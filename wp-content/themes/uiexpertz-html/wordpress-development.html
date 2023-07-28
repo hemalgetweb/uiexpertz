@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags for responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Favicon and touch icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.svg">
+  <meta name="misapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="@twitter_username">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="R">
+  <meta property="fb:admins" content="Facebook numeric ID">
+  <!-- gmail verification -->
+  <meta name="google-site-verification" content="">
+  <!-- Website title -->
+  <title>
+    Wordpres Development
+  </title>
+  <link rel="stylesheet" href="assets/css/nioicon.css">
+  <!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Local server Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+
+  <!-- CDN Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- jQuery (necessary for jQuery plugins) -->
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+  <!-- Main Coding Start Here -->
+
+  <!-- mobile menu -->
+  <div class="mobileMenu d-block d-xl-none" id="mobileHeader">
+    <nav class="navbar p-0">
+      <div class="mobileMenu-container">
+        <div class="mobileMenu-header d-flex align-items-center gap-4 justify-content-between">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.svg" alt="logo" class="img-fluid">
+          </a>
+          <div class="navbarToggler  border-0 text-decoration-none">
+            <div class="menuAction">
+              <a href="#" class="navbar-toggler-icons openMenu">
+                <img src="assets/img/menu.svg" alt="bar icon" class="img-fluid">
+              </a>
+              <a href="#" class="navbar-toggler-icons closeMenu">
+                <img src="assets/img/close.svg" alt="bar icon" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobileMenu-wrapper d-flex align-items-center justify-content-between flex-column">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-3 py-xl-0">
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue active" aria-current="page"
+                href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0 custom-dropdown">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue dropdown-toggle position-relative"
+                href="#">
+                <span>
+                  Services
+                </span>
+                <div class="dropArrow position-absolute text-center">
+                  <img src="assets/img/drop-up-arrow.svg" alt="drop arrow" class="img-fluid">
+                </div>
+              </a>
+              <ul class="custom-dropdown-menu mega-menu1 border-0">
+                <div class="">
+                  <div class="m-menu-widget">
+                    <ul class="widget-menu-list list-unstyled mb-0">
+                      <li class="mb-3">
+                        <a href="social-media-marketing.html" class="text-decoration-none ">
+
+                          <span class="fs-13 fw-semi-bold text-clr-blue text-uppercase">Social
+                            Media Marketing</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="search-engine-optimization.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Search
+                            Engine Optimization</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="advertisement.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Pay
+                            Per Click Advertisement</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="uiux-design.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Ui
+                            Ux Design</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="web-development.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Web
+                            Development</span>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue" href="case-studies.html">About</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue" href="case-studies.html">Case
+                Studies</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue" href="blog.html">Contact</a>
+            </li>
+          </ul>
+          <div
+            class="navbar-right btn-wrap d-flex flex-wrap justify-content-between align-content-center w-100 gap-3 gap-lg-4">
+            <a class="link-text text-decoration-none pe-4 fs-18 text-white fw-semi-bold d-flex gap-2 align-items-center"
+              href="tel:+88 012 458 368">
+              <img src="assets/img/phone.svg" alt="icon" class="img-fluid">
+              +88 012 458 368
+            </a>
+            <a class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky text-uppercase py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
+              href="contact-us.html">Lets’s talk </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- / Mobile menu -->
+
+  <!-- header -->
+  <header id="header" class="m-auto position-fixed top-0 start-0 end-0 d-xl-block d-none">
+    <nav class="navbar navbar-expand-xl py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icons">
+            <img src="assets/img/menu-bar.png" alt="bar icon" class="img-fluid">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-3 py-xl-0">
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-13 fw-bold text-uppercase text-clr-skyBlue active" aria-current="page"
+                href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0 custom-dropdown">
+              <a class="nav-link fs-13 fw-bold text-uppercase text-clr-skyBlue dropdown-toggle position-relative"
+                href="#">
+                <span>
+                  Service
+                </span>
+                <div class="dropArrow position-absolute text-center">
+                  <img src="assets/img/drop-up-arrow.svg" alt="drop arrow" class="img-fluid">
+                </div>
+              </a>
+              <ul class="custom-dropdown-menu mega-menu1 border-0">
+                <div class="">
+                  <div class="m-menu-widget">
+                    <ul class="widget-menu-list list-unstyled mb-0">
+                      <li class="mb-3">
+                        <a href="social-media-marketing.html" class="text-decoration-none ">
+
+                          <span class="fs-13 fw-semi-bold text-clr-blue text-uppercase">Social
+                            Media Marketing</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="search-engine-optimization.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Search
+                            Engine Optimization</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="advertisement.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Pay
+                            Per Click Advertisement</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="uiux-design.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Ui
+                            Ux Design</span>
+                        </a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="web-development.html" class="text-decoration-none ">
+
+                          <span class="fs-14 fw-semi-bold text-clr-blue text-uppercase">Web
+                            Development</span>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-13 fw-bold text-uppercase text-clr-skyBlue" href="case-studies.html">About</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-14 fw-bold text-uppercase text-clr-skyBlue" href="blog.html">Case
+                Studies</a>
+            </li>
+            <li class="nav-item ms-xl-4 ms-0">
+              <a class="nav-link fs-13 fw-bold text-uppercase text-clr-skyBlue" href="blog.html">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-right btn-wrap d-flex flex-wrap gap-3 gap-lg-4">
+            <a class="link-text ms-4 text-decoration-none pe-4 fs-5 text-white d-flex gap-2 align-items-center"
+              href="tel:+88 012 458 368">
+              <img src="assets/img/phone.svg" alt="icon" class="img-fluid">
+              +88 012 458 368
+            </a>
+            <a class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky text-uppercase py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
+              href="contact-us.html">Lets’s talk </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--/ header -->
+
+  <!--subbanner banner -->
+  <div class=" subBanner bg-clr-blue fs-6 ">
+    <div class="container">
+      <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
+              <p class="text-clr-sky fs-18">
+                Wordpress Development
+              </p>
+              <h1 class="fs-48 text-white mb-4 ">
+                UiExpertz WordPress Development.
+              </h1>
+              <div class="section-intro fs-18 fw-normal text-clr-skyBlue mb-5 ">
+                <p>
+                  Our WordPress developers can do things with WordPress that other agencies can only dream of.
+                </p>
+              </div>
+              <div
+                class="navbar-right btn-wrap d-flex justify-content-lg-start justify-content-center flex-wrap gap-3 gap-lg-4 "
+                data-wow-duration="0.200s" data-wow-delay="400ms">
+
+                <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+                  href="contact.html">
+                  Lets’s talk
+                  <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white" />
+                  </svg>
+
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="banner-img text-center text-lg-end ">
+              <img src="assets/img/wordpress-development-bg.png" alt="banner img" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--/ banner -->
+
+  <!-- Wordpress Services start -->
+  <div class="service section-padding bg-clr-lightGray">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+          <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
+            Our services include
+          </p>
+        </div>
+        <h1 class="fs-40 text-clr-blue py-2">
+          Our WordPress Services
+        </h1>
+        <p class="text-clr-gray">
+          Ullamcorper morbi tincidunt ornare massa eget. Quam viverra orci sagittis eu volutpat odio facilisis
+        </p>
+      </div>
+      <div class="service-wrapper row">
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wodpress-service1.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                Custom theme development
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                We create beautiful, user-friendly themes to fit your business's design and functionality needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service2.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                Figma to WordPress
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                Figma is a great tool for designing websites, but once your design is complete, you still need to build
+                the actual site.
+                We can turn your Figma design into a fully-functional WordPress site.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service3.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                HTML to WordPress
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                HTML is a programming language for creating websites. WordPress is a content management system for
+                creating and managing
+                sites.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service4.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                Plugin development
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                At custom WordPress plugin development service, we are dedicated to providing our clients with the best
+                possible custom
+                plugin development experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service5.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                Custom API integration
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                We can help you connect the tools you already use and love with WordPress to have a seamless workflow
+                between your
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service6.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                WordPress Maintenance
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                Let us manage WordPress maintenance and monitoring for you by assuming the update, customization, and
+                stability duties
+                of your WordPress site(s).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service7.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                WordPress Migration
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                If you need to move your website to WordPress, we will do it for you! We'll ensure your site retains
+                capabilities and
+                runs smoothly in search rankings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="service-item  bg-white h-100">
+            <div class="p-1">
+              <img src="assets/img/wordpress-service8.png" class="img-fluid w-100" alt="portfolio">
+            </div>
+            <div class="service-content p-4 text-decoration-none d-block mt-1">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3">
+                Hire WordPress Experts
+              </h4>
+              <p class="fs-14 text-clr-gray mb-2">
+                We can provide a dedicated team of WordPress experts working just for you and your products. An
+                excellent choice for
+                those who need to scale but want to avoid the burden of an in-house team.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d-flex flex-wrap align-items-center gap-3 mt-5 pt-3 justify-content-center">
+        <div class="">
+          <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+            href="#">
+            Lets’s talk
+            <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white" />
+            </svg>
+
+          </a>
+        </div>
+        <div class="">
+          <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center"
+            href="#">
+            Case Studies
+            <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="#5648FF" />
+            </svg>
+
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--/ UiExpertz Services end -->
+
+  <!-- Work Process start -->
+  <div class="WorkProcess section-padding">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+          <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
+            Work Process
+          </p>
+        </div>
+        <h1 class="fs-40 text-clr-blue py-2">
+          WordPress Development process.
+        </h1>
+        <p class="text-clr-gray">
+          The Design phase is an iterative process that begins with low-fidelity design options and ends with
+          pixel-perfect
+          mock-ups, ready for development.
+        </p>
+      </div>
+
+      <div class="workProcess-wrap py-3">
+        <div class="row">
+          <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">1
+                <span class="count-shape" style="background-color: #CCC8FF"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Consultation
+                </h3>
+                <p class="text-clr-gray fs-14">
+                  We will connect to understand and discuss your business, project requirements, current website
+                  details, goals, and
+                  expectations to determine if we would be a good fit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">2
+                <span class="count-shape" style="background-color: #C3E9FF"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Discovery
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  By leading multiple discovery workshops, we will prepare a detailed Scope of Work document with the
+                  essential workflows,
+                  challenges, goals, and processes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">3
+                <span class="count-shape" style="background-color: #F0F4C6"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Proposal and Onboarding
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  We will present a final proposal outlining the Scope of Work, solution design, timeline, and cost of
+                  the project.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">4
+                <span class="count-shape" style="background-color: #FFC3DC"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Project Kick-off
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  At Project Kick-off, your team & Multidots’ team will meet to discuss the project plan, milestone
+                  dates, communication,
+                  collaborative tools, and the overall process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">5
+                <span class="count-shape" style="background-color: #E2EAFF"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Development
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  Multidots team starts project development as per the project plan, completes the development as per
+                  its stated
+                  milestones, and prepares for an internal demo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">6
+                <span class="count-shape" style="background-color: #C5F0D1"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Client Team Demo
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  he project manager will invite you and your team to share project milestone progress and will give a
+                  demo to collect
+                  early feedback on the project from you and your team.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">7
+                <span class="count-shape" style="background-color: #E8C3FF"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Project Launch
+                </h3>
+                <p class="text-clr-gray fs-14 ">
+                  ith all the pre-launch testing taken care of, your project will finally be ready to go live. At this
+                  point, we will
+                  share a technical user manual and Quality Assurance reports for easy reference.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-xl-5 mb-4">
+            <div class="workProcessItem d-flex align-items-start gap-4">
+              <h2 class="fs-40 text-clr-blue process-count">7
+                <span class="count-shape" style="background-color: #E0E3EC"></span>
+              </h2>
+              <div class="workBorder"></div>
+              <div>
+                <h3 class="text-clr-blue fs-5 fw-bold">
+                  Support
+                </h3>
+                <p class="text-clr-gray fs-14">
+                  A successful launch and project delivery isn’t the end of our partnership. We are here to provide
+                  continuous maintenance
+                  and support post-launch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-3 mt-2 pt-3 justify-content-center">
+          <div class="">
+            <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+              href="contact.html">
+              Lets’s talk
+              <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white" />
+              </svg>
+
+            </a>
+          </div>
+          <div class="">
+            <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center"
+              href="contact.html">
+              Lets’s talk
+              <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="#5648FF" />
+              </svg>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Work Process end -->
+
+  <!--case study start -->
+  <div class="case-study bg-clr-lightGray section-padding">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+          <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
+            Case Studies
+          </p>
+        </div>
+        <h1 class="fs-40 text-clr-blue py-2">
+          WordPress Development case studies
+        </h1>
+        <p class="text-clr-gray">
+          We help create products while keeping in mind the brand, overall design, usability, and functionality.
+        </p>
+      </div>
+      <div class="case-study-wrap">
+        <div class="swiper caseStudy-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy1.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">App</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Fitness</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">UI/ux design
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">Stype Health - Walk Tracker App Design</h4>
+                    <p class="fs-6 text-clr-gray mb-0">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy2.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Landing</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">UI/ux design
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">SFackapp - Mobile App Landing Page</h4>
+                    <p class="fs-6 text-clr-gray mb-0 ">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3  mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy3.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Website</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Education
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">edmov - Find and Apply School Website</h4>
+                    <p class="fs-6 text-clr-gray mb-0">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3  mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy2.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Landing</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">UI/ux design
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">Fackapp - Mobile App Landing Page</h4>
+                    <p class="fs-6 text-clr-gray mb-0">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3  mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy2.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Landing</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">UI/ux design
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">Fackapp - Mobile App Landing Page</h4>
+                    <p class="fs-6 text-clr-gray mb-0">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3  mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex flex-column justify-content-between h-100 bg-white ">
+                <div class="">
+                  <div class="p-1">
+                    <img src="assets/img/caseStudy3.png" class="img-fluid w-100" alt="portfolio">
+                  </div>
+                  <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 p-4 mb-1">
+                    <li class="bg-clr-lightPink  py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Website</li>
+                    <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">Education
+                    </li>
+                  </ul>
+                  <div class="service-content px-4 text-decoration-none d-block ">
+                    <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base">edmov - Find and Apply School Website</h4>
+                    <p class="fs-6 text-clr-gray mb-0">Ut enim ad minima veniam, quis nostrum exercitationem
+                      ullam corporis suscipit laboriosam, nisi ut al</p>
+                  </div>
+                </div>
+                <a href=""
+                  class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
+                  <span>
+                    <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                  </span>
+                  <span>
+                    <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                    </svg>
+
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swipper-button position-relative">
+      <div class="swiper-button-prev-unique position-absolute d-flex justify-content-center align-items-center">
+        <svg width="64" height="127" viewBox="0 0 64 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="btn-swiper" d="M64 63.5L0.5 0V127L64 63.5Z" />
+          <path d="M25.9998 72L27.4165 70.5833L20.8332 64L27.4165 57.4167L25.9998 56L17.9998 64L25.9998 72Z"
+            fill="white" />
+        </svg>
+
+      </div>
+      <div class="swiper-button-next-unique position-absolute d-flex justify-content-center align-items-center">
+        <svg width="64" height="127" viewBox="0 0 64 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="btn-swiper" d="M0 63.5L63.5 0V127L0 63.5Z" fill="#97A3C1" />
+          <path d="M38.0002 72L36.5835 70.5833L43.1668 64L36.5835 57.4167L38.0002 56L46.0002 64L38.0002 72Z"
+            fill="white" />
+        </svg>
+
+      </div>
+    </div>
+  </div>
+  <!--/ case study end -->
+
+  <!-- why choose uiexperts /-start -->
+  <section id="whychooseus" class="section-padding">
+
+    <div class="container">
+
+      <div class="section-heading text-center mb-5">
+
+        <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+          <img src="assets/img/section-hints.svg" class="img-fluid" alt="section-heading">
+
+          <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
+            Why UiExpertz
+          </p>
+
+        </div>
+
+        <h1 class="fs-40 text-clr-blue py-2">
+          Why Choose UiExpertz
+        </h1>
+
+        <p class="text-clr-gray">
+          We are a WordPress website development team with a reputation for building powerful & successful enterprise
+          websites
+          with WordPress that have delivered extremely high ROI for our clients.
+        </p>
+
+      </div>
+
+      <div class="row">
+        <div class="why-choose-us-wrapper text-center">
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts1.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              Bulletproof Security
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts2.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              Ultimate Performances
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts3.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              Best SEO Practices
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts4.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              Predictable fixed cost
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts5.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              A WordPress VIP Agency
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+
+          <div class="why-choose-us-item">
+            <div class="card-img mb-4">
+              <img src="assets/img/why-uiexperts6.svg" alt="card-img">
+            </div>
+            <h5 class="fs-5 fw-bold text-clr-blue mb-4">
+              Non-Disclosure Agreement
+            </h5>
+            <p class="fs-14 fw-normal text-clr-gray mb-4">
+              We design cross platform mobile apps with easy functionalities and delightful interfaces that users love
+              to engage and
+              grow your business
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- why choose uiexperts /-end -->
+
+  <!-- brand start -->
+  <div class="brand section-padding bg-clr-blue">
+    <div class="container">
+      <div class=" me-auto mb-5">
+        <div class="section-hints d-flex justify-content-start align-items-center gap-2">
+          <p class="fs-14 mb-0 fw-bold text-clr-sky">Brands we’ve collaborated with</p>
+        </div>
+        <h1 class="fs-40 text-white py-2">Our technical expertise in the field of <br class="d-none d-xl-inline"> UX/UI
+          Design
+        </h1>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="brand-wrap pt-3 marquee-content d-flex align-items-center">
+        <div class="brand-item">
+          <img src="assets/img/ui1.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui2.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui3.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item ">
+          <img src="assets/img/ui4.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui5.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui6.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui7.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item ">
+          <img src="assets/img/ui8.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui1.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui2.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui3.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item ">
+          <img src="assets/img/ui4.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui5.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui6.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item">
+          <img src="assets/img/ui7.svg" class="img-fluid" alt="">
+        </div>
+        <div class="brand-item ">
+          <img src="assets/img/ui8.svg" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="uiux-counter mt-5">
+        <div class="d-flex align-items-start justify-content-between">
+          <div class="counter-item">
+            <h2 class="fs-48 text-clr-sky fw-normal mt-5">14</h2>
+            <p class="fs-14 fw-medium text-clr-skyBlue">Years of Experience</p>
+          </div>
+          <div class="counter-item">
+            <h2 class="fs-48 text-clr-sky fw-normal mt-5">1,070</h2>
+            <p class="fs-14 fw-medium text-clr-skyBlue">Clients Worldwide</p>
+          </div>
+          <div class="counter-item">
+            <h2 class="fs-48 text-clr-sky fw-normal mt-5">1,350</h2>
+            <p class="fs-14 fw-medium text-clr-skyBlue">Completed Projects</p>
+          </div>
+          <div class="counter-item">
+            <h2 class="fs-48 text-clr-sky fw-normal mt-5">1,350</h2>
+            <p class="fs-14 fw-medium text-clr-skyBlue">Completed Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ brand end -->
+
+  <!-- faq start -->
+  <div class="faq section-padding bg-clr-lightGray ">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+          <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">frequently asked questions</p>
+        </div>
+        <h1 class="fs-40 text-clr-blue py-2">Here are some of frequently asked questions about UX/UI Design.</h1>
+      </div>
+      <div class="faq-wrap">
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="accordion-list list-unstyled">
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4 open">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  Can you make functional prototypes and wireframes?
+                  <span class="ni ni-caret-up-fill"></span>
+                </h5>
+                <div class="accordion-desc">
+                  <p class="pe-5 pt-3 fw-normal fs-18 text-clr-text2">
+                    Most definitely. Creating functional prototypes and wireframes is the first thing that we do before
+                    diving into
+                    development.
+                  </p>
+                </div>
+              </li>
+
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  What is the timeline for UX design?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <ul class="faq-liststyle">
+                    <li class="fw-normal fs-18 text-clr-text3">VIEWS weekend (Mexico) - June 22-26 2023 *4 nights</li>
+                    <li class="fw-normal fs-18 text-clr-text3">VIEWS culture (Colombia) - July 20- 24 2023 *4 nights
+                    </li>
+                    <li class="fw-normal fs-18 text-clr-text3">VIEWS platinum (Dubai) - Sep 28-Oct 3 2023 *5 nights</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  What are some UI UX terminologies?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est laborum eaque quidem minus
+                    et!
+                  </p>
+                </div>
+              </li>
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  What are the UX design deliverables?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus.
+                  </p>
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="accordion-list list-unstyled">
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  What tools do you use for UI design?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pe-5 pt-3 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nulla, recusandae dolorem,
+                    repellat
+                    dolorum iste dolore quia eum sed asperiores iure sapiente laudantium fugit impedit, voluptatum
+                    explicabo rem
+                    eveniet ab unde itaque. Quibusdam molestias velit eius rem amet repellat delectus adipisci veniam
+                    numquam
+                    reprehenderit minus voluptas, obcaecati molestiae, quam error.
+                  </p>
+                </div>
+              </li>
+
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  Can you convert the design to WordPress, HTML or CSS?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    July 20 - 24, 2023
+                  </p>
+                </div>
+              </li>
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  What are the resources that clients need to provide?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est laborum eaque quidem minus
+                    et!
+                  </p>
+                </div>
+              </li>
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  Do you provide both app and web design services?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion-list-item bg-white px-4 py-4 mb-4">
+                <h5 class="accordion-title d-flex justify-content-between fw-medium fs-6 text-clr-gray mb-0">
+                  How will you manage the project?
+                  <span class="ni ni-caret-down-fill"></span>
+                </h5>
+                <div class="accordion-desc" style="display: none;">
+                  <p class="pt-3 pe-5 fw-normal fs-18 text-clr-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est laborum eaque quidem minus
+                    et!
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ faq end -->
+
+  <!-- contact start -->
+  <div class="contact bg-clr-blue section-padding">
+    <div class="section-heading text-center mb-5">
+      <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+        <img src="assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
+        <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+      </div>
+      <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span><a
+            class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
+      </h1>
+      <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
+        thrilled to hear how we’ve helped our
+        clients achieve their goals.</p>
+    </div>
+    <div class="footer-bg">
+
+      <div class="container">
+        <div class="contact-wrap bg-white py-5">
+          <div class="row my-3 align-items-center">
+            <div class="col-lg-5 offset-lg-1">
+              <div class="contactImg text-center mb-5 mb-lg-0">
+                <img src="assets/img/contact.svg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="contact-info">
+                <h3 class="fs-4 fw-bold">Fill out the form to start the <br class="d-none d-xl-inline">
+                  conversation</h3>
+              </div>
+              <div class="contact-form">
+                <form class="form-wrapper">
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
+                      <div class="name w-100">
+                        <label for="inputName" class="form-label fw-bold fs-14 text-clr-blue">
+                          Name
+                        </label>
+                        <input type="text" placeholder="Halász Emese" class="form-control text-clr-dark1"
+                          id="inputName">
+                      </div>
+                    </div>
+                    <div class="col-md-12  mb-3">
+                      <div class="email w-100">
+                        <label for="inputEmail" class="form-label fw-bold fs-14 text-clr-blue">
+                          Email address
+                        </label>
+                        <input type="email" placeholder="halászemese@gmail.com" class="form-control text-clr-dark1"
+                          id="inputEmail">
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                      <div class="email w-100">
+                        <label for="selectServices" class="form-label fw-bold fs-14 text-clr-blue">
+                          Services
+                        </label>
+                        <select class="select-menu form-select" aria-label="Default select example">
+                          <option selected>Choose services</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label fs-14 text-clr-gray" for="flexCheckDefault">
+                      I accept the privacy policy.
+                    </label>
+                  </div>
+                  <div class="btn-wrap mt-4">
+                    <button type="button"
+                      class="btn d-flex w-100 justify-content-center bg-clr-darkBlue form-btn align-items-center">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact end -->
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-wrapper mb-2 pb-4">
+            <div class="row justify-content-between">
+              <div class="col-xl-3 col-md-6 col-8">
+                <div class="footer-widget mb-4 mb-xl-0">
+                  <a href="index.html" class="footer-logo mb-3 d-block ">
+                    <img src="assets/img/footer-logo.svg" alt="logo" class="img-fluid" />
+                  </a>
+                  <p class="fs-14 text-clr-gray mb-3">
+                    Design is intelligence made visible.
+                  </p>
+
+
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-6">
+                <div class="footer-widget mb-4 mb-xl-0">
+                  <h3 class="widget-title text-clr-darkBlue fs-13 fw-bold mb-4 pb-1 ls-1 text-uppercase">
+                    Services
+                  </h3>
+                  <ul class="widget-list mb-0 list-unstyled">
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Ui/Ux Design
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Wordpress Development
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Support and Maintenance
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-6">
+                <div class="footer-widget mb-4 mb-xl-0 ">
+                  <h3 class="widget-title text-clr-darkBlue fs-13 fw-bold mb-4 pb-1 ls-1 text-uppercase">
+                    Navigation
+                  </h3>
+                  <ul class="widget-list mb-0 list-unstyled">
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Terms and Conditions
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-6">
+                <div class="footer-widget mb-4 mb-xl-0">
+                  <h3 class="widget-title text-clr-darkBlue fs-13 fw-bold mb-4 pb-1 ls-1 text-uppercase">
+                    Contact
+                  </h3>
+                  <ul class="widget-list mb-0 list-unstyled">
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none" href="home.html">
+                        2118 Thornridge Cir. Syracuse, Connecticut 35624
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none"
+                        href="tel:+88 012 458 368">
+                        +88 012 458 368
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="text-clr-gray footer-link fs-6 fw-normal text-decoration-none"
+                        href="mailto:hello@uiexpertz.com">
+                        hello@uiexpertz.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="footer-bottom py-4 " style="border-top: 1px solid #AAB4CF;">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright fs-14 text-center text-lg-start text-clr-gray mb-md-0 mb-3 mb-xl-0 ">
+                  Copyright © 2023 I UiExpertz I All Rights Reserved
+                </p>
+              </div>
+              <div class="col-md-6">
+                <ul
+                  class="f-bottom-menu list-unstyled d-flex justify-content-center justify-content-md-end gap-3 gap-xl-4  mb-0">
+                  <li>
+                    <a href="#" class="fs-14  text-clr-gray fw-bold text-decoration-none">
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="fs-14  text-clr-gray fw-bold text-decoration-none">
+                      Dribbble
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="fs-14  text-clr-gray fw-bold text-decoration-none">
+                      Behance
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <!-- backToTop -->
+  <button id="backToTop" class=""><svg class="mb-1" width="15" height="16" viewBox="0 0 15 16" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.26402 0L14.528 15.5041L7.45488 12.1239L0 15.5041L7.26402 0Z" fill="white" />
+    </svg>
+  </button>
+
+  <!-- Main Coding End -->
+
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <!-- CDN Bootstrap bundle js -->
+  <!-- <script src="assets/js/owl.carousel.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script JS -->
+  <script src="assets/js/jquery-petty-accordion.js"></script>
+  <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>

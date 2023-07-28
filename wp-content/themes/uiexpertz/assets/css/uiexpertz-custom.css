@@ -1,0 +1,70 @@
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu {min-width: 566px;border-radius: 16px;background: var(--white, #FFF);box-shadow: 0px -4px 0px 0px #FF368B;}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li {
+    margin: 0 !important;
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu {flex-wrap: wrap;}
+
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114 > li {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114 {
+    display: flex !important;
+}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li {
+    border: 1px solid #AAB4CF;
+    display: block;
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu {
+    grid-gap: 20px;
+}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li .extra-info {
+    display: block;
+    color: var(--gray-color-system-gray-2, #384973);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    padding-left: 37px;
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li img {background: var(--gray-color-system-gray-6, #EBF0FF);padding: 8px;}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li .menu-image-title {
+    color: var(--gray-color-system-gray-1, #001345);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 171.429% */
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li .extra-info {
+    padding-left: 51px;
+    margin-top: -8px;
+}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li  a {
+    transition: all .3s;
+    display: block;
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li img {
+    transform: translateY(10px);
+    transition: all .3s;
+}
+
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li a {
+    padding: 13px 11px;
+    transition: all .3s;
+    padding-top: 3px;
+}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li a:hover {
+    background: var(--primary-color-system-indigo-dye-light, #F3F2FF);
+}
+ul#menu-main-menu .has-mega-menu .custom-dropdown-menu > li a:hover img {
+    background: red;
+    filter: brightness(100);
+}

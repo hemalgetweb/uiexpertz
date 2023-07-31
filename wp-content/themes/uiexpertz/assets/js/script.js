@@ -8,6 +8,12 @@
         }
     });
     $(document).ready(function () {
+        $("[data-background").each(function(){
+            $(this).css("background-image","url("+$(this).attr("data-background") + ") ")
+        })
+        $("[data-bgcolor").each(function(){
+            $(this).css("background-color","#"+$(this).attr("data-bgcolor"));
+        })
         //navbar add class
         $(function () {
             if ($(".mobileMenu").length) {
@@ -139,12 +145,14 @@
 
     const marqueeContent = document.querySelector(".marquee-content");
 
-    marqueeContent.addEventListener("mouseenter", function () {
-        marqueeContent.style.animationPlayState = "paused";
-    });
-
-    marqueeContent.addEventListener("mouseleave", function () {
-        marqueeContent.style.animationPlayState = "running";
-    });
+    if(marqueeContent) {
+        marqueeContent.addEventListener("mouseenter", function () {
+            marqueeContent.style.animationPlayState = "paused";
+        });
+    
+        marqueeContent.addEventListener("mouseleave", function () {
+            marqueeContent.style.animationPlayState = "running";
+        });
+    }
 
 })(jQuery)

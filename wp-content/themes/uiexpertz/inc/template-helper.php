@@ -142,6 +142,10 @@ function uiexpertz_copyright_menu()
     <?php
     $uiexpertz_copyright_menu = wp_nav_menu([
         'theme_location' => 'copyright_menu',
+        'menu_class'     => 'f-bottom-menu list-unstyled uiexpertz-copyright-menu d-flex justify-content-center justify-content-md-end gap-3 gap-xl-4  mb-0',
+        'container'      => '',
+        'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'         => new WP_Bootstrap_Navwalker,
     ]);
     ?>
 <?php

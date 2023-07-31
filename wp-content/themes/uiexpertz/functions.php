@@ -132,22 +132,22 @@ function uiexpertz_widgets_init()
 			'name' => esc_html__('Blog Sidebar', 'uiexpertz'),
 			'id' => 'blog-sidebar',
 			'description' => esc_html__('Add Blog Sidebar.', 'uiexpertz'),
-			'before_widget' => '<section id="%1$s" class="uiexpertz-custom-blog-sidebar-1 sidebar-widget radius-6 overflow-hidden mb-4 %2$s">',
+			'before_widget' => '<section id="%1$s" class="footer-widget mb-4 mb-xl-0 %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h5 class="widget-title px-4 py-3 fs-4 fw-semi-bold mb-0">',
-			'after_title' => '</h5>',
+			'before_title' => '<h3 class="widget-title text-clr-darkBlue fs-13 fw-bold mb-4 pb-1 ls-1 text-uppercase">',
+			'after_title' => '</h3>',
 		)
 	);
 	// footer default
-	for ($num = 1; $num <= 3; $num++) {
+	for ($num = 1; $num <= 4; $num++) {
 		register_sidebar([
 			'name' => sprintf(esc_html__('Footer %1$s', 'uiexpertz'), $num),
 			'id' => 'footer-' . $num,
 			'description' => sprintf(esc_html__('Footer %1$s', 'uiexpertz'), $num),
 			'before_widget' => '<div><div id="%1$s" class="footer-widget mb-40 footer-col-' . esc_attr($num) . ' %2$s ">',
 			'after_widget' => '</div></div>',
-			'before_title' => '<h6 class="uiexpertz-rv-footer-widget-title">',
-			'after_title' => '</h6>',
+			'before_title' => '<h3 class="widget-title text-clr-darkBlue fs-13 fw-bold mb-4 pb-1 ls-1 text-uppercase">',
+			'after_title' => '</h3>',
 		]);
 	}
 }
@@ -193,7 +193,6 @@ function uiexpertz_scripts()
 	wp_enqueue_style('swiper-bundle', UIEXPERTZ_THEME_CSS_DIR . 'swiper-bundle.min.css');
 	wp_enqueue_style('bootstrap', UIEXPERTZ_THEME_CSS_DIR . 'bootstrap.min.css');
 
-	wp_enqueue_style('uiexpertz-unit', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-unit.css', null, time());
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
 	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-custom.css', null, time());
 

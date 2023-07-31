@@ -37,11 +37,6 @@ function uiexpertz_register_required_plugins()
             'required' => false,
         ),
         [
-            'name'     => esc_html__('Mailchimp For WP', 'uiexpertz'),
-            'slug'     => 'mailchimp-for-wp',
-            'required' => true,
-        ],
-        [
             'name'     => esc_html__('Menu Image, Icons made easy', 'uiexpertz'),
             'slug'     => 'menu-image',
             'required' => true,

@@ -164,3 +164,23 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.service-content  .text-clr-blue a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.service-content .text-clr-blue a:hover {
+  color: var(--primary-color-system-indigo-dye, #5648FF);
+}
+.service-item-wrap .read-more:hover span {
+  color: #6d60ff;
+}
+#header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+#header .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}

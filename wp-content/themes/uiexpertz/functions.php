@@ -195,7 +195,7 @@ function uiexpertz_scripts()
 
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
 	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-custom.css', null, time());
-	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'ashik-vai.css', null, time());
+	wp_enqueue_style('uiexpertz-ashik', UIEXPERTZ_THEME_CSS_DIR . 'ashik-vai.css', null, time());
 
 	// all js
 	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);
@@ -581,3 +581,28 @@ add_action('wp_ajax_nopriv_uiexpertz_perform_post_search', 'uiexpertz_perform_po
     return $classes;
 }
 add_filter( 'nav_menu_css_class', 'custom_child_menu_class', 10, 4 );
+
+/**
+ * custom time
+ */
+function custom_time_diff($post_date) {
+    $current_date = current_time('timestamp');
+    $post_timestamp = strtotime($post_date);
+    $time_diff = $current_date - $post_timestamp;
+
+    if ($time_diff < 3600) {
+        // Less than 1 hour
+        $result = sprintf(_n('%d hour', '%d hours', (int)($time_diff / 60)), (int)($time_diff / 60));
+    } elseif ($time_diff < 86400) {
+        // Less than 1 day
+        $result = sprintf(_n('%d day', '%d days', (int)($time_diff / 86400)), (int)($time_diff / 86400));
+    } elseif ($time_diff < 2592000) {
+        // Less than 30 days
+        $result = sprintf(_n('%d month', '%d months', (int)($time_diff / 2592000)), (int)($time_diff / 2592000));
+    } else {
+        // More than 30 days, show in years
+        $result = sprintf(_n('%d year', '%d years', (int)($time_diff / 31536000)), (int)($time_diff / 31536000));
+    }
+
+    return $result . ' ago';
+}

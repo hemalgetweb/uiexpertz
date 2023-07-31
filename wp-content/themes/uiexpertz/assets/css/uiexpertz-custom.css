@@ -216,3 +216,17 @@
 .authors.d-flex.gap-2.align-items-center > img {
   border-radius: 50%;
 }
+li.recent-post-list img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+li.recent-post-list img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+li.recent-post-list .post-time img {
+  width: 16px;
+  height: auto;
+}

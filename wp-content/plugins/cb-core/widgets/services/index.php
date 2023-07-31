@@ -128,7 +128,7 @@ class CB_Core_Service extends Widget_Base
 		$this->start_controls_section(
 			'_section_service',
 			[
-				'label' => __('Servicxe Content', 'cb-core'),
+				'label' => __('Service Content', 'cb-core'),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);

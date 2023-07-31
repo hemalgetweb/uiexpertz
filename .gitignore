@@ -4,6 +4,7 @@ wp-includes/
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
+wp-content/plugins/elementor
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/

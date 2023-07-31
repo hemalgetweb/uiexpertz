@@ -196,6 +196,7 @@ function uiexpertz_scripts()
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
 	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-custom.css', null, time());
 	wp_enqueue_style('uiexpertz-ashik', UIEXPERTZ_THEME_CSS_DIR . 'ashik-vai.css', null, time());
+	wp_enqueue_style('uiexpertz-emon', UIEXPERTZ_THEME_CSS_DIR . 'emon-vai.css', null, time());
 
 	// all js
 	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);

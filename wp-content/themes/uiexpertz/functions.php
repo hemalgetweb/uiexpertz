@@ -195,15 +195,21 @@ function uiexpertz_scripts()
 
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
 	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-custom.css', null, time());
+	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'ashik-vai.css', null, time());
 
 	// all js
 	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);
 	wp_enqueue_script('swiper', UI_EXPERTZ_THEME_JS_DIR . 'swiper-bundle.min.js', ['jquery'], '', true);
 	wp_enqueue_script('gsap', UI_EXPERTZ_THEME_JS_DIR . 'gsap.min.js', ['jquery'], '', true);
 	wp_enqueue_script('uiexpertz-script', UI_EXPERTZ_THEME_JS_DIR . 'script.js', ['jquery'], time(), true);
+	wp_enqueue_script('uiexpertz-ajax-script', UI_EXPERTZ_THEME_JS_DIR . 'ajax-script.js', ['jquery'], time(), true);
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
+	$data = array(
+		'ajax_url' => admin_url('admin-ajax.php'),
+	);
+	wp_localize_script( 'uiexpertz-ajax-script', 'ajax', $data );
 }
 add_action('wp_enqueue_scripts', 'uiexpertz_scripts');
 /*
@@ -290,70 +296,49 @@ function uiexpertz_filter_blog_posts_by_category()
 		while ($query->have_posts()) {
 			$query->the_post();
 			// Output the content of each blog post here?>
-			<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())):
-				$att = get_post_thumbnail_id();
-				$image_src = wp_get_attachment_image_src($att, 'full');
-				if (!empty($image_src)) {
-					$image_src = $image_src[0];
-				}
-			endif;
-			$uiexpertz_cat = get_the_category(get_the_ID()) ? (array) get_the_category(get_the_ID())[0] : '';
-			$first_cat_name = '';
-			$first_cat_id = '';
-			$first_cat_url = '';
-			if (!empty($uiexpertz_cat)) {
-				$first_cat_name = $uiexpertz_cat['name'];
-				$first_cat_id = $uiexpertz_cat['term_id'];
-				$first_cat_url = get_category_link($first_cat_id);
-			}
+			<?php
+			$category = get_the_category(get_the_ID());
+			$cat_id = '';
+			$cat_name = '';
 			?>
-			<div class="col-xl-4 col-sm-6 col-sm-6 mb-4">
-				<div id="post-<?php the_ID(); ?>" <?php post_class('single-blog bg-white p-2 radius-6 box-shadow2'); ?>>
-					<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())):
-						$att = get_post_thumbnail_id();
-						$image_src = wp_get_attachment_image_src($att, 'full');
-						if (!empty($image_src)) {
-							$image_src = $image_src[0];
-						}
-						$uiexpertz_cat = get_the_category(get_the_ID()) ? (array) get_the_category(get_the_ID())[0] : '';
-						$first_cat_name = '';
-						$first_cat_id = '';
-						$first_cat_url = '';
-						if (!empty($uiexpertz_cat)) {
-							$first_cat_name = $uiexpertz_cat['name'];
-							$first_cat_id = $uiexpertz_cat['term_id'];
-							$first_cat_url = get_category_link($first_cat_id);
-						}
-						?>
-						<div class="blog-img mb-2 radius-6 overflow-hidden">
-							<img src="<?php echo esc_url($image_src); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid w-100">
+			<div class="col-lg-4 col-md-6">
+				<div class="service-item service-item-wrap bg-white mb-4 pb-3">
+					<div>
+						<div class="p-1">
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="portfolio" class="img-fluid w-100">
 						</div>
-					<?php endif; ?>
-					<div class="blog-info ">
-						<div class="feature-top">
-							<?php if (!empty($first_cat_name)): ?>
-								<a href="<?php echo esc_url($first_cat_url); ?>">
-									<span
-										class="section-tag fs-12 fw-bold text-uppercase text-clr-dark4 d-inline-flex gap-2 align-items-center mb-2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-process-icon.svg" alt="icon"
-											class="img-fluid">
-										<?php echo $first_cat_name; ?>
-									</span>
-								</a>
-							<?php endif; ?>
-							<h3 class="blog-title fs-18 lh-base fw-medium">
-								<a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-clr-dark1">
-									<?php echo wp_trim_words(get_the_title(get_the_ID()), 7); ?>
-								</a>
-							</h3>
-							<div class="blog-intro fs-14 text-clr-dark2 mb-0">
-								<p class="">
-									<?php echo wp_trim_words(get_the_excerpt(), 15); ?>
-								</p>
-							</div>
+						<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap  px-4 pt-4">
+							<?php
+							if($category) {
+								foreach($category as $index => $cat) {
+									$cat_id = $category ? $category[$index]->term_id: '';
+									$cat_name = $category ? $category[$index]->name : '';?>
+									<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue"><?php echo esc_html($cat_name); ?></li>
+								<?php }
+							}
+							?>
+						</ul>
+						<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+							<h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words( get_the_title(),9); ?></a></h4>
+							<p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt( get_the_ID() ), 16); ?></p>
 						</div>
-						<span class="uiexpertz-has-blog-date-114"><?php echo get_the_date(); ?></span>
 					</div>
+					<a href="<?php the_permalink(get_the_ID()); ?>"
+						class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+						<span>
+							<span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
+						</span>
+						<span>
+							<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z">
+								</path>
+							</svg>
+
+						</span>
+					</a>
+
 				</div>
 			</div>
 		<?php }
@@ -515,60 +500,51 @@ function uiexpertz_perform_post_search()
 	if ($query->have_posts()) {
 		echo '<div class="row">';
 		while ($query->have_posts()) {
-			$query->the_post(); ?>
-			<div class="col-xl-4 col-sm-6 col-sm-6 mb-4">
-				<div id="post-<?php the_ID(); ?>" <?php post_class('single-blog bg-white p-2 radius-6 box-shadow2'); ?>>
-					<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())):
-						$att = get_post_thumbnail_id();
-						$image_src = wp_get_attachment_image_src($att, 'full');
-						if (!empty($image_src)) {
-							$image_src = $image_src[0];
-						}
-						$uiexpertz_cat = get_the_category(get_the_ID()) ? (array) get_the_category(get_the_ID())[0] : '';
-						$first_cat_name = '';
-						$first_cat_id = '';
-						$first_cat_url = '';
-						if (!empty($uiexpertz_cat)) {
-							$first_cat_name = $uiexpertz_cat['name'];
-							$first_cat_id = $uiexpertz_cat['term_id'];
-							$first_cat_url = get_category_link($first_cat_id);
+			$query->the_post();
+			$category = get_the_category(get_the_ID());
+			$cat_id = '';
+			$cat_name = '';	
+		?>
+		<div class="col-lg-4 col-md-6">
+			<div class="service-item service-item-wrap bg-white mb-4 pb-3">
+				<div>
+					<div class="p-1">
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="portfolio" class="img-fluid w-100">
+					</div>
+					<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap  px-4 pt-4">
+						<?php
+						if($category) {
+							foreach($category as $index => $cat) {
+								$cat_id = $category ? $category[$index]->term_id: '';
+								$cat_name = $category ? $category[$index]->name : '';?>
+								<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue"><?php echo esc_html($cat_name); ?></li>
+							<?php }
 						}
 						?>
-						<div class="blog-img mb-2 radius-6 overflow-hidden">
-							<img src="<?php echo esc_url($image_src); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid w-100">
-						</div>
-					<?php endif; ?>
-					<div class="blog-info ">
-						<div class="feature-top">
-							<?php if (!empty($first_cat_name)): ?>
-								<a href="<?php echo esc_url($first_cat_url); ?>">
-									<span
-										class="section-tag fs-12 fw-bold text-uppercase text-clr-dark4 d-inline-flex gap-2 align-items-center mb-2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-process-icon.svg" alt="icon"
-											class="img-fluid">
-										<?php echo $first_cat_name; ?>
-									</span>
-								</a>
-							<?php endif; ?>
-							<h3 class="blog-title fs-18 lh-base fw-medium">
-								<a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-clr-dark1">
-									<?php echo wp_trim_words(get_the_title(get_the_ID()), 7); ?>
-								</a>
-							</h3>
-							<div class="blog-intro fs-14 text-clr-dark2 mb-0">
-								<p class="">
-									<?php echo wp_trim_words(get_the_excerpt(), 15); ?>
-								</p>
-							</div>
-						</div>
-						<a href="<?php echo get_the_permalink(); ?>"
-							class="text-decoration-none fs-12 fw-bold text-clr-primary text-uppercase d-flex gap-2 align-items-center">
-							<?php echo esc_html__('Read more', 'uiexpertz'); ?>
-							<span class="ni fs-6 ni-arrow-right"></span>
-						</a>
+					</ul>
+					<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+						<h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words( get_the_title(),9); ?></a></h4>
+						<p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt( get_the_ID() ), 16); ?></p>
 					</div>
 				</div>
+				<a href="<?php the_permalink(get_the_ID()); ?>"
+					class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+					<span>
+						<span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
+					</span>
+					<span>
+						<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z">
+							</path>
+						</svg>
+
+					</span>
+				</a>
+
 			</div>
+		</div>
 		<?php }
 		wp_reset_postdata();
 		echo '</div>';

@@ -1,0 +1,46 @@
+# Ignore core WordPress files
+wp-admin/
+wp-includes/
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/plugins/hello.php
+
+# Ignore any local configuration files
+wp-config.php
+wp-config-*.php
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore Node.js related files (if not using Node.js in the project)
+node_modules/
+npm-debug.log
+
+# Ignore development files and directories
+.htaccess
+error_log
+license.txt
+readme.html
+
+# Ignore Composer files (if not using Composer in the project)
+vendor/
+
+# Ignore build or compiled files
+*.css.map
+*.js.map
+
+# Ignore backup files created by text editors
+*~
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Thumbs.db files (created by Windows)
+Thumbs.db

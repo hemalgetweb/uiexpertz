@@ -193,107 +193,44 @@ $recent_posts = new WP_Query($args);
                     Categories
                   </h3>
                   <div class="bg-light">
-                    <ul class="recent-post architect-3 list-unstyled py-3 px-4 mb-0 bg-white">
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">Webdesign</span>
-                          <span class="has-post">(03)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">SEO</span>
-                          <span class="has-post">(05)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">Content</span>
-                          <span class="has-post">(02)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">Animations</span>
-                          <span class="has-post">(04)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">Maintenance</span>
-                          <span class="has-post">(07)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">SEA</span>
-                          <span class="has-post">(02)</span>
-                        </a>
-                      </li>
-                      <li class="recent-post-list py-2">
-                        <a href="#" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">
-                          <span class="category-name">Branding</span>
-                          <span class="has-post">(05)</span>
-                        </a>
-                      </li>
+                  <ul class="recent-post architect-3 list-unstyled py-3 px-4 mb-0 bg-white">
+                    <?php
+                    $categories = get_categories();
+                    foreach ($categories as $category) {
+                        $category_name = $category->name;
+                        $category_count = $category->count;
+                        $category_link = get_category_link($category->term_id);
+
+                        echo '<li class="recent-post-list py-2">';
+                        echo '<a href="' . esc_url($category_link) . '" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">';
+                        echo '<span class="category-name">' . esc_html($category_name) . '</span>';
+                        echo '<span class="has-post">(' . esc_html($category_count) . ')</span>';
+                        echo '</a>';
+                        echo '</li>';
+                    }
+                    ?>
                     </ul>
                   </div>
                 </div>
-              
-           
-              
                 <div class="sidebar-widget border-dark1 radius-6 overflow-hidden">
                   <h3 class="widget-title px-4 pt-4 pb-3 fs-4 fw-bold mb-0">
                     Popular Tag
                   </h3>
                   <ul class="d-flex gap-2 flex-wrap list-unstyled p-4 bg-white">
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        Design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        Ui
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        SEO case studies
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        ui ux design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        SSL
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                        WEb Development
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                      Art
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                      Digital
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">
-                      Swipy
-                      </a>
-                    </li>
-                 
-                  </ul>
+                    <?php
+                    $tags = get_tags();
+                    foreach ($tags as $tag) {
+                        $tag_name = $tag->name;
+                        $tag_link = get_tag_link($tag->term_id);
+
+                        echo '<li>';
+                        echo '<a href="' . esc_url($tag_link) . '" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">';
+                        echo esc_html($tag_name);
+                        echo '</a>';
+                        echo '</li>';
+                    }
+                    ?>
+                    </ul>
                 </div>
               </div>
           </div>
@@ -301,8 +238,6 @@ $recent_posts = new WP_Query($args);
       </div>
     </div>
   </div>
-
-
 
 
 

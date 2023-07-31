@@ -590,17 +590,17 @@ function custom_time_diff($post_date) {
     $post_timestamp = strtotime($post_date);
     $time_diff = $current_date - $post_timestamp;
 
-    if ($time_diff < 3600) {
-        // Less than 1 hour
-        $result = sprintf(_n('%d hour', '%d hours', (int)($time_diff / 60)), (int)($time_diff / 60));
-    } elseif ($time_diff < 86400) {
-        // Less than 1 day
-        $result = sprintf(_n('%d day', '%d days', (int)($time_diff / 86400)), (int)($time_diff / 86400));
+    if ($time_diff < 43200) {
+        // Less than 12 hours
+        $result = sprintf(_n('%d hour', '%d hours', (int)($time_diff / 3600)), (int)($time_diff / 3600));
     } elseif ($time_diff < 2592000) {
         // Less than 30 days
+        $result = sprintf(_n('%d day', '%d days', (int)($time_diff / 86400)), (int)($time_diff / 86400));
+    } elseif ($time_diff < 31536000) {
+        // Less than 12 months
         $result = sprintf(_n('%d month', '%d months', (int)($time_diff / 2592000)), (int)($time_diff / 2592000));
     } else {
-        // More than 30 days, show in years
+        // More than 12 months, show in years
         $result = sprintf(_n('%d year', '%d years', (int)($time_diff / 31536000)), (int)($time_diff / 31536000));
     }
 

@@ -35,6 +35,9 @@
     top: calc(50% - 5px);
 }
 
+.wpcf7-submit {
+    border-radius: 0 !important;
+}
 
 
 

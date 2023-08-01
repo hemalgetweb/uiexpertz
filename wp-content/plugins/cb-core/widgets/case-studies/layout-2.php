@@ -58,7 +58,7 @@
                 </div>
 
             </div>
-            <div class="casestudy-swiper-pagination"></div>
+            <div class="casestudy-swiper-pagination text-center"></div>
 
         </div>
         <?php endif; ?>

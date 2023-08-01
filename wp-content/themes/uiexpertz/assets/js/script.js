@@ -8,7 +8,7 @@
         }
     });
     $(".js-text-cursor-block").mousemove(function (e) {
-        $(".js-text-cursor").removeClass('d-none');
+        $(this).find('js-text-cursor').removeClass('d-none');
         var t = $(this).offset(),
             n = t.left.toFixed(0),
             t = t.top.toFixed(0),

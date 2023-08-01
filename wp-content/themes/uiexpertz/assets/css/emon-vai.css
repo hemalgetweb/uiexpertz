@@ -1,0 +1,27 @@
+.technical-expertise-right{
+  background-color: #E5F6FF;
+  padding: 30px;
+}
+.py-120{
+  padding: 120px 0;
+}
+
+@media (max-width:991px) {
+   .py-120{
+  padding: 100px 0;
+}
+}
+@media (max-width:667px) {
+   .py-120{
+  padding: 80px 0;
+}
+}
+
+
+.case-study .swiper-button-prev-unique {
+    bottom: 250px !important;
+}
+.case-study .swiper-button-next-unique {
+    bottom: 250px !important;
+}
+

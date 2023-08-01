@@ -273,3 +273,6 @@ li.recent-post-list .post-time img {
       padding: 30px 15px;
   }
 }
+.service-item.js-text-cursor-block .p-1 img {
+  width: 100%;
+}

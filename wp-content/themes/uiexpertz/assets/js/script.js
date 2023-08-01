@@ -14,7 +14,7 @@
                 slidesPerView: 3,
                 spaceBetween: 30,
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: ".casestudy-swiper-pagination",
                     clickable: true,
                 },
                 navigation: {

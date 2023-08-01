@@ -248,7 +248,6 @@ body { padding: 0; margin: 0; background-color: #fff; font-family: "Manrope", sa
 
 .case-study .swiper-button-prev-unique { bottom: 220px; left: 0px; }
 .case-study .swiper-button-next-unique { bottom: 220px; right: 0px; }
-.case-study .case-study-wrap .swiper-wrapper { padding: 50px 0; }
 .case-study .swiper-button-prev-unique { bottom: 350px; left: 0px; }
 @media (max-width: 650px) { .case-study .swiper-button-prev-unique { display: none !important; } }
 .case-study .swiper-button-next-unique { bottom: 350px; right: 0px; }

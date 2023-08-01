@@ -257,3 +257,14 @@ li.recent-post-list .post-time img {
 .mt-40 {
   margin-top: 40px;
 }
+.js-text-cursor-block{
+  position: relative;
+  overflow: hidden !important;
+}
+
+.js-text-cursor{
+  position: absolute;
+  max-width: 90px;
+  width: 100%;
+
+}

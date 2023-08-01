@@ -7,6 +7,23 @@
             $("header").removeClass("fixed-header");
         }
     });
+    $(".js-text-cursor-block").mousemove(function (e) {
+        $(".js-text-cursor").removeClass('d-none');
+        var t = $(this).offset(),
+            n = t.left.toFixed(0),
+            t = t.top.toFixed(0),
+            n = e.pageX - n,
+            e = e.pageY - t;
+        $(".js-text-cursor").css({
+            transform: "translate3d(".concat(n - 35, "px, ").concat(e - 35, "px, 0px)"),
+        });
+    }),
+    $(".js-text-cursor-block").mouseenter(function () {
+        $(".js-text-cursor").stop(!0, !0).fadeIn("fast");
+    }),
+    $(".js-text-cursor-block").mouseleave(function () {
+        $(".js-text-cursor").stop(!0, !0).fadeOut("fast");
+    });
     var CB_Testimonial = function($scope, $) {
         $scope.find('.testi-slider').each(function() {
             // testimonial-active

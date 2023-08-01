@@ -159,19 +159,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				]
 			]
 		);
-		$this->add_control(
-			'section_title',
-			[
-				'label' => __('Section Title', 'cb-core'),
-				'label_block' => true,
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __('Get Weeky & Offer Daily News', 'cb-core'),
-				'placeholder' => __('Type your title here', 'cb-core'),
-				'condition' => [
-					'layout' => ['layout-1']
-				]
-			]
-		);
+		
 		$this->add_control(
 			'section_subtitle',
 			[

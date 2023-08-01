@@ -108,6 +108,9 @@
                       slidesPerView: 2,
                       spaceBetween: 0
                     },
+                    480: {
+                        slidesPerView: 3
+                    },
                     // when window width is >= 575px
                     576: {
                       slidesPerView: 4,

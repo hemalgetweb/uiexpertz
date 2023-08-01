@@ -230,3 +230,9 @@ li.recent-post-list .post-time img {
   width: 16px;
   height: auto;
 }
+.pt-75 {
+  padding-top: 75px;
+}
+.pb-120 {
+  padding-bottom: 120px;
+}

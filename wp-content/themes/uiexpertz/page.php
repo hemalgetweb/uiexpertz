@@ -19,24 +19,16 @@ $current_url = home_url( add_query_arg( array(), $wp->request ) );
 $uiexpertz_base_url = explode("/",$current_url);
 ?>
 
-<div class="<?php echo esc_attr($section_class); ?>">
-    <div class="container">
-		<div class="row">
-			<div class="col-xl-12">
-				<div class="uiexpertz-page-content">
-					<?php
-						if ( have_posts() ):
-							while ( have_posts() ): the_post();
-								get_template_part( 'post-formates/content', 'page' );
-							endwhile;
-						else:
-							get_template_part( 'post-formates/content', 'none' );
-						endif;
-					?>
-				</div>
-			</div>
-		</div>
-    </div>
+<div class="uiexpertz-page-content">
+	<?php
+		if ( have_posts() ):
+			while ( have_posts() ): the_post();
+				get_template_part( 'post-formates/content', 'page' );
+			endwhile;
+		else:
+			get_template_part( 'post-formates/content', 'none' );
+		endif;
+	?>
 </div>
 
 <?php

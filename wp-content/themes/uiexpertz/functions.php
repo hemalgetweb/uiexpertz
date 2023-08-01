@@ -64,13 +64,13 @@ function uiexpertz_setup()
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__('Main Menu', 'uiexpertz'),
-			'copyright_menu' => esc_html__('Copyright Menu', 'uiexpertz'),
-		),
+			'copyright_menu' => esc_html__('Copyright Menu', 'uiexpertz')
+		)
 	);
 	register_nav_menus(
 		array(
-			'footer-menu' => esc_html__('Footer Menu', 'uiexpertz'),
-		),
+			'footer-menu' => esc_html__('Footer Menu', 'uiexpertz')
+		)
 	);
 
 	add_theme_support(
@@ -607,3 +607,78 @@ function custom_time_diff($post_date) {
 
     return $result . ' ago';
 }
+
+
+/**
+ * Custom next portfolio
+ */
+function custom_next_posts() {
+	$post_type = 'project'; // Update post type to 'portfolio'
+    $paged = $_POST['paged'];
+    $posts_per_page = $_POST['posts_per_page'];
+	
+    $args = array(
+        'post_type' => $post_type,
+        'posts_per_page' => $posts_per_page,
+        'paged' => 1,
+    );
+
+    $next_posts_query = new WP_Query($args);
+
+    // Check if there are posts
+    if ($next_posts_query->have_posts()) {
+        while ($next_posts_query->have_posts()) {
+            $next_posts_query->the_post();
+			$taxonomy = 'category'; // Assuming the taxonomy for categories is 'category', change it if needed
+			$categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all')); 
+			?>
+			<div class="col-md-4  col-sm-6  mb-4">
+				<div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+					<div class="uiexpertz-service-item">
+						<div class="p-1">
+							<?php the_post_thumbnail(get_the_ID(), 'full'); ?>
+						</div>
+						<?php
+						if (!empty($categories)) {
+							// Output the HTML markup for the categories
+							echo '<ul class="list-unstyled d-flex flex-wrap align-items-center gap-1 gap-md-3 p-4 mb-1">';
+							foreach ($categories as $category) {
+								$category_link = get_term_link($category->term_id, $taxonomy);
+								echo '<li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
+								echo '<a href="' . esc_url($category_link) . '">' . $category->name . '</a>';
+								echo '</li>';
+							}
+							echo '</ul>';
+						}
+						?>
+						<div class="service-content px-4 text-decoration-none d-block ">
+							<h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h4>
+							<p class="fs-6 text-clr-gray mb-0"><?php the_excerpt(); ?></p>
+						</div>
+					</div>
+					<a href="<?php the_permalink( get_the_ID() ); ?>"
+						class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
+						<span>
+							<h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+						</span>
+						<span>
+							<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+							</svg>
+
+						</span>
+					</a>
+				</div>
+			</div>
+        <?php }
+        // Reset post data to restore the original loop
+        wp_reset_postdata();
+    }
+
+    // End the AJAX request
+    die();
+}
+add_action('wp_ajax_custom_next_posts', 'custom_next_posts');
+add_action('wp_ajax_nopriv_custom_next_posts', 'custom_next_posts');

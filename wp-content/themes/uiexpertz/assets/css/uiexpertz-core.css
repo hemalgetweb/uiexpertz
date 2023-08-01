@@ -709,9 +709,9 @@ body {
 
 /*workprocess - END*/
 /*brand - start*/
-.brand-wrap {
+/* .brand-wrap {
   animation: animated-slide 15s linear infinite;
-}
+} */
 .brand-wrap .brand-item {
   width: 285px;
   height: 285px;

@@ -7,222 +7,6 @@ function cb_core_check_is_cf7_activated()
 {
     return class_exists('WPCF7');
 }
-if (!function_exists('woocommerce_template_loop_add_to_cart_2')) {
-
-    /**
-     * Get the add to cart template for the loop.
-     *
-     * @param array $args Arguments.
-     */
-    function woocommerce_template_loop_add_to_cart_2($args = array())
-    {
-        global $product;
-
-        if ($product) {
-            $defaults = array(
-                'quantity'   => 1,
-                'class'      => implode(
-                    ' ',
-                    array_filter(
-                        array(
-                            'button',
-                            'product_type_' . $product->get_type(),
-                            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-                            $product->supports('ajax_add_to_cart') && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
-                        )
-                    )
-                ),
-                'attributes' => array(
-                    'data-product_id'  => $product->get_id(),
-                    'data-product_sku' => $product->get_sku(),
-                    'aria-label'       => $product->add_to_cart_description(),
-                    'rel'              => 'nofollow',
-                ),
-            );
-
-            $args = apply_filters('woocommerce_loop_add_to_cart_args', wp_parse_args($args, $defaults), $product);
-
-            if (isset($args['attributes']['aria-label'])) {
-                $args['attributes']['aria-label'] = wp_strip_all_tags($args['attributes']['aria-label']);
-            }
-
-            wc_get_template('loop/add-to-cart-2.php', $args);
-        }
-    }
-}
-
-if (!function_exists('woocommerce_template_loop_add_to_cart_layout')) {
-
-    /**
-     * Get the add to cart template for the loop.
-     *
-     * @param array $args Arguments.
-     */
-    function woocommerce_template_loop_add_to_cart_layout($args = array())
-    {
-        global $product;
-
-        if ($product) {
-            $defaults = array(
-                'quantity'   => 1,
-                'class'      => implode(
-                    ' ',
-                    array_filter(
-                        array(
-                            'button',
-                            'product_type_' . $product->get_type(),
-                            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-                            $product->supports('ajax_add_to_cart') && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
-                        )
-                    )
-                ),
-                'attributes' => array(
-                    'data-product_id'  => $product->get_id(),
-                    'data-product_sku' => $product->get_sku(),
-                    'aria-label'       => $product->add_to_cart_description(),
-                    'rel'              => 'nofollow',
-                ),
-            );
-
-            $args = apply_filters('woocommerce_loop_add_to_cart_args', wp_parse_args($args, $defaults), $product);
-
-            if (isset($args['attributes']['aria-label'])) {
-                $args['attributes']['aria-label'] = wp_strip_all_tags($args['attributes']['aria-label']);
-            }
-
-            wc_get_template('loop/add-to-cart-layout.php', $args);
-        }
-    }
-}
-if (!function_exists('woocommerce_template_loop_add_to_cart_text')) {
-
-    /**
-     * Get the add to cart template for the loop.
-     *
-     * @param array $args Arguments.
-     */
-    function woocommerce_template_loop_add_to_cart_text($args = array())
-    {
-        global $product;
-
-        if ($product) {
-            $defaults = array(
-                'quantity'   => 1,
-                'class'      => implode(
-                    ' ',
-                    array_filter(
-                        array(
-                            'button',
-                            'product_type_' . $product->get_type(),
-                            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-                            $product->supports('ajax_add_to_cart') && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
-                        )
-                    )
-                ),
-                'attributes' => array(
-                    'data-product_id'  => $product->get_id(),
-                    'data-product_sku' => $product->get_sku(),
-                    'aria-label'       => $product->add_to_cart_description(),
-                    'rel'              => 'nofollow',
-                ),
-            );
-
-            $args = apply_filters('woocommerce_loop_add_to_cart_args', wp_parse_args($args, $defaults), $product);
-
-            if (isset($args['attributes']['aria-label'])) {
-                $args['attributes']['aria-label'] = wp_strip_all_tags($args['attributes']['aria-label']);
-            }
-
-            wc_get_template('loop/add-to-cart-text.php', $args);
-        }
-    }
-}
-if (!function_exists('woocommerce_template_loop_add_to_cart_text2')) {
-
-    /**
-     * Get the add to cart template for the loop.
-     *
-     * @param array $args Arguments.
-     */
-    function woocommerce_template_loop_add_to_cart_text2($args = array())
-    {
-        global $product;
-
-        if ($product) {
-            $defaults = array(
-                'quantity'   => 1,
-                'class'      => implode(
-                    ' ',
-                    array_filter(
-                        array(
-                            'button',
-                            'product_type_' . $product->get_type(),
-                            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-                            $product->supports('ajax_add_to_cart') && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
-                        )
-                    )
-                ),
-                'attributes' => array(
-                    'data-product_id'  => $product->get_id(),
-                    'data-product_sku' => $product->get_sku(),
-                    'aria-label'       => $product->add_to_cart_description(),
-                    'rel'              => 'nofollow',
-                ),
-            );
-
-            $args = apply_filters('woocommerce_loop_add_to_cart_args', wp_parse_args($args, $defaults), $product);
-
-            if (isset($args['attributes']['aria-label'])) {
-                $args['attributes']['aria-label'] = wp_strip_all_tags($args['attributes']['aria-label']);
-            }
-
-            wc_get_template('loop/add-to-cart-text2.php', $args);
-        }
-    }
-}
-if (!function_exists('woocommerce_template_loop_add_to_cart_text3')) {
-
-    /**
-     * Get the add to cart template for the loop.
-     *
-     * @param array $args Arguments.
-     */
-    function woocommerce_template_loop_add_to_cart_text3($args = array())
-    {
-        global $product;
-
-        if ($product) {
-            $defaults = array(
-                'quantity'   => 1,
-                'class'      => implode(
-                    ' ',
-                    array_filter(
-                        array(
-                            'button',
-                            'product_type_' . $product->get_type(),
-                            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-                            $product->supports('ajax_add_to_cart') && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
-                        )
-                    )
-                ),
-                'attributes' => array(
-                    'data-product_id'  => $product->get_id(),
-                    'data-product_sku' => $product->get_sku(),
-                    'aria-label'       => $product->add_to_cart_description(),
-                    'rel'              => 'nofollow',
-                ),
-            );
-
-            $args = apply_filters('woocommerce_loop_add_to_cart_args', wp_parse_args($args, $defaults), $product);
-
-            if (isset($args['attributes']['aria-label'])) {
-                $args['attributes']['aria-label'] = wp_strip_all_tags($args['attributes']['aria-label']);
-            }
-
-            wc_get_template('loop/add-to-cart-text3.php', $args);
-        }
-    }
-}
 
 function cb_core_get_current_user_display_name()
 {
@@ -332,7 +116,7 @@ function cb_core_get_allowed_html_tags($level = 'basic')
 
     return $allowed_html;
 }
-function apps_drop_cat($tax, $post='post')
+function uiexpertz_drop_cat($tax, $post='post')
 {
     $args = [
         'taxonomy' => $tax,
@@ -350,7 +134,7 @@ function apps_drop_cat($tax, $post='post')
     }
     return $categories;
 }
-function apps_drop_posts($post_type)
+function uiexpertz_drop_posts($post_type)
 {
     $args = array(
         'numberposts' => -1,
@@ -388,7 +172,7 @@ function cb_core_elementor_review_star_rating_4($star_count) {
     $html .= '</div>';
     return $html;
 }
-function apps_drop_cat_featured($tax)
+function uiexpertz_drop_cat_featured($tax)
 {
     $args = [
         'taxonomy' => $tax,
@@ -824,7 +608,7 @@ function cb_loop_category($post_id)
     }
 }
 
-function apps_get_elementor_template_page() {
+function uiexpertz_get_elementor_template_page() {
     $args = array(
         'post_type'      => 'elementor_library',
         'posts_per_page' => 30,
@@ -842,7 +626,7 @@ function apps_get_elementor_template_page() {
     return $template_arr;
 }
 
-function apps_get_menu_items() {
+function uiexpertz_get_menu_items() {
     $menudata = wp_get_nav_menu_items( 'main-menu' );
     $menu_attributes = array();
     if(!empty($menudata)) {

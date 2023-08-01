@@ -236,3 +236,24 @@ li.recent-post-list .post-time img {
 .pb-120 {
   padding-bottom: 120px;
 }
+.workProcessItem .workBorder {
+  margin-top: -10px;
+}
+.bg-btn.banner-btn[disabled="disabled"] {
+  opacity: .4;
+}
+.uiexpertz-swiper-brand-114 .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.pt-115 {
+  padding-top: 115px;
+}
+.pb-130 {
+  padding-bottom: 130px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mt-40 {
+  margin-top: 40px;
+}

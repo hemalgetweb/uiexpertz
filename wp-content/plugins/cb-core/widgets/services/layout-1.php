@@ -8,21 +8,21 @@
                 <div class="service-item  bg-white d-flex flex-column justify-content-between">
                     <div>
                         <div class="p-1">
-                            <?php echo wp_get_attachment_image( $slide['service_image']['id'], 'full' ); ?>
-                            <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">
+                            <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">
                         </div>
                         <div class="service-content px-4 pt-4 text-decoration-none d-block mt-1">
-                            <h4 class="text-clr-blue fs-4 fw-bold mb-3">UX/UI Design</h4>
-                            <p class="fs-6 text-clr-gray mb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                                aut odit aut fugit,
-                                sed quia consequuntur ma</p>
-                        
+                            <?php if(!empty($slide['service_title'])) : ?>
+                            <h4 class="text-clr-blue fs-4 fw-bold mb-3"><?php echo esc_html($slide['service_title']); ?></h4>
+                            <?php endif; ?>
+                            <?php if(!empty($slide['service_excerpt'])) : ?>
+                                <p class="fs-6 text-clr-gray mb-3"><?php echo wp_kses_post($slide['service_excerpt']); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="px-4 pb-4">
-                            <a href="" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                            <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                                 <span>
-                                    <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                    <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'cb-core'); ?></h4>
                                 </span>
                                 <span>
                                     <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"

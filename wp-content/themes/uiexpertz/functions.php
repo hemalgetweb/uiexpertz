@@ -69,8 +69,8 @@ function uiexpertz_setup()
 	);
 	register_nav_menus(
 		array(
-			'footer-menu' => esc_html__('Footer Menu', 'uiexpertz'),
-		),
+			'footer-menu' => esc_html__('Footer Menu', 'uiexpertz')
+		)
 	);
 
 	add_theme_support(

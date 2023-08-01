@@ -102,6 +102,31 @@
                 speed: 3000,
                 slidesPerView: 7,
                 loop: true,
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                      slidesPerView: 3,
+                      spaceBetween: 0
+                    },
+                    // when window width is >= 575px
+                    576: {
+                      slidesPerView: 4,
+                      spaceBetween: 0
+                    },
+                    // when window width is >= 640px
+                    768: {
+                      slidesPerView: 5,
+                      spaceBetween: 0
+                    },
+                    992: {
+                        slidesPerView: 6,
+                        spaceBetween: 0
+                    },
+                    1200: {
+                        slidesPerView: 7,
+                        spaceBetween: 0
+                    }
+                }
             });
             UIExpertzBrand114.el.addEventListener('mouseover', function(){     //add
                 UIExpertzBrand114.autoplay.stop()                              //add

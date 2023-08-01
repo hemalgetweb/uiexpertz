@@ -184,8 +184,9 @@
             delay: 1,
         },
     });
-
-    tl.to(".slide-1", { opacity: 1, display: "none" }).to("#introduction", { opacity: 1, display: "none" });
+    if(hasClass('.slide-1') && hasClass('#introduction')) {
+        tl.to(".slide-1", { opacity: 1, display: "none" }).to("#introduction", { opacity: 1, display: "none" });
+    }
 
     
 

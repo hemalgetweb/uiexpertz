@@ -55,17 +55,10 @@
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                 </a>
-                <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icons">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/menu-bar.png" alt="bar icon" class="img-fluid">
-                    </span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <?php uiexpertz_header_menu(); ?>
                     <div class="navbar-right btn-wrap d-flex flex-wrap gap-3 gap-lg-4">
-                        `<?php if(!empty($cbtoolkit_side_support_number_text_1)) : ?>
+                        <?php if(!empty($cbtoolkit_side_support_number_text_1)) : ?>
                         <a class="link-text ms-4 text-decoration-none pe-4 fs-5 text-white d-flex gap-2 align-items-center"
                             href="tel:+88 012 458 368">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.svg" alt="icon" class="img-fluid">

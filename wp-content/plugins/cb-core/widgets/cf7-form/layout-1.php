@@ -37,15 +37,10 @@
                                 <!-- <h3 class="fs-4 fw-bold">Fill out the form to start the <br class="d-none d-xl-inline">
                                     conversation</h3> -->
                                 
-                                <?php if(!empty($settings['section_title'])) : ?>
+                                <?php if(!empty($settings['section_title_form'])) : ?>
                                     <h3 class="fs-4 fw-bold">
-                                        <?php echo cb_core_kses_basic($settings['section_title']); ?>
+                                        <?php echo cb_core_kses_basic($settings['section_title_form']); ?>
                                     </h3>
-                                <?php endif; ?>
-                                <?php if(!empty($settings['section_subtitle'])) : ?>
-                                    <p class="fs-6 text-clr-dark2">
-                                        <?php echo cb_core_kses_basic($settings['section_subtitle']); ?>
-                                    </p>
                                 <?php endif; ?>
                             </div>
                             <div class="contact-form">

@@ -882,7 +882,6 @@ svg *.btn-swiper:hover {
   }
 }
 .contact .footer-bg {
-  background-image: url(../img/footershape.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

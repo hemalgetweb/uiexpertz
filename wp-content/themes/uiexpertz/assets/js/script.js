@@ -7,6 +7,58 @@
             $("header").removeClass("fixed-header");
         }
     });
+    var CB_Testimonial = function($scope, $) {
+        $scope.find('.testi-slider').each(function() {
+            // testimonial-active
+            const TestiSlider = new Swiper(".testi-slider", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next-unique",
+                    prevEl: ".swiper-button-prev-unique",
+                },
+
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        })
+    }
+    var CB_Brand = function($scope, $) {
+        $scope.find('.uiexpertz-swiper-brand-114').each(function() {
+            var UIExpertzBrand114 = new Swiper ('.uiexpertz-swiper-brand-114', {
+                autoplay: {     //add
+                    delay: 0,   //add
+                },
+                spaceBetween: 0,
+                centeredSlides: true,
+                speed: 3000,
+                slidesPerView: 7,
+                loop: true,
+            });
+            UIExpertzBrand114.el.addEventListener('mouseover', function(){     //add
+                UIExpertzBrand114.autoplay.stop()                              //add
+            })                                                      //add
+            UIExpertzBrand114.el.addEventListener('mouseleave', function(){    //add
+                UIExpertzBrand114.autoplay.start()                             //add
+            })
+        })
+    }  
     $(document).ready(function () {
         $("[data-background").each(function(){
             $(this).css("background-image","url("+$(this).attr("data-background") + ") ")
@@ -83,34 +135,7 @@
 
     tl.to(".slide-1", { opacity: 1, display: "none" }).to("#introduction", { opacity: 1, display: "none" });
 
-    // testimonial-active
-    const swiper = new Swiper(".testi-slider", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next-unique",
-            prevEl: ".swiper-button-prev-unique",
-        },
-
-        breakpoints: {
-            300: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
-    });
+    
 
     // Swipper js case study
     const swiper2 = new Swiper(".caseStudy-slider", {
@@ -154,5 +179,8 @@
             marqueeContent.style.animationPlayState = "running";
         });
     }
-
+    $( window ).on( 'elementor/frontend/init', function() {
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/cb-brand.default', CB_Brand );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/cb-testimonial.default', CB_Testimonial );
+    } );
 })(jQuery)

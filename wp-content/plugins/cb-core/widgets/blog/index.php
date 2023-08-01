@@ -217,7 +217,7 @@ class CB_Core_Blog extends Widget_Base
 			[
 				'label' => __('Category', 'cb-core'),
 				'type' => Controls_Manager::SELECT2,
-				'options' => uiexpertz_drop_cat('category', 'post'),
+				'options' => \uiexpertz_drop_cat('category', 'post'),
 				'multiple' => true,
 				'label_block' => true,
 				'condition' => [
@@ -230,7 +230,7 @@ class CB_Core_Blog extends Widget_Base
 			[
 				'label' => __('Posts', 'cb-core'),
 				'type' => Controls_Manager::SELECT2,
-				'options' => uiexpertz_drop_posts('post'),
+				'options' => \uiexpertz_drop_posts('post'),
 				'multiple' => true,
 				'label_block' => true,
 				'condition' => [

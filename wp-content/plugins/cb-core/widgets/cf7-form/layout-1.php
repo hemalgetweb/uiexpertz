@@ -40,19 +40,18 @@
                                 <?php endif; ?>
                             </div>
                             <div class="contact-form">
-                                <form class="form-wrapper">
-
-                                    <?php
-                                        if(class_exists('WPCF7')) :
-                                            if (!empty($settings['form_id'])) {
-                                                echo cb_core_do_shortcode('contact-form-7', [
-                                                    'id' => $settings['form_id'],
-                                                    'html_class' => 'cb-cf7-form ' . cb_core_sanitize_html_class_param($settings['html_class']),
-                                                ]);
-                                            }
-                                        endif;
-                                    ?>
-                                </form>
+                                <div class="form-wrapper">
+                                <?php
+                                    if(class_exists('WPCF7')) :
+                                        if (!empty($settings['form_id'])) {
+                                            echo cb_core_do_shortcode('contact-form-7', [
+                                                'id' => $settings['form_id'],
+                                                'html_class' => 'cb-cf7-form ' . cb_core_sanitize_html_class_param($settings['html_class']),
+                                            ]);
+                                        }
+                                    endif;
+                                ?>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,7 @@
         <nav class="navbar p-0">
             <div class="mobileMenu-container">
                 <div class="mobileMenu-header d-flex align-items-center gap-4 justify-content-between">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                     </a>
                     <div class="navbarToggler  border-0 text-decoration-none">
@@ -52,7 +52,7 @@
     <header id="header" class="m-auto position-fixed top-0 start-0 end-0 d-xl-block d-none" style="background-color: var(--blue)">
         <nav class="navbar navbar-expand-xl py-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                 </a>
                 <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="collapse"

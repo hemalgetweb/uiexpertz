@@ -189,7 +189,6 @@ function uiexpertz_scripts()
 {
 	// all CSS
 	wp_enqueue_style('uiexpertz-fonts', uiexpertz_fonts_url(), array(), '1.0.0');
-	wp_enqueue_style('nioicon', UIEXPERTZ_THEME_CSS_DIR . 'nioicon.css');
 	wp_enqueue_style('swiper-bundle', UIEXPERTZ_THEME_CSS_DIR . 'swiper-bundle.min.css');
 	wp_enqueue_style('bootstrap', UIEXPERTZ_THEME_CSS_DIR . 'bootstrap.min.css');
 

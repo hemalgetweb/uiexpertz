@@ -1,10 +1,11 @@
-.common-fill-btn .elementor-button {
-    position: relative !important;
+.common-fill-btn .elementor-button,
+.btn-download-icon .elementor-button {
+    position: relative;
 }
 
 .common-fill-btn .elementor-button::after {
-    position: absolute !important;
-    content: "" !important;
+    position: absolute;
+    content: "";
     width: 20px;
     height: 20px;
     top: calc(50% - 10px);
@@ -17,6 +18,24 @@
 .common-fill-btn .elementor-button:hover::after {
     right: 25px;
 }
+
+.btn-download-icon .elementor-button::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    right: 25px;
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L5.0625 8.9375L9.25 13.125L9.25 4L10.75 4L10.75 13.125L14.9375 8.9375L16 10L10 16L4 10Z" fill="white"/></svg>');
+    background-repeat: no-repeat;
+    transition: all 200ms ease;
+}
+
+.btn-download-icon .elementor-button:hover::after {
+    top: calc(50% - 5px);
+}
+
+
 
 
 

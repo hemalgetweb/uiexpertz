@@ -292,3 +292,8 @@ li.recent-post-list .post-time img {
     flex-direction: column;
   }
 }
+@media (max-width: 767px) {
+  .section-heading .fs-40.text-clr-blue.py-2 br {
+    display: none;
+  }
+}

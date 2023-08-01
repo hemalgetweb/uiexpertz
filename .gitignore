@@ -7,7 +7,7 @@ wp-content/backups/
 wp-content/plugins/elementor
 wp-content/cache/
 wp-content/upgrade/
-wp-content/uploads/
+# wp-content/uploads/
 wp-content/plugins/hello.php
 
 # Ignore any local configuration files

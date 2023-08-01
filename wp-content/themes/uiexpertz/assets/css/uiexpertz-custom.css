@@ -296,4 +296,7 @@ li.recent-post-list .post-time img {
   .section-heading .fs-40.text-clr-blue.py-2 br {
     display: none;
   }
+  .brand .fs-40.text-white.py-2 br {
+    display: none;
+  }
 }

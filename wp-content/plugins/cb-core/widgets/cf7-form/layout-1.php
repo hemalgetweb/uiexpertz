@@ -1,16 +1,25 @@
     <!-- contact start -->
     <div class="contact bg-clr-blue section-padding">
-        <div class="section-heading text-center mb-5">
-            <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
-                <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <?php if(!empty($settings['section_subtitle'])) : ?>
+                <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
+                    <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post($settings['section_subtitle']); ?></p>
+                </div>
+                <?php endif; ?>
+                <h1 class="fs-40 text-white py-2">
+                    <?php if(!empty($settings['section_title'])) : ?>
+                        <?php echo wp_kses_post($settings['section_title']); ?>
+                    <?php endif; ?>
+                    <?php if(!empty($settings['contact_mail_text'])) : ?>
+                        <span><a class="fw-extraBold text-white text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a></span>
+                    <?php endif; ?>
+                </h1>
+                <?php if(!empty($settings['section_content'])) : ?>
+                    <p class="text-clr-skyBlue"><?php echo wp_kses_post($settings['section_content']); ?></p>
+                <?php endif; ?>
             </div>
-            <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span>
-                <a class="fw-extraBold text-white text-decoration-underline" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
-            </h1>
-            <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
-                thrilled to hear how we’ve helped our
-                clients achieve their goals.</p>
         </div>
         <div class="footer-bg">
 
@@ -28,31 +37,25 @@
                                 <!-- <h3 class="fs-4 fw-bold">Fill out the form to start the <br class="d-none d-xl-inline">
                                     conversation</h3> -->
                                 
-                                <?php if(!empty($settings['section_title'])) : ?>
+                                <?php if(!empty($settings['section_title_form'])) : ?>
                                     <h3 class="fs-4 fw-bold">
-                                        <?php echo cb_core_kses_basic($settings['section_title']); ?>
+                                        <?php echo cb_core_kses_basic($settings['section_title_form']); ?>
                                     </h3>
-                                <?php endif; ?>
-                                <?php if(!empty($settings['section_subtitle'])) : ?>
-                                    <p class="fs-6 text-clr-dark2">
-                                        <?php echo cb_core_kses_basic($settings['section_subtitle']); ?>
-                                    </p>
                                 <?php endif; ?>
                             </div>
                             <div class="contact-form">
-                                <form class="form-wrapper">
-
-                                    <?php
-                                        if(class_exists('WPCF7')) :
-                                            if (!empty($settings['form_id'])) {
-                                                echo cb_core_do_shortcode('contact-form-7', [
-                                                    'id' => $settings['form_id'],
-                                                    'html_class' => 'cb-cf7-form ' . cb_core_sanitize_html_class_param($settings['html_class']),
-                                                ]);
-                                            }
-                                        endif;
-                                    ?>
-                                </form>
+                                <div class="form-wrapper">
+                                <?php
+                                    if(class_exists('WPCF7')) :
+                                        if (!empty($settings['form_id'])) {
+                                            echo cb_core_do_shortcode('contact-form-7', [
+                                                'id' => $settings['form_id'],
+                                                'html_class' => 'cb-cf7-form ' . cb_core_sanitize_html_class_param($settings['html_class']),
+                                            ]);
+                                        }
+                                    endif;
+                                ?>
+                                </div>
                             </div>
                         </div>
                     </div>

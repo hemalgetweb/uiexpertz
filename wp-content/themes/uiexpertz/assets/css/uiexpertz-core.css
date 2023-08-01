@@ -697,7 +697,7 @@ body {
   width: 42px;
 }
 .workProcessItem .workBorder {
-  width: 1px;
+  width: 5px;
   min-height: 205px;
   background-color: #001345;
 }

@@ -276,3 +276,33 @@ li.recent-post-list .post-time img {
 .service-item.js-text-cursor-block .p-1 img {
   width: 100%;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .workProcessItem .workBorder {
+    width: 2px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .workProcessItem .workBorder {
+    width: 3px;
+  }
+  .testimonial .swiper-button-prev-unique, .testimonial .swiper-button-next-unique {
+    bottom: 160px;
+  }
+  .latest-blog .blog-heading.d-flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .section-heading .fs-40.text-clr-blue.py-2 br {
+    display: none;
+  }
+  .brand .fs-40.text-white.py-2 br {
+    display: none;
+  }
+}
+.contact .fs-40.text-white.py-2 span {
+	word-wrap: anywhere;
+}
+.uiexpertz-service-item .p-1 img {
+	width: 100%;
+}

@@ -122,7 +122,7 @@
                       spaceBetween: 0
                     },
                     992: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 0
                     },
                     1200: {

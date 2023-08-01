@@ -11,7 +11,7 @@
                 $taxonomy = 'category'; // Assuming the taxonomy for categories is 'category', change it if needed
                 $categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all'));    
             ?>
-                <div class="col-md-4  col-sm-6  mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-6  mb-4">
                     <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
                         <div class="uiexpertz-service-item">
                             <div class="p-1">
@@ -53,18 +53,6 @@
                 </div>
                 <?php endwhile; wp_reset_query(); ?>
 
-            </div>
-            <div class="d-flex align-items-center  mt-5 pt-3 justify-content-center">
-                <button data-posts_per_page="<?php echo $per_page; ?>" data-max_num_pages="<?php echo esc_attr($max_num_pages); ?>" class="uiexperts-more-works-portfolio text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center "
-                    href="#0">
-                    More works
-                    <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z"
-                            fill="white" />
-                    </svg>
-
-                </button>
             </div>
         </div>
         <?php endif; ?>

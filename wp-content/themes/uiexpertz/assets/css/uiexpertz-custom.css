@@ -303,3 +303,6 @@ li.recent-post-list .post-time img {
 .contact .fs-40.text-white.py-2 span {
 	word-wrap: anywhere;
 }
+.uiexpertz-service-item .p-1 img {
+	width: 100%;
+}

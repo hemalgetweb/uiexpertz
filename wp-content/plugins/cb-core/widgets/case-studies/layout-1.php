@@ -11,7 +11,7 @@
                 $taxonomy = 'category'; // Assuming the taxonomy for categories is 'category', change it if needed
                 $categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all'));    
             ?>
-                <div class="col-md-4  col-sm-6  mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-6  mb-4">
                     <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
                         <div class="uiexpertz-service-item">
                             <div class="p-1">

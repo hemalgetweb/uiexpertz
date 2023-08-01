@@ -288,4 +288,7 @@ li.recent-post-list .post-time img {
   .testimonial .swiper-button-prev-unique, .testimonial .swiper-button-next-unique {
     bottom: 160px;
   }
+  .latest-blog .blog-heading.d-flex {
+    flex-direction: column;
+  }
 }

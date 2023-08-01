@@ -18,6 +18,7 @@
         <?php if(!empty($settings['slides'])) : ?>
         <div class="swiper testi-slider">
             <div class="testimonial-slider swiper-wrapper pt-5">
+                <?php foreach($settings['slides'] as $slide) : ?>
                 <div class="slider-item swiper-slide">
                     <?php if(!empty($slide['testimonial_rating'])) : ?>
                     <div class="rating d-flex align-items-center gap-1">
@@ -60,74 +61,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="slider-item swiper-slide">
-                    <div class="rating d-flex align-items-center gap-1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                    </div>
-                    <p class="text-clr-sky fs-22 py-3 mt-3">The product's speed of delivering an answer to a user
-                        decreased from 30
-                        seconds to 10. Neuron was easy to work with and
-                        made the engagement seamless.</p>
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/writer1.png" class="img-fluid" alt="">
-                        <p class="fs-12 fw-medium text-clr-skyBlue mb-0">Halász Emese / CEO / Gemetric Agency</p>
-                    </div>
-                </div>
-                <div class="slider-item swiper-slide">
-                    <div class="rating d-flex align-items-center gap-1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                    </div>
-                    <p class="text-clr-sky fs-22 py-3 mt-3">The product's speed of delivering an answer to a user
-                        decreased from 30
-                        seconds to 10. Neuron was easy to work with and
-                        made the engagement seamless.</p>
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/writer1.png" class="img-fluid" alt="">
-                        <p class="fs-12 fw-medium text-clr-skyBlue mb-0">Halász Emese / CEO / Gemetric Agency</p>
-                    </div>
-                </div>
-                <div class="slider-item swiper-slide">
-                    <div class="rating d-flex align-items-center gap-1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                    </div>
-                    <p class="text-clr-sky fs-22 py-3 mt-3">The product's speed of delivering an answer to a user
-                        decreased from 30
-                        seconds to 10. Neuron was easy to work with and
-                        made the engagement seamless.</p>
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/writer1.png" class="img-fluid" alt="">
-                        <p class="fs-12 fw-medium text-clr-skyBlue mb-0">Halász Emese / CEO / Gemetric Agency</p>
-                    </div>
-                </div>
-                <div class="slider-item swiper-slide">
-                    <div class="rating d-flex align-items-center gap-1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                    </div>
-                    <p class="text-clr-sky fs-22 py-3 mt-3">The product's speed of delivering an answer to a user
-                        decreased from 30
-                        seconds to 10. Neuron was easy to work with and
-                        made the engagement seamless.</p>
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/writer1.png" class="img-fluid" alt="">
-                        <p class="fs-12 fw-medium text-clr-skyBlue mb-0">Halász Emese / CEO / Gemetric Agency</p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>

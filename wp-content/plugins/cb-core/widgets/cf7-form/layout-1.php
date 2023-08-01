@@ -1,16 +1,18 @@
     <!-- contact start -->
     <div class="contact bg-clr-blue section-padding">
-        <div class="section-heading text-center mb-5">
-            <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
-                <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
+                    <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+                </div>
+                <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span>
+                    <a class="fw-extraBold text-white text-decoration-underline" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
+                </h1>
+                <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
+                    thrilled to hear how we’ve helped our
+                    clients achieve their goals.</p>
             </div>
-            <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span>
-                <a class="fw-extraBold text-white text-decoration-underline" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
-            </h1>
-            <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
-                thrilled to hear how we’ve helped our
-                clients achieve their goals.</p>
         </div>
         <div class="footer-bg">
 

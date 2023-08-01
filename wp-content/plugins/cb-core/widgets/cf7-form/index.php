@@ -142,7 +142,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('Get Weeky & Offer Daily News', 'cb-core'),
 				'placeholder' => __('Type your title here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1', 'layout-2']
+					'layout' => ['layout-1']
 				]
 			]
 		);
@@ -155,7 +155,33 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('We are excited to get to know more about you, your business, and your needs! ', 'cb-core'),
 				'placeholder' => __('Type your subtitle here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1', 'layout-2']
+					'layout' => ['layout-1']
+				]
+			]
+		);
+		$this->add_control(
+			'contact_mail_text',
+			[
+				'label' => __('Contact Mail Text', 'cb-core'),
+				'label_block' => true,
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __('hello@uiexpertz.com', 'cb-core'),
+				'placeholder' => __('Type your mail here', 'cb-core'),
+				'condition' => [
+					'layout' => ['layout-1']
+				]
+			]
+		);
+		$this->add_control(
+			'contact_mail_link',
+			[
+				'label' => __('Contact Mail Link', 'cb-core'),
+				'label_block' => true,
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __('hello@uiexpertz.com', 'cb-core'),
+				'placeholder' => __('Type your mail here', 'cb-core'),
+				'condition' => [
+					'layout' => ['layout-1']
 				]
 			]
 		);
@@ -167,7 +193,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'placeholder' => __('Type your content here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-2']
+					'layout' => ['layout-1']
 				]
 			]
 		);

@@ -300,3 +300,6 @@ li.recent-post-list .post-time img {
     display: none;
   }
 }
+.contact .fs-40.text-white.py-2 span {
+	word-wrap: anywhere;
+}

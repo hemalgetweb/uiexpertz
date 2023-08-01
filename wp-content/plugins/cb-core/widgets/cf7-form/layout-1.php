@@ -2,16 +2,23 @@
     <div class="contact bg-clr-blue section-padding">
         <div class="container">
             <div class="section-heading text-center mb-5">
+                <?php if(!empty($settings['section_subtitle'])) : ?>
                 <div class="section-hints d-flex justify-content-center align-items-center gap-2">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" class="img-fluid" alt="section-heading">
-                    <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+                    <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post($settings['section_subtitle']); ?></p>
                 </div>
-                <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span>
-                    <a class="fw-extraBold text-white text-decoration-underline" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
+                <?php endif; ?>
+                <h1 class="fs-40 text-white py-2">
+                    <?php if(!empty($settings['section_title'])) : ?>
+                        <?php echo wp_kses_post($settings['section_title']); ?>
+                    <?php endif; ?>
+                    <?php if(!empty($settings['contact_mail_text'])) : ?>
+                        <span><a class="fw-extraBold text-white text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a></span>
+                    <?php endif; ?>
                 </h1>
-                <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
-                    thrilled to hear how we’ve helped our
-                    clients achieve their goals.</p>
+                <?php if(!empty($settings['section_content'])) : ?>
+                    <p class="text-clr-skyBlue"><?php echo wp_kses_post($settings['section_content']); ?></p>
+                <?php endif; ?>
             </div>
         </div>
         <div class="footer-bg">

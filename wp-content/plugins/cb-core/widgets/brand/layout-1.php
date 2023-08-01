@@ -1,5 +1,5 @@
     <!-- brand start -->
-    <div class="brand pb-130 pt-115 bg-clr-blue">
+    <div class="brand pb-130 pt-115 bg-clr-blue overflow-hidden">
         
         <div class="container">
             <div class=" me-auto mb-5">

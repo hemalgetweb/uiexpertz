@@ -218,7 +218,7 @@ Register Fonts
 function uiexpertz_fonts_url()
 {
 	if ('off' !== _x('on', 'Google font: on or off', 'uiexpertz')) {
-		$font_url = 'https://fonts.googleapis.com/css2?' . urlencode('family=DM+Sans:wght@400;500;600;700&display=swap');
+		$font_url = 'https://fonts.googleapis.com/css2?' . urlencode('family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 	}
 	return $font_url;
 }

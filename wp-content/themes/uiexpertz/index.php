@@ -78,6 +78,10 @@ $categories = get_categories(array(
 					<?php
 						while(have_posts()) :
 						the_post();
+                        $post_type = get_post_type(get_the_ID());
+                        if('page' == $post_type) {
+                            continue;
+                        }
 						$category = get_the_category(get_the_ID());
 						$cat_id = '';
 						$cat_name = '';

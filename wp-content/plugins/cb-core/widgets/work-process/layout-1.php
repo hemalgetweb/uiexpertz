@@ -7,7 +7,7 @@
                     <?php foreach($settings['slides'] as $slide) : ?>
                     <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
                         <div
-                            class="workProcessItem d-flex align-items-start gap-4 elementor-repeater-item-<?php echo esc_attr( $slide['_id'] ); ?>">
+                            class="workProcessItem d-flex mb-40 align-items-start gap-4 elementor-repeater-item-<?php echo esc_attr( $slide['_id'] ); ?>">
                             <?php if(!empty($slide['count'])) : ?>
                             <h2 class="fs-40 text-clr-blue process-count"><?php echo esc_html($slide['count']); ?>
                                 <span class="count-shape"></span>
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <?php endforeach; ?>
-                    <div class="d-flex flex-wrap align-items-center gap-3 mt-5 pt-3 justify-content-center">
+                    <div class="d-flex flex-wrap align-items-center gap-3 mt-40 justify-content-center">
                             <?php if(!empty($settings['btn_text_1'])) :
                             if ( ! empty( $settings['btn_link_1']['url'] ) ) {
                                 $this->add_link_attributes( 'btn_link_1', $settings['btn_link_1'] );

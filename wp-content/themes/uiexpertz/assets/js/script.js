@@ -177,16 +177,6 @@
 
         //faq-end
     });
-    tl = gsap.timeline({
-        defaults: {
-            duration: 1.2,
-            ease: "expo.inOut",
-            delay: 1,
-        },
-    });
-    if(hasClass('.slide-1') && hasClass('#introduction')) {
-        tl.to(".slide-1", { opacity: 1, display: "none" }).to("#introduction", { opacity: 1, display: "none" });
-    }
 
     
 

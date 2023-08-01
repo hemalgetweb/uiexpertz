@@ -191,11 +191,6 @@ class CB_Core_Service_Grid extends Widget_Base
              'label'       => esc_html__( 'Section Label', 'cb-core' ),
              'type'        => \Elementor\Controls_Manager::REPEATER,
              'fields'      => $repeater->get_controls(),
-             'default'     => [
-               [
-                 'item_id'   => esc_html__( 'Default-value', 'cb-core' ),
-               ],
-             ],
              'title_field' => '{{{ item_id }}}',
            ]
          );

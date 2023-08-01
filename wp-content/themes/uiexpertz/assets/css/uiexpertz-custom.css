@@ -268,3 +268,8 @@ li.recent-post-list .post-time img {
   width: 100%;
 
 }
+@media (max-width: 767px) {
+  #whychooseus .why-choose-us-wrapper .why-choose-us-item {
+      padding: 30px 15px;
+  }
+}

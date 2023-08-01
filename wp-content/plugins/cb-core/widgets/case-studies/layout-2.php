@@ -1,49 +1,46 @@
-<div class="case-study bg-clr-lightGray section-padding">
+<div class="case-study">
     <div class="container">
-        <div class="section-heading text-center mb-5">
-            <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-                <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">Case Studies</p>
-            </div>
-            <h1 class="fs-40 text-clr-blue py-2">Our UX/Ui design case studies
-            </h1>
-            <p class="text-clr-gray">We help create products while keeping in mind the brand, overall design, usability,
-                and
-                functionality.</p>
-        </div>
+    <?php if($wp_query->have_posts()) : ?>
         <div class="case-study-wrap">
             <div class="swiper caseStudy-slider">
                 <div class="swiper-wrapper">
+                <?php while($wp_query->have_posts()) : $wp_query->the_post();
+                    $taxonomy = 'category'; // Assuming the taxonomy for categories is 'category', change it if needed
+                    $categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all'));    
+                ?>
                     <div class="swiper-slide">
                         <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
-                            <a href="#" class="js-text-cursor d-none">
+                            <a href="<?php echo get_the_permalink( get_the_ID()); ?>" class="js-text-cursor d-none">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.png" class="arrow-image" alt="Arrow image">
                             </a>
                             <div>
+                                <?php if(has_post_thumbnail()) : ?>
                                 <div class="p-1">
-                                    <img src="assets/img/blog1.png" class="img-fluid w-100" alt="portfolio">
+                                    <?php the_post_thumbnail(get_the_ID()); ?>
                                 </div>
-                                <ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap  px-4 pt-4">
-                                    <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">
-                                        App</li>
-                                    <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">
-                                        Fitness</li>
-                                    <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">
-                                        UI/ux design
-                                    </li>
-                                </ul>
+                                <?php endif; ?>
+                                <?php
+                                if (!empty($categories)) {
+                                    // Output the HTML markup for the categories
+                                    echo '<ul class="list-unstyled d-flex flex-wrap align-items-center gap-1 gap-md-3 p-4 mb-1">';
+                                    foreach ($categories as $category) {
+                                        $category_link = get_term_link($category->term_id, $taxonomy);
+                                        echo '<li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
+                                        echo '<a href="' . esc_url($category_link) . '">' . $category->name . '</a>';
+                                        echo '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
                                 <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-                                    <h4 class="text-clr-blue fs-5 fw-bold mb-3">How to Handle Complex Apps and B2B
-                                        Interface
-                                        Design</h4>
-                                    <p class="fs-6 text-clr-gray mb-3">Nemo enim ipsam voluptatem quia voluptas sit
-                                        aspernatur
-                                        aut odit aut fugit, sed quia consequuntur ma</p>
+                                    <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h4>
+                                    <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
                                 </div>
                             </div>
-                            <a href=""
+                            <a href="<?php the_permalink( get_the_ID() ); ?>"
                                 class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
                                 <span>
-                                    <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                    <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'cb-core'); ?></h4>
                                 </span>
                                 <span>
                                     <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
@@ -57,11 +54,13 @@
 
                         </div>
                     </div>
+                <?php endwhile; wp_reset_query(); ?>
                 </div>
 
             </div>
 
         </div>
+        <?php endif; ?>
     </div>
 
     <div class="swipper-button position-relative">

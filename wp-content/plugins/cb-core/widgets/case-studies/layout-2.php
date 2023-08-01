@@ -16,7 +16,7 @@
                             <div>
                                 <?php if(has_post_thumbnail()) : ?>
                                 <div class="p-1">
-                                    <?php the_post_thumbnail(get_the_ID()); ?>
+                                    <?php the_post_thumbnail(get_the_ID(), 'full'); ?>
                                 </div>
                                 <?php endif; ?>
                                 <?php

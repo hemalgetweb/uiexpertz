@@ -37,7 +37,14 @@
 
 .back-to-home-btn {
     padding: 16px 30px 16px 60px !important;
+    background-color: #5648FF !important;
+    transition: all 200ms ease;
 }
+
+.back-to-home-btn:hover {
+    background-color: #36b7ff !important;
+}
+
 .back-to-home-btn::before {
     position: absolute;
     content: "";

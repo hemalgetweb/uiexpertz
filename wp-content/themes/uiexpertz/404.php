@@ -11,32 +11,64 @@
 get_header();
 
 $cbtoolkit_error_404_image = get_theme_mod('cbtoolkit_error_404_image', get_template_directory_uri() . '/assets/img/404.png');
-$cbtoolkit_error_title = get_theme_mod('cbtoolkit_error_title', __('Oh no! This Page Not Found', 'uiexpertz'));
-$cbtoolkit_error_desc = get_theme_mod('cbtoolkit_error_desc', __('The page you are looking for might have been removed its name, changed or is temporary unavailable.', 'uiexpertz'));
-$cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Back To Home', 'uiexpertz'));
+$cbtoolkit_error_title = get_theme_mod('cbtoolkit_error_title', __('Page not found', 'uiexpertz'));
+$cbtoolkit_error_desc = get_theme_mod('cbtoolkit_error_desc', __('Sorry we can`t find that page!', 'uiexpertz'));
+$cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take me home', 'uiexpertz'));
 ?>
-<!-- error area start -->
-<section class="uiexpertz-error-area-114 pt-165 pb-100">
+
+<!--subbanner banner -->
+<section class="subBanner bg-clr-blue fs-6 ">
    <div class="container">
-      <?php if(!empty($cbtoolkit_error_404_image)) : ?>
-      <div class="uiexpertz-error-image-top-114">
-         <img src="<?php echo esc_url($cbtoolkit_error_404_image); ?>" alt="<?php echo esc_attr__('Error image', 'uiexpertz'); ?>">
-      </div>
-      <?php endif; ?>
-      <div class="uiexpertz-error-cotnent-114">
-         <?php if(!empty($cbtoolkit_error_title)) : ?>
-            <h4 class="title"><?php echo wp_kses_post($cbtoolkit_error_title); ?></h4>
-         <?php endif; ?>
-         <?php if(!empty($cbtoolkit_error_desc)) : ?>
-            <p><?php echo wp_kses_post($cbtoolkit_error_desc); ?></p>
-         <?php endif; ?>
-         <?php if(!empty($cbtoolkit_error_link_text)) : ?>
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="uiexpertz-errror-btn-114"><i class="fas fa-long-arrow-alt-left"></i> <?php echo wp_kses_post($cbtoolkit_error_link_text); ?></a>
-         <?php endif; ?>
+      <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
+                  
+                  <?php if(!empty($cbtoolkit_error_title)) : ?>
+                     <p class="text-clr-sky fs-18">
+                        <?php echo wp_kses_post($cbtoolkit_error_title); ?>
+                     </p>
+                  <?php endif; ?>
+                  
+                  <?php if(!empty($cbtoolkit_error_desc)) : ?>
+                     <h1 class="fs-48 text-white mb-4 ">
+                        <?php echo wp_kses_post($cbtoolkit_error_desc); ?>
+                     </h1>
+                  <?php endif; ?>
+                  
+                  <div class="section-intro fs-18 fw-normal text-clr-skyBlue mb-5 ">
+                     <p>
+                        The page you are looking for might have been removed its
+                        name, changed or is temporary unavailable.
+                     </p>
+                  </div>
+                  <div class="navbar-right btn-wrap d-flex justify-content-lg-start justify-content-center flex-wrap gap-3 gap-lg-4">
+                     <?php if(!empty($cbtoolkit_error_link_text)) : ?>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="text-decoration-none position-relative bg-btn banner-btn text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.70898 10.6252L10.8757 15.7918L10.0007 16.6668L3.33398 10.0002L10.0007 3.3335L10.8757 4.2085L5.70898 9.37516H16.6673V10.6252H5.70898Z" fill="white"/>
+                           </svg>
+                           <?php echo wp_kses_post($cbtoolkit_error_link_text); ?>
+                        </a>
+                     <?php endif; ?>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">               
+               <?php if(!empty($cbtoolkit_error_404_image)) : ?>
+               <div class="banner-img text-center text-lg-end">
+                  <img src="<?php echo esc_url($cbtoolkit_error_404_image); ?>" alt="<?php echo esc_attr__('Error image', 'uiexpertz'); ?>" class="img-fluid">
+               </div>
+               <?php endif; ?>
+            </div>
+         </div>
       </div>
    </div>
 </section>
-<!-- error area end -->
+<!--/ banner -->
+
+
+
 
 <?php
 get_footer();

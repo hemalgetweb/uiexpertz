@@ -142,7 +142,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('Get Weeky & Offer Daily News', 'cb-core'),
 				'placeholder' => __('Type your title here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);
@@ -155,7 +155,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('Fill out the form to start the conversation', 'cb-core'),
 				'placeholder' => __('Type your form title here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);
@@ -169,7 +169,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('We are excited to get to know more about you, your business, and your needs! ', 'cb-core'),
 				'placeholder' => __('Type your subtitle here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);
@@ -182,7 +182,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('hello@uiexpertz.com', 'cb-core'),
 				'placeholder' => __('Type your mail here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);
@@ -195,7 +195,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('hello@uiexpertz.com', 'cb-core'),
 				'placeholder' => __('Type your mail here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);
@@ -207,7 +207,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'placeholder' => __('Type your content here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1']
+					'layout' => ['layout-1', 'layout-2']
 				]
 			]
 		);

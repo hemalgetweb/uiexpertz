@@ -169,7 +169,7 @@ class CB_Core_CF7_Form extends Widget_Base
 				'default' => __('We are excited to get to know more about you, your business, and your needs! ', 'cb-core'),
 				'placeholder' => __('Type your subtitle here', 'cb-core'),
 				'condition' => [
-					'layout' => ['layout-1', 'layout-2']
+					'layout' => ['layout-1']
 				]
 			]
 		);

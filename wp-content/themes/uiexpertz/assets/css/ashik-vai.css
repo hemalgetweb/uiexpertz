@@ -35,6 +35,29 @@
     top: calc(50% - 5px);
 }
 
+.back-to-home-btn {
+    padding: 16px 30px 16px 60px;
+}
+.back-to-home-btn::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: 25px;
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.70898 10.6252L10.8757 15.7918L10.0007 16.6668L3.33398 10.0002L10.0007 3.3335L10.8757 4.2085L5.70898 9.37516H16.6673V10.6252H5.70898Z" fill="white"/></svg>');
+    background-repeat: no-repeat;
+    transition: all 200ms ease;
+}
+
+.back-to-home-btn:hover::before {
+    left: 20px;
+}
+
+
+
+
+
 .wpcf7-submit {
     border-radius: 0 !important;
 }

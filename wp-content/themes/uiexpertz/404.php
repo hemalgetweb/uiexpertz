@@ -44,10 +44,7 @@ $cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take
                   </div>
                   <div class="navbar-right btn-wrap d-flex justify-content-lg-start justify-content-center flex-wrap gap-3 gap-lg-4">
                      <?php if(!empty($cbtoolkit_error_link_text)) : ?>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="text-decoration-none position-relative bg-btn banner-btn text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center">
-                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5.70898 10.6252L10.8757 15.7918L10.0007 16.6668L3.33398 10.0002L10.0007 3.3335L10.8757 4.2085L5.70898 9.37516H16.6673V10.6252H5.70898Z" fill="white"/>
-                           </svg>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="text-decoration-none position-relative bg-btn banner-btn text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center back-to-home-btn">
                            <?php echo wp_kses_post($cbtoolkit_error_link_text); ?>
                         </a>
                      <?php endif; ?>

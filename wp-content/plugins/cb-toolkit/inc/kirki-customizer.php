@@ -2019,10 +2019,18 @@ function cbtoolkit_404_fields($fields)
     ];
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'cbtoolkit_error_title',
-        'label'    => __('Page not found', 'cb-toolkit'),
+        'settings' => 'cbtoolkit_error_sub_title',
+        'label'    => __('Sub Title', 'cb-toolkit'),
         'section'  => '404_page',
-        'default'  => __('Oh no! This Page Not Found', 'cb-toolkit'),
+        'default'  => __('Page not found', 'cb-toolkit'),
+        'priority' => 10,
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_error_title',
+        'label'    => __('Title', 'cb-toolkit'),
+        'section'  => '404_page',
+        'default'  => __('Sorry we can`t find that page!', 'cb-toolkit'),
         'priority' => 10,
     ];
     $fields[] = [
@@ -2030,15 +2038,15 @@ function cbtoolkit_404_fields($fields)
         'settings' => 'cbtoolkit_error_desc',
         'label'    => __('404 Description Text', 'cb-toolkit'),
         'section'  => '404_page',
-        'default'  => __('The page you are looking for might have been removed its name, changed or is temporary unavailable.', 'cb-toolkit'),
+        'default'  => __("The page you are looking for might have been removed it's name, changed or is temporary unavailable.", 'cb-toolkit'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'text',
         'settings' => 'cbtoolkit_error_link_text',
-        'label'    => __('404 Link Text', 'cb-toolkit'),
+        'label'    => __('Button Text', 'cb-toolkit'),
         'section'  => '404_page',
-        'default'  => __('Back To Home', 'cb-toolkit'),
+        'default'  => __('Take me home', 'cb-toolkit'),
         'priority' => 10,
     ];
     return $fields;

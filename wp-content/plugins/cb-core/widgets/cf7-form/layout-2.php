@@ -8,11 +8,11 @@
                     <h1 class="fs-40 fw-normal text-clr-blue py-2">
                         <?php if(!empty($settings['section_title'])) : ?>
                                 <?php echo wp_kses_post($settings['section_title']); ?>
-                            <?php endif; ?>
-                            <?php if(!empty($settings['contact_mail_text'])) : ?>
-                                <span>
-                                    <a class="fw-extraBold text-clr-darkBlue text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a>
-                                </span>
+                        <?php endif; ?>
+                        <?php if(!empty($settings['contact_mail_text'])) : ?>
+                            <span>
+                                <a class="fw-extraBold text-clr-darkBlue text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a>
+                            </span>
                         <?php endif; ?>
                     </h1>
                     <?php if(!empty($settings['section_content'])) : ?>

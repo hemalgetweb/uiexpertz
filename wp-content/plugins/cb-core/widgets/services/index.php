@@ -118,7 +118,8 @@ class CB_Core_Service extends Widget_Base
 				'label' => __('Layout', 'cb-core'),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'options' => [
-					'layout-1' => __('Layout 1', 'cb-core')
+					'layout-1' => __('Layout 1', 'cb-core'),
+					'layout-2' => __('Layout 2', 'cb-core')
 				],
 				'default' => 'layout-1',
 				'toggle' => true,

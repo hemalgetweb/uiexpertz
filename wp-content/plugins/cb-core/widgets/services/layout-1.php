@@ -1,11 +1,14 @@
+<?php
+$service_box_height = $settings['service_box_height'] ? $settings['service_box_height'] : '';
+?>
 <!-- UiExpertz Services start -->
 <div class="service">
     <div class="container">
         <?php if(!empty($settings['slides'])) : ?>
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
-            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4 ">
-                <div class="service-item  bg-white d-flex flex-column justify-content-between">
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
                     <div>
                         <div class="p-1">
                             <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">

@@ -133,7 +133,16 @@ class CB_Core_Service extends Widget_Base
 			]
 		);
 		// main controls here]
-        
+        $this->add_control(
+		 'service_box_height',
+		 [
+		   'label'   => esc_html__( 'Section Box Height', 'cb-core' ),
+		   'type'    => \Elementor\Controls_Manager::NUMBER,
+		   'condition' => [
+			'layout' => ['layout-1', 'layout-2']
+		   ]
+		 ]
+		);
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
          'field_condition',

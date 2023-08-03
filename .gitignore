@@ -9,7 +9,6 @@ wp-content/cache/
 wp-content/upgrade/
 # wp-content/uploads/
 wp-content/plugins/hello.php
-
 # Ignore any local configuration files
 wp-config.php
 wp-config-*.php

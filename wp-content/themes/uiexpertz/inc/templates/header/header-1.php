@@ -13,7 +13,7 @@
             <div class="mobileMenu-container">
                 <div class="mobileMenu-header d-flex align-items-center gap-4 justify-content-between">
                     <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
+                        <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                     </a>
                     <div class="navbarToggler  border-0 text-decoration-none">
                         <div class="menuAction">
@@ -53,7 +53,7 @@
         <nav class="navbar navbar-expand-xl py-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
+                    <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <?php uiexpertz_header_menu(); ?>

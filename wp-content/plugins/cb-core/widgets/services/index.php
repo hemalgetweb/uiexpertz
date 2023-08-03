@@ -144,18 +144,18 @@ class CB_Core_Service extends Widget_Base
 		   ]
 		 ]
 		);
-		$settings->add_control(
-		'btn_1_text',
-			[
-			'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
-			'type'        => \Elementor\Controls_Manager::TEXT,
-			'label_block' => true,
-			'condition' => [
-				'field_condition' => ['style-2']
-			]
+		$this->add_control(
+			'btn_1_text',
+				[
+				'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'label_block' => true,
+				'condition' => [
+					'field_condition' => ['style-2']
+				]
 			]
 		);
-		$settings->add_control(
+		$this->add_control(
 		'btn_1_link',
 		[
 			'label'   => esc_html__( 'Button Link', 'cb-core' ),
@@ -174,7 +174,7 @@ class CB_Core_Service extends Widget_Base
 				]
 			]
 		);
-		$settings->add_control(
+		$this->add_control(
 		'btn_2_text',
 			[
 			'label'   => esc_html__( 'Button 2 text', 'cb-core' ),
@@ -185,7 +185,7 @@ class CB_Core_Service extends Widget_Base
 			]
 			]
 		);
-		$settings->add_control(
+		$this->add_control(
 		'btn_2_link',
 		[
 			'label'   => esc_html__( 'Button 2 Link', 'cb-core' ),

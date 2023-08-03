@@ -146,6 +146,12 @@ function cbtoolkit_customizer_panels_sections($wp_customize)
         'priority'    => 14,
         'capability'  => 'edit_theme_options',
     ]);
+    $wp_customize->add_section('case_study_settings', [
+        'title'       => __('Case Study Settings', 'cb-toolkit'),
+        'description' => '',
+        'priority'    => 14,
+        'capability'  => 'edit_theme_options',
+    ]);
 
     $wp_customize->add_section('breadcrumb_setting', [
         'title'       => __('Breadcrumb Setting', 'cb-toolkit'),
@@ -906,6 +912,7 @@ function _header_side_fields($fields)
         ],
     ];
 
+    
     //side info 2
     $fields[] = [
         'type'     => 'switch',
@@ -2055,6 +2062,62 @@ add_filter('kirki/fields', 'cbtoolkit_404_fields');
 
 
 
+
+/**
+ * Case studies
+ */
+function cbtoolkit_case_studies_fields($fields) {
+    //case studies controls
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_section_subtitle',
+        'label'    => __('Section Subtitile', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Case Studies', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_section_title',
+        'label'    => __('Section Title', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Our signature digital experiences projects.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_case_study_section_content',
+        'label'    => __('Section Content', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('We showcased how our skilled hands and creative minds turn a concept into a fully-functional product.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'image',
+        'settings' => 'cbtoolkit_case_study_section_image',
+        'label'    => __('Section Image', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_subtitle',
+        'label'    => __('Inner Section Subtitile', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_title',
+        'label'    => __('Inner Section Title', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    return $fields;
+}
+add_filter('kirki/fields', 'cbtoolkit_case_studies_fields');
 
 /**
  * Added Fields

@@ -36,7 +36,7 @@ function uiexpertz_custom_post_type_for_project() {
 		'description'           => __( 'Add your project', 'uiexpertz' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields', 'page-attributes', 'post-formats', 'excerpt' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -49,9 +49,34 @@ function uiexpertz_custom_post_type_for_project() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+		'show_in_rest' => true,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'project', $args );
+	$labels = array(
+        'name' => _x('Project Categories', 'taxonomy general name'),
+        'singular_name' => _x('Project Category', 'taxonomy singular name'),
+        'search_items' => __('Search Project Categories'),
+        'all_items' => __('All Project Categories'),
+        'parent_item' => __('Parent Project Category'),
+        'parent_item_colon' => __('Parent Project Category:'),
+        'edit_item' => __('Edit Project Category'),
+        'update_item' => __('Update Project Category'),
+        'add_new_item' => __('Add New Project Category'),
+        'new_item_name' => __('New Project Category Name'),
+        'menu_name' => __('Project Categories'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_menu' => true,
+    );
+
+    register_taxonomy('project_category', array('project'), $args);
 
 }
 add_action( 'init', 'uiexpertz_custom_post_type_for_project', 0 );

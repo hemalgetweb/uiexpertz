@@ -144,6 +144,66 @@ class CB_Core_Service extends Widget_Base
 		   ]
 		 ]
 		);
+		$settings->add_control(
+		'btn_1_text',
+			[
+			'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::TEXT,
+			'label_block' => true,
+			'condition' => [
+				'field_condition' => ['style-2']
+			]
+			]
+		);
+		$settings->add_control(
+		'btn_1_link',
+		[
+			'label'   => esc_html__( 'Button Link', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::URL,
+			'label_block' => true,
+			'default'     => [
+				'url'               => '#',
+				'is_external'       => true,
+				'nofollow'          => true,
+				'custom_attributes' => '',
+			],
+			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
+			'label_block' => true,
+			'condition' => [
+				'field_condition' => ['style-2']
+				]
+			]
+		);
+		$settings->add_control(
+		'btn_2_text',
+			[
+			'label'   => esc_html__( 'Button 2 text', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::TEXT,
+			'label_block' => true,
+			'condition' => [
+				'field_condition' => ['style-2']
+			]
+			]
+		);
+		$settings->add_control(
+		'btn_2_link',
+		[
+			'label'   => esc_html__( 'Button 2 Link', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::URL,
+			'label_block' => true,
+			'default'     => [
+				'url'               => '#',
+				'is_external'       => true,
+				'nofollow'          => true,
+				'custom_attributes' => '',
+			],
+			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
+			'label_block' => true,
+			'condition' => [
+				'field_condition' => ['style-2']
+				]
+			]
+		);
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
          'field_condition',
@@ -203,36 +263,7 @@ class CB_Core_Service extends Widget_Base
 			 ]
             ]
           );
-		  $repeater->add_control(
-			'btn_1_text',
-			  [
-				'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'label_block' => true,
-				'condition' => [
-				   'field_condition' => ['style-2']
-				]
-			  ]
-			);
-			$repeater->add_control(
-			'btn_1_link',
-			[
-				'label'   => esc_html__( 'Button Link', 'cb-core' ),
-				'type'        => \Elementor\Controls_Manager::URL,
-				'label_block' => true,
-				'default'     => [
-					'url'               => '#',
-					'is_external'       => true,
-					'nofollow'          => true,
-					'custom_attributes' => '',
-				],
-				'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
-				'label_block' => true,
-				'condition' => [
-					'field_condition' => ['style-2']
-				 ]
-				]
-			);
+		  
          $repeater->add_control(
          'service_excerpt',
            [

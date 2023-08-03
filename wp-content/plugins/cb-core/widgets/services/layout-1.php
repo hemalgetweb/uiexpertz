@@ -11,7 +11,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                 <div class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
                     <div>
                         <div class="p-1">
-                            <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">
+                            <?php echo wp_get_attachment_image( $slide['service_image']['id'], 'full' ); ?>
                         </div>
                         <div class="service-content px-4 pt-4 text-decoration-none d-block mt-1">
                             <?php if(!empty($slide['service_title'])) : ?>

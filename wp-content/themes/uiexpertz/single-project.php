@@ -64,7 +64,7 @@ if($process_3) {
 $process_3_image_gallery = function_exists('get_field') ? get_field('process_3_image_gallery', get_the_ID()): '';
 ?>
 <!--subbanner banner -->
-<div class="  subBanner bg-clr-blue fs-6 pt-75">
+<div class="  subBanner bg-clr-blue">
   <div class="container">
     <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
       <div class="row align-items-center">

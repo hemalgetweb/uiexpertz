@@ -60,31 +60,49 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
             <div class="search-experience">
                 <div class="row">
                     <div class="col-xl-6">
-                    <select class="form-select form-control case_studies_all_cat_ajax" aria-label="Default select example">
+                    <select class="form-select form-control case_studies_all_service_ajax" aria-label="Default select example">
+                      <option selected value="0">Select Service</option>
                       <?php
-                        $args = array(
-                          'type'                     => 'project',
-                          'child_of'                 => 0,
-                          'parent'                   => '',
-                          'orderby'                  => 'menu_order',
-                          'order'                    => 'ASC',
-                          'hide_empty'               => 1,
-                          'hierarchical'             => 1,
-                          'taxonomy'                 => 'project_category',
-                          'pad_counts'               => false );
-                          $categories = get_categories($args);
-                      foreach ($categories as $category) {
-                          echo '<option value="' . $category->term_id . '">' . $category->name . '</option>';
+                      $args = array(
+                          'taxonomy' => 'project_service', // Replace with your custom taxonomy name
+                          'orderby' => 'name',
+                          'order' => 'ASC',
+                          'hide_empty' => false, // Set to true to hide empty terms
+                      );
+                      
+                      $categories = get_terms($args);
+                      
+                      if (!empty($categories) && !is_wp_error($categories)) {
+                          foreach ($categories as $category) {
+                              echo '<option value="' . $category->term_id . '">' . $category->name . '</option>';
+                          }
+                      } else {
+                          echo '<option value="0">No Service found</option>';
                       }
                       ?>
                   </select>
                     </div>
                     <div class="col-xl-6">
-                        <select class="form-select form-control" aria-label="Default select example">
-                            <option selected>All Industries</option>
-                            <option value="1">Industries 1</option>
-                            <option value="2">Industries 2</option>
-                            <option value="3">Industries 3</option>
+                        <select class="form-select form-control case_studies_all_category_ajax">
+                        <option selected value="0">Select Category</option>
+                          <?php
+                            $args = array(
+                                'taxonomy' => 'project_category', // Replace with your custom taxonomy name
+                                'orderby' => 'name',
+                                'order' => 'ASC',
+                                'hide_empty' => false, // Set to true to hide empty terms
+                            );
+                            
+                            $categories = get_terms($args);
+                            
+                            if (!empty($categories) && !is_wp_error($categories)) {
+                                foreach ($categories as $category) {
+                                    echo '<option value="' . $category->term_id . '">' . $category->name . '</option>';
+                                }
+                            } else {
+                                echo '<option value="0">No categories found</option>';
+                            }
+                          ?>
                         </select>
                     </div>
                 </div>

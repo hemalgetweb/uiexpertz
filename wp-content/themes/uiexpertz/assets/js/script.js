@@ -7,6 +7,33 @@
             $("header").removeClass("fixed-header");
         }
     });
+    const CaseStudySliderGlobal = new Swiper(".caseStudy-slider", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".casestudy-swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next-unique",
+            prevEl: ".swiper-button-prev-unique",
+        },
+
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
     var CB_Case_Studies = function($scope, $) {
         $scope.find('.caseStudy-slider').each(function() {
             // Swipper js case study

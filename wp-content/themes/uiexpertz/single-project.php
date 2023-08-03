@@ -1,25 +1,91 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$cbtoolkit_case_study_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_section_subtitle', __('Case Studies', 'cb-toolkit') );
+$cbtoolkit_case_study_section_title = get_theme_mod( 'cbtoolkit_case_study_section_title', __('Our signature digital experiences projects.', 'cb-toolkit') );
+$cbtoolkit_case_study_section_content = get_theme_mod( 'cbtoolkit_case_study_section_content', __('We showcased how our skilled hands and creative minds turn a concept into a fully-functional product.', 'cb-toolkit') );
+$cbtoolkit_case_study_section_image = get_theme_mod( 'cbtoolkit_case_study_section_image', '' );
+$cbtoolkit_case_study_inner_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_inner_section_subtitle', __('Explore our key experience', 'cb-toolkit') );
+$cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study_inner_section_title', __('Explore our key experience', 'cb-toolkit') );
+$post_id = get_the_ID();
+$taxonomy_data = get_the_terms($post_id, 'project_category');
+$first_cat_name = '';
+if($taxonomy_data) {
+  $first_cat_name = $taxonomy_data[0]->name;
+}
+$portfolio_objective = function_exists('get_field') ? get_field('portfolio_objective', $post_id, TRUE): '';
+/**
+ * Process 1
+ */
+$process_1 = function_exists('get_field') ? get_field('process_1', get_the_ID()): '';
+$process_01_sub_title = '';
+$process_01_title = '';
+$process_01_description = '';
+$process_01_image = '';
+if($process_1) {
+  $process_01_sub_title = $process_1['process_01_sub_title'] ?? '';
+  $process_01_title = $process_1['process_01_title'] ?? '';
+  $process_01_description = $process_1['process_01_description'] ?? '';
+  $process_01_image = $process_1['process_01_image'] ?? '';
+}
+
+
+
+/**
+ * Process 2
+ */
+$process_2 = function_exists('get_field') ? get_field('process_2', get_the_ID()): '';
+$process_02_sub_title = '';
+$process_02_title = '';
+$process_2_description = '';
+$process_2_image_01 = '';
+$process_2_image_03 = '';
+if($process_2) {
+  $process_02_sub_title = $process_2['process_02_sub_title'] ?? '';
+  $process_02_title = $process_2['process_02_title'] ?? '';
+  $process_2_description = $process_2['process_2_description'] ?? '';
+  $process_2_image_01 = $process_2['process_2_image_01'] ?? '';
+  $process_2_image_02 = $process_2['process_2_image_02'] ?? '';
+  $process_2_image_03 = $process_2['process_2_image_03'] ?? '';
+}
+
+
+/**
+ * Process 3
+ */
+$process_3 = function_exists('get_field') ? get_field('process_3', get_the_ID()): '';
+$process_3_subtitle = '';
+$process_03_title = '';
+$process_3_description = '';
+if($process_3) {
+  $process_3_subtitle = $process_3['process_3_subtitle'] ?? '';
+  $process_03_title = $process_3['process_03_title'] ?? '';
+  $process_3_description = $process_3['process_3_description'] ?? '';
+}
+$process_3_image_gallery = function_exists('get_field') ? get_field('process_3_image_gallery', get_the_ID()): '';
+?>
 <!--subbanner banner -->
-<div class=" subBanner bg-clr-blue fs-6 ">
+<div class="  subBanner bg-clr-blue fs-6 pt-75">
   <div class="container">
     <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
-            <p class="text-clr-sky fs-18">Case Studies</p>
+            <?php if(!empty($first_cat_name)) : ?>
+            <p class="text-clr-sky fs-18"><?php echo $first_cat_name; ?></p>
+            <?php endif; ?>
             <h1 class="fs-48 text-white mb-4 ">
-              Our signature digital experiences projects.
+              <?php the_title(); ?>
             </h1>
             <div class="section-intro fs-18 fw-normal text-clr-skyBlue mb-5 ">
               <p>
-                We showcased how our skilled hands and creative minds turn a concept into a fully-functional product.
+                <?php the_excerpt(); ?>
               </p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="banner-img text-center text-lg-end ">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/case-study-details-banner.svg"
+            <img src="<?php echo esc_url($process_01_image); ?>"
               alt="banner img" class="img-fluid">
           </div>
         </div>
@@ -38,58 +104,15 @@
     <div class="technical-expertise-wrap row">
       <div class="col-lg-6 mb-4 mb-lg-0">
         <div class="technical-expertise-left">
-          <p class="fs-14 fw-bold text-clr-sky mb-1">Website Design</p>
-          <h4 class="fs-40 text-clr-blue fw-normal">Our technical expertise in the field of Support.</h4>
-          <div class="pt-3">
-            <p class="fs-18 text-clr-gray mb-2">Modillion came to us to re-envision their current software applications
-              suite and provide a unified value proposition for all their target markets and customers.</p>
-            <p class="fs-18 text-clr-gray mb-2">We have instilled a new product and marketing approach for them,
-              creating the foundations of a UX-driven organization from product development, marketing, and sales, and
-              assisted them in their internal UX team to be self-sustainable, which we achieved within six months.</p>
-            <p class="fs-18 text-clr-gray mb-2">Through our key findings, we identified strategies to approach user
-              problems in the most relevant way – defining the new customer journey. A critical success factor of this
-              effort was to make sure that the value proposition was directly correlated to each stage of the journey.
-            </p>
-            <p class="fs-18 text-clr-gray mb-2">Thanks to our careful planning and implementation, we were also able to
-              complete this project as expected. The result was a website that perfectly represents the predata dynamic
-              ag/smart dynamic ag brand and offers an improved user experience.</p>
-          </div>
+          <?php echo get_the_content(); ?>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="technical-expertise-right ms-lg-4 ms-0">
-          <h4 class="fs-4 fw-bold">Objective</h4>
+          <h4 class="fs-4 fw-bold"><?php echo esc_html__('Objective'); ?></h4>
 
           <div class="mt-3">
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">1. Ensure accessible information architecture for easy
-              content
-              discovery by several unique audiences
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">2. Align visual elements and storytelling with
-              refreshed brand
-              ing while improving user navigation
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">3. We love to bring designs to life as a developer, and
-              I aim
-              to do this using whatever front end tools are necessary. My prefer tools are more modern JavaScript
-              libraries like React.js but I like.
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">4. Build out a powerful farm tour locator functionality
-              filtered by user location
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3">5. Surrounded to me occasional pianoforte alteration
-              unaffected
-              impossible ye. For saw half than cold. Pretty merits waited six talked pulled you.
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">6. There are several reasons why a business would
-              consider a
-              rebrand and it doesn’t necessarily mean the business has been unsuccessful.
-            </p>
-            <p class="text-clr-blue fs-6 fw-normal mb-3 lh-base">7. Pell ente sque nulla id, tem pus ris, phase llus
-              vitae erat3
-              at tem por mi ris laor port tor quam, at arcu fac sis. Do nec est erat, ullam corper id ligu la quis,
-              ultri cies bibe ndum quam natis.
-            </p>
+            <?php echo wp_kses_post($portfolio_objective); ?>
           </div>
         </div>
       </div>
@@ -105,20 +128,25 @@
   <div class="container">
     <div class="section-heading text-center mb-5">
       <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+        <?php if(!empty($process_01_sub_title)) : ?>
         <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
-          Process 01
+            <?php echo wp_kses_post($process_01_sub_title); ?>
         </p>
+        <?php endif; ?>
       </div>
+      <?php if(!empty($process_01_title)) : ?>
       <h1 class="fs-40 text-clr-blue py-2">
-        User Flow Map
+        <?php echo esc_html($process_01_title); ?>
       </h1>
+      <?php endif; ?>
+      <?php if(!empty($process_01_description)) : ?>
       <p class="text-clr-gray">
-        The Design phase is an iterative process that begins with low-fidelity design options and ends with
-        pixel-perfect mock-ups, ready for development.
+      <?php echo wp_kses_post($process_01_description); ?>
       </p>
+      <?php endif; ?>
     </div>
     <div class="user-flow-wrap pt-3">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/user-flow.svg" alt="banner img"
+      <img src="<?php echo esc_url($process_01_image); ?>" alt="banner img"
         class="img-fluid w-100">
     </div>
   </div>
@@ -132,37 +160,39 @@
   <div class="container">
     <div class="section-heading text-center mb-5">
       <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+        <?php if(!empty($process_02_sub_title)) : ?>
         <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
-          Process 02
+          <?php echo $process_02_sub_title; ?>
         </p>
+        <?php endif; ?>
       </div>
-      <h1 class="fs-40 text-clr-blue py-2">
-        Project Wireframing
-      </h1>
-      <p class="text-clr-gray">
-        The Design phase is an iterative process that begins with low-fidelity design options and ends with
-        pixel-perfect mock-ups, ready for development.
-      </p>
+      <?php if(!empty($process_02_title)) : ?>
+        <h1 class="fs-40 text-clr-blue py-2">
+        <?php echo $process_02_title; ?>
+        </h1>
+      <?php endif; ?>
+      <?php if(!empty($process_2_description)) : ?>
+        <p class="text-clr-gray">
+        <?php echo $process_2_description; ?>
+        </p>
+      <?php endif; ?>
     </div>
 
     <div class="projects">
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4 md-mb-0">
           <div class="project-show-img border">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/project-wireframing1.png"
-              alt="banner img" class="img-fluid w-100">
+            <img src="<?php echo esc_url($process_2_image_01); ?>" alt="banner img" class="img-fluid w-100">
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4 md-mb-0">
           <div class="project-show-img border">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/project-wireframing2.png"
-              alt="banner img" class="img-fluid w-100">
+              <img src="<?php echo esc_url($process_2_image_02); ?>" alt="banner img" class="img-fluid w-100">
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4 md-mb-0">
           <div class="project-show-img border">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/project-wireframing3.png"
-              alt="banner img" class="img-fluid w-100">
+          <img src="<?php echo esc_url($process_2_image_03); ?>" alt="banner img" class="img-fluid w-100">
           </div>
         </div>
       </div>
@@ -181,74 +211,44 @@
   <div class="container">
     <div class="section-heading text-center mb-5">
       <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+        <?php if(!empty($process_3_subtitle)) : ?>
         <p class="fs-14 mb-0 fw-bold text-clr-sky">
-          Process 03
+          <?php echo $process_3_subtitle; ?>
         </p>
+        <?php endif; ?>
       </div>
+      <?php if(!empty($process_03_title)) : ?>
       <h1 class="fs-40 text-white py-2">
-        Visual Output
+      <?php echo $process_03_title; ?>
       </h1>
+      <?php endif; ?>
+      <?php if(!empty($process_3_description)) : ?>
       <p class="text-clr-skyBlue">
-        Aside from keeping your website up-to-date and free from technical issues, we also offer comprehensive
-        performance optimization so you can reach more customers, save your time/effort, and progress faster
+      <?php echo $process_3_description; ?>
       </p>
+      <?php endif; ?>
     </div>
+    <?php if(!empty($process_3_image_gallery)) : ?>
     <div class="case-study-wrap">
       <div class="swiper caseStudy-slider">
         <div class="swiper-wrapper">
+          <?php foreach($process_3_image_gallery as $slide) : ?>
           <div class="swiper-slide">
             <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
+              <?php if(!empty($slide['full_image_url'])) : ?>
               <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
+                <img src="<?php echo esc_url($slide['full_image_url']); ?>"
                   alt="banner img" class="img-fluid w-100">
               </div>
+              <?php endif; ?>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
-                  alt="banner img" class="img-fluid w-100">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
-                  alt="banner img" class="img-fluid w-100">
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
-                  alt="banner img" class="img-fluid w-100">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
-                  alt="banner img" class="img-fluid w-100">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
-                  alt="banner img" class="img-fluid w-100">
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
+    <?php endif; ?>
   </div>
 
   <div class="swipper-button position-relative">

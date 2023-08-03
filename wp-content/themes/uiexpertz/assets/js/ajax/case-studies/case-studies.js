@@ -45,25 +45,76 @@ jQuery(function($){
         loadMorePosts();
     });
 
+
     /**
-     * ajax filter for click on category
+     * Ajax filter for both service and category
      */
-    $('.case_studies_all_cat_ajax').on('change', function() {
-        var selectedCategory = $(this).val();
-        console.log(selectedCategory);
-        $.ajax({
-            type: 'post',
-            dataType: 'html',
-            url: loadmore_params.ajaxurl,
-            data: {
-                action: 'uiexpertz_category_based_filter_posts',
-                nonce: loadmore_params.nonce,
-                category: selectedCategory
-            },
-            success: function(response) {
-                $('#uiexpertz_service_archive_wrapper').html(response);
-                $('.uiexpertz_case_studies_archive_load_more_btn').attr('disabled', 'disable');
-            }
-        });
+    $('.case_studies_all_service_ajax, .case_studies_all_category_ajax').on('change', function() {
+        var case_studies_all_service_ajax = $('.case_studies_all_service_ajax').val();
+        var case_studies_all_category_ajax = $('.case_studies_all_category_ajax').val();
+        if(case_studies_all_service_ajax != 0 && case_studies_all_category_ajax != 0) {
+            /**
+             * ajax filter for click on service and category
+             */
+            var selectedService = case_studies_all_service_ajax;
+            var selectedCategory = case_studies_all_category_ajax;
+            $.ajax({
+                type: 'post',
+                dataType: 'html',
+                url: loadmore_params.ajaxurl,
+                data: {
+                    action: 'uiexpertz_service_category_based_filter_posts',
+                    nonce: loadmore_params.nonce,
+                    category: selectedCategory,
+                    service: selectedService
+                },
+                success: function(response) {
+                    $('#uiexpertz_service_archive_wrapper').html(response);
+                    $('.uiexpertz_case_studies_archive_load_more_btn').attr('disabled', 'disable');
+                }
+            });
+        } else if(case_studies_all_service_ajax != 0 && case_studies_all_category_ajax == 0) {
+            /**
+             * ajax filter for click on service
+             */
+             var selectedService = case_studies_all_service_ajax;
+             var selectedCategory = 0;
+            $.ajax({
+                type: 'post',
+                dataType: 'html',
+                url: loadmore_params.ajaxurl,
+                data: {
+                    action: 'uiexpertz_service_based_filter_posts',
+                    nonce: loadmore_params.nonce,
+                    service: selectedService
+                },
+                success: function(response) {
+                    $('#uiexpertz_service_archive_wrapper').html(response);
+                    $('.uiexpertz_case_studies_archive_load_more_btn').attr('disabled', 'disable');
+                }
+            });
+        } else if(case_studies_all_category_ajax != 0 && case_studies_all_service_ajax == 0) {
+            /**
+             * ajax filter for click on category
+             */
+            var selectedCategory = case_studies_all_category_ajax;
+            var selectedService = 0;
+            $.ajax({
+                type: 'post',
+                dataType: 'html',
+                url: loadmore_params.ajaxurl,
+                data: {
+                    action: 'uiexpertz_category_based_filter_posts',
+                    nonce: loadmore_params.nonce,
+                    category: selectedCategory
+                },
+                success: function(response) {
+                    $('#uiexpertz_service_archive_wrapper').html(response);
+                    $('.uiexpertz_case_studies_archive_load_more_btn').attr('disabled', 'disable');
+                }
+            });
+        } else {
+            console.log('no form are selected');
+        }
     })
 });

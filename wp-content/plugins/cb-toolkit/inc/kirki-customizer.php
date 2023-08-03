@@ -2115,6 +2115,8 @@ function cbtoolkit_case_studies_fields($fields) {
         'default'  => __('Explore our key experience', 'cb-toolkit'),
         'priority' => 10
     ];
+
+    
     return $fields;
 }
 add_filter('kirki/fields', 'cbtoolkit_case_studies_fields');

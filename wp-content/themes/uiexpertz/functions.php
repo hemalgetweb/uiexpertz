@@ -699,12 +699,90 @@ add_action('wp_ajax_nopriv_uiexpertz_case_studies_load_more', 'uiexpertz_case_st
 
 
 /***
+ * Service based filter on case study archive
+ */
+function uiexpertz_service_based_filter_posts() {
+    check_ajax_referer('loadmore_nonce', 'nonce');
+
+    $service_id = intval($_POST['service']);
+    $args = array(
+        'post_type' => 'project',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'project_service',
+                'field' => 'id',
+                'terms' => $service_id
+            )
+        )
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();?>
+				<div class="col-lg-4 col-md-6">
+					<div class="service-item service-item-wrap bg-white mb-4 pb-3">
+						<div>
+							<?php if(has_post_thumbnail( )) : ?>
+							<div class="p-1">
+								<?php the_post_thumbnail(get_the_ID(), 'full'); ?>
+							</div>
+							<?php endif; ?>
+							<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+							<?php
+							$post_categories = get_the_terms(get_the_ID(), 'category');
+							if ($post_categories && !is_wp_error($post_categories)) {
+								foreach ($post_categories as $category) {
+									echo '<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">' . esc_html($category->name) . '</li>';
+								}
+							}
+							?>
+						</ul>
+							<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+								<h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+								<p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+							</div>
+						</div>
+						<a href="<?php the_permalink(); ?>"
+							class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+							<span>
+								<h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+							</span>
+							<span>
+								<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+								</svg>
+
+							</span>
+						</a>
+					</div>
+				</div>
+        <?php }
+    }
+
+    wp_reset_postdata();
+    die();
+}
+add_action('wp_ajax_uiexpertz_service_based_filter_posts', 'uiexpertz_service_based_filter_posts');
+add_action('wp_ajax_nopriv_uiexpertz_service_based_filter_posts', 'uiexpertz_service_based_filter_posts');
+
+
+
+
+/***
  * Category based filter on case study archive
  */
 function uiexpertz_category_based_filter_posts() {
     check_ajax_referer('loadmore_nonce', 'nonce');
 
     $category_id = intval($_POST['category']);
+	if(empty($category_id)) {
+		return;
+	}
     $args = array(
         'post_type' => 'project',
         'posts_per_page' => -1,
@@ -769,3 +847,82 @@ function uiexpertz_category_based_filter_posts() {
 }
 add_action('wp_ajax_uiexpertz_category_based_filter_posts', 'uiexpertz_category_based_filter_posts');
 add_action('wp_ajax_nopriv_uiexpertz_category_based_filter_posts', 'uiexpertz_category_based_filter_posts');
+
+/***
+ * Category and service based filter on case study archive
+ */
+function uiexpertz_service_category_based_filter_posts() {
+    check_ajax_referer('loadmore_nonce', 'nonce');
+
+    $service_id = intval($_POST['service']);
+    $category_id = intval($_POST['category']);
+    $args = array(
+        'post_type' => 'project',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+			'relation' => 'AND',
+            array(
+                'taxonomy' => 'project_category',
+                'field' => 'id',
+                'terms' => $category_id
+			),
+            array(
+                'taxonomy' => 'project_service',
+                'field' => 'id',
+                'terms' => $service_id
+            )
+        )
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();?>
+				<div class="col-lg-4 col-md-6">
+					<div class="service-item service-item-wrap bg-white mb-4 pb-3">
+						<div>
+							<?php if(has_post_thumbnail( )) : ?>
+							<div class="p-1">
+								<?php the_post_thumbnail(get_the_ID(), 'full'); ?>
+							</div>
+							<?php endif; ?>
+							<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+							<?php
+							$post_categories = get_the_terms(get_the_ID(), 'category');
+							if ($post_categories && !is_wp_error($post_categories)) {
+								foreach ($post_categories as $category) {
+									echo '<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">' . esc_html($category->name) . '</li>';
+								}
+							}
+							?>
+						</ul>
+							<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+								<h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+								<p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+							</div>
+						</div>
+						<a href="<?php the_permalink(); ?>"
+							class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+							<span>
+								<h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+							</span>
+							<span>
+								<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+								</svg>
+
+							</span>
+						</a>
+					</div>
+				</div>
+        <?php }
+    }
+
+    wp_reset_postdata();
+    die();
+}
+add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
+add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');

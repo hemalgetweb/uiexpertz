@@ -153,6 +153,7 @@ class CB_Core_Service extends Widget_Base
             'label_block' => true,
             'options' => [
              'style-1'  => esc_html__( 'Style 1', 'cb-core' ),
+             'style-2'  => esc_html__( 'Style 1', 'cb-core' ),
            ],
            'default' => 'style-1',
          ]
@@ -167,7 +168,7 @@ class CB_Core_Service extends Widget_Base
                'url' => \Elementor\Utils::get_placeholder_image_src(),
            ],
            'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
             ]
          ]
         );
@@ -179,7 +180,7 @@ class CB_Core_Service extends Widget_Base
              'default'     => esc_html__( 'UX/UI Design', 'cb-core' ),
              'label_block' => true,
              'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
              ]
            ]
          );
@@ -206,7 +207,7 @@ class CB_Core_Service extends Widget_Base
              'type'        => \Elementor\Controls_Manager::TEXTAREA,
              'label_block' => true,
              'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
              ]
            ]
          );

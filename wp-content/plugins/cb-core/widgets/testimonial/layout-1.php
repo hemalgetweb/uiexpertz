@@ -23,29 +23,29 @@
                     <?php if(!empty($slide['testimonial_rating'])) : ?>
                     <div class="rating d-flex align-items-center gap-1">
                         <?php if($slide['testimonial_rating'] == 1) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
                         <?php endif; ?>
                         <?php if($slide['testimonial_rating'] == 2) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
                         <?php endif; ?>
                         <?php if($slide['testimonial_rating'] == 3) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
                         <?php endif; ?>
                         <?php if($slide['testimonial_rating'] == 4) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
                         <?php endif; ?>
                         <?php if($slide['testimonial_rating'] == 5) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
+                            <img width="16" height="15" src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" class="img-fluid" alt="">
                         <?php endif; ?>
                     </div>
                     <?php endif; ?>

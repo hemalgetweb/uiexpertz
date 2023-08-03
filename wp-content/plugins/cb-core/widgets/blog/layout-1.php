@@ -6,7 +6,6 @@
                 <div class="section-headings text-start">
                     <?php if(!empty($settings['subtitle'])) : ?>
                     <div class="section-hints d-flex justify-content-start align-items-center gap-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/section-hints.svg" class="img-fluid" alt="section-heading">
                         <p class="fs-14 mb-0 fw-bold text-clr-darkBlue"><?php echo wp_kses_post($settings['subtitle']); ?></p>
                     </div>
                     <?php endif; ?>

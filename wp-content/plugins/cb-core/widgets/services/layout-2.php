@@ -24,6 +24,26 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
             </div>
             <?php endforeach; ?>
         </div>
+        <div class="d-flex flex-wrap align-items-center gap-3 mt-5 pt-3 justify-content-center">
+            <div class="">
+            <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center" href="#">
+                Lets’s talk
+                <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white"></path>
+                </svg>
+
+            </a>
+            </div>
+            <div class="">
+            <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center" href="#">
+                Case Studies
+                <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="#5648FF"></path>
+                </svg>
+
+            </a>
+            </div>
+        </div>
         <?php endif; ?>
     </div>
 </div>

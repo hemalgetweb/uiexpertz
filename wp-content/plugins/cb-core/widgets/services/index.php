@@ -198,8 +198,41 @@ class CB_Core_Service extends Widget_Base
               ],
               'placeholder' => esc_html__( 'Serice URL', 'cb-core' ),
               'label_block' => true,
+			  'condition' => [
+				'field_condition' => ['style-1']
+			 ]
             ]
           );
+		  $repeater->add_control(
+			'btn_1_text',
+			  [
+				'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'label_block' => true,
+				'condition' => [
+				   'field_condition' => ['style-2']
+				]
+			  ]
+			);
+			$repeater->add_control(
+			'btn_1_link',
+			[
+				'label'   => esc_html__( 'Button Link', 'cb-core' ),
+				'type'        => \Elementor\Controls_Manager::URL,
+				'label_block' => true,
+				'default'     => [
+					'url'               => '#',
+					'is_external'       => true,
+					'nofollow'          => true,
+					'custom_attributes' => '',
+				],
+				'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
+				'label_block' => true,
+				'condition' => [
+					'field_condition' => ['style-2']
+				 ]
+				]
+			);
          $repeater->add_control(
          'service_excerpt',
            [

@@ -151,7 +151,7 @@ class CB_Core_Service extends Widget_Base
 				'type'        => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
 				'condition' => [
-					'field_condition' => ['style-2']
+					'layout' => ['layout-1']
 				]
 			]
 		);
@@ -170,7 +170,7 @@ class CB_Core_Service extends Widget_Base
 			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
 			'label_block' => true,
 			'condition' => [
-				'field_condition' => ['style-2']
+				'layout' => ['layout-1']
 				]
 			]
 		);
@@ -181,7 +181,7 @@ class CB_Core_Service extends Widget_Base
 			'type'        => \Elementor\Controls_Manager::TEXT,
 			'label_block' => true,
 			'condition' => [
-				'field_condition' => ['style-2']
+				'layout' => ['layout-1']
 			]
 			]
 		);
@@ -200,7 +200,7 @@ class CB_Core_Service extends Widget_Base
 			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
 			'label_block' => true,
 			'condition' => [
-				'field_condition' => ['style-2']
+				'layout' => ['layout-1']
 				]
 			]
 		);

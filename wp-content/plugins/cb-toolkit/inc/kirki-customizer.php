@@ -1635,7 +1635,42 @@ Header Social
 function _header_blog_fields($fields)
 {
     // Blog Setting
+    $fields[] = [
+        'type'        => 'image',
+        'settings'    => 'cbtoolkit_blog_banner_image',
+        'description' => __('Blog banner', 'cb-toolkit'),
+        'section'     => 'blog_setting',
+        'default'     => get_template_directory_uri() . '/assets/img/case-banner.svg',
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_blog_sub_title',
+        'label'    => __('Sub title', 'cb-toolkit'),
+        'section'  => 'blog_setting',
+        'default'  => __('Latest Blogs and News', 'cb-toolkit'),
+        'priority' => 10,
+    ];
     
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_blog_title',
+        'label'    => __('Title', 'cb-toolkit'),
+        'section'  => 'blog_setting',
+        'default'  => __('Sharing our knowledge, experience and insight.', 'cb-toolkit'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_blog_content',
+        'label'    => __('Content', 'cb-toolkit'),
+        'section'  => 'blog_setting',
+        'default'  => __("Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.", 'cb-toolkit'),
+        'priority' => 10,
+    ];
+
     
     $fields[] = [
         'type' => 'text',

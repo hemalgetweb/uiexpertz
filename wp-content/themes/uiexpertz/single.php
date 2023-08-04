@@ -42,6 +42,56 @@ $args = array(
 );
 
 $recent_posts = new WP_Query($args);
+
+
+/**
+ * Blog details customizer meta
+*/
+$cbblog_details_related_post_subtitle = get_theme_mod( 'cbblog_details_related_post_subtitle', __('UiExpertz Latest Blogs', 'uiexpertz') );
+$cbblog_details_related_post_title = get_theme_mod( 'cbblog_details_related_post_title', __('Related Posts', 'uiexpertz') );
+$cbblog_details_related_post_content = get_theme_mod( 'cbblog_details_related_post_content', __('Facilisis mauris sit amet massa vitae tortor condimentum.', 'uiexpertz') );
+$cbblog_details_related_post_btn_text = get_theme_mod( 'cbblog_details_related_post_btn_text', __('View all', 'uiexpertz') );
+$cbblog_details_related_post_btn_link = get_theme_mod( 'cbblog_details_related_post_btn_link', __('#', 'uiexpertz') );
+
+/**
+ * CF7 form data from customizer
+ */
+$cbtoolkit_case_study_cf7_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_cf7_section_subtitle', __('Let’s work together', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_title = get_theme_mod( 'cbtoolkit_case_study_cf7_section_title', __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_content = get_theme_mod( 'cbtoolkit_case_study_cf7_section_content', __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit') );
+
+
+
+/**
+ * Related post query
+ */
+$current_post_id = get_the_ID();
+
+$tags = wp_get_post_tags($current_post_id, array('fields' => 'ids'));
+$categories = wp_get_post_categories($current_post_id, array('fields' => 'ids'));
+
+$related_query_args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3, // You can adjust the number of related posts to display
+    'post__not_in' => array($current_post_id), // Exclude the current post
+    'tax_query' => array(
+        'relation' => 'OR',
+        array(
+            'taxonomy' => 'post_tag',
+            'field' => 'id',
+            'terms' => $tags,
+        ),
+        array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => $categories,
+        ),
+    ),
+);
+
+$related_query = new WP_Query($related_query_args);
+
  ?>
 <?php get_header(); ?>
 <div class=" subBanner blog-details-banner bg-clr-blue fs-6 ">
@@ -239,86 +289,132 @@ $recent_posts = new WP_Query($args);
     </div>
   </div>
 
+  
 
-
-
-
-
-
-
-
-
-
-    <!-- blog-details -->
-    <section class="uiexpertz-blog-details d-none"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/w-shape.svg); background-repeat: no-repeat;">
-        <div class="container mt-5 pt-4">
-            <div class="row">
-                <div class="col-lg-8">
-                    <article class="articles">
-                        <div class="psot-details">
-                            <div class="blog-info p-3">
-                                <div class="blog-header">
-									<?php if(!empty($cat_name)) : ?>
-                                    <span
-                                        class="section-tag fs-12 fw-bold text-uppercase text-clr-dark2 ls-1 d-inline-flex gap-2 align-items-center mb-2">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-process-icon.svg" alt="icon" class="img-fluid">
-                                        <?php echo $cat_name; ?>
-                                    </span>
-									<?php endif; ?>
-                                    <h2 class="blog-title text-clr-dark1 fs-36 fw-bold mb-3">
-										<?php the_title(); ?>
-                                    </h2>
-									<!-- display none -->
-                                    <div
-                                        class="d-none authors text-decoration-none d-flex gap-2 gap-lg-3 align-items-center">
-                                        <?php echo get_avatar(get_the_author_meta('ID'), get_the_ID()); ?>
-                                        <span>
-                                            <span class="authure-name fs-6 text-clr-dark1 mb-1">
-                                                <?php echo esc_html__('Published by ', 'uiexpertz'); ?><b><a href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>"><?php echo esc_html(get_the_author_meta('display_name')); ?></a></b>
-                                            </span>
-                                            <span class="authure-name fs-16 text-clr-dark2 fw-normal ms-4">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fi-rs-calendar.svg" alt="icon" class="img-fluid">
-                                                <span class="ms-2"><?php echo get_the_date(); ?></span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-								<?php if(has_post_thumbnail(get_the_ID())): ?>
-                                <div class="blog-img mb-2 radius-6 overflow-hidden my-4">
-									<?php the_post_thumbnail(get_the_ID()); ?>
-                                </div>
-								<?php endif; ?>
-                                <div class="blog-content my-4 pt-3">
-                                    <?php the_content(); ?>
-                                </div>
-                                <div class="blog-bottom my-4 pt-3">
-                                    <div
-                                        class="blog-bottom-box d-flex flex-wrap gap-4 justify-content-center justify-content-xl-between align-items-center radius-12 p-4 mb-4">
-                                        <h4 class="fs-5 fw-bold text-clr-dark1 mb-0">
-                                            <?php echo esc_html__('Social media accounts', 'uiexpertz'); ?>
-                                        </h4>
-										<?php echo do_shortcode('[Sassy_Social_Share]') ?>
-                                       
-                                    </div>
-									<?php get_template_part( 'post-formates/single-post/content', 'biography' ); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <div class="Sidebar mt-3">
-						<?php if(is_active_sidebar('blog-sidebar')) : ?>
-							<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
-								<?php dynamic_sidebar( 'blog-sidebar' ); ?>
-							<?php } ?>
-						<?php endif; ?>
-                    </div>
-                </div>
-            </div>
+  <!--  Latest Blogs  start -->
+  <div class="latest-blog section-padding bg-clr-lightGray">
+    <div class="container">
+      <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
+        <div class="section-headings text-start">
+          <?php if(!empty($cbblog_details_related_post_subtitle)) : ?>
+          <div class="section-hints d-flex justify-content-start align-items-center gap-2">
+            <p class="fs-14 mb-0 fw-bold text-clr-darkBlue"><?php echo wp_kses_post($cbblog_details_related_post_subtitle); ?></p>
+          </div>
+          <?php endif; ?>
+          <?php if(!empty($cbblog_details_related_post_title)) : ?>
+            <h1 class="fs-40 text-clr-blue py-2"><?php echo wp_kses_post($cbblog_details_related_post_title); ?></h1>
+          <?php endif; ?>
+          <?php if(!empty($cbblog_details_related_post_content)) : ?>
+            <p class="text-clr-gray fs-6"><?php echo wp_kses_post($cbblog_details_related_post_content); ?></p>
+          <?php endif; ?>
         </div>
-    </section>
-    <!--/ blog-pots -->
+        <?php if(!empty($cbblog_details_related_post_btn_text)) : ?>
+        <div class="d-flex align-items-center  mt-2 pt-3 justify-content-start">
+          <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+            href="<?php echo $cbblog_details_related_post_btn_link ? esc_url($cbblog_details_related_post_btn_link): ''; ?>">
+            <?php echo wp_kses_post($cbblog_details_related_post_btn_text); ?>
+            <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white" />
+            </svg>
+          </a>
+        </div>
+        <?php endif; ?>
+      </div>
+      <?php if($related_query->have_posts()) : ?>
+      <div class="row">
+        <?php while($related_query->have_posts()): $related_query->the_post() ?>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item  bg-white mb-4 pb-2">
+            <div class="p-1">
+              <?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+            </div>
+            <?php
+              $current_post_id = get_the_ID();
+              $categories = get_the_category($current_post_id);
 
+              if (!empty($categories)) {
+                  $first_category = $categories[0];
+                  $category_name = $first_category->name;
+                  $category_slug = $first_category->slug;
+                  ?>
+                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
+                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
+                          <a href="<?php echo esc_url(get_category_link($first_category)); ?>" class="text-decoration-none">
+                              <?php echo esc_html($category_name); ?>
+                          </a>
+                      </li>
+                  </ul>
+                  <?php
+              }
+              ?>
+            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                <span>
+                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+                </span>
+                <span>
+                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                  </svg>
+  
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <?php endwhile; wp_reset_query(); ?>
+      </div>
+      <?php endif; ?>
+    </div>
+  </div>
+  <!-- Latest Blogs end -->
+
+<!-- contact start -->
+<div class="contact bg-clr-blue section-padding">
+  <div class="section-heading text-center mb-5">
+    <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contacttitle.svg" alt="banner img"
+        class="img-fluid">
+        <?php if(!empty($cbtoolkit_case_study_cf7_section_subtitle)) : ?>
+          <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_subtitle ); ?></p>
+        <?php endif; ?>
+    </div>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_title)) : ?>
+      <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_title ); ?></h1>
+      <?php endif; ?>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_content)) : ?>
+      <p class="text-clr-skyBlue"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_content ); ?></p>
+      <?php endif; ?>
+  </div>
+  <div class="footer-bg">
+    <div class="container">
+      <div class="contact-wrap bg-white py-5">
+        <div class="row my-3 align-items-center">
+          <div class="col-lg-5 offset-lg-1">
+            <div class="contactImg text-center mb-5 mb-lg-0">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contact.svg" alt="banner img"
+                class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-info">
+            <?php if(!empty($cbtoolkit_case_study_cf7_section_form_heading)) : ?>
+              <h3 class="fs-4 fw-bold"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_form_heading ); ?></h3>
+            <?php endif; ?>
+            </div>
+            <div class="contact-form">
+              <?php echo do_shortcode( '[contact-form-7 id="452" title="Contact Global"]' ); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact end -->
 <?php get_footer(); ?>

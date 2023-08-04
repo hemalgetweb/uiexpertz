@@ -312,3 +312,6 @@ li.recent-post-list .post-time img {
 .service-item .p-1 img {
 	width: 100%;
 }
+.service-item .p-1 img {
+  height: auto;
+}

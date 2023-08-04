@@ -153,6 +153,12 @@ function cbtoolkit_customizer_panels_sections($wp_customize)
         'priority'    => 14,
         'capability'  => 'edit_theme_options',
     ]);
+    $wp_customize->add_section('cf7_form_settings', [
+        'title'       => __('CF7 Form Settings', 'cb-toolkit'),
+        'description' => '',
+        'priority'    => 14,
+        'capability'  => 'edit_theme_options',
+    ]);
 
     $wp_customize->add_section('breadcrumb_setting', [
         'title'       => __('Breadcrumb Setting', 'cb-toolkit'),
@@ -1631,110 +1637,46 @@ function _header_blog_fields($fields)
     // Blog Setting
 
     $fields[] = [
-        'type' => 'radio-buttonset',
-        'settings' => 'cbblog_layout',
-        'label' => __('Layout', 'cb-toolkit'),
-        'description' => __('You can choose a layout.', 'cb-toolkit'),
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_subtitle',
+        'label' => __('Blog Details Related Post Subtitle', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Subtitle.', 'cb-toolkit'),
         'section' => 'blog_setting',
-        'default' => 'right-sidebar',
-        'choices' => array(
-            'left-sidebar' => __('Left Sidebar', 'cb-toolkit'),
-            'full-width' => __('Full Width', 'cb-toolkit'),
-            'right-sidebar' => __('Right Sidebar', 'cb-toolkit'),
-        ),
+        'default' => 'UiExpertz Latest Blogs',
+    ];
+    $fields[] = [
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_title',
+        'label' => __('Blog Details Related Post Title', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Title.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'Related Posts',
+    ];
+    $fields[] = [
+        'type' => 'textarea',
+        'settings' => 'cbblog_details_related_post_content',
+        'label' => __('Blog Details Related Post Content', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Content.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'Facilisis mauris sit amet massa vitae tortor condimentum.',
+    ];
+    $fields[] = [
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_btn_text',
+        'label' => __('Blog Details Related Post Button Text', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Button Text.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'View all',
+    ];
+    $fields[] = [
+        'type' => 'url',
+        'settings' => 'cbblog_details_related_post_btn_link',
+        'label' => __('Blog Details Related Post Button Link', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Button Link.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => '#',
     ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_btn_switch',
-        'label'    => __('Blog BTN On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_meta_switch',
-        'label'    => __('Blog Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_author_switch',
-        'label'    => __('Blog Author Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_date_switch',
-        'label'    => __('Blog Date Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 0,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_comments_switch',
-        'label'    => __('Blog Comments Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => '1',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_blog_btn_text',
-        'label'    => __('Blog Button text', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => __('Read More', 'cb-toolkit'),
-        'priority' => 10,
-    ];
     return $fields;
 }
 add_filter('kirki/fields', '_header_blog_fields');
@@ -2104,7 +2046,7 @@ function cbtoolkit_case_studies_fields($fields) {
         'type'     => 'text',
         'settings' => 'cbtoolkit_case_study_cf7_section_subtitle',
         'label'    => __('CF7 Section Subtitile', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
+        'section'  => 'cf7_form_settings',
         'default'  => __('Let’s work together', 'cb-toolkit'),
         'priority' => 10
     ];
@@ -2112,7 +2054,7 @@ function cbtoolkit_case_studies_fields($fields) {
         'type'     => 'text',
         'settings' => 'cbtoolkit_case_study_cf7_section_title',
         'label'    => __('CF7 Section Title', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
+        'section'  => 'cf7_form_settings',
         'default'  => __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit'),
         'priority' => 10
     ];
@@ -2120,7 +2062,7 @@ function cbtoolkit_case_studies_fields($fields) {
         'type'     => 'textarea',
         'settings' => 'cbtoolkit_case_study_cf7_section_content',
         'label'    => __('CF7 Section Content', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
+        'section'  => 'cf7_form_settings',
         'default'  => __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit'),
         'priority' => 10
     ];
@@ -2128,7 +2070,7 @@ function cbtoolkit_case_studies_fields($fields) {
         'type'     => 'text',
         'settings' => 'cbtoolkit_case_study_cf7_section_form_heading',
         'label'    => __('CF7 Form Heading', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
+        'section'  => 'cf7_form_settings',
         'default'  => __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit'),
         'priority' => 10
     ];

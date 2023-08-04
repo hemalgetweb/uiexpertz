@@ -2101,18 +2101,34 @@ function cbtoolkit_case_studies_fields($fields) {
     ];
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'cbtoolkit_case_study_inner_section_subtitle',
-        'label'    => __('Inner Section Subtitile', 'cb-toolkit'),
+        'settings' => 'cbtoolkit_case_study_cf7_section_subtitle',
+        'label'    => __('CF7 Section Subtitile', 'cb-toolkit'),
         'section'  => 'case_study_settings',
-        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'default'  => __('Let’s work together', 'cb-toolkit'),
         'priority' => 10
     ];
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'cbtoolkit_case_study_inner_section_title',
-        'label'    => __('Inner Section Title', 'cb-toolkit'),
+        'settings' => 'cbtoolkit_case_study_cf7_section_title',
+        'label'    => __('CF7 Section Title', 'cb-toolkit'),
         'section'  => 'case_study_settings',
-        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'default'  => __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_case_study_cf7_section_content',
+        'label'    => __('CF7 Section Content', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_cf7_section_form_heading',
+        'label'    => __('CF7 Form Heading', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit'),
         'priority' => 10
     ];
 

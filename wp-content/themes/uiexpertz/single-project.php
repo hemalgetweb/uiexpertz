@@ -6,6 +6,10 @@ $cbtoolkit_case_study_section_content = get_theme_mod( 'cbtoolkit_case_study_sec
 $cbtoolkit_case_study_section_image = get_theme_mod( 'cbtoolkit_case_study_section_image', '' );
 $cbtoolkit_case_study_inner_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_inner_section_subtitle', __('Explore our key experience', 'cb-toolkit') );
 $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study_inner_section_title', __('Explore our key experience', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_cf7_section_subtitle', __('Let’s work together', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_title = get_theme_mod( 'cbtoolkit_case_study_cf7_section_title', __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_content = get_theme_mod( 'cbtoolkit_case_study_cf7_section_content', __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit') );
 $post_id = get_the_ID();
 $taxonomy_data = get_the_terms($post_id, 'project_category');
 $first_cat_name = '';
@@ -62,6 +66,28 @@ if($process_3) {
   $process_3_description = $process_3['process_3_description'] ?? '';
 }
 $process_3_image_gallery = function_exists('get_field') ? get_field('process_3_image_gallery', get_the_ID()): '';
+
+/**
+ * Process 4
+ */
+$process_4 = function_exists('get_field') ? get_field('process_4', get_the_ID()): '';
+$process_4_subtitle = '';
+$process_4_title = '';
+$process_4_description = '';
+$process_4_image_bottom_title = '';
+$process_4_image_bottom_content = '';
+$process_4_image_1 = '';
+$process_4_image_2 = '';
+if($process_4) {
+  $process_4_subtitle = $process_4['process_4_subtitle'] ?? '';
+  $process_4_title = $process_4['process_4_title'] ?? '';
+  $process_4_description = $process_4['process_4_description'] ?? '';
+  $process_4_image_1 = $process_4['process_4_image_1'] ?? '';
+  $process_4_image_2 = $process_4['process_4_image_2'] ?? '';
+  $process_4_image_bottom_title = $process_4['process_4_image_bottom_title'] ?? '';
+  $process_4_image_bottom_content = $process_4['process_4_image_bottom_content'] ?? '';
+}
+
 ?>
 <!--subbanner banner -->
 <div class="  subBanner bg-clr-blue fs-6 pt-75">
@@ -282,50 +308,62 @@ $process_3_image_gallery = function_exists('get_field') ? get_field('process_3_i
       <div class="container">
         <div class="section-heading text-center mb-5">
           <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+            <?php if(!empty($process_4_subtitle)) : ?>
             <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">
-              Process 04
+              <?php echo $process_4_subtitle; ?>
             </p>
+            <?php endif; ?>
           </div>
-          <h1 class="fs-40 text-clr-blue py-2">
-            Project Style Guide
-          </h1>
-          <p class="text-clr-gray mb-4">
-            The Design phase is an iterative process that begins with low-fidelity design options and ends with
-            pixel-perfect mock-ups, ready for development.
-          </p>
+          <?php if(!empty($process_4_title)) : ?>
+            <h1 class="fs-40 text-clr-blue py-2">
+              <?php echo $process_4_title; ?>
+            </h1>
+          <?php endif; ?>
+          <?php if(!empty($process_4_title)) : ?>
+            <p class="text-clr-gray mb-4">
+              <?php echo $process_4_description; ?>
+              </p>
+          <?php endif; ?> 
         </div>
       </div>
 
       <div class="row">
+        <?php if(!empty($process_4_image_1)) : ?>
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/style-guide1.png" alt="banner img"
-              class="img-fluid w-100">
+            <div>
+              <img src="<?php echo esc_url($process_4_image_1); ?>" alt="banner img"
+                class="img-fluid w-100">
+            </div>
           </div>
-        </div>
+          <?php endif; ?> 
+          <?php if(!empty($process_4_image_2)) : ?>
         <div class="col-lg-4">
           <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/style-guide2.png" alt="banner img"
+            <img src="<?php echo esc_url($process_4_image_2); ?>" alt="banner img"
               class="img-fluid w-100">
           </div>
         </div>
+        <?php endif; ?> 
       </div>
 
       <div class="result mt-5 pt-3">
         <div class="row">
           <div class="col-lg-4">
-            <h4 class="fs-2 text-clr-blue">The Result</h4>
+          <?php if(!empty($process_4_image_bottom_title)) : ?>
+            <h4 class="fs-2 text-clr-blue">
+              <?php echo $process_4_image_bottom_title; ?>
+            </h4>
+          <?php endif; ?>
           </div>
           <div class="col-lg-8">
             <div>
               <ul class="list-unstyled">
                 <li>
-                  <p class="fs-6 text-clr-gray">1. Supported substance consolidates parts of web based promoting and
-                    substance showcasing. It includes making substance, for example, a blog entry or video and paying
-                    for its consideration on a site that routinely distributes comparative substance. A piece of
-                    supported substance will seem to be like the remainder of the substance on the site yet will
-                    incorporate some sign that it’s supported. With execution showcasing, you would pay a pre-decided
-                    aps on your supported article navigates to your site from the article.</p>
+                  <?php if(!empty($process_4_image_bottom_content)) : ?>
+                    <p class="fs-6 text-clr-gray">
+                      <?php echo $process_4_image_bottom_content; ?>
+                      </p>
+                  <?php endif; ?>
                 </li>
               </ul>
             </div>
@@ -344,14 +382,16 @@ $process_3_image_gallery = function_exists('get_field') ? get_field('process_3_i
     <div class="section-hints d-flex justify-content-center align-items-center gap-2">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contacttitle.svg" alt="banner img"
         class="img-fluid">
-      <p class="fs-14 mb-0 fw-bold text-clr-sky">Let’s work together</p>
+        <?php if(!empty($cbtoolkit_case_study_cf7_section_subtitle)) : ?>
+          <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_subtitle ); ?></p>
+        <?php endif; ?>
     </div>
-    <h1 class="fs-40 text-white py-2">Tell us about your project, or send us an email at <span><a
-          class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com</a></span>
-    </h1>
-    <p class="text-clr-skyBlue">We take pride in delivering exceptional customer satisfaction and are always
-      thrilled to hear how we’ve helped our
-      clients achieve their goals.</p>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_title)) : ?>
+      <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_title ); ?></h1>
+      <?php endif; ?>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_content)) : ?>
+      <p class="text-clr-skyBlue"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_content ); ?></p>
+      <?php endif; ?>
   </div>
   <div class="footer-bg">
 
@@ -366,57 +406,12 @@ $process_3_image_gallery = function_exists('get_field') ? get_field('process_3_i
           </div>
           <div class="col-lg-6">
             <div class="contact-info">
-              <h3 class="fs-4 fw-bold">Fill out the form to start the <br class="d-none d-xl-inline">
-                conversation</h3>
+            <?php if(!empty($cbtoolkit_case_study_cf7_section_form_heading)) : ?>
+              <h3 class="fs-4 fw-bold"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_form_heading ); ?></h3>
+            <?php endif; ?>
             </div>
             <div class="contact-form">
-              <form class="form-wrapper">
-                <div class="row">
-                  <div class="col-md-12 mb-3">
-                    <div class="name w-100">
-                      <label for="inputName" class="form-label fw-bold fs-14 text-clr-blue">
-                        Name
-                      </label>
-                      <input type="text" placeholder="Halász Emese" class="form-control text-clr-dark1" id="inputName">
-                    </div>
-                  </div>
-                  <div class="col-md-12  mb-3">
-                    <div class="email w-100">
-                      <label for="inputEmail" class="form-label fw-bold fs-14 text-clr-blue">
-                        Email address
-                      </label>
-                      <input type="email" placeholder="halászemese@gmail.com" class="form-control text-clr-dark1"
-                        id="inputEmail">
-                    </div>
-                  </div>
-
-                  <div class="col-md-12 mb-3">
-                    <div class="email w-100">
-                      <label for="selectServices" class="form-label fw-bold fs-14 text-clr-blue">
-                        Services
-                      </label>
-                      <select class="select-menu form-select" aria-label="Default select example">
-                        <option selected>Choose services</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label fs-14 text-clr-gray" for="flexCheckDefault">
-                    I accept the privacy policy.
-                  </label>
-                </div>
-                <div class="btn-wrap mt-4">
-                  <button type="button"
-                    class="btn d-flex w-100 justify-content-center bg-clr-darkBlue form-btn align-items-center">
-                    Submit
-                  </button>
-                </div>
-              </form>
+              <?php echo do_shortcode( '[contact-form-7 id="452" title="Contact Global"]' ); ?>
             </div>
           </div>
         </div>

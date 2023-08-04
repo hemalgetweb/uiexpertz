@@ -10,7 +10,7 @@ function uiexpertz_custom_post_type_for_project() {
 		'archives'              => __( 'Item Archives', 'uiexpertz' ),
 		'attributes'            => __( 'Item Attributes', 'uiexpertz' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'uiexpertz' ),
-		'all_items'             => __( 'All Items', 'uiexpertz' ),
+		'all_items'             => __( 'All Project', 'uiexpertz' ),
 		'add_new_item'          => __( 'Add New Item', 'uiexpertz' ),
 		'add_new'               => __( 'Add New', 'uiexpertz' ),
 		'new_item'              => __( 'New Project', 'uiexpertz' ),

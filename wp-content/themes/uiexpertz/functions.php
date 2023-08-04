@@ -190,7 +190,7 @@ function uiexpertz_scripts()
 	// all CSS
 	wp_enqueue_style('uiexpertz-fonts', uiexpertz_fonts_url(), array(), '1.0.0');
 	wp_enqueue_style('swiper-bundle', UIEXPERTZ_THEME_CSS_DIR . 'swiper-bundle.min.css');
-	wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+	wp_enqueue_style('bootstrap', UIEXPERTZ_THEME_CSS_DIR . 'bootstrap.min.css');
 
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
 	wp_enqueue_style('uiexpertz-custom', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-custom.css', null, time());

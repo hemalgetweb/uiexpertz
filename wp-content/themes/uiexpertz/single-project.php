@@ -1,3 +1,5 @@
+
+
 <?php
 get_header();
 $cbtoolkit_case_study_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_section_subtitle', __('Case Studies', 'cb-toolkit') );

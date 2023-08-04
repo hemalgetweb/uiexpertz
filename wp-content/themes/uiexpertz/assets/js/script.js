@@ -138,14 +138,14 @@
                     480: {
                         slidesPerView: 4
                     },
-                    // when window width is >= 575px
+                    // when window width is >= 576
                     576: {
                       slidesPerView: 4,
                       spaceBetween: 0
                     },
-                    // when window width is >= 640px
+                    // when window width is >= 768
                     768: {
-                      slidesPerView: 4,
+                      slidesPerView: 3,
                       spaceBetween: 0
                     },
                     992: {

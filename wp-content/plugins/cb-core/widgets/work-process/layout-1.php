@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <?php endforeach; ?>
-                    <div class="d-flex flex-wrap align-items-center gap-3 mt-0 justify-content-center">
+                    <div class="d-flex flex-wrap align-items-center gap-3 mt-3 justify-content-center">
                             <?php if(!empty($settings['btn_text_1'])) :
                             if ( ! empty( $settings['btn_link_1']['url'] ) ) {
                                 $this->add_link_attributes( 'btn_link_1', $settings['btn_link_1'] );

@@ -2131,7 +2131,6 @@ function cbtoolkit_case_studies_fields($fields) {
         'default'  => __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit'),
         'priority' => 10
     ];
-
     
     return $fields;
 }

@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -142,6 +143,18 @@ function cbtoolkit_customizer_panels_sections($wp_customize)
 
     $wp_customize->add_section('header_side_setting', [
         'title'       => __('Side Info', 'cb-toolkit'),
+        'description' => '',
+        'priority'    => 14,
+        'capability'  => 'edit_theme_options',
+    ]);
+    $wp_customize->add_section('case_study_settings', [
+        'title'       => __('Case Study Settings', 'cb-toolkit'),
+        'description' => '',
+        'priority'    => 14,
+        'capability'  => 'edit_theme_options',
+    ]);
+    $wp_customize->add_section('cf7_form_settings', [
+        'title'       => __('CF7 Form Settings', 'cb-toolkit'),
         'description' => '',
         'priority'    => 14,
         'capability'  => 'edit_theme_options',
@@ -906,6 +919,7 @@ function _header_side_fields($fields)
         ],
     ];
 
+    
     //side info 2
     $fields[] = [
         'type'     => 'switch',
@@ -1624,39 +1638,44 @@ function _header_blog_fields($fields)
     
     
     $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'cbtoolkit_blog_banner_image',
-        'description' => __('Blog banner image', 'cb-toolkit'),
-        'section'     => 'blog_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/case-banner.svg',
-        'priority' => 10,
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_subtitle',
+        'label' => __('Blog Details Related Post Subtitle', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Subtitle.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'UiExpertz Latest Blogs',
     ];
-
     $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_blog_sub_title',
-        'label'    => __('Sub title', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => __('Latest Blogs and News', 'cb-toolkit'),
-        'priority' => 10,
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_title',
+        'label' => __('Blog Details Related Post Title', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Title.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'Related Posts',
     ];
-    
     $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_blog_title',
-        'label'    => __('Title', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => __('Sharing our knowledge, experience and insight.', 'cb-toolkit'),
-        'priority' => 10,
+        'type' => 'textarea',
+        'settings' => 'cbblog_details_related_post_content',
+        'label' => __('Blog Details Related Post Content', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Content.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'Facilisis mauris sit amet massa vitae tortor condimentum.',
     ];
-
     $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'cbtoolkit_blog_content',
-        'label'    => __('Content', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => __("Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.", 'cb-toolkit'),
-        'priority' => 10,
+        'type' => 'text',
+        'settings' => 'cbblog_details_related_post_btn_text',
+        'label' => __('Blog Details Related Post Button Text', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Button Text.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => 'View all',
+    ];
+    $fields[] = [
+        'type' => 'url',
+        'settings' => 'cbblog_details_related_post_btn_link',
+        'label' => __('Blog Details Related Post Button Link', 'cb-toolkit'),
+        'description' => __('Blog Details Related Post Button Link.', 'cb-toolkit'),
+        'section' => 'blog_setting',
+        'default' => '#',
     ];
 
     return $fields;
@@ -1987,6 +2006,79 @@ add_filter('kirki/fields', 'cbtoolkit_404_fields');
 
 
 
+
+/**
+ * Case studies
+ */
+function cbtoolkit_case_studies_fields($fields) {
+    //case studies controls
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_section_subtitle',
+        'label'    => __('Section Subtitile', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Case Studies', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_section_title',
+        'label'    => __('Section Title', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Our signature digital experiences projects.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_case_study_section_content',
+        'label'    => __('Section Content', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('We showcased how our skilled hands and creative minds turn a concept into a fully-functional product.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'image',
+        'settings' => 'cbtoolkit_case_study_section_image',
+        'label'    => __('Section Image', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_cf7_section_subtitle',
+        'label'    => __('CF7 Section Subtitile', 'cb-toolkit'),
+        'section'  => 'cf7_form_settings',
+        'default'  => __('Let’s work together', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_cf7_section_title',
+        'label'    => __('CF7 Section Title', 'cb-toolkit'),
+        'section'  => 'cf7_form_settings',
+        'default'  => __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_case_study_cf7_section_content',
+        'label'    => __('CF7 Section Content', 'cb-toolkit'),
+        'section'  => 'cf7_form_settings',
+        'default'  => __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_cf7_section_form_heading',
+        'label'    => __('CF7 Form Heading', 'cb-toolkit'),
+        'section'  => 'cf7_form_settings',
+        'default'  => __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    
+    return $fields;
+}
+add_filter('kirki/fields', 'cbtoolkit_case_studies_fields');
 
 /**
  * Added Fields

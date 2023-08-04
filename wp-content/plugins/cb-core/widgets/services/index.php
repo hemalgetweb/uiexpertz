@@ -118,7 +118,8 @@ class CB_Core_Service extends Widget_Base
 				'label' => __('Layout', 'cb-core'),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'options' => [
-					'layout-1' => __('Layout 1', 'cb-core')
+					'layout-1' => __('Layout 1', 'cb-core'),
+					'layout-2' => __('Layout 2', 'cb-core')
 				],
 				'default' => 'layout-1',
 				'toggle' => true,
@@ -133,7 +134,76 @@ class CB_Core_Service extends Widget_Base
 			]
 		);
 		// main controls here]
-        
+        $this->add_control(
+		 'service_box_height',
+		 [
+		   'label'   => esc_html__( 'Section Box Height', 'cb-core' ),
+		   'type'    => \Elementor\Controls_Manager::NUMBER,
+		   'condition' => [
+			'layout' => ['layout-1', 'layout-2']
+		   ]
+		 ]
+		);
+		$this->add_control(
+			'btn_1_text',
+				[
+				'label'   => esc_html__( 'Button 1 text', 'cb-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'label_block' => true,
+				'condition' => [
+					'layout' => ['layout-2']
+				]
+			]
+		);
+		$this->add_control(
+		'btn_1_link',
+		[
+			'label'   => esc_html__( 'Button Link', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::URL,
+			'label_block' => true,
+			'default'     => [
+				'url'               => '#',
+				'is_external'       => true,
+				'nofollow'          => true,
+				'custom_attributes' => '',
+			],
+			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
+			'label_block' => true,
+			'condition' => [
+				'layout' => ['layout-2']
+				]
+			]
+		);
+		$this->add_control(
+		'btn_2_text',
+			[
+			'label'   => esc_html__( 'Button 2 text', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::TEXT,
+			'label_block' => true,
+			'condition' => [
+				'layout' => ['layout-2']
+			]
+			]
+		);
+		$this->add_control(
+		'btn_2_link',
+		[
+			'label'   => esc_html__( 'Button 2 Link', 'cb-core' ),
+			'type'        => \Elementor\Controls_Manager::URL,
+			'label_block' => true,
+			'default'     => [
+				'url'               => '#',
+				'is_external'       => true,
+				'nofollow'          => true,
+				'custom_attributes' => '',
+			],
+			'placeholder' => esc_html__( 'Button URL', 'cb-core' ),
+			'label_block' => true,
+			'condition' => [
+				'layout' => ['layout-2']
+				]
+			]
+		);
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
          'field_condition',
@@ -143,6 +213,7 @@ class CB_Core_Service extends Widget_Base
             'label_block' => true,
             'options' => [
              'style-1'  => esc_html__( 'Style 1', 'cb-core' ),
+             'style-2'  => esc_html__( 'Style 1', 'cb-core' ),
            ],
            'default' => 'style-1',
          ]
@@ -157,7 +228,7 @@ class CB_Core_Service extends Widget_Base
                'url' => \Elementor\Utils::get_placeholder_image_src(),
            ],
            'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
             ]
          ]
         );
@@ -169,7 +240,7 @@ class CB_Core_Service extends Widget_Base
              'default'     => esc_html__( 'UX/UI Design', 'cb-core' ),
              'label_block' => true,
              'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
              ]
            ]
          );
@@ -187,8 +258,12 @@ class CB_Core_Service extends Widget_Base
               ],
               'placeholder' => esc_html__( 'Serice URL', 'cb-core' ),
               'label_block' => true,
+			  'condition' => [
+				'field_condition' => ['style-1']
+			 ]
             ]
           );
+		  
          $repeater->add_control(
          'service_excerpt',
            [
@@ -196,7 +271,7 @@ class CB_Core_Service extends Widget_Base
              'type'        => \Elementor\Controls_Manager::TEXTAREA,
              'label_block' => true,
              'condition' => [
-                'field_condition' => ['style-1']
+                'field_condition' => ['style-1', 'style-2']
              ]
            ]
          );

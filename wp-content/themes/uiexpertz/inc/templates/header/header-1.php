@@ -13,7 +13,7 @@
             <div class="mobileMenu-container">
                 <div class="mobileMenu-header d-flex align-items-center gap-4 justify-content-between">
                     <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
+                        <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                     </a>
                     <div class="navbarToggler  border-0 text-decoration-none">
                         <div class="menuAction">
@@ -53,15 +53,15 @@
         <nav class="navbar navbar-expand-xl py-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
+                    <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <?php uiexpertz_header_menu(); ?>
                     <div class="navbar-right btn-wrap d-flex flex-wrap gap-3 gap-lg-4">
                         <?php if(!empty($cbtoolkit_side_support_number_text_1)) : ?>
                         <a class="link-text ms-4 text-decoration-none pe-4 fs-5 text-white d-flex gap-2 align-items-center"
-                            href="tel:+88 012 458 368">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.svg" alt="icon" class="img-fluid">
+                            href="tel:<?php echo $cbtoolkit_side_support_number_link_1 ? esc_attr($cbtoolkit_side_support_number_link_1): ''; ?>">
+                            <img width="18" height="18" src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.svg" alt="icon" class="img-fluid">
                             <?php echo esc_html($cbtoolkit_side_support_number_text_1); ?>
                         </a>
                         <?php endif; ?>

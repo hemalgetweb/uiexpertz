@@ -129,7 +129,7 @@
   padding-top: 120px;
 }
 .footer-widget ul.menu li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 17px;
   list-style: none;
 }
 
@@ -305,4 +305,13 @@ li.recent-post-list .post-time img {
 }
 .uiexpertz-service-item .p-1 img {
 	width: 100%;
+}
+.uiexpertz-service-item .text-clr-darkBlue a {
+	color: #5648FF;
+}
+.service-item .p-1 img {
+	width: 100%;
+}
+.service-item .p-1 img {
+  height: auto;
 }

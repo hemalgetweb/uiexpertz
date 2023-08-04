@@ -42,6 +42,56 @@ $args = array(
 );
 
 $recent_posts = new WP_Query($args);
+
+
+/**
+ * Blog details customizer meta
+*/
+$cbblog_details_related_post_subtitle = get_theme_mod( 'cbblog_details_related_post_subtitle', __('UiExpertz Latest Blogs', 'uiexpertz') );
+$cbblog_details_related_post_title = get_theme_mod( 'cbblog_details_related_post_title', __('Related Posts', 'uiexpertz') );
+$cbblog_details_related_post_content = get_theme_mod( 'cbblog_details_related_post_content', __('Facilisis mauris sit amet massa vitae tortor condimentum.', 'uiexpertz') );
+$cbblog_details_related_post_btn_text = get_theme_mod( 'cbblog_details_related_post_btn_text', __('View all', 'uiexpertz') );
+$cbblog_details_related_post_btn_link = get_theme_mod( 'cbblog_details_related_post_btn_link', __('#', 'uiexpertz') );
+
+/**
+ * CF7 form data from customizer
+ */
+$cbtoolkit_case_study_cf7_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_cf7_section_subtitle', __('Let’s work together', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_title = get_theme_mod( 'cbtoolkit_case_study_cf7_section_title', __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_content = get_theme_mod( 'cbtoolkit_case_study_cf7_section_content', __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit') );
+
+
+
+/**
+ * Related post query
+ */
+$current_post_id = get_the_ID();
+
+$tags = wp_get_post_tags($current_post_id, array('fields' => 'ids'));
+$categories = wp_get_post_categories($current_post_id, array('fields' => 'ids'));
+
+$related_query_args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3, // You can adjust the number of related posts to display
+    'post__not_in' => array($current_post_id), // Exclude the current post
+    'tax_query' => array(
+        'relation' => 'OR',
+        array(
+            'taxonomy' => 'post_tag',
+            'field' => 'id',
+            'terms' => $tags,
+        ),
+        array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => $categories,
+        ),
+    ),
+);
+
+$related_query = new WP_Query($related_query_args);
+
  ?>
 <?php get_header(); ?>
 <div class=" subBanner blog-details-banner bg-clr-blue fs-6 ">
@@ -108,21 +158,6 @@ $recent_posts = new WP_Query($args);
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
-                  <a href="#" target="_blank" class="text-decoration-none blog-details-social">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_504_6829)">
-                        <path d="M11 1.98086C13.9391 1.98086 14.2871 1.99375 15.443 2.04531C16.5172 2.09258 17.0973 2.27305 17.484 2.42344C17.9953 2.62109 18.3648 2.86172 18.7473 3.24414C19.134 3.63086 19.3703 3.99609 19.568 4.50742C19.7184 4.89414 19.8988 5.47852 19.9461 6.54844C19.9977 7.70859 20.0105 8.05664 20.0105 10.9914C20.0105 13.9305 19.9977 14.2785 19.9461 15.4344C19.8988 16.5086 19.7184 17.0887 19.568 17.4754C19.3703 17.9867 19.1297 18.3563 18.7473 18.7387C18.3605 19.1254 17.9953 19.3617 17.484 19.5594C17.0973 19.7098 16.5129 19.8902 15.443 19.9375C14.2828 19.9891 13.9348 20.002 11 20.002C8.06094 20.002 7.71289 19.9891 6.55703 19.9375C5.48281 19.8902 4.90273 19.7098 4.51602 19.5594C4.00469 19.3617 3.63516 19.1211 3.25273 18.7387C2.86602 18.352 2.62969 17.9867 2.43203 17.4754C2.28164 17.0887 2.10117 16.5043 2.05391 15.4344C2.00234 14.2742 1.98945 13.9262 1.98945 10.9914C1.98945 8.05234 2.00234 7.7043 2.05391 6.54844C2.10117 5.47422 2.28164 4.89414 2.43203 4.50742C2.62969 3.99609 2.87031 3.62656 3.25273 3.24414C3.63945 2.85742 4.00469 2.62109 4.51602 2.42344C4.90273 2.27305 5.48711 2.09258 6.55703 2.04531C7.71289 1.99375 8.06094 1.98086 11 1.98086ZM11 0C8.01367 0 7.63984 0.0128906 6.4668 0.0644531C5.29805 0.116016 4.49453 0.305078 3.79844 0.575781C3.07227 0.859375 2.45781 1.2332 1.84766 1.84766C1.2332 2.45781 0.859375 3.07227 0.575781 3.79414C0.305078 4.49453 0.116016 5.29375 0.0644531 6.4625C0.0128906 7.63984 0 8.01367 0 11C0 13.9863 0.0128906 14.3602 0.0644531 15.5332C0.116016 16.702 0.305078 17.5055 0.575781 18.2016C0.859375 18.9277 1.2332 19.5422 1.84766 20.1523C2.45781 20.7625 3.07227 21.1406 3.79414 21.4199C4.49453 21.6906 5.29375 21.8797 6.4625 21.9313C7.63555 21.9828 8.00937 21.9957 10.9957 21.9957C13.982 21.9957 14.3559 21.9828 15.5289 21.9313C16.6977 21.8797 17.5012 21.6906 18.1973 21.4199C18.9191 21.1406 19.5336 20.7625 20.1437 20.1523C20.7539 19.5422 21.132 18.9277 21.4113 18.2059C21.682 17.5055 21.8711 16.7063 21.9227 15.5375C21.9742 14.3645 21.9871 13.9906 21.9871 11.0043C21.9871 8.01797 21.9742 7.64414 21.9227 6.47109C21.8711 5.30234 21.682 4.49883 21.4113 3.80273C21.1406 3.07227 20.7668 2.45781 20.1523 1.84766C19.5422 1.2375 18.9277 0.859375 18.2059 0.580078C17.5055 0.309375 16.7062 0.120313 15.5375 0.06875C14.3602 0.0128906 13.9863 0 11 0Z" fill="#97A3C1"></path>
-                        <path d="M11 5.34961C7.88047 5.34961 5.34961 7.88047 5.34961 11C5.34961 14.1195 7.88047 16.6504 11 16.6504C14.1195 16.6504 16.6504 14.1195 16.6504 11C16.6504 7.88047 14.1195 5.34961 11 5.34961ZM11 14.6652C8.97617 14.6652 7.33477 13.0238 7.33477 11C7.33477 8.97617 8.97617 7.33477 11 7.33477C13.0238 7.33477 14.6652 8.97617 14.6652 11C14.6652 13.0238 13.0238 14.6652 11 14.6652Z" fill="#97A3C1"></path>
-                        <path d="M18.193 5.12615C18.193 5.85662 17.6 6.44529 16.8738 6.44529C16.1434 6.44529 15.5547 5.85232 15.5547 5.12615C15.5547 4.39568 16.1477 3.80701 16.8738 3.80701C17.6 3.80701 18.193 4.39998 18.193 5.12615Z" fill="#97A3C1"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_504_6829">
-                          <rect width="22" height="22" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-
                   </a>
                   <a href="<?php echo $linkedin_share_link; ?>" target="_blank" class="text-decoration-none blog-details-social">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,86 +274,132 @@ $recent_posts = new WP_Query($args);
     </div>
   </div>
 
+  
 
-
-
-
-
-
-
-
-
-
-    <!-- blog-details -->
-    <section class="uiexpertz-blog-details d-none"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/w-shape.svg); background-repeat: no-repeat;">
-        <div class="container mt-5 pt-4">
-            <div class="row">
-                <div class="col-lg-8">
-                    <article class="articles">
-                        <div class="psot-details">
-                            <div class="blog-info p-3">
-                                <div class="blog-header">
-									<?php if(!empty($cat_name)) : ?>
-                                    <span
-                                        class="section-tag fs-12 fw-bold text-uppercase text-clr-dark2 ls-1 d-inline-flex gap-2 align-items-center mb-2">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-process-icon.svg" alt="icon" class="img-fluid">
-                                        <?php echo $cat_name; ?>
-                                    </span>
-									<?php endif; ?>
-                                    <h2 class="blog-title text-clr-dark1 fs-36 fw-bold mb-3">
-										<?php the_title(); ?>
-                                    </h2>
-									<!-- display none -->
-                                    <div
-                                        class="d-none authors text-decoration-none d-flex gap-2 gap-lg-3 align-items-center">
-                                        <?php echo get_avatar(get_the_author_meta('ID'), get_the_ID()); ?>
-                                        <span>
-                                            <span class="authure-name fs-6 text-clr-dark1 mb-1">
-                                                <?php echo esc_html__('Published by ', 'uiexpertz'); ?><b><a href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>"><?php echo esc_html(get_the_author_meta('display_name')); ?></a></b>
-                                            </span>
-                                            <span class="authure-name fs-16 text-clr-dark2 fw-normal ms-4">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fi-rs-calendar.svg" alt="icon" class="img-fluid">
-                                                <span class="ms-2"><?php echo get_the_date(); ?></span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-								<?php if(has_post_thumbnail(get_the_ID())): ?>
-                                <div class="blog-img mb-2 radius-6 overflow-hidden my-4">
-									<?php the_post_thumbnail(get_the_ID()); ?>
-                                </div>
-								<?php endif; ?>
-                                <div class="blog-content my-4 pt-3">
-                                    <?php the_content(); ?>
-                                </div>
-                                <div class="blog-bottom my-4 pt-3">
-                                    <div
-                                        class="blog-bottom-box d-flex flex-wrap gap-4 justify-content-center justify-content-xl-between align-items-center radius-12 p-4 mb-4">
-                                        <h4 class="fs-5 fw-bold text-clr-dark1 mb-0">
-                                            <?php echo esc_html__('Social media accounts', 'uiexpertz'); ?>
-                                        </h4>
-										<?php echo do_shortcode('[Sassy_Social_Share]') ?>
-                                       
-                                    </div>
-									<?php get_template_part( 'post-formates/single-post/content', 'biography' ); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <div class="Sidebar mt-3">
-						<?php if(is_active_sidebar('blog-sidebar')) : ?>
-							<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
-								<?php dynamic_sidebar( 'blog-sidebar' ); ?>
-							<?php } ?>
-						<?php endif; ?>
-                    </div>
-                </div>
-            </div>
+  <!--  Latest Blogs  start -->
+  <div class="latest-blog section-padding bg-clr-lightGray">
+    <div class="container">
+      <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
+        <div class="section-headings text-start">
+          <?php if(!empty($cbblog_details_related_post_subtitle)) : ?>
+          <div class="section-hints d-flex justify-content-start align-items-center gap-2">
+            <p class="fs-14 mb-0 fw-bold text-clr-darkBlue"><?php echo wp_kses_post($cbblog_details_related_post_subtitle); ?></p>
+          </div>
+          <?php endif; ?>
+          <?php if(!empty($cbblog_details_related_post_title)) : ?>
+            <h1 class="fs-40 text-clr-blue py-2"><?php echo wp_kses_post($cbblog_details_related_post_title); ?></h1>
+          <?php endif; ?>
+          <?php if(!empty($cbblog_details_related_post_content)) : ?>
+            <p class="text-clr-gray fs-6"><?php echo wp_kses_post($cbblog_details_related_post_content); ?></p>
+          <?php endif; ?>
         </div>
-    </section>
-    <!--/ blog-pots -->
+        <?php if(!empty($cbblog_details_related_post_btn_text)) : ?>
+        <div class="d-flex align-items-center  mt-2 pt-3 justify-content-start">
+          <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+            href="<?php echo $cbblog_details_related_post_btn_link ? esc_url($cbblog_details_related_post_btn_link): ''; ?>">
+            <?php echo wp_kses_post($cbblog_details_related_post_btn_text); ?>
+            <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="white" />
+            </svg>
+          </a>
+        </div>
+        <?php endif; ?>
+      </div>
+      <?php if($related_query->have_posts()) : ?>
+      <div class="row">
+        <?php while($related_query->have_posts()): $related_query->the_post() ?>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item  bg-white mb-4 pb-2">
+            <div class="p-1">
+              <?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+            </div>
+            <?php
+              $current_post_id = get_the_ID();
+              $categories = get_the_category($current_post_id);
 
+              if (!empty($categories)) {
+                  $first_category = $categories[0];
+                  $category_name = $first_category->name;
+                  $category_slug = $first_category->slug;
+                  ?>
+                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
+                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
+                          <a href="<?php echo esc_url(get_category_link($first_category)); ?>" class="text-decoration-none">
+                              <?php echo esc_html($category_name); ?>
+                          </a>
+                      </li>
+                  </ul>
+                  <?php
+              }
+              ?>
+            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                <span>
+                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+                </span>
+                <span>
+                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                  </svg>
+  
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <?php endwhile; wp_reset_query(); ?>
+      </div>
+      <?php endif; ?>
+    </div>
+  </div>
+  <!-- Latest Blogs end -->
+
+<!-- contact start -->
+<div class="contact bg-clr-blue section-padding">
+  <div class="section-heading text-center mb-5">
+    <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contacttitle.svg" alt="banner img"
+        class="img-fluid">
+        <?php if(!empty($cbtoolkit_case_study_cf7_section_subtitle)) : ?>
+          <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_subtitle ); ?></p>
+        <?php endif; ?>
+    </div>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_title)) : ?>
+      <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_title ); ?></h1>
+      <?php endif; ?>
+    <?php if(!empty($cbtoolkit_case_study_cf7_section_content)) : ?>
+      <p class="text-clr-skyBlue"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_content ); ?></p>
+      <?php endif; ?>
+  </div>
+  <div class="footer-bg">
+    <div class="container">
+      <div class="contact-wrap bg-white py-5">
+        <div class="row my-3 align-items-center">
+          <div class="col-lg-5 offset-lg-1">
+            <div class="contactImg text-center mb-5 mb-lg-0">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contact.svg" alt="banner img"
+                class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-info">
+            <?php if(!empty($cbtoolkit_case_study_cf7_section_form_heading)) : ?>
+              <h3 class="fs-4 fw-bold"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_form_heading ); ?></h3>
+            <?php endif; ?>
+            </div>
+            <div class="contact-form">
+              <?php echo do_shortcode( '[contact-form-7 id="452" title="Contact Global"]' ); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact end -->
 <?php get_footer(); ?>

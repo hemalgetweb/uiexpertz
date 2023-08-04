@@ -1,37 +1,5 @@
 (function($) {
 
-
-    var page = page ? page + 1: 2;
-    var postType = 'project';
-    var container = $('.uiexperts-case-study-wrap-row');
-    $('.uiexperts-more-works-portfolio').on('click', function() {
-        var max_num_pages = $(this).data('max_num_pages');
-        var posts_per_page = $(this).data('posts_per_page');
-        $.ajax({
-            url: ajax.ajax_url,
-            type: 'POST',
-            data: {
-                action: 'custom_next_posts',
-                paged: page,
-                post_type: postType,
-                posts_per_page: posts_per_page
-            },
-            beforeSend: function() {
-                // Add a loading indicator if desired
-            },
-            success: function(response) {
-                container.append(response);
-                page++;
-            },
-            complete: function() {
-                // Remove the loading indicator if added
-                $(this).hide();
-            }
-        });
-        if(page >= max_num_pages) {
-            $(this).attr('disabled', 'disable');
-        }
-    });
     /**
      * Blog category filter
      */

@@ -394,7 +394,6 @@ if($process_4) {
       <?php endif; ?>
   </div>
   <div class="footer-bg">
-
     <div class="container">
       <div class="contact-wrap bg-white py-5">
         <div class="row my-3 align-items-center">

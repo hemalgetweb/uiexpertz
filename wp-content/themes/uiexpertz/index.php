@@ -13,6 +13,13 @@
  */
 get_header();
 
+$cbtoolkit_blog_banner_image = get_theme_mod('cbtoolkit_blog_banner_image', get_template_directory_uri() . '/assets/img/case-banner.svg');
+$cbtoolkit_blog_sub_title = get_theme_mod('cbtoolkit_blog_sub_title', __('Latest Blogs and News', 'uiexpertz'));
+$cbtoolkit_blog_title = get_theme_mod('cbtoolkit_blog_title', __('Sharing our knowledge, experience and insight.', 'uiexpertz'));
+$cbtoolkit_blog_content = get_theme_mod('cbtoolkit_blog_content', __('Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.', 'uiexpertz'));
+
+
+
 $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 8;
 $sidebar_class = is_active_sidebar( 'blog-sidebar' ) ? 'theme-has-blog-sidebar' : 'theme-has-blog-no-sidebar';
 $cbblog_layout = get_theme_mod('cbblog_layout') ? get_theme_mod('cbblog_layout') : 'right-sidebar';
@@ -37,6 +44,51 @@ $categories = get_categories(array(
 
 
 ?>
+
+
+
+<!--sub banner -->
+<div class=" subBanner bg-clr-blue fs-6 ">
+    <div class="container">
+        <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
+                        <?php if(!empty($cbtoolkit_blog_sub_title)) : ?>
+                            <p class="text-clr-sky fs-18"><?php echo wp_kses_post($cbtoolkit_blog_sub_title); ?></p>
+                        <?php endif; ?>
+                        <?php if(!empty($cbtoolkit_blog_title)) : ?>
+                            <h1 class="fs-48 text-white mb-4 ">
+                                <?php echo wp_kses_post($cbtoolkit_blog_title); ?>
+                            </h1>
+                        <?php endif ?>
+                        <div class="section-intro fs-18 fw-normal text-clr-skyBlue mb-5 ">
+                            <?php if(!empty($cbtoolkit_blog_content)) : ?>
+                                <p>
+                                    <?php echo wp_kses_post($cbtoolkit_blog_content); ?>
+                                </p>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <?php if(!empty($cbtoolkit_blog_banner_image)) : ?>
+                        <div class="banner-img text-center text-lg-end ">
+                        
+                            <img src="<?php echo esc_url($cbtoolkit_blog_banner_image); ?>" alt="<?php echo esc_attr__('Blog banner', 'uiexpertz'); ?>" class="img-fluid">
+                        
+                        </div>
+                    <?php endif ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/ sub banner -->
+
+
+
 <!-- blog-pots -->
 <section class="service section-padding bg-clr-lightGray">
     <div class="container">

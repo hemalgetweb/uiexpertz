@@ -1621,112 +1621,44 @@ Header Social
 function _header_blog_fields($fields)
 {
     // Blog Setting
-
+    
+    
     $fields[] = [
-        'type' => 'radio-buttonset',
-        'settings' => 'cbblog_layout',
-        'label' => __('Layout', 'cb-toolkit'),
-        'description' => __('You can choose a layout.', 'cb-toolkit'),
-        'section' => 'blog_setting',
-        'default' => 'right-sidebar',
-        'choices' => array(
-            'left-sidebar' => __('Left Sidebar', 'cb-toolkit'),
-            'full-width' => __('Full Width', 'cb-toolkit'),
-            'right-sidebar' => __('Right Sidebar', 'cb-toolkit'),
-        ),
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_btn_switch',
-        'label'    => __('Blog BTN On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
+        'type'        => 'image',
+        'settings'    => 'cbtoolkit_blog_banner_image',
+        'description' => __('Blog banner image', 'cb-toolkit'),
+        'section'     => 'blog_setting',
+        'default'     => get_template_directory_uri() . '/assets/img/case-banner.svg',
         'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_meta_switch',
-        'label'    => __('Blog Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_author_switch',
-        'label'    => __('Blog Author Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 1,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_date_switch',
-        'label'    => __('Blog Date Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => 0,
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
-    ];
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'cbtoolkit_blog_comments_switch',
-        'label'    => __('Blog Comments Meta On/Off', 'cb-toolkit'),
-        'section'  => 'blog_setting',
-        'default'  => '1',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => __('Enable', 'cb-toolkit'),
-            'off' => __('Disable', 'cb-toolkit'),
-        ],
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_blog_meta_switch',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ]
     ];
 
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'cbtoolkit_blog_btn_text',
-        'label'    => __('Blog Button text', 'cb-toolkit'),
+        'settings' => 'cbtoolkit_blog_sub_title',
+        'label'    => __('Sub title', 'cb-toolkit'),
         'section'  => 'blog_setting',
-        'default'  => __('Read More', 'cb-toolkit'),
+        'default'  => __('Latest Blogs and News', 'cb-toolkit'),
         'priority' => 10,
     ];
+    
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_blog_title',
+        'label'    => __('Title', 'cb-toolkit'),
+        'section'  => 'blog_setting',
+        'default'  => __('Sharing our knowledge, experience and insight.', 'cb-toolkit'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'textarea',
+        'settings' => 'cbtoolkit_blog_content',
+        'label'    => __('Content', 'cb-toolkit'),
+        'section'  => 'blog_setting',
+        'default'  => __("Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.", 'cb-toolkit'),
+        'priority' => 10,
+    ];
+
     return $fields;
 }
 add_filter('kirki/fields', '_header_blog_fields');

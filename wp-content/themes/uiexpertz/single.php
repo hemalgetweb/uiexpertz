@@ -295,7 +295,7 @@ $related_query = new WP_Query($related_query_args);
         </div>
         <?php if(!empty($cbblog_details_related_post_btn_text)) : ?>
         <div class="d-flex align-items-center  mt-2 pt-3 justify-content-start">
-          <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+          <a class="text-decoration-none position-relative bg-btn banner-btn  border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
             href="<?php echo $cbblog_details_related_post_btn_link ? esc_url($cbblog_details_related_post_btn_link): ''; ?>">
             <?php echo wp_kses_post($cbblog_details_related_post_btn_text); ?>
             <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"

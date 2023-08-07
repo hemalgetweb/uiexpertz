@@ -157,7 +157,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                 <div class="navbar-right btn-wrap d-flex justify-content-center flex-wrap gap-3 gap-lg-4 mt-5"
                     data-wow-duration="0.200s" data-wow-delay="400ms">
 
-                    <button class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center uiexpertz_case_studies_archive_load_more_btn">
+                    <button class="text-decoration-none position-relative bg-btn banner-btn  border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center uiexpertz_case_studies_archive_load_more_btn">
                         Load more works
                         <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none"
                             xmlns="http://www.w3.org/2000/svg">

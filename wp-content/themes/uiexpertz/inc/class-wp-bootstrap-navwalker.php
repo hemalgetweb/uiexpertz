@@ -80,7 +80,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             }
             $indent = str_repeat( $t, $depth );
             // Add custom text before the submenu
-            if ( $depth === 1 ) {
+            if ( $depth === 0 ) {
                 $custom_text = 'Your additional text here';
                 $output .= "<li class='test-text'><div>$custom_text</div></li>";
             } 

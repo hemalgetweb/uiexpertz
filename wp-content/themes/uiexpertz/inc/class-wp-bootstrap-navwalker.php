@@ -79,11 +79,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 $n = "\n";
             }
             $indent = str_repeat( $t, $depth );
-            // Add custom text before the submenu
-            if ( $depth === 1 ) {
-                $custom_text = 'Your additional text here';
-                $output .= "{$n}{$indent}<li class='menu-item menu-item-submenu-root'><div>$custom_text</div></li>{$n}";
-            }
             // Default class to add to the file.
             $classes = array( 'custom-dropdown-menu dropdown-menu has-apps-dropdown-mega-menu-114' );
             /**
@@ -113,7 +108,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
-            $output .= "{$n}{$indent}<ul$class_names $labelledby>{$n}";
+            $output .= "{$n}{$indent}<h1>md hemal akhand</h1><ul$class_names $labelledby>{$n}";
         }
 
         /**

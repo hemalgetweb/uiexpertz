@@ -23,7 +23,7 @@
                                 echo '<ul class="list-unstyled d-flex flex-wrap align-items-center gap-1 gap-md-3 p-4 mb-1">';
                                 foreach ($categories as $category) {
                                     $category_link = get_term_link($category->term_id, $taxonomy);
-                                    echo '<li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
+                                    echo '<li class="text-uppercase bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
                                     echo '<a href="' . esc_url($category_link) . '">' . $category->name . '</a>';
                                     echo '</li>';
                                 }

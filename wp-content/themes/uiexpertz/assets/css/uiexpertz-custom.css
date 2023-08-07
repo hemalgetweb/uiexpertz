@@ -323,3 +323,8 @@ li.recent-post-list .post-time img {
 .service .service-wrapper.row .service-item:hover {
   box-shadow: 0px 30px 30px 0px rgba(0, 19, 69, 0.10);
 }   
+@media (max-width: 1199px) {
+  .navbar-right.btn-wrap.d-flex.flex-wrap.justify-content-between.align-content-center.w-100.gap-3.gap-lg-4 {
+      padding: 15px 0px;
+  }
+}

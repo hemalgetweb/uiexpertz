@@ -926,3 +926,22 @@ function uiexpertz_service_category_based_filter_posts() {
 }
 add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
+
+
+
+/**
+ * Add extra options in submenu wp
+ */
+function uiexpertz_add_custom_html_before_menu( $items, $args ) {
+    // Check if the menu location matches the one you want to modify
+    if ( $args->theme_location == 'main-menu' ) {
+        // Add your custom HTML content before the menu items
+        $custom_html = '<div>Your additional text here</div>';
+        
+        // Concatenate the custom HTML with the original menu items
+        $items = $custom_html . $items;
+    }
+    
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'uiexpertz_add_custom_html_before_menu', 10, 2 );

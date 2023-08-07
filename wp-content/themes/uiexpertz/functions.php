@@ -928,38 +928,3 @@ add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_s
 add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 
 
-
-/**
- * Add extra options in submenu wp
- */
-function add_custom_html_before_submenu( $sorted_menu_items, $args ) {
-    // Check if the menu location matches the one you want to modify
-    if ( $args->theme_location == 'main-menu' ) {
-        // Loop through the sorted menu items and find the submenu item
-        foreach ( $sorted_menu_items as $index => $menu_item ) {
-            if ( in_array( 'menu-item-has-children', $menu_item->classes ) ) {
-                // Add your custom HTML content before the submenu
-                $custom_html = '<div>Your additional text here</div>';
-                
-                // Insert the custom HTML before the submenu item
-                array_splice( $sorted_menu_items, $index, 0, array( (object) array(
-                    'title'            => $custom_html,
-                    'menu_item_parent' => $menu_item->ID,
-                    'db_id'            => 0,
-                    'object'           => '',
-                    'type'             => '',
-                    'type_label'       => '',
-                    'url'              => '',
-                    'target'           => '',
-                    'classes'          => array(),
-                    'xfn'              => '',
-                ) ) );
-                
-                break; // Exit the loop after adding the custom HTML
-            }
-        }
-    }
-    
-    return $sorted_menu_items;
-}
-add_filter( 'wp_nav_menu_objects', 'add_custom_html_before_submenu', 10, 2 );

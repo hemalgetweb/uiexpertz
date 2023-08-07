@@ -932,16 +932,34 @@ add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiex
 /**
  * Add extra options in submenu wp
  */
-function uiexpertz_add_custom_html_before_menu( $items, $args ) {
+function add_custom_html_before_submenu( $sorted_menu_items, $args ) {
     // Check if the menu location matches the one you want to modify
     if ( $args->theme_location == 'main-menu' ) {
-        // Add your custom HTML content before the menu items
-        $custom_html = '<div>Your additional text here</div>';
-        
-        // Concatenate the custom HTML with the original menu items
-        $items = $custom_html . $items;
+        // Loop through the sorted menu items and find the submenu item
+        foreach ( $sorted_menu_items as $index => $menu_item ) {
+            if ( in_array( 'menu-item-has-children', $menu_item->classes ) ) {
+                // Add your custom HTML content before the submenu
+                $custom_html = '<div>Your additional text here</div>';
+                
+                // Insert the custom HTML before the submenu item
+                array_splice( $sorted_menu_items, $index, 0, array( (object) array(
+                    'title'            => $custom_html,
+                    'menu_item_parent' => $menu_item->ID,
+                    'db_id'            => 0,
+                    'object'           => '',
+                    'type'             => '',
+                    'type_label'       => '',
+                    'url'              => '',
+                    'target'           => '',
+                    'classes'          => array(),
+                    'xfn'              => '',
+                ) ) );
+                
+                break; // Exit the loop after adding the custom HTML
+            }
+        }
     }
     
-    return $items;
+    return $sorted_menu_items;
 }
-add_filter( 'wp_nav_menu_items', 'uiexpertz_add_custom_html_before_menu', 10, 2 );
+add_filter( 'wp_nav_menu_objects', 'add_custom_html_before_submenu', 10, 2 );

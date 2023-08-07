@@ -98,7 +98,7 @@ function uiexpertz_footer_style()
 		}
 
 		<?php } ?><?php if (get_theme_mod('footer_bg_image_1')) { ?>.uiexpertz-footer-114 {
-			background-image: <?php echo esc_url(get_theme_mod('footer_bg_image_1')); ?>;
+			background-image: url(<?php echo esc_url(get_theme_mod('footer_bg_image_1')); ?>);
 		}
 
 		<?php } ?><?php if (get_theme_mod('cbtoolkit_footer_bg_color_1')) { ?>.uiexpertz-footer-114 {

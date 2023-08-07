@@ -325,6 +325,6 @@ li.recent-post-list .post-time img {
 }   
 @media (max-width: 1199px) {
   .navbar-right.btn-wrap.d-flex.flex-wrap.justify-content-between.align-content-center.w-100.gap-3.gap-lg-4 {
-      padding: 15px 0px;
+      padding: 25px 0px;
   }
 }

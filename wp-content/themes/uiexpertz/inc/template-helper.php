@@ -115,7 +115,6 @@ function uiexpertz_check_has_menu_in_link($atts, $item, $args)
         if (key_exists('class', $atts)) {
             $atts['class'] .= ' dropdown-toggle';
         }
-        $atts['id'] = 'navbarDropdown';
         $atts['role'] = 'button';
         $atts['data-bs-toggle'] = 'dropdown';
         $atts['aria-expanded'] = 'true';

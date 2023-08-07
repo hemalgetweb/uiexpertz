@@ -6,7 +6,7 @@
 .has-mega-menu .custom-dropdown-menu {flex-wrap: wrap;}
 
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114 > li {
-    flex: 0 0 calc(50% - 10px);
+  flex: 0 0 100%;
 }
 
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114 {

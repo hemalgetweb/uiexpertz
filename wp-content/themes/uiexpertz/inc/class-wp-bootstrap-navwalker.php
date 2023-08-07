@@ -80,10 +80,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             }
             $indent = str_repeat( $t, $depth );
             // Add custom text before the submenu
-            if ( $depth === 0 ) {
+            if ( $depth === 1 ) {
                 $custom_text = 'Your additional text here';
-                $output .= "<li class='test-text'><div>$custom_text</div></li>";
-            } 
+                $output .= "{$n}{$indent}<li class='menu-item menu-item-submenu-root'><div>$custom_text</div></li>{$n}";
+            }
             // Default class to add to the file.
             $classes = array( 'custom-dropdown-menu dropdown-menu has-apps-dropdown-mega-menu-114' );
             /**

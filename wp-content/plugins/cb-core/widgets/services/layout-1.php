@@ -8,7 +8,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
             <div class="col-lg-4 col-md-6 mb-4 ">
-                <div class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
+                <a href="#" class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
                     <div>
                         <div class="p-1">
                             <?php echo wp_get_attachment_image( $slide['service_image']['id'], 'full' ); ?>
@@ -37,7 +37,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                                 </span>
                             </a>
                     </div>
-                </div>
+                </a>
             </div>
             <?php endforeach; ?>
         </div>

@@ -495,7 +495,7 @@ body {
 #header .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu {
   opacity: 1;
-  display: block;
+  visibility: visible;
   z-index: 5555;
 }
 #header .navbar-nav .nav-item.custom-dropdown:hover .dropArrow,
@@ -519,10 +519,10 @@ body {
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
   opacity: 0;
-  display: none;
+  visibility: hidden;
   background-color: white;
   padding: 25px;
-  transition: opacity 0.2s all linear;
+  transition: all .3s;
 }
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1 {

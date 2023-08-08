@@ -56,24 +56,5 @@
         </div>
         <?php endif; ?>
     </div>
-
-    <div class="swipper-button position-relative">
-        <div class="swiper-button-prev-unique position-absolute d-flex justify-content-center align-items-center">
-            <svg width="64" height="127" viewBox="0 0 64 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="btn-swiper" d="M64 63.5L0.5 0V127L64 63.5Z" />
-                <path d="M25.9998 72L27.4165 70.5833L20.8332 64L27.4165 57.4167L25.9998 56L17.9998 64L25.9998 72Z"
-                    fill="white" />
-            </svg>
-
-        </div>
-        <div class="swiper-button-next-unique position-absolute d-flex justify-content-center align-items-center">
-            <svg width="64" height="127" viewBox="0 0 64 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="btn-swiper" d="M0 63.5L63.5 0V127L0 63.5Z" fill="#97A3C1" />
-                <path d="M38.0002 72L36.5835 70.5833L43.1668 64L36.5835 57.4167L38.0002 56L46.0002 64L38.0002 72Z"
-                    fill="white" />
-            </svg>
-
-        </div>
-    </div>
 </div>
 <!--/ case study end -->

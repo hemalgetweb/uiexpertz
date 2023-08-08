@@ -46,7 +46,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
             }    
             ?>
             <div class="uiexpertz-item">
-                <a <?php echo $this->get_render_attribute_string( 'btn_2_link' ); ?> class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center">
+                <a <?php echo $this->get_render_attribute_string( 'btn_2_link' ); ?> class="text-decoration-none position-relative bg-btn banner-btn border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center">
                  <?php echo esc_html($settings['btn_2_text']); ?>
                     <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z" fill="#5648FF"></path>

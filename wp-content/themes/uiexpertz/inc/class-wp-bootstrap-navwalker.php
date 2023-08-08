@@ -71,6 +71,8 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
          * @param WP_Nav_Menu_Args $args   An object of wp_nav_menu() arguments.
          */
         public function start_lvl( &$output, $depth = 0, $args = null ) {
+            $cbtoolkit_header_menu_heading = get_theme_mod('cbtoolkit_header_menu_heading', __('Services', 'uiexpertz'));
+            $cbtoolkit_header_menu_content = get_theme_mod('cbtoolkit_header_menu_content', __('We offer innovation services based on your business needs', 'uiexpertz'));
             if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
                 $t = '';
                 $n = '';
@@ -108,7 +110,14 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
-            $output .= "{$n}{$indent}<ul$class_names $labelledby><li class='apps-submenu-main-title-114'><h1 class='title'>Services</h1></li><li class='apps-submenu-main-desc-114'><p>We offer innovation services based on your business needs</p></li>{$n}";
+            $output .= "{$n}{$indent}<ul$class_names $labelledby>";?>
+            <?php if(!empty($cbtoolkit_header_menu_heading)) {
+                $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$cbtoolkit_header_menu_heading</h1></li>";
+            } ?>
+            <?php if(!empty($cbtoolkit_header_menu_content)) {
+                $output .= "<li class='apps-submenu-main-desc-114'><p>$cbtoolkit_header_menu_content</p></li>";
+            } ?>
+            <?php $output .= "{$n}";
         }
 
         /**

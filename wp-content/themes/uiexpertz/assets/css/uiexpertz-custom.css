@@ -396,6 +396,15 @@ li.recent-post-list .post-time img {
   .has-mega-menu .custom-dropdown-menu::after {
     top: -14px;
   }
+  .apps-submenu-main-title-114 .title {
+    font-size: 30px;
+  }
+  .has-mega-menu .custom-dropdown-menu > li.apps-submenu-main-title-114 {
+    padding-bottom: 0;
+  }
+  .has-mega-menu .custom-dropdown-menu > li.apps-submenu-main-desc-114 {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 420px) {
   .has-mega-menu .custom-dropdown-menu > li img {

@@ -5,11 +5,11 @@
             <div class=" me-auto mb-5">
                 <?php if(!empty($settings['subtitle'])) : ?>
                 <div class="section-hints d-flex justify-content-start align-items-center gap-2">
-                    <p class="fs-14 fw-normal mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post($settings['subtitle']); ?></p>
+                    <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post($settings['subtitle']); ?></p>
                 </div>
                 <?php endif; ?>
                 <?php if(!empty($settings['title'])) : ?>
-                    <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post($settings['title']); ?></h1>
+                    <h1 class="fs-40 fw-normal text-white py-2"><?php echo wp_kses_post($settings['title']); ?></h1>
                 <?php endif; ?>
             </div>
         </div>

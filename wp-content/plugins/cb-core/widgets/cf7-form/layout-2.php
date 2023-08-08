@@ -11,7 +11,7 @@
                         <?php endif; ?>
                         <?php if(!empty($settings['contact_mail_text'])) : ?>
                             <span>
-                                <a class="fw-extraBold text-clr-darkBlue text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a>
+                                <a class="text-clr-darkBlue text-decoration-underline" href="mailto:<?php echo $settings['contact_mail_link'] ? esc_attr($settings['contact_mail_link']): ''; ?>"><?php echo esc_html($settings['contact_mail_text']); ?></a>
                             </span>
                         <?php endif; ?>
                     </h1>

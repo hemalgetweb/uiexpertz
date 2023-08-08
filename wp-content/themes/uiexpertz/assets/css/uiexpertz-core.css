@@ -435,7 +435,7 @@ body {
 @media (min-width: 1400px) {
   #header .navbar-nav,
   .mobileMenu .navbar-nav {
-    margin-left: 120px;
+    margin-left: 105px;
   }
 }
 #header .navbar-nav .nav-item .nav-link,
@@ -522,6 +522,7 @@ body {
   visibility: hidden;
   background-color: white;
   padding: 25px;
+  padding-top: 29px;
   transition: all .3s;
 }
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1,

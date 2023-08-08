@@ -113,7 +113,10 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                     <?php while(have_posts()) : the_post();
                     ?>
                     <div class="col-lg-4 col-md-6">
-                        <div class="service-item service-item-wrap bg-white mb-4 pb-3">
+                        <div class="service-item service-item-wrap bg-white mb-4 pb-3 js-text-cursor-block">
+                            <a href="<?php echo get_the_permalink( get_the_ID()); ?>" class="js-text-cursor d-none">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.png" class="arrow-image" alt="Arrow image">
+                            </a>
                             <div>
                               <?php if(has_post_thumbnail( )) : ?>
                                 <div class="p-1">

@@ -393,46 +393,7 @@ function _header_fields($fields)
             ]
         ],
     ];
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_header_menu_heading',
-        'label'    => __('Header Menu Heading', 'cb-toolkit'),
-        'section'  => 'section_header_settings',
-        'default'  => __('Services ', 'cb-toolkit'),
-        'priority' => 10,
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_header_main_switch_1',
-                'operator' => '==',
-                'value'    => 'content',
-            ],
-            [
-                'setting'  => 'choose_default_header',
-                'operator' => '==',
-                'value'    => 'header-style-1',
-            ]
-        ],
-    ];
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_header_menu_content',
-        'label'    => __('Header Menu Content', 'cb-toolkit'),
-        'section'  => 'section_header_settings',
-        'default'  => __('We offer innovation services based on your business needs ', 'cb-toolkit'),
-        'priority' => 10,
-        'active_callback' => [
-            [
-                'setting'  => 'cbtoolkit_header_main_switch_1',
-                'operator' => '==',
-                'value'    => 'content',
-            ],
-            [
-                'setting'  => 'choose_default_header',
-                'operator' => '==',
-                'value'    => 'header-style-1',
-            ]
-        ],
-    ];
+   
     $fields[] = [
         'type'     => 'text',
         'settings' => 'cbtoolkit_side_support_number_text_1',

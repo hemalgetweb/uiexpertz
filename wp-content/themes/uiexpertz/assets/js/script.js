@@ -7,6 +7,24 @@
             $("header").removeClass("fixed-header");
         }
     });
+    $(".js-text-cursor-block").mousemove(function (e) {
+        var t = $(this).offset(),
+            n = t.left.toFixed(0),
+            t = t.top.toFixed(0),
+            n = e.pageX - n,
+            e = e.pageY - t;
+        $(".js-text-cursor").css({
+            transform: "translate3d(".concat(n - 35, "px, ").concat(e - 35, "px, 0px)"),
+        });
+    }),
+    $(".js-text-cursor-block").mouseenter(function () {
+        $(this).find('.js-text-cursor').removeClass('d-none');
+        $(".js-text-cursor").stop(!0, !0).fadeIn("fast");
+    }),
+    $(".js-text-cursor-block").mouseleave(function () {
+        $(this).find('.js-text-cursor').addClass('d-none');
+        $(".js-text-cursor").stop(!0, !0).fadeOut("fast");
+    });
     const CaseStudySliderGlobal = new Swiper(".caseStudy-slider", {
         slidesPerView: 3,
         spaceBetween: 30,

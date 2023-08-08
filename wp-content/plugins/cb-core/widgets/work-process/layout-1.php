@@ -50,7 +50,7 @@
                             }    
                         ?>
                             <div class="uiexperts-btn-item">
-                                <a class="text-decoration-none position-relative bg-btn banner-btn  text-uppercase border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center"
+                                <a class="text-decoration-none position-relative bg-btn banner-btn  border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center"
                                 <?php echo $this->get_render_attribute_string( 'btn_link_2' ); ?>>
                                     <?php echo esc_html($settings['btn_text_2']); ?>
                                     <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12"

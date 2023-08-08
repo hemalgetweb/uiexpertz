@@ -511,7 +511,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-  #header .navbar-nav .nav-item.custom-dropdown:hover .dropArrow img,
+  #header .navbar-nav .nav-item.custom-dropdown:hov .dropArrow img,
   .mobileMenu .navbar-nav .nav-item.custom-dropdown:hover .dropArrow img {
     margin-bottom: -5px;
   }
@@ -522,7 +522,6 @@ body {
   display: none;
   background-color: white;
   padding: 25px;
-  border-radius: 10px;
   transition: opacity 0.2s all linear;
 }
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1,

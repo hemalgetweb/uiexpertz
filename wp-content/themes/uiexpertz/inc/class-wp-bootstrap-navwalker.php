@@ -108,7 +108,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
-            $output .= "{$n}{$indent}<ul$class_names $labelledby><li><h1>Services</h1></li><li><p>We offer innovation services based on your business needs</p></li>{$n}";
+            $output .= "{$n}{$indent}<ul$class_names $labelledby><li class='apps-submenu-main-title-114'><h1 class='title'>Services</h1></li><li class='apps-submenu-main-desc-114'><p>We offer innovation services based on your business needs</p></li>{$n}";
         }
 
         /**

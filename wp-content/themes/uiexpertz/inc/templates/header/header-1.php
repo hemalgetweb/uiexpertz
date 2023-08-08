@@ -49,7 +49,7 @@
     <!-- / Mobile menu -->
 
     <!-- header -->
-    <header id="header" class="m-auto position-fixed top-0 start-0 end-0 d-xl-block d-none" style="background-color: var(--blue)">
+    <header id="header" class="m-auto position-fixed top-0 start-0 end-0 d-xl-block d-none uiexpertz-header-menu-for-pc-114" style="background-color: var(--blue)">
         <nav class="navbar navbar-expand-xl py-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">

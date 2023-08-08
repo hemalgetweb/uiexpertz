@@ -435,3 +435,24 @@ li.recent-post-list .post-time img {
     max-width: 106px;
   }
 }
+
+.uiexpertz-archive-project-tab-buttons-114 .nav-tabs .nav-link {
+	border: 0;
+	padding: 11px 24px;
+	border-radius: 0;
+	color: var(--gray-color-system-gray-2, #384973);
+	font-family: Manrope;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+}
+.uiexpertz-archive-project-tab-buttons-114 .nav-tabs {
+	border: 0;
+	justify-content: center;
+}
+.uiexpertz-archive-project-tab-buttons-114 .nav-tabs .nav-link.active {
+	background: var(--primary-color-system-indigo-dye, #5648FF);
+	color: #fff;
+}
+.pt-10 {padding-top: 10px;} .pb-95 { padding-bottom: 95px; } .uiexpertz-project-bottom-main-wrap-114 {overflow: auto;} .pb-60 {padding-bottom: 60px;}

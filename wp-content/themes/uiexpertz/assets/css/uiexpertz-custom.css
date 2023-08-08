@@ -157,6 +157,7 @@
 #header .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu {
   opacity: 1;
   visibility: visible;
+  top: 100%;
 }
 .blog-pagination > * {
   border: 1px solid rgb(222, 226, 230);
@@ -249,6 +250,8 @@ li.recent-post-list .post-time img {
 }
 .service-item.js-text-cursor-block .p-1 img {
   width: 100%;
+  max-height: 257.48px;
+  object-fit: cover;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .workProcessItem .workBorder {
@@ -326,7 +329,8 @@ li.recent-post-list .post-time img {
 .has-mega-menu .custom-dropdown-menu {
   position: absolute;
   left: -80px;
-  top: 100%;
+  top: 130%;
+  transition: all .3s;
 }
 
 .uiexpertz-header-menu-for-pc-114 .navbar-nav > li > a {

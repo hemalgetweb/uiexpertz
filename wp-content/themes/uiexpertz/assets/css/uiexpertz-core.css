@@ -914,6 +914,9 @@ svg *.btn-swiper:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  color: #001345;
+}
+.contact-form .form-select option:first-child {
   color: #97A3C1;
 }
 .contact-form .form-select:focus {

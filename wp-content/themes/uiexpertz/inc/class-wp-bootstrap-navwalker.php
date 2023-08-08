@@ -70,9 +70,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
          * @param int              $depth  Depth of menu item. Used for padding.
          * @param WP_Nav_Menu_Args $args   An object of wp_nav_menu() arguments.
          */
-        public function start_lvl( &$output, $depth = 0, $args = null ) {
-            $cbtoolkit_header_menu_heading = get_theme_mod('cbtoolkit_header_menu_heading', __('Services', 'uiexpertz'));
-            $cbtoolkit_header_menu_content = get_theme_mod('cbtoolkit_header_menu_content', __('We offer innovation services based on your business needs', 'uiexpertz'));
+        public function start_lvl( &$output, $depth = 0, $args = null, $id=0 ) {
+            $submenu_title = get_field( 'submenu_title', 6 );
+            $submenu_content = get_field( 'submenu_content', 6 );
             if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
                 $t = '';
                 $n = '';
@@ -111,11 +111,11 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
             $output .= "{$n}{$indent}<ul$class_names $labelledby>";?>
-            <?php if(!empty($cbtoolkit_header_menu_heading)) {
-                $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$cbtoolkit_header_menu_heading</h1></li>";
+            <?php if(!empty($submenu_title)) {
+                $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$submenu_title</h1></li>";
             } ?>
-            <?php if(!empty($cbtoolkit_header_menu_content)) {
-                $output .= "<li class='apps-submenu-main-desc-114'><p>$cbtoolkit_header_menu_content</p></li>";
+            <?php if(!empty($submenu_content)) {
+                $output .= "<li class='apps-submenu-main-desc-114'><p>$submenu_content</p></li>";
             } ?>
             <?php $output .= "{$n}";
         }
@@ -216,7 +216,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
              */
             $id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
             $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-
             $output .= $indent . '<li ' . $id . $class_names . '>';
 
             // Initialize array for holding the $atts for the link item.

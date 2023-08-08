@@ -900,6 +900,14 @@ svg *.btn-swiper:hover {
   box-shadow: none !important;
   border-color: #5648ff;
 }
+.contact-form .form-control::placeholder {
+  color: #97A3C1;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
 .contact-form .form-select {
   border: 1px solid #001345;
   height: 52px;

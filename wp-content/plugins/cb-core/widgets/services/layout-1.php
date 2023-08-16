@@ -23,7 +23,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                         </div>
                     </div>
                     <div class="px-4 pb-4">
-                            <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                            <div <?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?> class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                                 <span>
                                     <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'cb-core'); ?></h4>
                                 </span>
@@ -35,7 +35,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                                     </svg>
                             
                                 </span>
-                            </a>
+                            </div>
                     </div>
                 </a>
             </div>

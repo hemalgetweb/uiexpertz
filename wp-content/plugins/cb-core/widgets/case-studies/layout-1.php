@@ -31,12 +31,11 @@
                             }
                             ?>
                             <div class="service-content px-4 text-decoration-none d-block ">
-                                <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h4>
+                                <h4 class="text-clr-blue fs-5 fw-bold mb-3 lh-base"><?php echo wp_trim_words(get_the_title(), 7); ?></h4>
                                 <p class="fs-6 text-clr-gray mb-0"><?php the_excerpt(); ?></p>
                             </div>
                         </div>
-                        <a href="<?php the_permalink( get_the_ID() ); ?>"
-                            class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
+                        <div class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
                             <span>
                                 <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
                             </span>
@@ -48,7 +47,7 @@
                                 </svg>
 
                             </span>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <?php endwhile; wp_reset_query(); ?>

@@ -1,4 +1,65 @@
 (function($) {
+
+//case slider new
+
+ 
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.case.splide', {
+              type   : 'loop',
+              drag   : 'free',
+              focus  : 'center',
+              
+              perPage: $(window).width() > 800 ? 2 : 1,
+              autoScroll: {
+                speed: 3,
+              },
+            }).mount( window.splide.Extensions );
+          });
+        document.addEventListener('DOMContentLoaded', function () {
+       
+
+
+            setTimeout(function() {
+                
+                new Splide('.splide-blog.splide', {
+                    type   : 'loop',
+                    perPage      : 1,
+                    autoplay     : true,
+                    interval     : 3000, // How long to display each slide
+                    pauseOnHover : false, // must be false
+                    pauseOnFocus : false, // must be false
+                    resetProgress: false,
+                  perPage: $(window).width() > 800 ? 1 : 1,
+                }).mount();
+              }, 100);
+
+
+          });
+    
+    //searbar toggle
+
+    
+    // searchBar
+    $('.search-btn').click(function (e) {
+        e.stopPropagation();
+        $('.searchBar').slideToggle(200);
+    });
+    $('.cross-search').click(function (e) {
+        e.stopPropagation();
+        $('.searchBar').slideToggle(200);
+    });
+    $('.searchBar').click(function (e) {
+        e.stopPropagation();
+    });
+    $('body,html').click(function (e) {
+        $('.searchBar').slideUp(500);
+    });
+    // searchBar -end
+
+
+
+
+
     // fixed-header -Js
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 100) {

@@ -46,7 +46,10 @@
                     }
                 ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item  bg-white mb-4 pb-2">
+                    <div class="service-item js-text-cursor-block bg-white mb-4 pb-2">
+                    <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>" class="js-text-cursor d-none">
+                        <?php echo esc_html__('Get inspired', 'cb-core'); ?>
+                    </a>
                         <?php if(has_post_thumbnail( get_the_ID() )) : ?>
                         <div class="p-1">
                             <?php the_post_thumbnail(get_the_ID('full')); ?>

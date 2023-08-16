@@ -70,7 +70,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
          * @param int              $depth  Depth of menu item. Used for padding.
          * @param WP_Nav_Menu_Args $args   An object of wp_nav_menu() arguments.
          */
-        public function start_lvl( &$output, $depth = 0, $args = null ) {
+        public function start_lvl( &$output, $depth = 0, $args = null, $id=0 ) {
+            $submenu_title = get_field( 'submenu_title', 6 );
+            $submenu_content = get_field( 'submenu_content', 6 );
             if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
                 $t = '';
                 $n = '';
@@ -108,7 +110,14 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
-            $output .= "{$n}{$indent}<ul$class_names $labelledby>{$n}";
+            $output .= "{$n}{$indent}<ul$class_names $labelledby>";?>
+            <?php if(!empty($submenu_title)) {
+                $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$submenu_title</h1></li>";
+            } ?>
+            <?php if(!empty($submenu_content)) {
+                $output .= "<li class='apps-submenu-main-desc-114'><p>$submenu_content</p></li>";
+            } ?>
+            <?php $output .= "{$n}";
         }
 
         /**
@@ -207,7 +216,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
              */
             $id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
             $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-
             $output .= $indent . '<li ' . $id . $class_names . '>';
 
             // Initialize array for holding the $atts for the link item.

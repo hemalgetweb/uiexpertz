@@ -9,7 +9,7 @@
                 </div>
                 <?php endif; ?>
                 <?php if(!empty($settings['title'])) : ?>
-                    <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post($settings['title']); ?></h1>
+                    <h1 class="fs-40 fw-normal text-white py-2"><?php echo wp_kses_post($settings['title']); ?></h1>
                 <?php endif; ?>
             </div>
         </div>

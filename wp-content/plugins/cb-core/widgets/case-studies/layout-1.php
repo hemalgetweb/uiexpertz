@@ -13,7 +13,10 @@
             ?>
                 <div class="col-lg-4 col-md-6 col-sm-6  mb-4">
                     <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
-                        <div class="uiexpertz-service-item">
+                        <div class="uiexpertz-service-item js-text-cursor-block">
+                            <a href="<?php echo get_the_permalink( get_the_ID()); ?>" class="js-text-cursor d-none">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.png" class="arrow-image" alt="Arrow image">
+                            </a>
                             <div class="p-1">
                                <?php the_post_thumbnail(get_the_ID(), 'full'); ?>
                             </div>
@@ -23,7 +26,7 @@
                                 echo '<ul class="list-unstyled d-flex flex-wrap align-items-center gap-1 gap-md-3 p-4 mb-1">';
                                 foreach ($categories as $category) {
                                     $category_link = get_term_link($category->term_id, $taxonomy);
-                                    echo '<li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
+                                    echo '<li class="text-uppercase bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue">';
                                     echo '<a href="' . esc_url($category_link) . '">' . $category->name . '</a>';
                                     echo '</li>';
                                 }

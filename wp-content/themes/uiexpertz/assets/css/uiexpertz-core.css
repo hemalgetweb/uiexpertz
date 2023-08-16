@@ -435,7 +435,7 @@ body {
 @media (min-width: 1400px) {
   #header .navbar-nav,
   .mobileMenu .navbar-nav {
-    margin-left: 120px;
+    margin-left: 105px;
   }
 }
 #header .navbar-nav .nav-item .nav-link,
@@ -495,7 +495,7 @@ body {
 #header .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown:hover .custom-dropdown-menu {
   opacity: 1;
-  display: block;
+  visibility: visible;
   z-index: 5555;
 }
 #header .navbar-nav .nav-item.custom-dropdown:hover .dropArrow,
@@ -511,7 +511,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-  #header .navbar-nav .nav-item.custom-dropdown:hover .dropArrow img,
+  #header .navbar-nav .nav-item.custom-dropdown:hov .dropArrow img,
   .mobileMenu .navbar-nav .nav-item.custom-dropdown:hover .dropArrow img {
     margin-bottom: -5px;
   }
@@ -519,11 +519,11 @@ body {
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
   opacity: 0;
-  display: none;
+  visibility: hidden;
   background-color: white;
   padding: 25px;
-  border-radius: 10px;
-  transition: opacity 0.2s all linear;
+  padding-top: 29px;
+  transition: all .3s;
 }
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1,
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.mega-menu1 {
@@ -889,7 +889,7 @@ svg *.btn-swiper:hover {
 }
 
 .contact-form .form-control {
-  border: 1px solid #aab4cf;
+  border: 1px solid #001345;
   height: 52px;
   font-weight: 400;
   font-size: 16px;
@@ -901,13 +901,24 @@ svg *.btn-swiper:hover {
   box-shadow: none !important;
   border-color: #5648ff;
 }
+.contact-form .form-control::placeholder {
+  color: #97A3C1;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
 .contact-form .form-select {
-  border: 1px solid #aab4cf;
+  border: 1px solid #001345;
   height: 52px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #384973;
+  color: #97A3C1;
+}
+.contact-form .form-select option {
+  color: #001345;
 }
 .contact-form .form-select:focus {
   box-shadow: none !important;

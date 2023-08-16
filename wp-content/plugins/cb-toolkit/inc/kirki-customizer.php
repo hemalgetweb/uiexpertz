@@ -393,6 +393,7 @@ function _header_fields($fields)
             ]
         ],
     ];
+   
     $fields[] = [
         'type'     => 'text',
         'settings' => 'cbtoolkit_side_support_number_text_1',
@@ -457,7 +458,7 @@ function _header_fields($fields)
     ];
     
     $fields[] = [
-        'type'     => 'header_btn_text',
+        'type'     => 'text',
         'settings' => 'cbtoolkit_header_btn_text',
         'label'    => __('Header Button Text', 'cb-toolkit'),
         'section'  => 'section_header_settings',
@@ -487,6 +488,7 @@ function _header_fields($fields)
             ]
         ],
     ];
+    
     $fields[] = [
         'type'     => 'URL',
         'settings' => 'cbtoolkit_header_btn_link',

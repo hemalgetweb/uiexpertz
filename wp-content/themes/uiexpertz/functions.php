@@ -929,3 +929,5 @@ function uiexpertz_service_category_based_filter_posts() {
 }
 add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
+
+

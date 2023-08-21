@@ -69,7 +69,7 @@ get_header(); ?>
 
 <!-- blog-main -->
 <main class="blog-main pb-5 bg-clr-lightGray">
-    <div class="container">
+    <div class="slider-container">
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-Neueste" role="tabpanel" tabindex="0">
                 <div class="blogCart-section-title">

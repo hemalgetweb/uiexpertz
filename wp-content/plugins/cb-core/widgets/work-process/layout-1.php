@@ -67,4 +67,5 @@
                 <?php endif; ?>
             </div>
         </div>
+    </div>
         <!--/ Work Process end -->

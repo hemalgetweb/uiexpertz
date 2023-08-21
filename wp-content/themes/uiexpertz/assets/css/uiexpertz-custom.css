@@ -148,7 +148,7 @@
   color: var(--primary-color-system-indigo-dye, #5648FF);
 }
 .service-item-wrap .read-more:hover span {
-  color: #6d60ff;
+  color: #6d60ff !important;
 }
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
   opacity: 0;
@@ -239,9 +239,10 @@ li.recent-post-list .post-time img {
 
 .js-text-cursor{
   position: absolute;
-  max-width: 90px;
+  max-width: 163px;
   width: 100%;
-
+  margin: auto;
+  text-align: center;
 }
 @media (max-width: 1199px) {
   #whychooseus .why-choose-us-wrapper .why-choose-us-item {
@@ -255,16 +256,14 @@ li.recent-post-list .post-time img {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .workProcessItem .workBorder {
-    width: 2px;
+    width: 1px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .workProcessItem .workBorder {
-    width: 3px;
+    width: 1px;
   }
-  .testimonial .swiper-button-prev-unique, .testimonial .swiper-button-next-unique {
-    bottom: 160px;
-  }
+
   .latest-blog .blog-heading.d-flex {
     flex-direction: column;
   }

@@ -47,8 +47,14 @@
                 ?>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item js-text-cursor-block bg-white mb-4 pb-2">
-                    <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>" class="js-text-cursor d-none">
+                    <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>" class="js-text-cursor d-none">
                         <?php echo esc_html__('Get inspired', 'cb-core'); ?>
+                        <span class="pb-1">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z" fill="white"/>
+</svg>
+
+                        </span>
                     </a>
                         <?php if(has_post_thumbnail( get_the_ID() )) : ?>
                         <div class="p-1">
@@ -57,7 +63,7 @@
                         <?php endif; ?>
                         <?php if(!empty($first_cat_name)) : ?>
                         <ul class="list-unstyled d-flex align-items-center gap-3  px-4 pt-4">
-                            <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue"><?php echo esc_html($first_cat_name); ?></li>
+                            <li class="bg-clr-lightPink py-1 px-3 ls-1 fs-12 text-clr-darkBlue text-uppercase"><?php echo esc_html($first_cat_name); ?></li>
                         </ul>
                         <?php endif; ?>
                         <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">

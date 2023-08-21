@@ -16,11 +16,7 @@
             }).mount( window.splide.Extensions );
           });
         document.addEventListener('DOMContentLoaded', function () {
-       
-
-
             setTimeout(function() {
-                
                 new Splide('.splide-blog.splide', {
                     type   : 'loop',
                     perPage      : 1,
@@ -35,6 +31,34 @@
 
 
           });
+
+
+          //testimonial slider 
+
+          document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide('.testimonial#splide', {
+                gap: '45px',
+              type: 'loop',
+              perPage: 3,
+            //   focus: 'center',
+              autoplay: true,
+              interval: 8000,
+            //   flickMaxPages: 3,
+              updateOnMove: true,
+              pagination: false,
+            //   padding: '10%',
+            //   throttle: 300,
+              breakpoints: {
+                1200: {
+                  perPage: 2,
+                },
+                700: {
+                  perPage: 1,
+                },
+              }
+            }).mount();
+          });
+          
     
     //searbar toggle
 

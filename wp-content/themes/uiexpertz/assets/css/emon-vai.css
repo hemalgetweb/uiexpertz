@@ -301,7 +301,63 @@ border-radius: 0px;
 .blog-main .blog-slide-active .splide__arrow--prev {
   left: -5em;
 }
-.blog-main .blog-slide-active .single-blog {
+.testimonial .splide__arrow {
+  background-color: #97A3C1;
+  height: 50px;
+  width: 50px;
+  transition: .2s all linear;
+}
+.testimonial .splide__arrow svg {
+  fill: #fff;
+}
+.testimonial .splide__arrow:hover:not(:disabled) {
+  background-color: #5648FF;
+}
+.testimonial .splide__arrow--next {
+  right: -4em !important;
+}
+.testimonial .splide__arrow--prev {
+  left: -4em !important;
+}
+@media (max-width:1200px) {
+  .testimonial .splide__arrow--next {
+    right: -4em !important;
+  }
+  .testimonial .splide__arrow--prev {
+    left: -4em !important;
+  }
+} 
+@media (max-width:600px) and (min-width:450px) {
+  .testimonial .splide__arrow--prev {
+    position: absolute;
+    top: calc(100% + 50px);
+    left: 35% !important;
+  }
+  .testimonial .splide__arrow--next {
+    position: absolute;
+    top: calc(100% + 50px);
+    right: 35% !important;
+  }
+  .testimonial-container {
+    padding: 20px 20px 70px 20px !important;
+  }
+} 
+@media (max-width:469px) and (min-width:320px) {
+  .testimonial .splide__arrow--prev {
+    position: absolute;
+    top: calc(100% + 50px);
+    left: 30% !important;
+  }
+  .testimonial .splide__arrow--next {
+    position: absolute;
+    top: calc(100% + 50px);
+    right: 30% !important;
+  }
+  .testimonial-container {
+    padding: 20px 20px 70px 20px !important;
+  }
+} 
+.testimonial .single-blog {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 15px;
@@ -314,6 +370,8 @@ border-radius: 0px;
  }
 }
 
+
+
 .splide-blog .splide__pagination{
   display: none !important;
 }
@@ -324,4 +382,24 @@ border-radius: 0px;
   fill: #5648FF !important;
 }
 
+.workBorder{
+  flex-shrink: 0;
+  width: 1px !important;
+}
+
 /*-- blog-header-tab style -/End ---*/
+
+
+/*-- testimonial slider -/start ---*/
+.testimonial-container{
+  max-width: 1270px;
+  width: 100%;
+  margin: auto;
+  padding: 0 80px;
+
+  @media (max-width:600px) {
+    padding:0 20px;
+  }
+}
+/*-- testimonial slider -/End ---*/
+

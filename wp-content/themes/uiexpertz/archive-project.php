@@ -119,7 +119,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                                             <ul
                                                 class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
                                                 <?php
-                                                $post_categories = get_the_terms(get_the_ID(), 'category');
+                                                $post_categories = get_the_terms(get_the_ID(), 'project_category');
                                                 if ($post_categories && !is_wp_error($post_categories)) {
                                                     foreach ($post_categories as $category) {
                                                         echo '<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">' . esc_html($category->name) . '</li>';

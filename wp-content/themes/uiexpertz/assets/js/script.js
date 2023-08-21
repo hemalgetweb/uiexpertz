@@ -20,7 +20,7 @@
                 new Splide('.splide-blog.splide', {
                     type   : 'loop',
                     perPage      : 1,
-                    autoplay     : true,
+                    autoplay     : false,
                     interval     : 3000, // How long to display each slide
                     pauseOnHover : false, // must be false
                     pauseOnFocus : false, // must be false

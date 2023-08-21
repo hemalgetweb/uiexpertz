@@ -1,8 +1,8 @@
 (function($) {
-
-//case slider new
-
- 
+    //case slider new
+    $("[data-background]").each(function () {
+        $(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
+    });
         document.addEventListener('DOMContentLoaded', function () {
             new Splide('.case.splide', {
               type   : 'loop',

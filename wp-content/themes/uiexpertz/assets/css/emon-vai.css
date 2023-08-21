@@ -52,10 +52,9 @@
 }
 
 .case-study-details-banner {
-  background-image: url(../img/case-details.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 895px;
   position: relative;
 
 }

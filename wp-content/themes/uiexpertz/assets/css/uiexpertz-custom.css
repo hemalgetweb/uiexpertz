@@ -1,3 +1,4 @@
+img{max-width:100%}
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu,.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.has-mega-menu .custom-dropdown-menu{min-width:566px;border-radius:0;border-top:4px solid var(--primary-color-system-indigo-dye,#5648ff);background:var(--gray-color-system-gray-6,#ebf0ff);box-shadow:0 30px 30px 0 rgba(0,19,69,.1)}
 .has-mega-menu .custom-dropdown-menu{flex-wrap:wrap}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li{flex:0 0 100%;margin-left:0!important}
@@ -123,4 +124,9 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .pt-10{padding-top:10px}
 .pb-95{padding-bottom:95px}
 .uiexpertz-project-bottom-main-wrap-114{overflow:auto}
-.pb-60{padding-bottom:60px}.js-text-cursor {text-decoration: none;}
+.pb-60{padding-bottom:60px}
+.js-text-cursor{text-decoration:none}
+.case-study-img img{height:auto}
+.has-p-mb-0 p{margin-bottom:0}
+.luiexpertz-has-process-2 p{color:var(--gray-color-system-gray-2,#384973);font-size:18px}
+.uiexpertz-has-process-2 p{color:var(--gray-color-system-gray-7,#9db9ff);font-size:22px;line-height:32px}

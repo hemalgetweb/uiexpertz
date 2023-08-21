@@ -363,7 +363,7 @@ $related_query = new WP_Query($related_query_args);
 <div class="contact bg-clr-blue section-padding">
   <div class="section-heading text-center mb-5">
     <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contacttitle.svg" alt="banner img"
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" alt="banner img"
         class="img-fluid">
         <?php if(!empty($cbtoolkit_case_study_cf7_section_subtitle)) : ?>
           <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_subtitle ); ?></p>
@@ -382,7 +382,7 @@ $related_query = new WP_Query($related_query_args);
         <div class="row my-3 align-items-center">
           <div class="col-lg-5 offset-lg-1">
             <div class="contactImg text-center mb-5 mb-lg-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/contact.svg" alt="banner img"
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact.svg" alt="banner img"
                 class="img-fluid">
             </div>
           </div>

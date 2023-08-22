@@ -87,7 +87,7 @@
         e.stopPropagation();
         $('.searchBar').slideToggle(200);
     });
-    $('.cross-search').click(function (e) {
+    $('.cross-btn').click(function (e) {
         e.stopPropagation();
         $('.searchBar').slideToggle(200);
     });

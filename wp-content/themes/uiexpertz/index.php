@@ -94,6 +94,7 @@ $categories = get_categories(array(
             <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-lg-0" id="pills-tab"
                 role="tablist">
                 <li class="nav-item" role="presentation">
+                    <?php if(!isset($_POST['search'])) : ?>
                     <button
                         class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
@@ -101,6 +102,14 @@ $categories = get_categories(array(
 
                         Latest Blogs
                     </button>
+                    <?php else: ?>
+                        <button
+                        class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
+                        id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
+                        role="tab">
+                            Blog Result
+                        </button>
+                    <?php endif; ?>
                 </li>
                 <?php if(!empty($cbtoolkit_blog_category_select)) : ?>
                 <?php foreach($cbtoolkit_blog_category_select as $index=>$category_id) :

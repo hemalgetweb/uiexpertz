@@ -287,231 +287,21 @@ function remove_comment_field_for_page($open, $post_id)
 add_filter('comments_open', 'remove_comment_field_for_page', 10, 2);
 
 
-/**
- * Filter blog post by category
- */
-
-
-// AJAX handler for filtering blog posts
-function uiexpertz_filter_blog_posts_by_category()
-{
-	$category = $_POST['category'];
-
-	$args = array(
-		'post_type' => 'post',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-	);
-
-	// If a specific category is selected, add it to the query arguments
-	if ($category !== 'all') {
-		$args['cat'] = $category;
-	}
-
-	$query = new WP_Query($args);
-
-	// Start output buffer to store the HTML content
-	ob_start();
-
-	// Check if there are blog posts to display
-	if ($query->have_posts()) {
-		echo '<div class="row">';
-		while ($query->have_posts()) {
-			$query->the_post();
-			// Output the content of each blog post here?>
-			<?php
-			$category = get_the_category(get_the_ID());
-			$cat_id = '';
-			$cat_name = '';
-			?>
-			<div class="col-lg-4 col-md-6">
-				<div class="service-item service-item-wrap bg-white mb-4 pb-3">
-					<div>
-						<div class="p-1">
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="portfolio" class="img-fluid w-100">
-						</div>
-						<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap  px-4 pt-4">
-							<?php
-							if($category) {
-								foreach($category as $index => $cat) {
-									$cat_id = $category ? $category[$index]->term_id: '';
-									$cat_name = $category ? $category[$index]->name : '';?>
-									<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue"><?php echo esc_html($cat_name); ?></li>
-								<?php }
-							}
-							?>
-						</ul>
-						<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-							<h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words( get_the_title(),9); ?></a></h4>
-							<p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt( get_the_ID() ), 16); ?></p>
-						</div>
-					</div>
-					<a href="<?php the_permalink(get_the_ID()); ?>"
-						class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
-						<span>
-							<span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
-						</span>
-						<span>
-							<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z">
-								</path>
-							</svg>
-
-						</span>
-					</a>
-
-				</div>
-			</div>
-		<?php }
-		wp_reset_postdata();
-		echo '</div>';
-	} else {
-		// No blog posts found for the selected category
-		echo '<p>No blog posts found for the selected category.</p>';
-	}
-
-	// End the output buffer and return the content
-	$output = ob_get_clean();
-	echo $output;
-	exit;
-}
-add_action('wp_ajax_uiexpertz_filter_blog_posts', 'uiexpertz_filter_blog_posts_by_category');
-add_action('wp_ajax_nopriv_uiexpertz_filter_blog_posts', 'uiexpertz_filter_blog_posts_by_category');
-
-
-
-
-/**
- * Filter blog post by date
- */
-
-function uiexpertz_filter_blog_posts()
-{
-	$date_filter = $_POST['date_filter'];
-
-	$args = array(
-		'post_type' => 'post',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-	);
-
-	// Handle date filtering based on the selected option
-	if ($date_filter === 'last-7-days') {
-		$args['date_query'] = array(
-			array(
-				'after' => '1 week ago',
-			),
-		);
-	} elseif ($date_filter === 'last-month') {
-		$args['date_query'] = array(
-			array(
-				'after' => '1 month ago',
-			),
-		);
-	} elseif ($date_filter === 'last-year') {
-		$args['date_query'] = array(
-			array(
-				'after' => '1 year ago',
-			),
-		);
-	}
-
-	$query = new WP_Query($args);
-
-	// Start output buffer to store the HTML content
-	ob_start();
-
-	// Check if there are blog posts to display
-	if ($query->have_posts()) {
-		echo '<div class="row">';
-		while ($query->have_posts()) {
-			$query->the_post();
-			?>
-			<div class="col-xl-4 col-sm-6 col-sm-6 mb-4">
-				<div id="post-<?php the_ID(); ?>" <?php post_class('single-blog bg-white p-2 radius-6 box-shadow2'); ?>>
-					<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())):
-						$att = get_post_thumbnail_id();
-						$image_src = wp_get_attachment_image_src($att, 'full');
-						if (!empty($image_src)) {
-							$image_src = $image_src[0];
-						}
-						$uiexpertz_cat = get_the_category(get_the_ID()) ? (array) get_the_category(get_the_ID())[0] : '';
-						$first_cat_name = '';
-						$first_cat_id = '';
-						$first_cat_url = '';
-						if (!empty($uiexpertz_cat)) {
-							$first_cat_name = $uiexpertz_cat['name'];
-							$first_cat_id = $uiexpertz_cat['term_id'];
-							$first_cat_url = get_category_link($first_cat_id);
-						}
-						?>
-						<div class="blog-img mb-2 radius-6 overflow-hidden">
-							<img src="<?php echo esc_url($image_src); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid w-100">
-						</div>
-					<?php endif; ?>
-					<div class="blog-info ">
-						<div class="feature-top">
-							<?php if (!empty($first_cat_name)): ?>
-								<a href="<?php echo esc_url($first_cat_url); ?>">
-									<span
-										class="section-tag fs-12 fw-bold text-uppercase text-clr-dark4 d-inline-flex gap-2 align-items-center mb-2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-process-icon.svg" alt="icon"
-											class="img-fluid">
-										<?php echo $first_cat_name; ?>
-									</span>
-								</a>
-							<?php endif; ?>
-							<h3 class="blog-title fs-18 lh-base fw-medium">
-								<a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-clr-dark1">
-									<?php echo wp_trim_words(get_the_title(get_the_ID()), 7); ?>
-								</a>
-							</h3>
-							<div class="blog-intro fs-14 text-clr-dark2 mb-0">
-								<p class="">
-									<?php echo wp_trim_words(get_the_excerpt(), 15); ?>
-								</p>
-							</div>
-						</div>
-						<a href="<?php echo get_the_permalink(); ?>"
-							class="text-decoration-none fs-12 fw-bold text-clr-primary text-uppercase d-flex gap-2 align-items-center">
-							<?php echo esc_html__('Read more', 'uiexpertz'); ?>
-							<span class="ni fs-6 ni-arrow-right"></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		<?php }
-		wp_reset_postdata();
-		echo '</div>';
-	} else {
-		// No blog posts found for the selected date
-		echo '<p>No blog posts found for the selected date range.</p>';
-	}
-
-	// End the output buffer and return the content
-	$output = ob_get_clean();
-	echo $output;
-	exit;
-}
-add_action('wp_ajax_filter_blog_posts', 'uiexpertz_filter_blog_posts');
-add_action('wp_ajax_nopriv_filter_blog_posts', 'uiexpertz_filter_blog_posts');
 
 
 /**
  * Filter blog post by search
  */
 
-function uiexpertz_perform_post_search()
+function uiexpertz_perform_fetch_all_post()
 {
-	$search_term = $_POST['search_term'];
+	$paged = $_POST['paged'];
 
 	$args = array(
 		'post_type' => 'post',
 		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		's' => $search_term,
+		'ignore_sticky_posts' => true,
+		'paged' => $paged
 	);
 
 	$query = new WP_Query($args);
@@ -524,56 +314,62 @@ function uiexpertz_perform_post_search()
 		echo '<div class="row">';
 		while ($query->have_posts()) {
 			$query->the_post();
-			$category = get_the_category(get_the_ID());
-			$cat_id = '';
-			$cat_name = '';	
 		?>
-		<div class="col-lg-4 col-md-6">
-			<div class="service-item service-item-wrap bg-white mb-4 pb-3">
-				<div>
-					<div class="p-1">
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="portfolio" class="img-fluid w-100">
+			<div class="col-lg-4 col-md-6">
+				<div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
+					<a  class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
+						href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>"
+						class="js-text-cursor d-none">
+						<?php echo esc_html__('Get inspired', 'cb-core'); ?>
+						<span class="pb-1">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z"
+									fill="white" />
+							</svg>
+						</span>
+					</a>
+					<div>
+						<div class="p-1">
+							<?php the_post_thumbnail( get_the_ID(), 'full' ); ?>
+						</div>
+						<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+							<?php
+							$categories = get_the_category();
+							
+							foreach ($categories as $category) {
+								echo '<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">' . esc_html($category->name) . '</li>';
+							}
+							?>
+						</ul>
+						<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+							<h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+							<p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
+						</div>
 					</div>
-					<ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap  px-4 pt-4">
-						<?php
-						if($category) {
-							foreach($category as $index => $cat) {
-								$cat_id = $category ? $category[$index]->term_id: '';
-								$cat_name = $category ? $category[$index]->name : '';?>
-								<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue"><?php echo esc_html($cat_name); ?></li>
-							<?php }
-						}
-						?>
-					</ul>
-					<div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-						<h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php the_permalink(get_the_ID()); ?>"><?php echo wp_trim_words( get_the_title(),9); ?></a></h4>
-						<p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt( get_the_ID() ), 16); ?></p>
+					<div
+						class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+						<span>
+							<h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+						</span>
+						<span>
+							<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11"
+								fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+							</svg>
+
+						</span>
 					</div>
 				</div>
-				<a href="<?php the_permalink(get_the_ID()); ?>"
-					class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
-					<span>
-						<span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
-					</span>
-					<span>
-						<svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z">
-							</path>
-						</svg>
-
-					</span>
-				</a>
-
 			</div>
-		</div>
 		<?php }
 		wp_reset_postdata();
 		echo '</div>';
 	} else {
 		// No search results found
-		echo '<p>No results found for the search term: "' . $search_term . '".</p>';
+		echo '0';
 	}
 
 	// End the output buffer and return the content
@@ -581,8 +377,8 @@ function uiexpertz_perform_post_search()
 	echo $output;
 	exit;
 }
-add_action('wp_ajax_uiexpertz_perform_post_search', 'uiexpertz_perform_post_search');
-add_action('wp_ajax_nopriv_uiexpertz_perform_post_search', 'uiexpertz_perform_post_search');
+add_action('wp_ajax_uiexpertz_perform_fetch_all_post', 'uiexpertz_perform_fetch_all_post');
+add_action('wp_ajax_nopriv_uiexpertz_perform_fetch_all_post', 'uiexpertz_perform_fetch_all_post');
 
 
 

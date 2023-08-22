@@ -1672,6 +1672,17 @@ function _header_blog_fields($fields)
         'default'  => __("Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.", 'cb-toolkit'),
         'priority' => 10,
     ];
+    $fields[] = [
+        'type'     => 'select',
+        'settings'    => 'cbtoolkit_blog_category_select',
+		'label'       => esc_html__( 'Select Blog', 'kirki' ),
+		'section'     => 'blog_setting',
+        'multiple'    => true,
+		'default'     => 'option-3',
+		'placeholder' => esc_html__( 'Select Blog', 'kirki' ),
+		'choices'     => generate_blog_category_control(),
+        'priority' => 10,
+    ];
 
     
     $fields[] = [
@@ -1714,7 +1725,7 @@ function _header_blog_fields($fields)
         'section' => 'blog_setting',
         'default' => '#',
     ];
-
+    
     return $fields;
 }
 add_filter('kirki/fields', '_header_blog_fields');

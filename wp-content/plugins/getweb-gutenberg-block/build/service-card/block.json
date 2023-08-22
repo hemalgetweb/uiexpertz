@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/getweb-service-card",
+  "version": "0.1.0",
+  "title": "Getweb Service Card",
+  "category": "getweb-blocks",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Social Media Marketing"
+    },
+    "block_image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "default": "We help you dominate the ever-changing social media landscape with profile optimization, content creation, regular post management, audience engagement & paid ads"
+    },
+    "btn_text": {
+      "type": "string",
+      "default": "Contact us"
+    },
+    "btn_link": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "getweb-gutenberg-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

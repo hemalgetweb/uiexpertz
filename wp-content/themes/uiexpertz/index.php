@@ -96,7 +96,7 @@ $categories = get_categories(array(
                 <li class="nav-item" role="presentation">
                     <button
                         class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
-                        id="pills-Neueste-tab" data-bs-toggle="pill" data-bs-target="#pills-Neueste" type="button"
+                        id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
 
                         Latest Blogs
@@ -126,30 +126,33 @@ $categories = get_categories(array(
             </ul>
             <!-- search-wrap -->
             <div class="searchBar position-absolute ">
-                <div class="search-wrap position-relative">
-                    <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" placeholder="Search..">
-                    <button type="submit" class="cross-btn border-0 bg-transparent position-absolute">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cross.svg" alt="about image"
-                            class="img-fluid cross-search me-3">
-                    </button>
-                </div>
+                <form action="#" method="POST">
+                    <div class="search-wrap position-relative">
+                        <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" name="search" placeholder="Search..">
+                        <button type="submit" class="cross-btn border-0 bg-transparent position-absolute">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cross.svg" alt="about image"
+                                class="img-fluid cross-search me-3">
+                        </button>
+                    </div>
+                </form>
             </div>
             <!-- search-wrap -End -->
         </div>
     </div>
 </div>
 <!--/ blog-header-tab -->
+
 <!-- blog-main -->
 <main class="blog-main pb-5 bg-clr-lightGray">
     <div class="slider-container">
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-Neueste" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" tabindex="0">
+                <?php if(!isset($_POST['search'])) : ?>
                 <div class="blogCart-section-title">
                     <h4 class="fs-2 fw-normal text-clr-blue">
                         Latest Blogs
                     </h4>
                 </div>
-
                 <!-- blog-slide-active -->
                 <div class="blog-slide-active radius-12">
 
@@ -185,30 +188,36 @@ $categories = get_categories(array(
                                         <div
                                             class="blog-info ps-3 pe-4 pt-3 d-flex flex-column justify-content-between h-100">
                                             <div>
-                                                <h6
-                                                    class="sub-title fs-12 fw-medium text-clr-darkBlue bg-clr-lightPink radius-4 px-2 d-inline-block mb-3">
-                                                    <?php
+                                                <?php
                                                 $categories = get_the_category();
-                                                if (!empty($categories)) {
-                                                    echo esc_html($categories[0]->name);
+                                                $cat_first_name = "";
+                                                if($categories) {
+                                                    $cat_first_name = $categories[0]->name;
                                                 }
                                                 ?>
+                                                <?php if($cat_first_name) : ?>
+                                                <h6
+                                                    class="sub-title fs-12 fw-medium text-clr-darkBlue bg-clr-lightPink radius-4 px-2 d-inline-block mb-3">
+                                                    <?php echo $cat_first_name; ?>
                                                 </h6>
+                                                <?php endif; ?>
                                                 <h3 class="mb-4">
                                                     <a href="<?php the_permalink(); ?>"
                                                         class="blog-title text-clr-blue fs-2 fw-bold text-decoration-none">
                                                         <?php the_title(); ?>
                                                     </a>
                                                 </h3>
+                                                <?php if(has_excerpt()) : ?>
                                                 <p class="fs-14 text-clr-gray fw-normal mb-1">
-                                                    <?php the_excerpt(); ?>
+                                                    <?php echo esc_html(get_the_excerpt()); ?>
                                                 </p>
+                                                <?php endif; ?>
                                             </div>
                                             <div class=" py-3">
                                                 <a href="<?php the_permalink(); ?>"
                                                     class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                                                     <span>
-                                                        <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                                        <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
                                                     </span>
                                                     <span>
                                                         <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
@@ -232,36 +241,52 @@ $categories = get_categories(array(
                     </div>
                 </div>
                 <!-- blog-slide-active -END -->
-
+                <?php endif; ?>
 
                 <!-- blogs-post  -->
                 <div>
                     <div class="">
                         <div class="blogCart-section-title">
+                            <?php if(!isset($_POST['search'])) : ?>
                             <h4 class="fs-2 fw-normal text-clr-blue">
                                 All blogs
                             </h4>
+                            <?php endif; ?>
+                            <?php if(isset($_POST['search'])) : ?>
+                            <h4 class="fs-2 fw-normal text-clr-blue">
+                                Blog Result: <?php echo sanitize_text_field($_POST['search']); ?>
+                            </h4>
+                            <?php endif; ?>
                         </div>
                         <?php
                             /**
-                             * Fetch all featured blogs
+                             * Fetch all blogs
                             */
-                            $args = array(
-                                'post_type'      => 'post',
-                                'post_status' => 'publish',
-                                'ignore_sticky_posts' => true
-                            );
+                            if(!isset($_POST['search'])) {
+                                $args = array(
+                                    'post_type'      => 'post',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => true
+                                );
+                            } else {
+                                $search_keyword = sanitize_text_field($_POST['search']);
+                                $args = array(
+                                    'post_type'      => 'post',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => true,
+                                    's' => $search_keyword
+                                );
+                            }
                             
                             $fetch_all_posts = new WP_Query($args);
                         ?>
                         <?php if($fetch_all_posts->have_posts()): ?>
-                        <div class="row mt-4" id="home-filtered-blog-post-114">
+                        <div class="row mt-4" id="home-filtered-blog-post-1143">
                             <?php while($fetch_all_posts->have_posts()) : $fetch_all_posts->the_post(); ?>
                             <div class="col-lg-4 col-md-6">
                                 <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
-                                    <a  class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
-                                        href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>"
-                                        class="js-text-cursor d-none">
+                                    <a  class="js-text-cursor uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
+                                        href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
                                         <?php echo esc_html__('Get inspired', 'cb-core'); ?>
                                         <span class="pb-1">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -293,7 +318,7 @@ $categories = get_categories(array(
                                     <div
                                         class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
                                         <span>
-                                            <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                            <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
                                         </span>
                                         <span>
                                             <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11"
@@ -319,8 +344,6 @@ $categories = get_categories(array(
                 </div>
                 <!--/ blogs-post  -->
             </div>
-
-
             <!-- /. tab 1 -->
             <?php 
             $category_ids = [];
@@ -338,7 +361,7 @@ $categories = get_categories(array(
                     <div class="blog-slide-active radius-12">
 
                         <div class="splide-blog<?php echo $category_id; ?> splide">
-                            <div class="splide__track" id="splide-track">
+                            <div class="splide__track" id="splide-track<?php echo $category_id ?>">
                                 <?php
                                     /**
                                      * Fetch all featured blogs
@@ -385,14 +408,14 @@ $categories = get_categories(array(
                                                         </a>
                                                     </h3>
                                                     <p class="fs-14 text-clr-gray fw-normal mb-1">
-                                                        <?php the_excerpt(); ?>
+                                                        <?php echo esc_html(get_the_excerpt()); ?>
                                                     </p>
                                                 </div>
                                                 <div class=" py-3">
                                                     <a href="<?php the_permalink(); ?>"
                                                         class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                                                         <span>
-                                                            <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                                            <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
                                                         </span>
                                                         <span>
                                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
@@ -441,13 +464,12 @@ $categories = get_categories(array(
                                 $fetch_all_posts = new WP_Query($args);
                             ?>
                             <?php if($fetch_all_posts->have_posts()): ?>
-                            <div class="row mt-4" id="home-filtered-blog-post-114">
+                            <div class="row mt-4" id="home-filtered-blog-post-1142">
                                 <?php while($fetch_all_posts->have_posts()) : $fetch_all_posts->the_post(); ?>
                                 <div class="col-lg-4 col-md-6">
                                     <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
                                         <a  class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
-                                            href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>"
-                                            class="js-text-cursor d-none">
+                                            href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
                                             <?php echo esc_html__('Get inspired', 'cb-core'); ?>
                                             <span class="pb-1">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -479,7 +501,7 @@ $categories = get_categories(array(
                                         <div
                                             class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
                                             <span>
-                                                <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                                <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
                                             </span>
                                             <span>
                                                 <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11"

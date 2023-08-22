@@ -130,3 +130,6 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .has-p-mb-0 p{margin-bottom:0}
 .luiexpertz-has-process-2 p{color:var(--gray-color-system-gray-2,#384973);font-size:18px}
 .uiexpertz-has-process-2 p{color:var(--gray-color-system-gray-7,#9db9ff);font-size:22px;line-height:32px}
+.service .service-wrapper.row .service-item .text-clr-blue:hover{color:var(--primary-color-system-indigo-dye,#5648ff)}
+.service .service-wrapper.row .service-item .text-clr-blue{transition:all .3s}
+.service .service-wrapper.row .service-item .d-flex.read-more{margin-top:0!important}

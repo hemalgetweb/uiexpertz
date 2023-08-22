@@ -6,6 +6,9 @@
     /**
      * For indivitual category item
      */
+    $('.blog-header-tab .nav-pills .nav-link').on('click', function() {
+        $('.uiexpertz-has-archive-default-loaded').removeClass("show active");
+    })
     // Loop through the class numbers
     if (typeof uiexpertz_all_cat_ids !== 'undefined') {
         uiexpertz_all_cat_ids.forEach(function (number) {
@@ -41,6 +44,47 @@
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.splide-blog.splide', {
+                    type   : 'loop',
+                    perPage      : 1,
+                    autoplay     : true,
+                    interval     : 3000, // How long to display each slide
+                    pauseOnHover : false, // must be false
+                    pauseOnFocus : false, // must be false
+                    resetProgress: false,
+                  perPage: $(window).width() > 800 ? 1 : 1,
+                }).mount();
+              }, 100);
+          });
+
+
+          //testimonial slider 
+
+          document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide('.testimonial#splide', {
+                gap: '45px',
+              type: 'loop',
+              perPage: 3,
+            //   focus: 'center',
+              autoplay: true,
+              interval: 8000,
+            //   flickMaxPages: 3,
+              updateOnMove: true,
+              pagination: false,
+            //   padding: '10%',
+            //   throttle: 300,
+              breakpoints: {
+                1200: {
+                  perPage: 2,
+                },
+                700: {
+                  perPage: 1,
+                },
+              }
+            }).mount();
+          });
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function() {
+                new Splide('.splide-blog1234.splide', {
                     type   : 'loop',
                     perPage      : 1,
                     autoplay     : true,

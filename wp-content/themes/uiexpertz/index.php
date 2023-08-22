@@ -41,6 +41,19 @@ $categories = get_categories(array(
 ));
 
 
+
+/**
+ * Get query var for category archive
+ */
+if (get_query_var('cat')) {
+    // The 'cat' query variable is set in the URL
+    // You can access its value using get_query_var('cat')
+    $archive_category_id = get_query_var('cat');
+    $cat_id_passed = true;
+} else {
+    $archive_category_id = 0;
+    $cat_id_passed = false;
+}
 ?>
 
 
@@ -94,9 +107,14 @@ $categories = get_categories(array(
             <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-lg-0" id="pills-tab"
                 role="tablist">
                 <li class="nav-item" role="presentation">
-                    <?php if(!isset($_POST['search'])) : ?>
+                    <?php if(!isset($_POST['search'])) :
+                    $active_class = "";
+                    if(!$archive_category_id) {
+                        $active_class = "active";
+                    }  
+                    ?>
                     <button
-                        class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
+                        class="nav-link <?php echo $active_class; ?> py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
 
@@ -155,7 +173,19 @@ $categories = get_categories(array(
 <main class="blog-main pb-5 bg-clr-lightGray">
     <div class="slider-container">
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" tabindex="0">
+            <?php $active_class = "";
+                if(!$archive_category_id) {
+                    $active_class = "show active";
+                } else {
+                    $active_class = "";
+                }
+            ?>
+            <?php
+            /**
+             * Show all post by default
+             */
+            ?>
+            <div class="tab-pane fade <?php echo $active_class; ?>" id="pills-all" role="tabpanel" tabindex="0">
                 <?php if(!isset($_POST['search'])) : ?>
                 <div class="blogCart-section-title">
                     <h4 class="fs-2 fw-normal text-clr-blue">
@@ -354,6 +384,218 @@ $categories = get_categories(array(
                 <!--/ blogs-post  -->
             </div>
             <!-- /. tab 1 -->
+            <?php
+            /**
+             * Show post only for category archive
+             */
+            $archive_active_class = "";
+            if($archive_category_id) {
+                $archive_active_class = "show active";
+            } else {
+                $archive_active_class = "";
+            }
+            ?>
+            <div class="tab-pane fade uiexpertz-has-archive-default-loaded <?php echo $archive_active_class; ?>" id="pills-archive-<?php echo $archive_category_id; ?>" role="tabpanel" tabindex="0">
+                <?php if(!isset($_POST['search'])) : ?>
+                <div class="blogCart-section-title">
+                    <h4 class="fs-2 fw-normal text-clr-blue">
+                        Archive: <?php echo get_cat_name( $archive_category_id ); ?>
+                    </h4>
+                </div>
+                <!-- blog-slide-active -->
+                <div class="blog-slide-active radius-12">
+
+                    <div class="splide-blog1234 splide">
+                        <div class="splide__track" id="splide-track">
+                            <?php
+                                /**
+                                 * Fetch all featured blogs
+                                */
+                                $args = array(
+                                    'post_type'      => 'post',
+                                    'posts_per_page' => -1,
+                                    'meta_key'       => 'featured_blog',
+                                    'meta_value'     => 1,
+                                    'meta_compare'   => '=',
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
+                                );
+                                
+                                $fetch_all_featured_post = new WP_Query($args);
+                            ?>
+                            <?php if($fetch_all_featured_post->have_posts()) : ?>
+                            <ul class="splide__list">
+                                <?php while($fetch_all_featured_post->have_posts()) :
+                                $fetch_all_featured_post->the_post();
+                                ?>
+                                <li class="splide__slide">
+                                    <div class="single-blog bg-white">
+                                        <div class="featured-image">
+                                            <div class="case-study-img text-center">
+                                                <a
+                                                    href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( get_the_ID(), 'full' ); ?></a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="blog-info ps-3 pe-4 pt-3 d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <?php
+                                                $categories = get_the_category();
+                                                $cat_first_name = "";
+                                                if($categories) {
+                                                    $cat_first_name = $categories[0]->name;
+                                                }
+                                                ?>
+                                                <?php if($cat_first_name) : ?>
+                                                <h6
+                                                    class="sub-title fs-12 fw-medium text-clr-darkBlue bg-clr-lightPink radius-4 px-2 d-inline-block mb-3">
+                                                    <?php echo $cat_first_name; ?>
+                                                </h6>
+                                                <?php endif; ?>
+                                                <h3 class="mb-4">
+                                                    <a href="<?php the_permalink(); ?>"
+                                                        class="blog-title text-clr-blue fs-2 fw-bold text-decoration-none">
+                                                        <?php the_title(); ?>
+                                                    </a>
+                                                </h3>
+                                                <?php if(has_excerpt()) : ?>
+                                                <p class="fs-14 text-clr-gray fw-normal mb-1">
+                                                    <?php echo esc_html(get_the_excerpt()); ?>
+                                                </p>
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class=" py-3">
+                                                <a href="<?php the_permalink(); ?>"
+                                                    class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                                                    <span>
+                                                        <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
+                                                    </span>
+                                                    <span>
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z"
+                                                                fill="#384973" />
+                                                        </svg>
+
+
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <?php endwhile; wp_reset_query(); ?>
+                            </ul>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- blog-slide-active -END -->
+                <?php endif; ?>
+
+                <!-- blogs-post  -->
+                <div>
+                    <div class="">
+                        <div class="blogCart-section-title">
+                            <?php if(!isset($_POST['search'])) : ?>
+                            <h4 class="fs-2 fw-normal text-clr-blue">
+                                All blogs
+                            </h4>
+                            <?php endif; ?>
+                            <?php if(isset($_POST['search'])) : ?>
+                            <h4 class="fs-2 fw-normal text-clr-blue">
+                                Blog Result: <?php echo sanitize_text_field($_POST['search']); ?>
+                            </h4>
+                            <?php endif; ?>
+                        </div>
+                        <?php
+                            /**
+                             * Fetch all blogs
+                            */
+                            if(!isset($_POST['search'])) {
+                                $args = array(
+                                    'post_type'      => 'post',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => true
+                                );
+                            } else {
+                                $search_keyword = sanitize_text_field($_POST['search']);
+                                $args = array(
+                                    'post_type'      => 'post',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => true,
+                                    's' => $search_keyword
+                                );
+                            }
+                            
+                            $fetch_all_posts = new WP_Query($args);
+                        ?>
+                        <?php if($fetch_all_posts->have_posts()): ?>
+                        <div class="row mt-4" id="home-filtered-blog-post-1143">
+                            <?php while($fetch_all_posts->have_posts()) : $fetch_all_posts->the_post(); ?>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
+                                    <a  class="js-text-cursor uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
+                                        href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
+                                        <?php echo esc_html__('Get inspired', 'cb-core'); ?>
+                                        <span class="pb-1">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <div>
+                                        <div class="p-1">
+                                            <?php the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                                        </div>
+                                        <ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+                                            <?php
+                                            $categories = get_the_category();
+                                            
+                                            foreach ($categories as $category) {
+                                                echo '<li class="bg-clr-lightPink py-2 px-3 ls-1 fs-12 fs-12 fw-medium text-clr-darkBlue">' . esc_html($category->name) . '</li>';
+                                            }
+                                            ?>
+                                        </ul>
+                                        <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+                                            <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+                                            <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
+                                        <span>
+                                            <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
+                                        </span>
+                                        <span>
+                                            <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                                            </svg>
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <!--/ blogs-post  -->
+            </div>
+            <!-- /. tab 2 -->
             <?php 
             $category_ids = [];
             foreach($cbtoolkit_blog_category_select as $index=>$category_id) :

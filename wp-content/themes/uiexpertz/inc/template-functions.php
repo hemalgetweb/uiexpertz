@@ -45,3 +45,13 @@ function reveral_is_elementor_editor()
     }
     return is_admin() && isset($_REQUEST['action']) && in_array(sanitize_text_field(wp_unslash($_REQUEST['action'])), array('elementor', 'elementor_ajax'), true);
 }
+
+
+function generate_blog_category_control() {
+    $categories = get_categories();
+    $choices = [];
+    foreach ($categories as $category) {
+        $choices[$category->term_id] = $category->name;
+    }
+    return $choices;
+}

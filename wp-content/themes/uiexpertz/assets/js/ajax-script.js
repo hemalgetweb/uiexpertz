@@ -1,81 +1,33 @@
 (function($) {
-
-    /**
-     * Blog category filter
-     */
-    $(".uiexperts-blog-category-filter").on('change', function() {
-        var selectedCategory = $(this).val();
-        $.ajax({
-            url: ajax.ajax_url,
-            type: 'POST',
-            data: {
-                action: 'uiexpertz_filter_blog_posts',
-                category: selectedCategory,
-            },
-            beforeSend: function() {
-                // Show loading spinner or message if needed
-                $('#home-filtered-blog-post-114').html('Loading...');
-            },
-            success: function(response) {
-                // Update the content of the blog post container
-                $('#home-filtered-blog-post-114').html(response);
-            },
-            error: function(xhr, status, error) {
-                // Handle error if AJAX request fails
-                console.error('AJAX Error:', xhr.responseText);
-            }
-        });
-    });
-    /**
-         * Blog duration filter
-         */
-    $('.uiexpertz-has-duration-select').on('change', function() {
-        var selectedOption = $(this).val();
-        $.ajax({
-            url: ajax.ajax_url,
-            type: 'POST',
-            data: {
-                action: 'uiexpertz_filter_blog_posts',
-                date_filter: selectedOption,
-            },
-            beforeSend: function() {
-                // Show loading spinner or message if needed
-                $('#home-filtered-blog-post-114').html('Loading...');
-            },
-            success: function(response) {
-                // Update the content of the blog post container
-                $('#home-filtered-blog-post-114').html(response);
-            },
-            error: function(xhr, status, error) {
-                // Handle error if AJAX request fails
-                console.error('AJAX Error:', xhr.responseText);
-            }
-        });
-    });
     /**
      * Blog search filter
     */
-   $('.uiexpertz-blog-search').on('change', function() {
-        var searchTerm = $(this).val();
+    let paged = 2;
+   $('.ajax-load-more-all-blog').on('click', function() {
         $.ajax({
             url: ajax.ajax_url,
             type: 'POST',
             data: {
-                action: 'uiexpertz_perform_post_search',
-                search_term: searchTerm,
+                action: 'uiexpertz_perform_fetch_all_post',
+                paged: paged,
             },
             beforeSend: function() {
                 // Show loading spinner or message if needed
-                $('#home-filtered-blog-post-114').html('Searching...');
             },
             success: function(response) {
-                // Update the content of the search results container
-                $('#home-filtered-blog-post-114').html(response);
+                if (response.trim() == 0) {
+                    // If there's no content, remove the button
+                    $('.ajax-load-more-all-blog').addClass('d-none');
+                } else {
+                    $('#home-filtered-blog-post-114').append(response);
+                }
             },
             error: function(xhr, status, error) {
                 // Handle error if AJAX request fails
                 console.error('AJAX Error:', xhr.responseText);
             }
         });
+        paged++;
     });
+    
 }(jQuery))

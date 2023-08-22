@@ -532,9 +532,10 @@ $categories = get_categories(array(
             </div>
             <?php endforeach; ?>
             <?php
+            if (is_home()) {
                 wp_localize_script( 'uiexpertz-script', 'uiexpertz_all_cat_ids', $category_ids );            
+            }
             ?>
-
             <!-- /. tab 2 -->
 
         </div>

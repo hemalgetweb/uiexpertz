@@ -7,22 +7,24 @@
      * For indivitual category item
      */
     // Loop through the class numbers
-    uiexpertz_all_cat_ids.forEach(function (number) {
-        document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
-                new Splide(`.splide-blog${number}.splide`, {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
-                }).mount();
-              }, 100);
-          });
-    });
+    if (typeof uiexpertz_all_cat_ids !== 'undefined') {
+        uiexpertz_all_cat_ids.forEach(function (number) {
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function() {
+                    new Splide(`.splide-blog${number}.splide`, {
+                        type   : 'loop',
+                        perPage      : 1,
+                        autoplay     : true,
+                        interval     : 3000, // How long to display each slide
+                        pauseOnHover : false, // must be false
+                        pauseOnFocus : false, // must be false
+                        resetProgress: false,
+                    perPage: $(window).width() > 800 ? 1 : 1,
+                    }).mount();
+                }, 100);
+            });
+        });
+    }
 
         document.addEventListener('DOMContentLoaded', function () {
             new Splide('.case.splide', {

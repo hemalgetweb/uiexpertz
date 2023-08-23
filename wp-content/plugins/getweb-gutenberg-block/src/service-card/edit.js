@@ -126,7 +126,7 @@ export default function Edit(props) {
 								value={title}
 								onChange={title => updateTitle(title)}
 							/></h4>
-							&& <p>
+							<p>
 								<TextareaControl
 									value={ description }
 									onChange={description => updateDescription(description)}
@@ -203,7 +203,7 @@ export default function Edit(props) {
 							value={title}
 							onChange={title => updateTitle(title)}
 						/></h4>
-						&& <p>
+						<p>
 						<TextareaControl
 							value={ description }
 							onChange={description => updateDescription(description)}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/getweb-cta",
+  "version": "0.1.0",
+  "title": "Getweb CTA",
+  "category": "getweb-blocks",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cta_title": {
+      "type": "string",
+      "default": "title here"
+    },
+    "cta_content": {
+      "type": "string",
+      "default": "content here"
+    },
+    "cta_btn_1_text": {
+      "type": "string",
+      "default": "btn text"
+    },
+    "cta_btn_1_link": {
+      "type": "string",
+      "default": "#"
+    },
+    "cta_btn_2_text": {
+      "type": "string",
+      "default": "btn 2 text"
+    },
+    "cta_btn_2_link": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "getweb-gutenberg-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

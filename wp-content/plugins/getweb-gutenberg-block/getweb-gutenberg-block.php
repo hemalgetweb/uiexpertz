@@ -24,6 +24,7 @@ function create_block_getweb_gutenberg_block_block_init() {
 	register_block_type( __DIR__ . '/build/faq' );
 	register_block_type( __DIR__ . '/build/service-card' );
 	register_block_type( __DIR__ . '/build/quote' );
+	register_block_type( __DIR__ . '/build/cta' );
 }
 add_action( 'init', 'create_block_getweb_gutenberg_block_block_init' );
 
@@ -41,9 +42,9 @@ add_filter( 'block_categories_all' , 'getweb_create_block_category' );
 
 function getweb_enqueue_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', null, time(), false );
-	wp_enqueue_style('apps-core', get_template_directory_uri() . '/assets/css/apps-core.css', null, time());
+	wp_enqueue_style('apps-core', get_template_directory_uri() . '/assets/css/uiexpertz-core.css', null, time());
 	wp_enqueue_style('emon-vai', get_template_directory_uri() . '/assets/css/emon-vai.css', null, time());
-	wp_enqueue_style('apps-custom', get_template_directory_uri() . '/assets/css/apps-custom.css', null, time());
+	wp_enqueue_style('apps-custom', get_template_directory_uri() . '/assets/css/uiexpertz-custom.css', null, time());
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), time(), true );
 }
 add_action("admin_enqueue_scripts", "getweb_enqueue_scripts");

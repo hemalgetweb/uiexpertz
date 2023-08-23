@@ -17,7 +17,6 @@ import { TextControl, TextareaControl  } from '@wordpress/components';
  */
 export default function save(props) {
 	const {title, block_layout, description, btn_text, btn_link, block_image} = props.attributes;
-	console.log(block_layout);
 	return (
 		<div { ...useBlockProps.save() }>
 			{

@@ -133,4 +133,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .service .service-wrapper.row .service-item .text-clr-blue:hover{color:var(--primary-color-system-indigo-dye,#5648ff)}
 .service .service-wrapper.row .service-item .text-clr-blue{transition:all .3s}
 .service .service-wrapper.row .service-item .d-flex.read-more{margin-top:0!important}
-.service-item.js-text-cursor-block:hover .service-content .text-clr-blue a, .service-item.js-text-cursor-block:hover .read-more h4, .service-item.js-text-cursor-block:hover .read-more .arrow-svg path{fill: var(--primary-color-system-indigo-dye,#5648ff); color:var(--primary-color-system-indigo-dye,#5648ff)}
+.service-item.js-text-cursor-block:hover .read-more .arrow-svg path,.service-item.js-text-cursor-block:hover .read-more h4,.service-item.js-text-cursor-block:hover .service-content .text-clr-blue a{fill:var(--primary-color-system-indigo-dye,#5648ff);color:var(--primary-color-system-indigo-dye,#5648ff)}
+.pt-105{padding-top:105px}
+.apps-accordion-wrapper-main-114 p{margin-bottom:0;padding-bottom:20px;color:#384973;line-height:26px}
+.faq-area .accordion-button:not(.collapsed){background:0 0}

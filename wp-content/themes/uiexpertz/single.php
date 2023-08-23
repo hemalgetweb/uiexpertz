@@ -1,79 +1,14 @@
 <?php
-/**
- * single.php
- * @package WordPress
- * @subpackage uiexpertz
- * @since uiexpertz 1.0
- * 
- */
-$blog_column = is_active_sidebar( 'blog-sidebar' ) ? 'col-lg-8 col-md-12 col-sm-12' : 'col-lg-8 col-md-12 col-sm-12';
-$cbblog_layout = get_theme_mod('cbblog_layout') ? get_theme_mod('cbblog_layout'): 'right-sidebar';
-$sidebar_space = '';
-$author_id = get_the_author_meta('ID');
-$post_id = get_the_ID();
-if($cbblog_layout == 'right-sidebar') {
-	$sidebar_space = is_active_sidebar( 'blog-sidebar' ) ? 'pl-50' : '';
-} else if($cbblog_layout == 'left-sidebar') {
-	$sidebar_space = is_active_sidebar( 'blog-sidebar' ) ? 'pr-50' : '';
-}
-$category = get_the_category(get_the_ID());
-$cat_id = '';
-$cat_name = '';
-if($category) {
-    $cat_id = $category ? $category[0]->term_id : '';
-    $cat_name = $category ? $category[0]->name : '';
-}
-$author_avatar = get_avatar( $author_id, 32 );
-$comment_count = get_comments_number( $post_id );
-$author_id = get_post_field('post_author', get_the_ID());
-$author_archive_link = get_author_posts_url($author_id);
-$username = get_the_author_meta('user_login', $author_id);
-$current_url = urlencode( get_permalink() );
-$post_title = get_the_title();
-$facebook_share_link = 'https://www.facebook.com/sharer/sharer.php?u=' . $current_url;
-$twitter_share_link = 'https://twitter.com/intent/tweet?url=' . $current_url . '&text=' . urlencode( $post_title );
-$linkedin_share_link = 'https://www.linkedin.com/sharing/share-offsite/?url=' . urlencode($current_url);
-$args = array(
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'posts_per_page' => 4,
-    'orderby' => 'date',
-    'order' => 'DESC',
-);
+// Template Name: Blog Details Updated Emon
 
-$recent_posts = new WP_Query($args);
+get_header();
 
-
-/**
- * Blog details customizer meta
-*/
-$cbblog_details_related_post_subtitle = get_theme_mod( 'cbblog_details_related_post_subtitle', __('UiExpertz Latest Blogs', 'uiexpertz') );
-$cbblog_details_related_post_title = get_theme_mod( 'cbblog_details_related_post_title', __('Related Posts', 'uiexpertz') );
-$cbblog_details_related_post_content = get_theme_mod( 'cbblog_details_related_post_content', __('Facilisis mauris sit amet massa vitae tortor condimentum.', 'uiexpertz') );
-$cbblog_details_related_post_btn_text = get_theme_mod( 'cbblog_details_related_post_btn_text', __('View all', 'uiexpertz') );
-$cbblog_details_related_post_btn_link = get_theme_mod( 'cbblog_details_related_post_btn_link', __('#', 'uiexpertz') );
-
-/**
- * CF7 form data from customizer
- */
-$cbtoolkit_case_study_cf7_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_cf7_section_subtitle', __('Let’s work together', 'cb-toolkit') );
-$cbtoolkit_case_study_cf7_section_title = get_theme_mod( 'cbtoolkit_case_study_cf7_section_title', __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit') );
-$cbtoolkit_case_study_cf7_section_content = get_theme_mod( 'cbtoolkit_case_study_cf7_section_content', __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit') );
-$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit') );
-
-
-
-/**
- * Related post query
- */
 $current_post_id = get_the_ID();
-
-$tags = wp_get_post_tags($current_post_id, array('fields' => 'ids'));
 $categories = wp_get_post_categories($current_post_id, array('fields' => 'ids'));
 
 $related_query_args = array(
     'post_type' => 'post',
-    'posts_per_page' => 3, // You can adjust the number of related posts to display
+    'posts_per_page' => -1, // You can adjust the number of related posts to display
     'post__not_in' => array($current_post_id), // Exclude the current post
     'tax_query' => array(
         'relation' => 'OR',
@@ -91,194 +26,100 @@ $related_query_args = array(
 );
 
 $related_query = new WP_Query($related_query_args);
-
- ?>
-<?php get_header(); ?>
-<div class=" subBanner blog-details-banner bg-clr-blue fs-6 ">
+?>
+<div class="wb-blog-details pt-105">
     <div class="container">
-      <div class="banner-wrapper d-flex flex-column justify-content-between">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
-              <p class="text-clr-sky fs-18"><?php echo esc_html($cat_name); ?></p>
-              <h1 class="fs-48 text-white mb-4 lh-sm">
-                <?php the_title(); ?>
-              </h1>
-              <div class="blog-details-info d-flex align-items-center gap-4">
-                <div class="authors d-flex gap-2 align-items-center">
-                  <?php echo $author_avatar; ?>
-                  <div class="text-clr-skyBlue fs-18 ">Published by <a href="<?php echo esc_url($author_archive_link); ?>" class="text-decoration-none fw-bold text-white"><?php echo esc_html($username); ?></a></div>
-                </div>
-                <div class="publish-info-line"></div>
-                <div class="authors d-flex gap-2 align-items-center text-decoration-none">
-                  <img src="assets/img/fi-rs-calendar.svg" class="img-fluid me-1" alt="">
-                  <p class="text-clr-skyBlue fs-18 mb-0"><?php echo get_the_date(); ?></p>
-                </div>
-                <div class="publish-info-line"></div>
-                <div class="authors d-flex gap-2 align-items-center  text-decoration-none">
-                  <img src="assets/img/comment.svg" class="img-fluid me-1" alt="">
-                  <p class="text-clr-skyBlue fs-18 mb-0"><?php echo esc_attr($comment_count); ?> Comments</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <a href="<?php echo get_post_type_archive_link('post'); ?>"
+            class="back-to-blog d-flex align-items-center gap-2 text-clr-sky text-decoration-none fs-14 fw-bold">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L7.0625 10.9375L2.875 6.75H12V5.25H2.875L7.0625 1.0625L6 0L0 6L6 12Z" fill="#5648FF" />
+            </svg>
+            </svg> <span class="fs-14 fw-bold text-clr-darkBlue">Back</span>
+        </a>
+        <h1><?php echo get_the_title(); ?></h1>
+        <div class="d-flex align-items-center gap-3">
+              <?php if (has_category()):
+                $categories = get_the_category();
+                if($categories) {
+                  $first_category_name = $categories[0]->name;
+                  $first_category_id = $categories[0]->term_id;
+                }
+                ?>
+              <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($first_category_id); ?>"
+                class="fs-12 fw-medium ls-1 text-uppercase text-decoration-none px-2 py-1 bg-clr-lightPink"><?php echo esc_html($first_category_name); ?></a>
+              <?php endif; ?>
+            <span class="fs-12 fw-medium text-clr-gray ls-1 text-uppercase"><?php echo get_the_date(); ?></span>
         </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="blog-details section-padding">
-    <div class="container">
-      <div class="blog-details-wrap">
-        <div class="row">
-          <div class="col-xl-8">
-            <div class="uiexpertz-blog-details-inner">
-              <?php the_post_thumbnail(get_the_ID()); ?>
-              <?php the_content(); ?>
-              <div class="shared-article d-flex align-items-center justify-content-between">
-                <h3 class="text-clr-blue fs-4 m-0">Share articles</h3>
-                <div class="d-flex gap-3">
-                  <a href="<?php echo $facebook_share_link; ?>" target="_blank" class="text-decoration-none blog-details-social">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 11C22 4.92486 17.0751 0 11 0C4.92486 0 0 4.92486 0 11C0 16.4903 4.02252 21.0412 9.28125 21.8664V14.1797H6.48828V11H9.28125V8.57656C9.28125 5.81969 10.9235 4.29687 13.4361 4.29687C14.6392 4.29687 15.8984 4.51172 15.8984 4.51172V7.21875H14.5114C13.145 7.21875 12.7188 8.06674 12.7188 8.9375V11H15.7695L15.2818 14.1797H12.7188V21.8664C17.9775 21.0412 22 16.4903 22 11Z" fill="#97A3C1"></path>
-                    </svg>
-
-
-                  </a>
-                  <a href="<?php echo $twitter_share_link; ?>" target="_blank" class="text-decoration-none blog-details-social">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_504_6826)">
-                        <path d="M6.92098 19.9376C15.2208 19.9376 19.7618 13.0596 19.7618 7.09683C19.7618 6.90347 19.7575 6.70581 19.7489 6.51245C20.6322 5.87363 21.3945 5.08235 22 4.17581C21.1773 4.54184 20.3038 4.78089 19.4094 4.8848C20.3512 4.32029 21.0563 3.43347 21.3941 2.38874C20.5082 2.9138 19.5393 3.28418 18.529 3.48402C17.8483 2.76072 16.9482 2.28181 15.968 2.12134C14.9879 1.96086 13.9821 2.12775 13.1063 2.59621C12.2304 3.06467 11.5333 3.8086 11.1227 4.71299C10.7121 5.61738 10.6108 6.63185 10.8346 7.59956C9.04062 7.50954 7.28561 7.04352 5.68332 6.23171C4.08102 5.41991 2.66722 4.28044 1.53355 2.88718C0.957366 3.8806 0.781052 5.05613 1.04044 6.17487C1.29984 7.29361 1.97547 8.27162 2.93004 8.91011C2.21341 8.88736 1.51248 8.69441 0.885156 8.34722V8.40308C0.884514 9.44559 1.24492 10.4562 1.90512 11.263C2.56531 12.0698 3.48455 12.6231 4.50656 12.8289C3.84272 13.0105 3.14598 13.037 2.47027 12.9062C2.75867 13.8028 3.31978 14.5869 4.07529 15.1493C4.8308 15.7116 5.74303 16.024 6.68465 16.0429C5.08606 17.2986 3.11133 17.9797 1.07852 17.9765C0.718013 17.976 0.357866 17.9539 0 17.9103C2.06512 19.2352 4.4674 19.9389 6.92098 19.9376Z" fill="#97A3C1"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_504_6826">
-                          <rect width="22" height="22" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                  <a href="<?php echo $linkedin_share_link; ?>" target="_blank" class="text-decoration-none blog-details-social">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_504_6832)">
-                        <path d="M20.3715 0H1.62422C0.726172 0 0 0.708984 0 1.58555V20.4102C0 21.2867 0.726172 22 1.62422 22H20.3715C21.2695 22 22 21.2867 22 20.4145V1.58555C22 0.708984 21.2695 0 20.3715 0ZM6.52695 18.7473H3.26133V8.2457H6.52695V18.7473ZM4.89414 6.81484C3.8457 6.81484 2.99922 5.96836 2.99922 4.92422C2.99922 3.88008 3.8457 3.03359 4.89414 3.03359C5.93828 3.03359 6.78477 3.88008 6.78477 4.92422C6.78477 5.96406 5.93828 6.81484 4.89414 6.81484ZM18.7473 18.7473H15.4859V13.6426C15.4859 12.4266 15.4645 10.8582 13.7887 10.8582C12.0914 10.8582 11.8336 12.1859 11.8336 13.5566V18.7473H8.57656V8.2457H11.7047V9.68086H11.7477C12.1816 8.85586 13.2473 7.98359 14.8328 7.98359C18.1371 7.98359 18.7473 10.1578 18.7473 12.9852V18.7473Z" fill="#97A3C1"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_504_6832">
-                          <rect width="22" height="22" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-
-                  </a>
+        <div class="blog-details-img mt-4">
+            <?php echo get_the_post_thumbnail(); ?>
+        </div>
+        <div class="blog-details-wrap mt-5">
+            <div class="row">
+                <div class="col-xl-9">
+                    <?php echo get_the_content(); ?>
                 </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-xl-4">
-              <div class="Sidebar">
-                <div class="sidebar-widget overflow-hidden p-2 mb-4">
-                  <input type="text" class="form-control border-0 ps-5" placeholder="Search" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/search.svg); background-repeat: no-repeat; background-position: 15px center;">
-                </div>
-        
-
-                    <div class="sidebar-widget border-dark1 radius-6 overflow-hidden mb-4">
-                      <h3 class="widget-title text-clr-blue px-4 py-4 fs-4 fw-bold mb-0">
-                        Recent Posts
-                      </h3>
-                      <div class="bg-white">
-                        <ul class="recent-post architect-2 list-unstyled mb-0">
+                <div class="col-xl-3">
+                    <?php
+                    $categories = get_categories();
+                    ?>
+                    <div class="categories mb-5">
+                        <h3 class="text-clr-blue fs-4 fw-bold mb-4">Categories</h3>
+                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-3 flex-wrap">
+                            <?php foreach($categories as $index => $category) :
+                                $category_id = $category->term_id;    
+                            ?>
+                            <li class="flex-shrink-0">
+                                <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="category-item text-decoration-none"><?php echo esc_html($category->name); ?></a>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="recent-post mb-4">
+                        <h3 class="text-clr-blue fs-4 fw-bold mb-4">Recent post</h3>
+                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-2 flex-wrap">
                             <?php
+                            // Define a custom query to get recent posts
+                            $args = array(
+                                'post_type' => 'post', // You can specify other post types if needed
+                                'posts_per_page' => 5, // Number of recent posts to display
+                                'ignore_sticky_posts' => 1, // Ignore sticky posts
+                            );
+
+                            $recent_posts = new WP_Query($args);
+
+                            // Check if there are recent posts
                             if ($recent_posts->have_posts()) {
                                 while ($recent_posts->have_posts()) {
                                     $recent_posts->the_post();
-                                    $post_date = get_the_time('Y-m-d H:i:s');
-                                    ?>
-                                    <li class="recent-post-list my-3 px-4">
-                                        <a href="<?php echo get_the_permalink(get_the_ID()); ?>" class="text-decoration-none d-flex gap-3 align-items-center">
-                                        <?php the_post_thumbnail( get_the_ID()); ?>
-                                        <div class="recent-post-content">
-                                            <span class="post-title fs-14 fw-medium text-clr-blue mb-1 d-block">
-                                            <?php echo get_the_title(get_the_ID(), ); ?>
-                                            </span>
-                                            <span class="post-time d-flex align-items-center gap-2 fs-12 fw-normal text-clr-gray2 fs-14 fw-medium mb-0 d-block">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clock.svg" class="img-fluid" alt="">
-                                            <span>
-                                                <?php echo custom_time_diff($post_date); ?>
-                                            </span>
-                                            </span>
-                                        </div>
+                            ?>
+                                    <li class="mb-2">
+                                        <a href="<?php the_permalink(); ?>"
+                                            class="recent-post-item text-decoration-none d-flex align-items-center gap-2">
+                                            <div class="flex-shrink-0">
+                                                <?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+                                            </div>
+                                            <span class="text-wrap"><?php the_title(); ?></span>
                                         </a>
                                     </li>
-                                <?php }
+                            <?php
+                                }
+                                // Restore global post data
                                 wp_reset_postdata();
                             } else {
-                                echo 'No posts found.';
+                                echo '<li>No recent posts found.</li>';
                             }
                             ?>
                         </ul>
-                      </div>
                     </div>
-
-              
-                <div class="sidebar-widget border-dark1 radius-6 overflow-hidden mb-4">
-                  <h3 class="text-clr-blue pt-4 px-4 pb-3 fs-4 fw-bold mb-0">
-                    Categories
-                  </h3>
-                  <div class="bg-light">
-                  <ul class="recent-post architect-3 list-unstyled py-3 px-4 mb-0 bg-white">
-                    <?php
-                    $categories = get_categories();
-                    foreach ($categories as $category) {
-                        $category_name = $category->name;
-                        $category_count = $category->count;
-                        $category_link = get_category_link($category->term_id);
-
-                        echo '<li class="recent-post-list py-2">';
-                        echo '<a href="' . esc_url($category_link) . '" class="d-flex justify-content-between fs-18 fw-medium text-clr-blue text-decoration-none">';
-                        echo '<span class="category-name">' . esc_html($category_name) . '</span>';
-                        echo '<span class="has-post">(' . esc_html($category_count) . ')</span>';
-                        echo '</a>';
-                        echo '</li>';
-                    }
-                    ?>
-                    </ul>
-                  </div>
                 </div>
-                <div class="sidebar-widget border-dark1 radius-6 overflow-hidden">
-                  <h3 class="widget-title px-4 pt-4 pb-3 fs-4 fw-bold mb-0">
-                    Popular Tag
-                  </h3>
-                  <ul class="d-flex gap-2 flex-wrap list-unstyled p-4 bg-white">
-                    <?php
-                    $tags = get_tags();
-                    foreach ($tags as $tag) {
-                        $tag_name = $tag->name;
-                        $tag_link = get_tag_link($tag->term_id);
-
-                        echo '<li>';
-                        echo '<a href="' . esc_url($tag_link) . '" class="fs-12 fw-semi-bold text-clr-gray text-decoration-none text-uppercase d-inline-flex ls-1 gap-2 px-2 py-1 border-gray">';
-                        echo esc_html($tag_name);
-                        echo '</a>';
-                        echo '</li>';
-                    }
-                    ?>
-                    </ul>
-                </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  
-
+</div>
   <!--  Latest Blogs  start -->
   <div class="latest-blog section-padding bg-clr-lightGray">
     <div class="container">
+    <h4 class="uiexpertz-generic-title-114">Recommended posts</h4>
       <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
         <div class="section-headings text-start">
           <?php if(!empty($cbblog_details_related_post_subtitle)) : ?>
@@ -312,7 +153,7 @@ $related_query = new WP_Query($related_query_args);
         <div class="col-lg-4 col-md-6">
           <div class="service-item  bg-white mb-4 pb-2">
             <div class="p-1">
-              <?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+            <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
             </div>
             <?php
               $current_post_id = get_the_ID();
@@ -322,10 +163,11 @@ $related_query = new WP_Query($related_query_args);
                   $first_category = $categories[0];
                   $category_name = $first_category->name;
                   $category_slug = $first_category->slug;
+                  $category_id = $first_category->term_id;
                   ?>
                   <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
                       <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
-                          <a href="<?php echo esc_url(get_category_link($first_category)); ?>" class="text-decoration-none">
+                          <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
                               <?php echo esc_html($category_name); ?>
                           </a>
                       </li>
@@ -334,7 +176,7 @@ $related_query = new WP_Query($related_query_args);
               }
               ?>
             <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
+              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
               <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
               <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                 <span>
@@ -359,47 +201,7 @@ $related_query = new WP_Query($related_query_args);
   </div>
   <!-- Latest Blogs end -->
 
-<!-- contact start -->
-<div class="contact bg-clr-blue section-padding">
-  <div class="section-heading text-center mb-5">
-    <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contacttitle.svg" alt="banner img"
-        class="img-fluid">
-        <?php if(!empty($cbtoolkit_case_study_cf7_section_subtitle)) : ?>
-          <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_subtitle ); ?></p>
-        <?php endif; ?>
-    </div>
-    <?php if(!empty($cbtoolkit_case_study_cf7_section_title)) : ?>
-      <h1 class="fs-40 text-white py-2"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_title ); ?></h1>
-      <?php endif; ?>
-    <?php if(!empty($cbtoolkit_case_study_cf7_section_content)) : ?>
-      <p class="text-clr-skyBlue"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_content ); ?></p>
-      <?php endif; ?>
-  </div>
-  <div class="footer-bg">
-    <div class="container">
-      <div class="contact-wrap bg-white py-5">
-        <div class="row my-3 align-items-center">
-          <div class="col-lg-5 offset-lg-1">
-            <div class="contactImg text-center mb-5 mb-lg-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact.svg" alt="banner img"
-                class="img-fluid">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="contact-info">
-            <?php if(!empty($cbtoolkit_case_study_cf7_section_form_heading)) : ?>
-              <h3 class="fs-4 fw-bold"><?php echo wp_kses_post( $cbtoolkit_case_study_cf7_section_form_heading ); ?></h3>
-            <?php endif; ?>
-            </div>
-            <div class="contact-form">
-              <?php echo do_shortcode( '[contact-form-7 id="452" title="Contact Global"]' ); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- contact end -->
+
+
+
 <?php get_footer(); ?>

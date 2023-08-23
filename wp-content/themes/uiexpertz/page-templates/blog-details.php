@@ -32,7 +32,7 @@ get_header(); ?>
         </div>
         <div class="blog-details-wrap mt-5">
             <div class="row">
-                <div class="col-xl-9">
+                <div class="col-lg-8">
                     <div>
                         <h2>Lorem, ipsum dolor.</h2>
                         <p>
@@ -44,7 +44,7 @@ get_header(); ?>
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-lg-4">
                     <div class="categories mb-5">
                         <h3 class="text-clr-blue fs-4 fw-bold mb-4">Categories</h3>
                         <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-3 flex-wrap">
@@ -110,15 +110,15 @@ get_header(); ?>
             <div class="blog-details-card-wrap my-5">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="details-card-item">
+                        <div class="details-card-item mb-lg-0 mb-3">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/details-card-img.svg"
                                 alt="banner img" class="img-fluid">
                             <h4 class="my-3">Libero enim sed</h4>
                             <p>Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Maecenas pharetra
                                 convallis posuer</p>
                             <a href="#" class="details-link d-block text-decoration-none">Lets’s talk <span>
-                                <svg class="ms-2" width="21" height="21"
-                                        viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="ms-2" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M10.5 16.2671L9.4375 15.2046L13.625 11.0171H4.5V9.51709H13.625L9.4375 5.32959L10.5 4.26709L16.5 10.2671L10.5 16.2671Z"
                                             fill="white" />
@@ -127,7 +127,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#" class="details-card-item d-block text-decoration-none">
+                        <a href="#" class="details-card-item mb-lg-0 mb-3 d-block text-decoration-none">
                             <div class="d-flex align-items-start gap-2 justify-content-between">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/details-card-img.svg"
                                     alt="banner img" class="img-fluid">
@@ -137,26 +137,70 @@ get_header(); ?>
                             <h4 class="my-3">Libero enim sed</h4>
                             <p>Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Maecenas pharetra
                                 convallis posuer</p>
-                          
+
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#" class="details-card-item  d-block text-decoration-none">
+                        <a href="#" class="details-card-item mb-lg-0 mb-3  d-block text-decoration-none">
                             <h4 class="my-3">Libero enim sed</h4>
                             <p>Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Maecenas pharetra
                                 convallis posuer</p>
-                         
+
                         </a>
                     </div>
                 </div>
             </div>
-            <p class="text-clr-gray fs-6 fw-normal">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être.</p>
+            <p class="text-clr-gray fs-6 fw-normal">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là,
+                mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne
+                ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous
+                devez être.</p>
         </div>
 
         <div class="wb-blog-details-quote">
-            <h3>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.</h3>
-           <div class="quote-line"></div>
-            <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard.</p>
+            <h3>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de
+                distractions, et empêche de se concentrer sur la mise en page elle-même.</h3>
+            <div class="quote-line"></div>
+            <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de
+                distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur
+                un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres
+                plus ou moins normale, et en tout cas comparable avec celle du français standard.</p>
+        </div>
+        <div>
+            <p class="pb-5 text-clr-gray fs-6 fw-normal">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici
+                ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires
+                qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem
+                Ipsum.</p>
+        </div>
+        <div class="wb-blog-details-box">
+            <h3>On sait depuis longtemps que travailler avec du texte</h3>
+            <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve
+                ses racines Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus.</p>
+            <p>Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles
+                a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du
+                texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être</p>
+            </p>
+
+
+       
+                <div class="uiexperts-btn-item d-flex flex-wrap mt-4 align-items-start gap-4">
+                    <a class="text-decoration-none position-relative bg-btn banner-btn border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center"
+                        href="#" target="_blank" rel="nofollow">
+                        Lets’s talk <svg class="btn-icon position-absolute" width="12" height="12" viewBox="0 0 12 12"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12L4.9375 10.9375L9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12Z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                    <a class="text-decoration-none position-relative bg-btn banner-btn border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center"
+                        href="#" target="_blank" rel="nofollow">
+                        Lets’s talk <svg class="btn-icon position-absolute" width="20" height="21" viewBox="0 0 20 21"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 16.2671L8.9375 15.2046L13.125 11.0171H4V9.51709H13.125L8.9375 5.32959L10 4.26709L16 10.2671L10 16.2671Z"
+                                fill="#5648FF" />
+                        </svg>
+                    </a>
+            </div>
         </div>
     </div>
 </div>

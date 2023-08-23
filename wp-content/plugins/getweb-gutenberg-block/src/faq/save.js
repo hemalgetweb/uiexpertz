@@ -33,7 +33,6 @@ export default function save(props) {
 							data-bs-target={`#collapse_213432-${index}`}
 							aria-expanded="false"
 							>
-							<span className="apps-question-q-114">Q</span> 
 							{faqs[index].question}
 							</button>
 						</h2>
@@ -44,7 +43,6 @@ export default function save(props) {
 							data-bs-parent="#questionAccordion-213432"
 						>
 							<div className="accordion-body apps-faq-accordion-body-wrapper">
-							<span className="apps-answere-a-114 mt-1">A</span>
 							<div className="apps-content">
 								<p>
 								{faqs[index].answere}

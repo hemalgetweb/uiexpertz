@@ -6,9 +6,11 @@
     display: block;
     margin-bottom: 10px;
 }
+
 .dynamic-service-box-content-114 input {
-	border: 0 !important;
+    border: 0 !important;
 }
+
 .dynamic-service-box-content-114 textarea {
     font-weight: 400;
     font-size: 14px;
@@ -16,6 +18,7 @@
     color: #1F516D;
     margin-bottom: 15px;
 }
+
 textarea {
     padding: 0 !important;
     border: 0 !important;
@@ -27,4 +30,46 @@ span.dynamic-service-read-more-btn-114 {
     width: fit-content;
 }
 
-span.dynamic-service-read-more-btn-114 input {flex: 0 0 auto !important;}
+span.dynamic-service-read-more-btn-114 input {
+    flex: 0 0 auto !important;
+}
+
+.details-card-item img {
+    max-width: 63px;
+}
+
+div .components-text-control__input {
+    color: #00314D;
+    font-size: 18px !important;
+    font-weight: 600;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.editor-styles-wrapper p textarea {
+    color: #265068;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+.components-panel__body textarea, .components-panel__body input {
+    border: 1px solid #e0e0e0 !important;
+    padding: 12px !important;
+}
+a.details-link .components-base-control {
+    width: 120px;
+    float: left;
+}
+
+a.details-link .components-base-control input {
+    background: transparent;
+    color: #fff;
+}
+
+a.details-link {overflow: hidden;}
+
+a.details-link .components-base-control .components-base-control__field {
+    margin-bottom: 0;
+}

@@ -18,6 +18,10 @@
     "block_image": {
       "type": "string"
     },
+    "block_layout": {
+      "type": "string",
+      "default": "layout-1"
+    },
     "description": {
       "type": "string",
       "default": "We help you dominate the ever-changing social media landscape with profile optimization, content creation, regular post management, audience engagement & paid ads"

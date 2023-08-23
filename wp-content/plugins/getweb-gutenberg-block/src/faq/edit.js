@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
-import { TextControl } from '@wordpress/components';
+import { TextControl, TextareaControl  } from '@wordpress/components';
 import './editor.scss';
 
 export default function Edit(props) {
@@ -47,7 +47,6 @@ export default function Edit(props) {
                       data-bs-target={`#collapse_213432-${index}`}
                       aria-expanded="false"
                     >
-                      <span className="apps-question-q-114">Q</span>
                       <TextControl
                         value={faqs[index].question}
                         onChange={newContent => updateQuestion(index, newContent)}
@@ -61,10 +60,9 @@ export default function Edit(props) {
                     data-bs-parent="#questionAccordion-213432"
                   >
                     <div className="accordion-body apps-faq-accordion-body-wrapper">
-                      <span className="apps-answere-a-114 mt-1">A</span>
                       <div className="apps-content">
                         <p>
-                          <TextControl
+                          <TextareaControl
                             value={faqs[index].answere}
                             onChange={newContent => updateAnswere(index, newContent)}
                           />

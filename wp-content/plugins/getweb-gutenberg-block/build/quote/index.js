@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/faq/edit.js":
-/*!*************************!*\
-  !*** ./src/faq/edit.js ***!
-  \*************************/
+/***/ "./src/quote/edit.js":
+/*!***************************!*\
+  !*** ./src/quote/edit.js ***!
+  \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/faq/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/quote/editor.scss");
 
 
 
@@ -28,106 +28,57 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit(props) {
   const {
+    quote_title,
+    quote_content
+  } = props.attributes;
+  const {
     attributes,
     setAttributes
   } = props;
-  const {
-    faqs
-  } = attributes;
-  const updateQuestion = (index, newContent) => {
-    const updatedFaqs = [...faqs];
-    updatedFaqs[index].question = newContent;
+  const updateQuoteTitle = function (newtitle) {
     setAttributes({
-      faqs: updatedFaqs
-    });
-    setIndexNumber(index);
-  };
-  const updateAnswere = (index, newContent) => {
-    const updatedFaqs = [...faqs];
-    updatedFaqs[index].answere = newContent;
-    setAttributes({
-      faqs: updatedFaqs
-    });
-    setIndexNumber(index);
-  };
-  const AddRow = () => {
-    const updatedFaqs = [...faqs];
-    const newItem = {
-      question: 'Add Question',
-      answere: 'Add answer'
-    };
-    updatedFaqs.push(newItem);
-    setAttributes({
-      faqs: updatedFaqs
+      quote_title: newtitle
     });
   };
-  const RemoveRow = () => {
-    const updatedFaqs = [...faqs];
-    updatedFaqs.pop();
+  const updateQuoteContent = function (newContent) {
     setAttributes({
-      faqs: updatedFaqs
+      quote_content: newContent
     });
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "faq-area faq-area pt-30"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "apps-accordion-wrapper-main-114"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion accordion-flush",
-    id: "questionAccordion-213432"
-  }, faqs.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    key: index,
-    className: "accordion-item"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-    className: "accordion-header",
-    id: `213432_heading_${index}`
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "accordion-button d-flex align-items-start collapsed",
-    type: "button",
-    "data-bs-toggle": "collapse",
-    "data-bs-target": `#collapse_213432-${index}`,
-    "aria-expanded": "false"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-    value: faqs[index].question,
-    onChange: newContent => updateQuestion(index, newContent)
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    id: `collapse_213432-${index}`,
-    className: "accordion-collapse collapse",
-    "aria-labelledby": `213432_heading_${index}`,
-    "data-bs-parent": "#questionAccordion-213432"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion-body apps-faq-accordion-body-wrapper"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "apps-content"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
-    value: faqs[index].answere,
-    onChange: newContent => updateAnswere(index, newContent)
-  })))))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "btn btn-primary me-2",
-    onClick: AddRow
-  }, "Add Question"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "btn btn-danger",
-    onClick: RemoveRow
-  }, "Remove Question"))));
+    class: "wb-blog-details-quote"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+    value: quote_title,
+    onChange: newTitle => {
+      updateQuoteTitle(newTitle);
+    }
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "quote-line"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
+    value: quote_content,
+    onChange: newContent => {
+      updateQuoteContent(newContent);
+    }
+  }))));
 }
 
 /***/ }),
 
-/***/ "./src/faq/index.js":
-/*!**************************!*\
-  !*** ./src/faq/index.js ***!
-  \**************************/
+/***/ "./src/quote/index.js":
+/*!****************************!*\
+  !*** ./src/quote/index.js ***!
+  \****************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/faq/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/faq/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/faq/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/faq/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/quote/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/quote/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/quote/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/quote/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -169,10 +120,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/faq/save.js":
-/*!*************************!*\
-  !*** ./src/faq/save.js ***!
-  \*************************/
+/***/ "./src/quote/save.js":
+/*!***************************!*\
+  !*** ./src/quote/save.js ***!
+  \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -203,51 +154,28 @@ __webpack_require__.r(__webpack_exports__);
  */
 function save(props) {
   const {
+    quote_title,
+    quote_content
+  } = props.attributes;
+  const {
     attributes,
     setAttributes
   } = props;
-  const {
-    faqs
-  } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "faq-area pt-30"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "apps-accordion-wrapper-main-114"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion accordion-flush",
-    id: "questionAccordion-213432"
-  }, faqs.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    key: index,
-    className: "accordion-item"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-    className: "accordion-header",
-    id: `213432_heading_${index}`
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "accordion-button d-flex align-items-start collapsed",
-    type: "button",
-    "data-bs-toggle": "collapse",
-    "data-bs-target": `#collapse_213432-${index}`,
-    "aria-expanded": "false"
-  }, faqs[index].question)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    id: `collapse_213432-${index}`,
-    className: "accordion-collapse collapse",
-    "aria-labelledby": `213432_heading_${index}`,
-    "data-bs-parent": "#questionAccordion-213432"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion-body apps-faq-accordion-body-wrapper"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "apps-content"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, faqs[index].answere))))))))));
+    class: "wb-blog-details-quote"
+  }, quote_title && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, quote_title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "quote-line"
+  }), quote_content && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, quote_content)));
 }
 
 /***/ }),
 
-/***/ "./src/faq/editor.scss":
-/*!*****************************!*\
-  !*** ./src/faq/editor.scss ***!
-  \*****************************/
+/***/ "./src/quote/editor.scss":
+/*!*******************************!*\
+  !*** ./src/quote/editor.scss ***!
+  \*******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -256,10 +184,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/faq/style.scss":
-/*!****************************!*\
-  !*** ./src/faq/style.scss ***!
-  \****************************/
+/***/ "./src/quote/style.scss":
+/*!******************************!*\
+  !*** ./src/quote/style.scss ***!
+  \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -318,13 +246,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./src/faq/block.json":
-/*!****************************!*\
-  !*** ./src/faq/block.json ***!
-  \****************************/
+/***/ "./src/quote/block.json":
+/*!******************************!*\
+  !*** ./src/quote/block.json ***!
+  \******************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/getweb-faq","version":"0.1.0","title":"Getweb Faq","category":"getweb-blocks","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"faqs":{"type":"array","default":[{"question":"first question","answere":"first answere"}]}},"textdomain":"getweb-gutenberg-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/getweb-quote","version":"0.1.0","title":"Getweb Quote","category":"getweb-blocks","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"quote_title":{"type":"string"},"quote_content":{"type":"string"}},"textdomain":"getweb-gutenberg-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -440,8 +368,8 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"faq/index": 0,
-/******/ 			"faq/style-index": 0
+/******/ 			"quote/index": 0,
+/******/ 			"quote/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -493,7 +421,7 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["faq/style-index"], function() { return __webpack_require__("./src/faq/index.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["quote/style-index"], function() { return __webpack_require__("./src/quote/index.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

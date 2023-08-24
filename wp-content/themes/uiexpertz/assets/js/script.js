@@ -55,6 +55,20 @@
                 }).mount();
               }, 100);
           });
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function() {
+                new Splide('.recommended-blog.splide', {
+                    type   : 'loop',
+                    perPage      : 1,
+                    autoplay     : true,
+                    interval     : 3000, // How long to display each slide
+                    pauseOnHover : false, // must be false
+                    pauseOnFocus : false, // must be false
+                    resetProgress: false,
+                  perPage: $(window).width() > 991 ? 3 : 1,
+                }).mount();
+              }, 100);
+          });
 
 
           //testimonial slider 

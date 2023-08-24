@@ -58,15 +58,25 @@
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.recommended-blog.splide', {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                    gap: '30px',
-                  perPage: $(window).width() > 991 ? 3 : 1,
+                    gap: '45px',
+                    type: 'loop',
+                    perPage: 3,
+                  //   focus: 'center',
+                    autoplay: true,
+                    interval: 8000,
+                  //   flickMaxPages: 3,
+                    updateOnMove: true,
+                    pagination: false,
+                  //   padding: '10%',
+                  //   throttle: 300,
+                    breakpoints: {
+                      1200: {
+                        perPage: 2,
+                      },
+                      700: {
+                        perPage: 1,
+                      },
+                    }
                 }).mount();
               }, 100);
           });

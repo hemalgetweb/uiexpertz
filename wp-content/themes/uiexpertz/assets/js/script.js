@@ -65,6 +65,7 @@
                     pauseOnHover : false, // must be false
                     pauseOnFocus : false, // must be false
                     resetProgress: false,
+                    gap: '30px',
                   perPage: $(window).width() > 991 ? 3 : 1,
                 }).mount();
               }, 100);

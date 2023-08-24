@@ -170,7 +170,7 @@ if (get_query_var('cat')) {
 <!--/ blog-header-tab -->
 
 <!-- blog-main -->
-<main class="blog-main pb-5 bg-clr-lightGray">
+<main class="blog-main pb-5 bg-clr-lightGray <?php echo is_home() && !is_front_page() ? 'pb-120-i' : '';?>">
     <div class="slider-container">
         <div class="tab-content" id="pills-tabContent">
             <?php $active_class = "";

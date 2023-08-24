@@ -174,5 +174,6 @@
 .blog .subBanner{min-height:auto;padding-block:80px 100px;padding-bottom:70px}
 }
 @media (min-width:768px) and (max-width:1199px){
+.slider-container{padding:0 19px}
 .blog .subBanner{min-height:auto;padding-block:100px 100px;padding-bottom:60px}
 }

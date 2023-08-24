@@ -148,7 +148,7 @@ $related_query = new WP_Query($related_query_args);
         <?php endif; ?>
       </div>
       <?php if($related_query->have_posts()) : ?>
-        <div id="splide" class="splide recommended-blog">
+        <div id="splide" class="splide testimonial">
           <div class="splide__track">
             <ul class="splide__list">
             <?php while($related_query->have_posts()): $related_query->the_post() ?>

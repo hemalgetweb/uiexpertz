@@ -148,197 +148,58 @@ $related_query = new WP_Query($related_query_args);
         <?php endif; ?>
       </div>
       <?php if($related_query->have_posts()) : ?>
-      <div class="row">
-        <?php while($related_query->have_posts()): $related_query->the_post() ?>
-     
         <div id="splide" class="splide recommended-blog">
-  <div class="splide__track">
-    <ul class="splide__list">
-      <li class="splide__slide">
-      <div class="service-item  bg-white mb-4 pb-2">
-            <div class="p-1">
-            <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
-            </div>
-            <?php
-              $current_post_id = get_the_ID();
-              $categories = get_the_category($current_post_id);
+          <div class="splide__track">
+            <ul class="splide__list">
+            <?php while($related_query->have_posts()): $related_query->the_post() ?>
+              <li class="splide__slide">
+              <div class="service-item  bg-white mb-4 pb-2">
+                    <div class="p-1">
+                    <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
+                    </div>
+                    <?php
+                      $current_post_id = get_the_ID();
+                      $categories = get_the_category($current_post_id);
 
-              if (!empty($categories)) {
-                  $first_category = $categories[0];
-                  $category_name = $first_category->name;
-                  $category_slug = $first_category->slug;
-                  $category_id = $first_category->term_id;
-                  ?>
-                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
-                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
-                          <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
-                              <?php echo esc_html($category_name); ?>
-                          </a>
-                      </li>
-                  </ul>
-                  <?php
-              }
-              ?>
-            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
-              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
-              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
-                <span>
-                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
-                </span>
-                <span>
-                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
-                  </svg>
-  
-                </span>
-              </a>
-            </div>
+                      if (!empty($categories)) {
+                          $first_category = $categories[0];
+                          $category_name = $first_category->name;
+                          $category_slug = $first_category->slug;
+                          $category_id = $first_category->term_id;
+                          ?>
+                          <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
+                              <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
+                                  <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
+                                      <?php echo esc_html($category_name); ?>
+                                  </a>
+                              </li>
+                          </ul>
+                          <?php
+                      }
+                      ?>
+                    <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
+                      <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
+                      <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+                      <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                        <span>
+                          <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+                        </span>
+                        <span>
+                          <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
+                          </svg>
+          
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+              </li>
+              <?php endwhile; wp_reset_query(); ?>
+            </ul>
           </div>
-      </li>
-      <li class="splide__slide">
-      <div class="service-item  bg-white mb-4 pb-2">
-            <div class="p-1">
-            <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
-            </div>
-            <?php
-              $current_post_id = get_the_ID();
-              $categories = get_the_category($current_post_id);
-
-              if (!empty($categories)) {
-                  $first_category = $categories[0];
-                  $category_name = $first_category->name;
-                  $category_slug = $first_category->slug;
-                  $category_id = $first_category->term_id;
-                  ?>
-                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
-                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
-                          <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
-                              <?php echo esc_html($category_name); ?>
-                          </a>
-                      </li>
-                  </ul>
-                  <?php
-              }
-              ?>
-            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
-              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
-              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
-                <span>
-                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
-                </span>
-                <span>
-                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
-                  </svg>
-  
-                </span>
-              </a>
-            </div>
-          </div>
-      </li>
-      <li class="splide__slide">
-      <div class="service-item  bg-white mb-4 pb-2">
-            <div class="p-1">
-            <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
-            </div>
-            <?php
-              $current_post_id = get_the_ID();
-              $categories = get_the_category($current_post_id);
-
-              if (!empty($categories)) {
-                  $first_category = $categories[0];
-                  $category_name = $first_category->name;
-                  $category_slug = $first_category->slug;
-                  $category_id = $first_category->term_id;
-                  ?>
-                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
-                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
-                          <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
-                              <?php echo esc_html($category_name); ?>
-                          </a>
-                      </li>
-                  </ul>
-                  <?php
-              }
-              ?>
-            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
-              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
-              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
-                <span>
-                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
-                </span>
-                <span>
-                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
-                  </svg>
-  
-                </span>
-              </a>
-            </div>
-          </div>
-      </li>
-      <li class="splide__slide">
-      <div class="service-item  bg-white mb-4 pb-2">
-            <div class="p-1">
-            <a href="<?php echo get_the_permalink(); ?>" ><?php the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?></a>
-            </div>
-            <?php
-              $current_post_id = get_the_ID();
-              $categories = get_the_category($current_post_id);
-
-              if (!empty($categories)) {
-                  $first_category = $categories[0];
-                  $category_name = $first_category->name;
-                  $category_slug = $first_category->slug;
-                  $category_id = $first_category->term_id;
-                  ?>
-                  <ul class="list-unstyled d-flex align-items-center gap-3 px-4 pt-4">
-                      <li class="bg-clr-lightPink py-2 px-3 ls-1 fs-6 fs-12 text-clr-darkBlue">
-                          <a href="<?php echo get_post_type_archive_link('post'); ?>?cat=<?php echo esc_attr($category_id); ?>" class="text-decoration-none">
-                              <?php echo esc_html($category_name); ?>
-                          </a>
-                      </li>
-                  </ul>
-                  <?php
-              }
-              ?>
-            <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
-              <h4 class="text-clr-blue fs-5 fw-bold mb-3"><a href="<?php echo get_the_permalink(); ?>" ><?php the_title(); ?></a></h4>
-              <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
-              <a href="<?php echo get_the_permalink(); ?>" class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
-                <span>
-                  <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
-                </span>
-                <span>
-                  <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1.06288 10.7034L0.296875 9.9374L8.93471 1.29154H1.20873V0.208252H10.792V9.79154H9.70873V2.06556L1.06288 10.7034Z" />
-                  </svg>
-  
-                </span>
-              </a>
-            </div>
-          </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-
-
-        <?php endwhile; wp_reset_query(); ?>
-      </div>
+        </div>
       <?php endif; ?>
     </div>
   </div>

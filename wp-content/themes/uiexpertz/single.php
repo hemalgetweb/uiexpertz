@@ -118,7 +118,7 @@ $related_query = new WP_Query($related_query_args);
 </div>
   <!--  Latest Blogs  start -->
   <div class="latest-blog section-padding bg-clr-lightGray">
-    <div class="container">
+    <div class="testimonial-container">
     <h4 class="uiexpertz-generic-title-114">Recommended posts</h4>
       <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
         <div class="section-headings text-start">

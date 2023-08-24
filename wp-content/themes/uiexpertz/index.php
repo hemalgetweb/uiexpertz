@@ -322,7 +322,7 @@ if (get_query_var('cat')) {
                         <?php if($fetch_all_posts->have_posts()): ?>
                         <div class="row mt-4" id="home-filtered-blog-post-1143">
                             <?php while($fetch_all_posts->have_posts()) : $fetch_all_posts->the_post(); ?>
-                            <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">
                                     <a  class="js-text-cursor uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
                                         href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">

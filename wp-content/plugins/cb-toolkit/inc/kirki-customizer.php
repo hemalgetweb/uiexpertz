@@ -2070,22 +2070,6 @@ function cbtoolkit_case_studies_fields($fields) {
     ];
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'cbtoolkit_case_study_inner_section_subtitle',
-        'label'    => __('Section Inner subtitle', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
-        'default'  => __('Explore our key experience', 'cb-toolkit'),
-        'priority' => 10
-    ];
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'cbtoolkit_case_study_inner_section_title',
-        'label'    => __('Section Inner title', 'cb-toolkit'),
-        'section'  => 'case_study_settings',
-        'default'  => __('Explore our key experience', 'cb-toolkit'),
-        'priority' => 10
-    ];
-    $fields[] = [
-        'type'     => 'text',
         'settings' => 'cbtoolkit_case_study_section_title',
         'label'    => __('Section Title', 'cb-toolkit'),
         'section'  => 'case_study_settings',
@@ -2098,6 +2082,22 @@ function cbtoolkit_case_studies_fields($fields) {
         'label'    => __('Section Content', 'cb-toolkit'),
         'section'  => 'case_study_settings',
         'default'  => __('We showcased how our skilled hands and creative minds turn a concept into a fully-functional product.', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_subtitle',
+        'label'    => __('Case study inner section subtitle', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_title',
+        'label'    => __('Case study inner section title', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
         'priority' => 10
     ];
     $fields[] = [

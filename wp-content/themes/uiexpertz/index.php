@@ -292,7 +292,7 @@ if (get_query_var('cat')) {
                             <?php endif; ?>
                             <?php if(isset($_POST['search'])) : ?>
                             <h4 class="fs-2 fw-normal text-clr-blue">
-                                Blog Result: <?php echo sanitize_text_field($_POST['search']); ?>
+                                Latest Blogs <?php echo sanitize_text_field($_POST['search']); ?>
                             </h4>
                             <?php endif; ?>
                         </div>
@@ -510,7 +510,7 @@ if (get_query_var('cat')) {
                             <?php endif; ?>
                             <?php if(isset($_POST['search'])) : ?>
                             <h4 class="fs-2 fw-normal text-clr-blue">
-                                Blog Result: <?php echo sanitize_text_field($_POST['search']); ?>
+                                Latest Blogs <?php echo sanitize_text_field($_POST['search']); ?>
                             </h4>
                             <?php endif; ?>
                         </div>

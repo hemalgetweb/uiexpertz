@@ -170,7 +170,7 @@
 @media (max-width:768px){
 .wb-blog-details-box h3{font-size:20px;line-height:30px}
 }
-.blog-slide-active .single-blog{padding: 2.13px;display:grid;grid-template-columns:2fr 1fr;gap:15px;align-items:center;box-shadow:0 30px 30px 0 rgba(0,19,69,.03)}
+.blog-slide-active .single-blog{padding:2.13px;display:grid;grid-template-columns:2fr 1fr;gap:15px;align-items:center;box-shadow:0 30px 30px 0 rgba(0,19,69,.03)}
 .technical-expertise-right{background-color:#e5f6ff;padding:30px}
 .py-120{padding:120px 0}
 @media (max-width:991px){
@@ -351,3 +351,4 @@
 .blog .subBanner{min-height:auto;padding-block:100px 100px;padding-bottom:60px}
 }
 .pb-120-i{padding-bottom:120px!important}
+.wb-blog-details .blog-details-img img{width:100%}

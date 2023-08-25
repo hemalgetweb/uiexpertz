@@ -7,7 +7,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
         <?php if(!empty($settings['slides'])) : ?>
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
                 <div class="service-item  bg-white h-100" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
                     <div class="p-1">
                         <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">

@@ -209,6 +209,20 @@ class CB_Core_Testimonial extends Widget_Base
           ]
          );
          $repeater->add_control(
+          'author_image',
+          [
+            'label'   => esc_html__( 'Author Image', 'cb-core' ),
+            'type'    => \Elementor\Controls_Manager::MEDIA,
+            'default' => [
+                'url' => \Elementor\Utils::get_placeholder_image_src(),
+            ],
+            'label_block' => true,
+            'condition' => [
+                'field_condition' => ['style-1']
+            ],
+          ]
+         );
+         $repeater->add_control(
           'author_name_designation',
           [
             'label'   => esc_html__( 'Author Name & Designation', 'cb-core' ),

@@ -90,13 +90,14 @@
                             <div>
                                 <?php if (!empty($slide['testimonial_text'])): ?>
                                 <h3 class="fs-22 fw-normal text-clr-sky mb-4">
-                                    <?php echo wp_get_attachment_image($slide['author_image']['id'], 'thumbnail'); ?>
+                                    <?php echo wp_kses_post($testimonial_text); ?>
                                 </h3>
                                 <?php endif; ?>
                                 <?php if (!empty($slide['author_name_designation'])): ?>
                                 <div class="d-flex align-items-center gap-2">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-writter.png"
-                                        class="img-fluid flex-shrink-0" alt="">
+                                    <?php if (!empty($slide['author_image']['url'])): ?>
+                                        <?php echo wp_get_attachment_image($slide['author_image']['id'], 'thumbnail'); ?>
+                                    <?php endif; ?>
                                     <p class="text-clr-skyBlue fs-12 fw-medium mb-0"><?php echo wp_kses_post($slide['author_name_designation']); ?></p>
                                 </div>
                                 <?php endif; ?>

@@ -2070,6 +2070,22 @@ function cbtoolkit_case_studies_fields($fields) {
     ];
     $fields[] = [
         'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_subtitle',
+        'label'    => __('Section Inner subtitle', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'cbtoolkit_case_study_inner_section_title',
+        'label'    => __('Section Inner title', 'cb-toolkit'),
+        'section'  => 'case_study_settings',
+        'default'  => __('Explore our key experience', 'cb-toolkit'),
+        'priority' => 10
+    ];
+    $fields[] = [
+        'type'     => 'text',
         'settings' => 'cbtoolkit_case_study_section_title',
         'label'    => __('Section Title', 'cb-toolkit'),
         'section'  => 'case_study_settings',

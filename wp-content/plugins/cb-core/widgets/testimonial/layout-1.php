@@ -90,7 +90,7 @@
                             <div>
                                 <?php if (!empty($slide['testimonial_text'])): ?>
                                 <h3 class="fs-22 fw-normal text-clr-sky mb-4">
-                                    <?php echo wp_kses_post($testimonial_text); ?>
+                                    <?php echo wp_kses_post($slide['testimonial_text']); ?>
                                 </h3>
                                 <?php endif; ?>
                                 <?php if (!empty($slide['author_name_designation'])): ?>

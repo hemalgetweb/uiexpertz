@@ -13,7 +13,7 @@
  */
 get_header();
 
-$cbtoolkit_blog_banner_image = get_theme_mod('cbtoolkit_blog_banner_image', get_template_directory_uri() . '/assets/img/case-banner.svg');
+$cbtoolkit_blog_banner_image = get_theme_mod('cbtoolkit_blog_banner_image', get_template_directory_uri() . '/assets/img/blog-banner.svg');
 $cbtoolkit_blog_sub_title = get_theme_mod('cbtoolkit_blog_sub_title', __('Latest Blogs and News', 'uiexpertz'));
 $cbtoolkit_blog_title = get_theme_mod('cbtoolkit_blog_title', __('Sharing our knowledge, experience and insight.', 'uiexpertz'));
 $cbtoolkit_blog_content = get_theme_mod('cbtoolkit_blog_content');
@@ -87,7 +87,6 @@ if (get_query_var('cat')) {
                     <div class="banner-img text-center text-lg-end ">
                         <img src="<?php echo esc_url($cbtoolkit_blog_banner_image); ?>"
                             alt="<?php echo esc_attr__('Blog banner', 'uiexpertz'); ?>" class="img-fluid">
-
                     </div>
                     <?php endif ?>
                 </div>

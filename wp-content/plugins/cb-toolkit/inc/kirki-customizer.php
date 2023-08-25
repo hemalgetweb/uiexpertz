@@ -1642,7 +1642,7 @@ function _header_blog_fields($fields)
         'settings'    => 'cbtoolkit_blog_banner_image',
         'description' => __('Blog banner', 'cb-toolkit'),
         'section'     => 'blog_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/case-banner.svg',
+        'default'     => get_template_directory_uri() . '/assets/img/blog-banner.svg',
         'priority' => 10,
     ];
 

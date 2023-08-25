@@ -188,7 +188,7 @@ body{padding:0;margin:0;background-color:#fff;font-family:Manrope,sans-serif!imp
 .banner .banner-wrapper .our-strategy .strategy-item{flex-basis:146px}
 }
 .service-item{box-shadow:0 0 20px rgba(0,19,69,.05);transition:.2s all linear}
-.service-item:hover{box-shadow:0 30px 60px 0 rgba(0,19,69,.15)}
+.service-item:hover{box-shadow:0 10px 19px 0 rgba(0,19,69,.15)}
 .service-item .read-more svg *{fill:#384973}
 .service-item .read-more .arrow-svg{transition:.2s all linear}
 .service-item .read-more:hover h4{color:#5648ff!important}

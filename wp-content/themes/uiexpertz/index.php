@@ -187,7 +187,7 @@ if (get_query_var('cat')) {
             <div class="tab-pane fade <?php echo $active_class; ?>" id="pills-all" role="tabpanel" tabindex="0">
                 <?php if(!isset($_POST['search'])) : ?>
                 <div class="blogCart-section-title">
-                    <h4 class="fs-2 fw-normal text-clr-blue">
+                    <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                         Latest Blogs
                     </h4>
                 </div>
@@ -286,12 +286,12 @@ if (get_query_var('cat')) {
                     <div class="">
                         <div class="blogCart-section-title">
                             <?php if(!isset($_POST['search'])) : ?>
-                            <h4 class="fs-2 fw-normal text-clr-blue">
+                            <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                                 All blogs
                             </h4>
                             <?php endif; ?>
                             <?php if(isset($_POST['search'])) : ?>
-                            <h4 class="fs-2 fw-normal text-clr-blue">
+                            <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                                 Latest Blogs <?php echo sanitize_text_field($_POST['search']); ?>
                             </h4>
                             <?php endif; ?>
@@ -397,7 +397,7 @@ if (get_query_var('cat')) {
             <div class="tab-pane fade uiexpertz-has-archive-default-loaded <?php echo $archive_active_class; ?>" id="pills-archive-<?php echo $archive_category_id; ?>" role="tabpanel" tabindex="0">
                 <?php if(!isset($_POST['search'])) : ?>
                 <div class="blogCart-section-title">
-                    <h4 class="fs-2 fw-normal text-clr-blue">
+                    <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                         Archive: <?php echo get_cat_name( $archive_category_id ); ?>
                     </h4>
                 </div>
@@ -504,12 +504,12 @@ if (get_query_var('cat')) {
                     <div class="">
                         <div class="blogCart-section-title">
                             <?php if(!isset($_POST['search'])) : ?>
-                            <h4 class="fs-2 fw-normal text-clr-blue">
+                            <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                                 All blogs
                             </h4>
                             <?php endif; ?>
                             <?php if(isset($_POST['search'])) : ?>
-                            <h4 class="fs-2 fw-normal text-clr-blue">
+                            <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                                 Latest Blogs <?php echo sanitize_text_field($_POST['search']); ?>
                             </h4>
                             <?php endif; ?>
@@ -602,7 +602,7 @@ if (get_query_var('cat')) {
             ?>
             <div class="tab-pane fade" id="pills-<?php echo $category_id; ?>" role="tabpanel" tabindex="0">
                 <div class="blogCart-section-title">
-                        <h4 class="fs-2 fw-normal text-clr-blue">
+                        <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                             <?php echo get_cat_name( $category_id ); ?>
                         </h4>
                     </div>
@@ -695,7 +695,7 @@ if (get_query_var('cat')) {
                     <div>
                         <div class="">
                             <div class="blogCart-section-title">
-                                <h4 class="fs-2 fw-normal text-clr-blue">
+                                <h4 class="fs-2 fw-normal text-clr-blue mb-0">
                                     All blogs
                                 </h4>
                             </div>

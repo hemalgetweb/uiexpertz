@@ -3,8 +3,6 @@
     <div class="section-heading text-center mb-5 px-3">
         <?php if (!empty($settings['subtitle'])): ?>
             <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/assets/img/happyClient.svg"
-                    class="img-fluid" alt="section-heading">
                 <p class="fs-14 mb-0 fw-bold text-clr-sky">
                     <?php echo wp_kses_post($settings['subtitle']); ?>
                 </p>

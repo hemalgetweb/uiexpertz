@@ -124,7 +124,7 @@ if (get_query_var('cat')) {
                         class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
-                            Blog Result
+                            Latest Blogs
                         </button>
                     <?php endif; ?>
                 </li>

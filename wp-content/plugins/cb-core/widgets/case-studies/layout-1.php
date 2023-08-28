@@ -54,7 +54,7 @@
                                     <div
                                         class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between py-3 mt-3">
                                         <span>
-                                            <h4 class="fs-14 fw-semi-bold text-clr-gray">View details</h4>
+                                            <span class="fs-14 fw-semi-bold text-clr-gray">View details</span>
                                         </span>
                                         <span>
                                             <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"

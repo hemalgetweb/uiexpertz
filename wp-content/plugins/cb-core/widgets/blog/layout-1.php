@@ -72,7 +72,7 @@
                             <a href="<?php the_permalink( get_the_ID() ); ?>"
                                 class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                                 <span>
-                                    <h4 class="fs-14 fw-semi-bold text-clr-gray">Read more</h4>
+                                    <span class="fs-14 fw-semi-bold text-clr-gray">Read more</span>
                                 </span>
                                 <span>
                                     <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11" fill="none"

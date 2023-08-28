@@ -141,3 +141,5 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .workProcess-wrap.py-3 .process-count{transform:translateY(10px)}
 .process-count .count-shape{top:-23px;left:8px}
 }
+.service .service-wrapper.row .service-item .d-flex.read-more .fw-semi-bold{transition:all .3s}
+.service .service-wrapper.row .service-item .d-flex.read-more .fw-semi-bold:hover{color:#5648ff}

@@ -11,7 +11,7 @@
                     <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo get_the_permalink( get_the_ID()); ?>">Get inspired <span class="pb-1"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z" fill="white"></path></svg></span></a>
                         <div>
                             <?php if(has_post_thumbnail()) : ?>
-                            <div class="p-1">
+                            <div class="m-1">
                                 <?php the_post_thumbnail(get_the_ID(), 'full'); ?>
                             </div>
                             <?php endif; ?>

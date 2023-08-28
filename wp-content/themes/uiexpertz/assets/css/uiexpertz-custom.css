@@ -152,3 +152,12 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 to{transform:translateY(0) translateX(-50%)}
 }
 .workProcessItem:hover .process-count .count-shape{animation-duration:1s;animation-iteration-count:1;animation-name:wobble-vertical;animation-timing-function:ease-in-out}
+.case-study .service-item img {
+    transition: all .3s;
+}
+.case-study .service-item:hover img {
+    transform: scale(1.1);
+}
+.case-study .service-item .m-1 {
+    overflow: hidden;
+}

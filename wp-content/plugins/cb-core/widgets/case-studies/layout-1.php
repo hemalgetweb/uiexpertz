@@ -22,7 +22,7 @@
 
                         </span>
                     </a>
-                                    <div class="p-1">
+                                    <div class="m-1">
                                         <?php the_post_thumbnail(get_the_ID(), 'full'); ?>
                                     </div>
                                     <?php

@@ -137,3 +137,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .pt-105{padding-top:105px}
 .apps-accordion-wrapper-main-114 p{margin-bottom:0;padding-bottom:20px;color:#384973;line-height:26px}
 .faq-area .accordion-button:not(.collapsed){background:0 0}
+@media (max-width:767px){
+.workProcess-wrap.py-3 .process-count{transform:translateY(10px)}
+.process-count .count-shape{top:-23px;left:8px}
+}

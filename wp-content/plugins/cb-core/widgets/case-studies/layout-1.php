@@ -43,7 +43,7 @@
                                             <?php echo wp_trim_words(get_the_title(), 7); ?>
                                         </h4>
                                         <p class="fs-6 text-clr-gray mb-0">
-                                            <?php the_excerpt(); ?>
+                                            <?php echo get_the_excerpt(); ?>
                                         </p>
                                     </div>
                                     <div

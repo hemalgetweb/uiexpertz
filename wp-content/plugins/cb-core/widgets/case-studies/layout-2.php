@@ -3,7 +3,7 @@
     <?php if($wp_query->have_posts()) : ?>
         <div class="row">
             <?php while($wp_query->have_posts()) : $wp_query->the_post();
-                $taxonomy = 'category'; // Assuming the taxonomy for categories is 'category', change it if needed
+                $taxonomy = 'project_category'; // Assuming the taxonomy for categories is 'category', change it if needed
                 $categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all'));    
             ?>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">

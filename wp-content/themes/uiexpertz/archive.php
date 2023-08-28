@@ -320,7 +320,7 @@ if (get_query_var('cat')) {
                             $fetch_all_posts = new WP_Query($args);
                         ?>
                         <?php if($fetch_all_posts->have_posts()): ?>
-                        <div class="row mt-4" id="home-filtered-blog-post-1143">
+                        <div class="row mt-4" id="home-filtered-blog-post-114123">
                             <?php while($fetch_all_posts->have_posts()) : $fetch_all_posts->the_post(); ?>
                             <div class="col-lg-4 col-md-6">
                                 <div class="service-item js-text-cursor-block  service-item-wrap bg-white mb-4 pb-3">

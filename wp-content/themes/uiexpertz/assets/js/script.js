@@ -66,6 +66,7 @@
               perPage: 3,
             //   focus: 'center',
               autoplay: true,
+              perMove: 1,
               interval: 8000,
             //   flickMaxPages: 3,
               updateOnMove: true,

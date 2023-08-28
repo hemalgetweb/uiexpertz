@@ -189,6 +189,7 @@ function uiexpertz_scripts()
 {
 	// all CSS
 	wp_enqueue_style('uiexpertz-fonts', uiexpertz_fonts_url(), array(), '1.0.0');
+	wp_enqueue_style('swiper-bundle', UIEXPERTZ_THEME_CSS_DIR . 'swiper-bundle.min.css');
 	wp_enqueue_style('bootstrap', UIEXPERTZ_THEME_CSS_DIR . 'bootstrap.min.css');
 
 	wp_enqueue_style('uiexpertz-core', UIEXPERTZ_THEME_CSS_DIR . 'uiexpertz-core.css', null, time());
@@ -199,6 +200,7 @@ function uiexpertz_scripts()
 
 	// all js
 	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);
+	wp_enqueue_script('swiper', UI_EXPERTZ_THEME_JS_DIR . 'swiper-bundle.min.js', ['jquery'], '', true);
 	wp_enqueue_script('gsap', UI_EXPERTZ_THEME_JS_DIR . 'gsap.min.js', ['jquery'], '', true);
 	wp_enqueue_script('uiexpertz-script', UI_EXPERTZ_THEME_JS_DIR . 'script.js', ['jquery'], time(), true);
 	wp_enqueue_script('uiexpertz-ajax-script', UI_EXPERTZ_THEME_JS_DIR . 'ajax-script.js', ['jquery'], time(), true);

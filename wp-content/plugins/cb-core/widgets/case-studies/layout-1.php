@@ -13,12 +13,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6  mb-4">
                             <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
                                 <div class="uiexpertz-service-item js-text-cursor-block">
-
-                                    <!-- <a href="<?php echo get_the_permalink(get_the_ID()); ?>" class="js-text-cursor d-none">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.png"
-                                            class="arrow-image" alt="Arrow image">
-                                    </a> -->
-                                    <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>" class="js-text-cursor d-none">
+                                    <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor js-text-cursor d-none bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
                         <?php echo esc_html__('Get inspired', 'cb-core'); ?>
                         <span class="pb-1">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

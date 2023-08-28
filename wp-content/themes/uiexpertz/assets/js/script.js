@@ -55,34 +55,6 @@
                 }).mount();
               }, 100);
           });
-
-
-          //testimonial slider 
-
-          document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide('.testimonial#splide', {
-                gap: '35px',
-              type: 'loop',
-              perPage: 3,
-            //   focus: 'center',
-              autoplay: true,
-              perMove: 1,
-              interval: 8000,
-            //   flickMaxPages: 3,
-              updateOnMove: true,
-              pagination: false,
-            //   padding: '10%',
-            //   throttle: 300,
-              breakpoints: {
-                1200: {
-                  perPage: 2,
-                },
-                700: {
-                  perPage: 1,
-                },
-              }
-            }).mount();
-          });
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.splide-blog1234.splide', {

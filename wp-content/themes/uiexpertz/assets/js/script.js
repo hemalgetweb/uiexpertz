@@ -86,6 +86,7 @@
               pagination: false,
             //   padding: '10%',
             //   throttle: 300,
+            perMove: 1,
               breakpoints: {
                 1200: {
                   perPage: 2,

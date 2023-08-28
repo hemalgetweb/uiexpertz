@@ -406,7 +406,7 @@ if (get_query_var('cat')) {
                 <div class="blog-slide-active radius-12">
 
                     <div class="splide-blog1234 splide">
-                        <div class="splide__track" id="splide-track">
+                        <div class="splide__track" id="splide-track2">
                             <?php
                                 /**
                                  * Fetch all featured blogs

@@ -8,7 +8,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
             <div class="col-lg-4 col-md-6 mb-4 ">
-                <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo esc_attr($service_box_height); ?>;">
+                <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo $service_box_height ? esc_attr($service_box_height): 'auto'; ?>;">
                     <div>
                         <div class="p-1">
                             <?php echo wp_get_attachment_image( $slide['service_image']['id'], 'full' ); ?>
@@ -23,7 +23,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                         </div>
                     </div>
                     <div class="px-4 pb-4">
-                        <div <?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?> class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
+                        <div class="d-flex read-more text-decoration-none align-items-start justify-content-between mt-4">
                             <span>
                                 <h4 class="fs-14 fw-semi-bold text-clr-gray"><?php echo esc_html__('Read more', 'cb-core'); ?></h4>
                             </span>

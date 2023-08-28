@@ -283,12 +283,17 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
 <section class="visual-design py-120">
     <div class="container">
         <div class="section-heading text-center mb-60">
-            <div class="section-hints d-flex justify-content-center align-items-center gap-2">
-                <p class="fs-14 mb-0 fw-bold text-clr-darkBlue">Novelship</p>
-            </div>
-            <h1 class="fs-40 text-clr-blue pb-2">Visual Design</h1>
-            <p class="text-clr-gray">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <?php if(!empty($process_gallery_image_subtitle)) : ?>
+              <div class="section-hints d-flex justify-content-center align-items-center gap-2">
+                  <p class="fs-14 mb-0 fw-bold text-clr-darkBlue"><?php echo wp_kses_post($process_gallery_image_subtitle); ?></p>
+              </div>
+              <?php endif; ?>
+            <?php if(!empty($process_general_gallery_title)) : ?>
+            <h1 class="fs-40 text-clr-blue pb-2"><?php echo wp_kses_post($process_general_gallery_title); ?></h1>
+            <?php endif; ?>
+            <?php if(!empty($process_gallery_image_content)) : ?>
+              <p class="text-clr-gray"><?php echo wp_kses_post($process_gallery_image_content); ?></p>
+            <?php endif; ?>
         </div>
     </div>
     <?php if(!empty($process_gallery_images)) : ?>

@@ -19,7 +19,7 @@
                     // If there's no content, remove the button
                     $('.ajax-load-more-all-blog').addClass('d-none');
                 } else {
-                    $('#home-filtered-blog-post-114').append(response);
+                    $('.home-filtered-blog-post-114').append(response);
                 }
             },
             error: function(xhr, status, error) {

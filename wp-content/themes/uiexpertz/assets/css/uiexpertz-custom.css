@@ -155,3 +155,9 @@ to{transform:translateY(0) translateX(-50%)}
 .case-study .service-item img{transition:all .3s}
 .case-study .service-item:hover img{transform:scale(1.1)}
 .case-study .service-item .m-1{overflow:hidden}
+.case-study .service-item .read-more .span.fs-14.fw-semi-bold.text-clr-gray {
+    transition: all .3s;
+}
+.case-study .service-item:hover .read-more .span.fs-14.fw-semi-bold.text-clr-gray {
+    color: #5648ff;
+}

@@ -11,7 +11,7 @@
                         $taxonomy = 'project_category'; // Assuming the taxonomy for categories is 'category', change it if needed
                         $categories = wp_get_post_terms(get_the_ID(), $taxonomy, array('fields' => 'all')); ?>
                         <div class="col-lg-4 col-md-6 col-sm-6  mb-4">
-                            <div class="service-item d-flex flex-column justify-content-between h-100 bg-white">
+                            <div class="service-item d-flex flex-column justify-content-between bg-white">
                                 <div class="uiexpertz-service-item js-text-cursor-block">
                                     <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor js-text-cursor d-none bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
                         <?php echo esc_html__('Get inspired', 'cb-core'); ?>

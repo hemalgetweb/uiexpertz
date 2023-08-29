@@ -383,3 +383,19 @@
        margin-left: -5px !important;
  }
 }
+
+.case-study-wrap .uiexpertz-service-item .service-content p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.case-study-wrap .uiexpertz-service-item .service-content h4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

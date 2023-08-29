@@ -353,3 +353,30 @@
 }
 .pb-120-i{padding-bottom:120px!important}
 .wb-blog-details .blog-details-img img{width:100%}
+
+
+
+
+.service .service-wrapper.row .service-item:hover img {
+    transform: scale(0.97);
+}
+
+.service .service-wrapper.row .service-item img {
+    transition: all 0.3s;
+}
+
+.service .service-wrapper.row .service-item:hover .read-more .arrow-svg {
+    transform: rotate(45deg);
+}
+
+
+.service .service-wrapper.row .service-item:hover .read-more {
+   color: #5648ff;
+}
+
+
+@media (min-width: 1200px) {
+    .workProcess-wrap .row .col-xl-3.mb-4:nth-child(5) .workProcessItem .workBorder {
+       margin-left: -5px !important;
+ }
+}

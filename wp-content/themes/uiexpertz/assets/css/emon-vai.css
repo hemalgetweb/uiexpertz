@@ -370,8 +370,11 @@
 }
 
 
-.service .service-wrapper.row .service-item:hover .read-more {
+.service .service-wrapper.row .service-item:hover .read-more span span{
    color: #5648ff;
+}
+.service .service-wrapper.row .service-item:hover .read-more svg *{
+   fill: #5648ff;
 }
 
 

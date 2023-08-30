@@ -155,10 +155,10 @@ if (get_query_var('cat')) {
                     <form id="searchForm" action="#" method="POST">
                         <div class="search-wrap position-relative">
                             <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" name="search" placeholder="Search.." id="searchInput">
+                            <button type="button" class="cross-btn border-0 bg-transparent position-absolute" id="searchButton">
+                                <img src="http://www.uiexpertz.com/wp-content/themes/uiexpertz/assets/img/cross.svg" alt="about image" class="img-fluid cross-search me-3">
+                            </button>
                         </div>
-                        <button type="button" class="cross-btn border-0 bg-transparent position-absolute" id="searchButton">
-                            <img src="http://www.uiexpertz.com/wp-content/themes/uiexpertz/assets/img/cross.svg" alt="about image" class="img-fluid cross-search me-3">
-                        </button>
                     </form>
                 </div>
             <!-- search-wrap -End -->

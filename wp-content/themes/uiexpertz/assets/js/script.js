@@ -83,16 +83,20 @@
     }
 
         document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.case.splide', {
-              type   : 'loop',
-              drag   : 'free',
-              focus  : 'center',
-              
-              perPage: $(window).width() > 800 ? 2 : 1,
-              autoScroll: {
-                speed: 3,
-              },
-            }).mount( window.splide.Extensions );
+            $(document).ready(function () {
+                // Check if an element with the class .case.splide exists
+                if ($('.case.splide').length > 0) {
+                    new Splide('.case.splide', {
+                        type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
+                        perPage: $(window).width() > 800 ? 2 : 1,
+                        autoScroll: {
+                            speed: 3,
+                        },
+                    }).mount(window.splide.Extensions);
+                }
+            });
           });
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {

@@ -17,7 +17,7 @@
             </div>
         </div>
         <?php if(!empty($settings['slides'])) : ?>
-        <div class="ui-brand ui-brand-wrap py-5">
+        <div class="ui-brand ui-brand-wrap">
             <div id="splide" class="uiexpertz-swiper-brand-114 brand-wrap splide brand-active">
                 <div class="splide__track py-5">
                     <ul class="splide__list">

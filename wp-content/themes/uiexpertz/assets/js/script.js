@@ -1,50 +1,51 @@
 (function($) {
     document.addEventListener( 'DOMContentLoaded', function () {
-        function calculatePerPage(windowWidth) {
-            if (windowWidth > 1700) {
-                return 7;
-            } else if (windowWidth > 1500) {
-                return 6;
+        if ($('.brand-active.splide').length > 0) {
+            function calculatePerPage(windowWidth) {
+                if (windowWidth > 1700) {
+                    return 7;
+                } else if (windowWidth > 1500) {
+                    return 6;
+                }
+                else if (windowWidth > 1300) {
+                    return 5;
+                }
+                    else if (windowWidth > 1100) {
+                    return 5;
+                }
+                    else if (windowWidth > 1000) {
+                    return 5;
+                }
+                    else if (windowWidth > 800) {
+                    return 4;
+                }
+                    else if (windowWidth > 600) {
+                    return 3;
+                }
+                    else if (windowWidth > 570) {
+                    return 3;
+                }
+                    else if (windowWidth > 400) {
+                    return 2.5;
+                } else {
+                    return 2;
+                }
             }
-            else if (windowWidth > 1300) {
-                return 5;
-            }
-                else if (windowWidth > 1100) {
-                return 5;
-            }
-                else if (windowWidth > 1000) {
-                return 5;
-            }
-                else if (windowWidth > 800) {
-                return 4;
-            }
-                else if (windowWidth > 600) {
-                return 3;
-            }
-                else if (windowWidth > 570) {
-                return 3;
-            }
-                else if (windowWidth > 400) {
-                return 2.5;
-            } else {
-                return 2;
-            }
+            new Splide('.brand-active.splide', {
+                type   : 'loop',
+                drag   : 'free',
+                focus  : 'center',
+                pagination: false,
+                arrows:false,
+                perPage: calculatePerPage($(window).width()),
+                autoScroll: {
+                    speed: 3,
+                },
+            }).mount( window.splide.Extensions );
         }
-        new Splide('.brand-active.splide', {
-            type   : 'loop',
-            drag   : 'free',
-            focus  : 'center',
-            pagination: false,
-            arrows:false,
-            perPage: calculatePerPage($(window).width()),
-            autoScroll: {
-                speed: 3,
-            },
-        }).mount( window.splide.Extensions );
     });
     $(window).on('scroll', function() {
         var scrollPosition = $(window).scrollTop();
-        console.log(scrollPosition);
         if(scrollPosition >= 70) {
             $('.mobileMenu .mobileMenu-action').css('top', 0 + 'px');
             $('.mobileMenu .mobileMenu-action').css('height', '100%');
@@ -83,74 +84,81 @@
     }
 
         document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.case.splide', {
-              type   : 'loop',
-              drag   : 'free',
-              focus  : 'center',
-              
-              perPage: $(window).width() > 800 ? 2 : 1,
-              autoScroll: {
-                speed: 3,
-              },
-            }).mount( window.splide.Extensions );
+            $(document).ready(function () {
+                // Check if an element with the class .case.splide exists
+                if ($('.case.splide').length > 0) {
+                    new Splide('.case.splide', {
+                        type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
+                        perPage: $(window).width() > 800 ? 2 : 1,
+                        autoScroll: {
+                            speed: 3,
+                        },
+                    }).mount(window.splide.Extensions);
+                }
+            });
           });
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
-                new Splide('.splide-blog.splide', {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
-                }).mount();
-              }, 100);
+            setTimeout(function () {
+                // Check if an element with the class .splide-blog.splide exists
+                if ($('.splide-blog.splide').length > 0) {
+                    new Splide('.splide-blog.splide', {
+                        type: 'loop',
+                        perPage: 1,
+                        autoplay: true,
+                        interval: 3000,
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        resetProgress: false,
+                        perPage: $(window).width() > 800 ? 1 : 1,
+                    }).mount();
+                }
+            }, 100);
           });
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
-                new Splide('.splide-blog1234.splide', {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
-                }).mount();
-              }, 100);
+            setTimeout(function () {
+                // Check if an element with the class .splide-blog1234.splide exists
+                if ($('.splide-blog1234.splide').length > 0) {
+                    new Splide('.splide-blog1234.splide', {
+                        type: 'loop',
+                        perPage: 1,
+                        autoplay: true,
+                        interval: 3000,
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        resetProgress: false,
+                        perPage: $(window).width() > 800 ? 1 : 1,
+                    }).mount();
+                }
+            }, 100);
           });
 
 
           //testimonial slider 
 
-          document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide('.testimonial#splide', {
-                gap: '45px',
-              type: 'loop',
-              perPage: 3,
-            //   focus: 'center',
-              autoplay: true,
-              interval: 8000,
-            //   flickMaxPages: 3,
-              updateOnMove: true,
-              pagination: false,
-            //   padding: '10%',
-            //   throttle: 300,
-            perMove: 1,
-              breakpoints: {
-                1200: {
-                  perPage: 2,
-                },
-                700: {
-                  perPage: 1,
-                },
-              }
-            }).mount();
-          });
-          
+          document.addEventListener('DOMContentLoaded', function () {
+            if (document.querySelector('.testimonial#splide')) {
+                new Splide('.testimonial#splide', {
+                    gap: '45px',
+                    type: 'loop',
+                    perPage: 3,
+                    autoplay: true,
+                    interval: 8000,
+                    updateOnMove: true,
+                    pagination: false,
+                    perMove: 1,
+                    breakpoints: {
+                        1200: {
+                            perPage: 2,
+                        },
+                        700: {
+                            perPage: 1,
+                        },
+                    }
+                }).mount();
+            }
+        });
     
     //searbar toggle
 

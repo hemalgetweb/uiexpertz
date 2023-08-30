@@ -99,18 +99,21 @@
             });
           });
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
-                new Splide('.splide-blog.splide', {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
-                }).mount();
-              }, 100);
+            setTimeout(function () {
+                // Check if an element with the class .splide-blog.splide exists
+                if ($('.splide-blog.splide').length > 0) {
+                    new Splide('.splide-blog.splide', {
+                        type: 'loop',
+                        perPage: 1,
+                        autoplay: true,
+                        interval: 3000,
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        resetProgress: false,
+                        perPage: $(window).width() > 800 ? 1 : 1,
+                    }).mount();
+                }
+            }, 100);
           });
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {

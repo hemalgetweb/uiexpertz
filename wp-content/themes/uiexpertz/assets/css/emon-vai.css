@@ -425,3 +425,7 @@
     line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+.wb-blog-load-more-btn.bg-btn.banner-btn{
+    padding: 10px 30px 10px 30px!important;
+}

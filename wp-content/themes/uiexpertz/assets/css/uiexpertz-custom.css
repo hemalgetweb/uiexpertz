@@ -180,3 +180,7 @@ p.uiexpertz-brand-content-114{color:var(--gray-color-system-gray-7,#9db9ff);font
 @media (max-width:1200px) {
     .searchBar .search-wrap .form-control{height: 55px !important;}
 }
+div#mobileHeader {
+    position: relative;
+    z-index: 9999;
+}

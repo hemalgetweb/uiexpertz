@@ -55,7 +55,7 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
                     </a>
                     <div class="mt-4 row align-items-start">
                         <div class="col-xl-6">
-                            <h2 class="fs-64 fw-normal text-white"><?php the_title(); ?></h2>
+                            <h2 class="fs-50 fw-normal text-white"><?php the_title(); ?></h2>
                         </div>
                         <div class="col-xl-6">
                             <p class="fs-18 fw-normal text-clr-skyBlue"><?php echo get_the_excerpt(); ?></p>

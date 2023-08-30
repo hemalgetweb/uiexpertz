@@ -230,9 +230,6 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
         <div class="container">
             <div class="work-process-details-wrap uiexpertz-process-4-content-114">
                 <div class="row mb-60">
-                  <?php
-                  var_dump($process_4);
-                  ?>
                     <div class="col-lg-6">
                       <?php if(!empty($process_4_title)) : ?>
                         <h2 class="fs-120 text-clr-darkBlue  fw-lighter"><?php echo wp_kses_post($process_4_title); ?></h2>
@@ -250,7 +247,7 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
                 <div class="case-study-img text-center">
                     <div class="row">
                       <?php if(!empty($process_4_image_1)) : ?>
-                        <div class="col-lg-6">
+                        <div class="<?php echo $process_4_image_2 ? 'col-lg-6': 'col-12'; ?>">
                             <div>
                                 <img src="<?php echo esc_url($process_4_image_1); ?>"
                                     alt="about image" class="img-fluid">

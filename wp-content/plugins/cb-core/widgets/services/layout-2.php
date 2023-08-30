@@ -24,7 +24,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
             </div>
             <?php endforeach; ?>
         </div>
-        <div class="d-flex flex-wrap align-items-center gap-3 pt-3 justify-content-center">
+        <div class="d-flex flex-wrap align-items-center gap-3 pt-4 justify-content-center">
             <?php if(!empty($settings['btn_1_text'])) :
             if ( ! empty( $settings['btn_1_link']['url'] ) ) {
                 $this->add_link_attributes( 'btn_1_link', $settings['btn_1_link'] );

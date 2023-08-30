@@ -63,23 +63,9 @@
     $('.blog-header-tab .nav-pills .nav-link').on('click', function() {
         $('.uiexpertz-has-archive-default-loaded').removeClass("show active");
     })
-    var searchForm = document.getElementById('searchForm');
-    var searchInput = document.getElementById('searchInput');
-    var searchButton = document.getElementById('searchButton');
-
-    // Attach a click event listener to the input field
-    searchInput.addEventListener('click', function (event) {
-        // Prevent the default behavior of the input click (e.g., text selection)
-        event.preventDefault();
-
-        // Submit the form programmatically
-        searchForm.submit();
-    });
-
-    // Attach a click event listener to the button to prevent form submission
-    searchButton.addEventListener('click', function (event) {
-        event.preventDefault();
-    });
+    $('.cross-btn').on('click', function() {
+        e.preventDefault();
+    })
     // Loop through the class numbers
     if (typeof uiexpertz_all_cat_ids !== 'undefined') {
         uiexpertz_all_cat_ids.forEach(function (number) {

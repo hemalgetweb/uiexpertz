@@ -1,4 +1,56 @@
 (function($) {
+    document.addEventListener( 'DOMContentLoaded', function () {
+        function calculatePerPage(windowWidth) {
+            if (windowWidth > 1700) {
+                return 7;
+            } else if (windowWidth > 1500) {
+                return 6;
+            }
+            else if (windowWidth > 1300) {
+                return 5;
+            }
+                else if (windowWidth > 1100) {
+                return 5;
+            }
+                else if (windowWidth > 1000) {
+                return 5;
+            }
+                else if (windowWidth > 800) {
+                return 4;
+            }
+                else if (windowWidth > 600) {
+                return 3;
+            }
+                else if (windowWidth > 570) {
+                return 3;
+            }
+                else if (windowWidth > 400) {
+                return 2.5;
+            } else {
+                return 2;
+            }
+        }
+        new Splide('.brand-active.splide', {
+            type   : 'loop',
+            drag   : 'free',
+            focus  : 'center',
+            arrows:false,
+            perPage: calculatePerPage($(window).width()),
+            autoScroll: {
+                speed: 3,
+            },
+        }).mount( window.splide.Extensions );
+    });
+    $(window).on('scroll', function() {
+        var scrollPosition = $(window).scrollTop();
+        console.log(scrollPosition);
+        if(scrollPosition >= 70) {
+            $('.mobileMenu .mobileMenu-action').css('top', 0 + 'px');
+            $('.mobileMenu .mobileMenu-action').css('height', '100%');
+        } else {
+            $('.mobileMenu .mobileMenu-action').css('top', 70-scrollPosition + 'px');
+        }
+    })
     //case slider new
     $("[data-background]").each(function () {
         $(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
@@ -41,29 +93,6 @@
               },
             }).mount( window.splide.Extensions );
           });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.brand-active.splide', {
-              type   : 'loop',
-              drag   : 'free',
-              focus  : 'center',
-              autoScroll: {
-                speed: 3,
-              },
-              breakpoints: {
-                1200: {
-                  perPage: 7,
-                },
-                700: {
-                  perPage: 5,
-                },
-                400: {
-                  perPage: 3,
-                },
-              }
-            }).mount( window.splide.Extensions );
-          });
-
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.splide-blog.splide', {

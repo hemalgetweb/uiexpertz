@@ -7,7 +7,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
         <?php if(!empty($settings['slides'])) : ?>
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                 <div class="service-item  bg-white h-100" style="min-height: <?php echo $service_box_height ? esc_attr($service_box_height): 'auto'; ?>;">
                     <div class="p-1">
                         <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">
@@ -24,7 +24,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
             </div>
             <?php endforeach; ?>
         </div>
-        <div class="d-flex flex-wrap align-items-center gap-3 pt-3 justify-content-center">
+        <div class="d-flex flex-wrap align-items-center gap-3 pt-4 justify-content-center">
             <?php if(!empty($settings['btn_1_text'])) :
             if ( ! empty( $settings['btn_1_link']['url'] ) ) {
                 $this->add_link_attributes( 'btn_1_link', $settings['btn_1_link'] );

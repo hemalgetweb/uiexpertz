@@ -764,6 +764,7 @@
     font-weight: 700;
     line-height: 58px;
     color: #001345;
+    margin-top:60px;
 }
 
 .wb-blog-details .blog-details-wrap h2 {
@@ -771,6 +772,7 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 50px;
+    margin-top:60px;
 }
 
 .wb-blog-details .blog-details-wrap h3 {
@@ -778,6 +780,7 @@
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
+    margin-top:60px;
 }
 
 .wb-blog-details .blog-details-wrap h4 {
@@ -785,18 +788,21 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 34px;
+    margin-top:60px;
 }
 .wb-blog-details .blog-details-wrap h5 {
     color: #001345;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+    margin-top:60px;
 }
 .wb-blog-details .blog-details-wrap h6 {
     color: #001345;
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
+    margin-top:60px;
 }
 .wb-blog-details .blog-details-wrap p {
     color: #384973;

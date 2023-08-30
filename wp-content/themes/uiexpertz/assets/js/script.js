@@ -1,5 +1,4 @@
 (function($) {
-    document.addEventListener( 'DOMContentLoaded', function () {
     function calculatePerPage(windowWidth) {
         if (windowWidth > 1700) {
             return 7;
@@ -40,7 +39,8 @@
           speed: 3,
         },
       }).mount( window.splide.Extensions );
-  });
+
+      
     $(window).on('scroll', function() {
         var scrollPosition = $(window).scrollTop();
         console.log(scrollPosition);

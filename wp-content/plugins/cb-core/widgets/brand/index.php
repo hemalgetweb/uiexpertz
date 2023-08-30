@@ -158,6 +158,18 @@ class CB_Core_Brand extends Widget_Base
                 ]
             ]
         );
+        $this->add_control(
+            'content',
+                [
+                'label'       => esc_html__( 'Content', 'cb-core' ),
+                'type'        => \Elementor\Controls_Manager::TEXTAREA,
+                'label_block' => true,
+                'placeholder' => esc_html__( 'Content', 'cb-core' ),
+                'condition' => [
+                    'layout' => ['layout-1']
+                ]
+            ]
+        );
         
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(

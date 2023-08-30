@@ -11,6 +11,9 @@
                 <?php if(!empty($settings['title'])) : ?>
                     <h1 class="fs-40 fw-normal text-white py-2"><?php echo wp_kses_post($settings['title']); ?></h1>
                 <?php endif; ?>
+                <?php if(!empty($settings['title'])) : ?>
+                    <p class="uiexpertz-brand-content-114"><?php echo wp_kses_post($settings['content']); ?></p>
+                <?php endif; ?>
             </div>
         </div>
         <?php if(!empty($settings['slides'])) : ?>

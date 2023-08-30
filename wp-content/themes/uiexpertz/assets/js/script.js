@@ -1,53 +1,46 @@
 (function($) {
-    
-    // Define the function to initialize the slider
-    function initializeSlider() {
+    document.addEventListener( 'DOMContentLoaded', function () {
+        function calculatePerPage(windowWidth) {
+            if (windowWidth > 1700) {
+                return 7;
+            } else if (windowWidth > 1500) {
+                return 6;
+            }
+            else if (windowWidth > 1300) {
+                return 5;
+            }
+                else if (windowWidth > 1100) {
+                return 5;
+            }
+                else if (windowWidth > 1000) {
+                return 5;
+            }
+                else if (windowWidth > 800) {
+                return 4;
+            }
+                else if (windowWidth > 600) {
+                return 3;
+            }
+                else if (windowWidth > 570) {
+                return 3;
+            }
+                else if (windowWidth > 400) {
+                return 2.5;
+            } else {
+                return 2;
+            }
+        }
         new Splide('.brand-active.splide', {
-            type: 'loop',
-            drag: 'free',
-            focus: 'center',
+            type   : 'loop',
+            drag   : 'free',
+            focus  : 'center',
             pagination: false,
-            arrows: false,
+            arrows:false,
             perPage: calculatePerPage($(window).width()),
             autoScroll: {
                 speed: 3,
             },
-        }).mount(window.splide.Extensions);
-    }
-
-    // Define the function to calculate the 'perPage' value based on window width
-    function calculatePerPage(windowWidth) {
-        if (windowWidth > 1700) {
-            return 7;
-        } else if (windowWidth > 1500) {
-            return 6;
-        } else if (windowWidth > 1300) {
-            return 5;
-        } else if (windowWidth > 1100) {
-            return 5;
-        } else if (windowWidth > 1000) {
-            return 5;
-        } else if (windowWidth > 800) {
-            return 4;
-        } else if (windowWidth > 600) {
-            return 3;
-        } else if (windowWidth > 570) {
-            return 3;
-        } else if (windowWidth > 400) {
-            return 2.5;
-        } else {
-            return 2;
-        }
-    }
-
-    // Initialize the slider on DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', function () {
-        initializeSlider();
-    });
-
-    // Update the slider when the window is resized
-    window.addEventListener('resize', function () {
-        initializeSlider();
+        }).mount( window.splide.Extensions );
     });
     $(window).on('scroll', function() {
         var scrollPosition = $(window).scrollTop();

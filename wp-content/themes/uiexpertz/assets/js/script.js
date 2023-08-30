@@ -1,4 +1,5 @@
 (function($) {
+    
     $(window).on('scroll', function() {
         var scrollPosition = $(window).scrollTop();
         console.log(scrollPosition);
@@ -51,29 +52,6 @@
               },
             }).mount( window.splide.Extensions );
           });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.brand-active.splide', {
-              type   : 'loop',
-              drag   : 'free',
-              focus  : 'center',
-              autoScroll: {
-                speed: 3,
-              },
-              breakpoints: {
-                1200: {
-                  perPage: 7,
-                },
-                700: {
-                  perPage: 5,
-                },
-                400: {
-                  perPage: 3,
-                },
-              }
-            }).mount( window.splide.Extensions );
-          });
-
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.splide-blog.splide', {
@@ -295,56 +273,48 @@
     }
     var CB_Brand = function($scope, $) {
         $scope.find('.uiexpertz-swiper-brand-114').each(function() {
-            var UIExpertzBrand114 = new Swiper ('.uiexpertz-swiper-brand-114', {
-                autoplay: {     //add
-                    delay: 0,   //add
-                },
-                spaceBetween: 0,
-                centeredSlides: true,
-                speed: 3000,
-                slidesPerView: 7,
-                loop: true,
-                breakpoints: {
-                    // when window width is >= 320px
-                    320: {
-                      slidesPerView: 2,
-                      spaceBetween: 0
-                    },
-                    480: {
-                        slidesPerView: 3
-                    },
-                    // when window width is >= 576
-                    576: {
-                      slidesPerView: 3,
-                      spaceBetween: 0
-                    },
-                    // when window width is >= 768
-                    768: {
-                      slidesPerView: 3,
-                      spaceBetween: 0
-                    },
-                    992: {
-                        slidesPerView: 4,
-                        spaceBetween: 0
-                    },
-                    1200: {
-                        slidesPerView: 5,
-                        spaceBetween: 0
-                    },
-                    1400: {
-                        slidesPerView: 6,
-                    },
-                    1600: {
-                        slidesPerView: 7
+            document.addEventListener( 'DOMContentLoaded', function () {
+                function calculatePerPage(windowWidth) {
+                    if (windowWidth > 1700) {
+                        return 7;
+                    } else if (windowWidth > 1500) {
+                        return 6;
+                    }
+                    else if (windowWidth > 1300) {
+                        return 5;
+                    }
+                     else if (windowWidth > 1100) {
+                        return 5;
+                    }
+                     else if (windowWidth > 1000) {
+                        return 5;
+                    }
+                     else if (windowWidth > 800) {
+                        return 4;
+                    }
+                     else if (windowWidth > 600) {
+                        return 3;
+                    }
+                     else if (windowWidth > 570) {
+                        return 3;
+                    }
+                     else if (windowWidth > 400) {
+                        return 2.5;
+                    } else {
+                        return 2;
                     }
                 }
-            });
-            UIExpertzBrand114.el.addEventListener('mouseover', function(){     //add
-                UIExpertzBrand114.autoplay.stop()                              //add
-            })                                                      //add
-            UIExpertzBrand114.el.addEventListener('mouseleave', function(){    //add
-                UIExpertzBrand114.autoplay.start()                             //add
-            })
+                new Splide('.uiexpertz-swiper-brand-114.splide', {
+                    type   : 'loop',
+                    drag   : 'free',
+                    focus  : 'center',
+                    arrows:false,
+                    perPage: calculatePerPage($(window).width()),
+                    autoScroll: {
+                      speed: 3,
+                    },
+                  }).mount( window.splide.Extensions );
+              });
         })
     }  
     $(document).ready(function () {

@@ -166,7 +166,7 @@ to{transform:translateY(0)}
 75%{transform:scale(.9)}
 100%{transform:scale(1)}
 }
-.brand-wrap .brand-item:hover img{animation-direction:alternate;animation-duration:1s;animation-iteration-count:1;animation-name:animation-pulse-shrink;animation-timing-function:linear;display:inline-block}
+.brand-wrap .brand-item:hover img{animation-direction:alternate;animation-duration:.5s;animation-iteration-count:1;animation-name:animation-pulse-shrink;animation-timing-function:linear;display:inline-block}
 .workProcessItem:hover .process-count .count-shape{animation-duration:1s;animation-iteration-count:1;animation-name:wobble-vertical;animation-timing-function:ease-in-out}
 .case-study .service-item img{transition:all .3s}
 .case-study .service-item:hover img{transform:scale(1.1)}

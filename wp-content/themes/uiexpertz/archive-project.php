@@ -129,7 +129,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                                             </ul>
                                             <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
                                                 <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
-                                                <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+                                                <p class="fs-6 text-clr-gray mb-3"><?php echo wp_kses_post(get_the_excerpt(), 13); ?></p>
                                             </div>
                                         </div>
                                         <a href="<?php the_permalink(); ?>"
@@ -217,7 +217,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                                             </ul>
                                             <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
                                                 <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
-                                                <p class="fs-6 text-clr-gray mb-3"><?php the_excerpt(); ?></p>
+                                                <p class="fs-6 text-clr-gray mb-3"><?php echo wp_kses_post(get_the_excerpt(), 13); ?></p>
                                             </div>
                                         </div>
                                         <a href="<?php the_permalink(); ?>"

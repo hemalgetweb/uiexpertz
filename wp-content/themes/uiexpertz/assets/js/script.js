@@ -1,46 +1,48 @@
 (function($) {
     document.addEventListener( 'DOMContentLoaded', function () {
-        function calculatePerPage(windowWidth) {
-            if (windowWidth > 1700) {
-                return 7;
-            } else if (windowWidth > 1500) {
-                return 6;
+        if ($('.brand-active.splide').length > 0) {
+            function calculatePerPage(windowWidth) {
+                if (windowWidth > 1700) {
+                    return 7;
+                } else if (windowWidth > 1500) {
+                    return 6;
+                }
+                else if (windowWidth > 1300) {
+                    return 5;
+                }
+                    else if (windowWidth > 1100) {
+                    return 5;
+                }
+                    else if (windowWidth > 1000) {
+                    return 5;
+                }
+                    else if (windowWidth > 800) {
+                    return 4;
+                }
+                    else if (windowWidth > 600) {
+                    return 3;
+                }
+                    else if (windowWidth > 570) {
+                    return 3;
+                }
+                    else if (windowWidth > 400) {
+                    return 2.5;
+                } else {
+                    return 2;
+                }
             }
-            else if (windowWidth > 1300) {
-                return 5;
-            }
-                else if (windowWidth > 1100) {
-                return 5;
-            }
-                else if (windowWidth > 1000) {
-                return 5;
-            }
-                else if (windowWidth > 800) {
-                return 4;
-            }
-                else if (windowWidth > 600) {
-                return 3;
-            }
-                else if (windowWidth > 570) {
-                return 3;
-            }
-                else if (windowWidth > 400) {
-                return 2.5;
-            } else {
-                return 2;
-            }
+            new Splide('.brand-active.splide', {
+                type   : 'loop',
+                drag   : 'free',
+                focus  : 'center',
+                pagination: false,
+                arrows:false,
+                perPage: calculatePerPage($(window).width()),
+                autoScroll: {
+                    speed: 3,
+                },
+            }).mount( window.splide.Extensions );
         }
-        new Splide('.brand-active.splide', {
-            type   : 'loop',
-            drag   : 'free',
-            focus  : 'center',
-            pagination: false,
-            arrows:false,
-            perPage: calculatePerPage($(window).width()),
-            autoScroll: {
-                speed: 3,
-            },
-        }).mount( window.splide.Extensions );
     });
     $(window).on('scroll', function() {
         var scrollPosition = $(window).scrollTop();

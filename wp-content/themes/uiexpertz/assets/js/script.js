@@ -34,6 +34,7 @@
             type   : 'loop',
             drag   : 'free',
             focus  : 'center',
+            pagination: false,
             arrows:false,
             perPage: calculatePerPage($(window).width()),
             autoScroll: {

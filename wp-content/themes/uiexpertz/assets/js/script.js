@@ -63,9 +63,6 @@
     $('.blog-header-tab .nav-pills .nav-link').on('click', function() {
         $('.uiexpertz-has-archive-default-loaded').removeClass("show active");
     })
-    $('.cross-btn').on('click', function() {
-        e.preventDefault();
-    })
     // Loop through the class numbers
     if (typeof uiexpertz_all_cat_ids !== 'undefined') {
         uiexpertz_all_cat_ids.forEach(function (number) {

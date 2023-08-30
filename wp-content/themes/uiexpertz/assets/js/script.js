@@ -24,36 +24,41 @@
     if (typeof uiexpertz_all_cat_ids !== 'undefined') {
         uiexpertz_all_cat_ids.forEach(function (number) {
             document.addEventListener('DOMContentLoaded', function () {
-                setTimeout(function() {
-                    new Splide(`.splide-blog${number}.splide`, {
-                        type   : 'loop',
-                        perPage      : 1,
-                        autoplay     : true,
-                        interval     : 3000, // How long to display each slide
-                        pauseOnHover : false, // must be false
-                        pauseOnFocus : false, // must be false
-                        resetProgress: false,
-                    perPage: $(window).width() > 800 ? 1 : 1,
-                    }).mount();
-                }, 100);
+                if($(`.splide-blog${number}.splide`)) {
+                    setTimeout(function() {
+                        new Splide(`.splide-blog${number}.splide`, {
+                            type   : 'loop',
+                            perPage      : 1,
+                            autoplay     : true,
+                            interval     : 3000, // How long to display each slide
+                            pauseOnHover : false, // must be false
+                            pauseOnFocus : false, // must be false
+                            resetProgress: false,
+                            perPage: $(window).width() > 800 ? 1 : 1,
+                        }).mount();
+                    }, 100);
+                }
             });
         });
     }
 
         document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.case.splide', {
-              type   : 'loop',
-              drag   : 'free',
-              focus  : 'center',
-              
-              perPage: $(window).width() > 800 ? 2 : 1,
-              autoScroll: {
-                speed: 3,
-              },
-            }).mount( window.splide.Extensions );
+            if($('.case.splide')) {
+                new Splide('.case.splide', {
+                  type   : 'loop',
+                  drag   : 'free',
+                  focus  : 'center',
+                  
+                  perPage: $(window).width() > 800 ? 2 : 1,
+                  autoScroll: {
+                    speed: 3,
+                  },
+                }).mount( window.splide.Extensions );
+            }
           });
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
+            if($('.splide-blog.splide')) {
+                setTimeout(function() {
                 new Splide('.splide-blog.splide', {
                     type   : 'loop',
                     perPage      : 1,
@@ -62,51 +67,52 @@
                     pauseOnHover : false, // must be false
                     pauseOnFocus : false, // must be false
                     resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
+                    perPage: $(window).width() > 800 ? 1 : 1,
                 }).mount();
-              }, 100);
+                }, 100);
+            }
           });
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function() {
-                new Splide('.splide-blog1234.splide', {
-                    type   : 'loop',
-                    perPage      : 1,
-                    autoplay     : true,
-                    interval     : 3000, // How long to display each slide
-                    pauseOnHover : false, // must be false
-                    pauseOnFocus : false, // must be false
-                    resetProgress: false,
-                  perPage: $(window).width() > 800 ? 1 : 1,
-                }).mount();
-              }, 100);
+            if($('.splide-blog1234.splide')) {
+                setTimeout(function() {
+                    new Splide('.splide-blog1234.splide', {
+                        type   : 'loop',
+                        perPage      : 1,
+                        autoplay     : true,
+                        interval     : 3000, // How long to display each slide
+                        pauseOnHover : false, // must be false
+                        pauseOnFocus : false, // must be false
+                        resetProgress: false,
+                      perPage: $(window).width() > 800 ? 1 : 1,
+                    }).mount();
+                  }, 100);
+            }
           });
 
 
           //testimonial slider 
 
           document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide('.testimonial#splide', {
-                gap: '45px',
-              type: 'loop',
-              perPage: 3,
-            //   focus: 'center',
-              autoplay: true,
-              interval: 8000,
-            //   flickMaxPages: 3,
-              updateOnMove: true,
-              pagination: false,
-            //   padding: '10%',
-            //   throttle: 300,
-            perMove: 1,
-              breakpoints: {
-                1200: {
-                  perPage: 2,
-                },
-                700: {
-                  perPage: 1,
-                },
-              }
-            }).mount();
+            if($('.testimonial#splide')) {
+                new Splide('.testimonial#splide', {
+                    gap: '45px',
+                  type: 'loop',
+                  perPage: 3,
+                  autoplay: true,
+                  interval: 8000,
+                  updateOnMove: true,
+                  pagination: false,
+                perMove: 1,
+                  breakpoints: {
+                    1200: {
+                      perPage: 2,
+                    },
+                    700: {
+                      perPage: 1,
+                    },
+                  }
+                }).mount();
+            }
           });
           
     
@@ -273,7 +279,8 @@
     }
     var CB_Brand = function($scope, $) {
         $scope.find('.uiexpertz-swiper-brand-114').each(function() {
-            document.addEventListener( 'DOMContentLoaded', function () {
+            if($('.uiexpertz-swiper-brand-114.splide')) {
+                document.addEventListener( 'DOMContentLoaded', function () {
                 function calculatePerPage(windowWidth) {
                     if (windowWidth > 1700) {
                         return 7;
@@ -283,22 +290,22 @@
                     else if (windowWidth > 1300) {
                         return 5;
                     }
-                     else if (windowWidth > 1100) {
+                        else if (windowWidth > 1100) {
                         return 5;
                     }
-                     else if (windowWidth > 1000) {
+                        else if (windowWidth > 1000) {
                         return 5;
                     }
-                     else if (windowWidth > 800) {
+                        else if (windowWidth > 800) {
                         return 4;
                     }
-                     else if (windowWidth > 600) {
+                        else if (windowWidth > 600) {
                         return 3;
                     }
-                     else if (windowWidth > 570) {
+                        else if (windowWidth > 570) {
                         return 3;
                     }
-                     else if (windowWidth > 400) {
+                        else if (windowWidth > 400) {
                         return 2.5;
                     } else {
                         return 2;
@@ -311,10 +318,11 @@
                     arrows:false,
                     perPage: calculatePerPage($(window).width()),
                     autoScroll: {
-                      speed: 3,
+                        speed: 3,
                     },
-                  }).mount( window.splide.Extensions );
-              });
+                    }).mount( window.splide.Extensions );
+                });   
+            }
         })
     }  
     $(document).ready(function () {

@@ -47,7 +47,7 @@ get_header(); ?>
                 <div class="col-lg-4">
                     <div class="categories mb-5">
                         <h3 class="text-clr-blue fs-4 fw-bold mb-4">Categories</h3>
-                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-3 flex-wrap">
+                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-2 flex-wrap">
                             <li class="flex-shrink-0">
                                 <a href="#" class="category-item text-decoration-none">UI Design</a>
                             </li>

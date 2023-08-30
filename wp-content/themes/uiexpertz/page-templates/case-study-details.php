@@ -201,7 +201,7 @@ get_header(); ?>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="visual-output d-flex flex-column justify-content-between h-100 bg-transparent">
-              <div class="p-1">
+              <div class="m-1">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/delete/visual-output1.png"
                   alt="banner img" class="img-fluid w-100">
               </div>

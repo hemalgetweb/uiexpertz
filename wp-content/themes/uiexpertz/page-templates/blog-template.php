@@ -7,7 +7,7 @@ get_header(); ?>
 <div class="blog-header-tab mt-5 pt-5">
     <div class="container">
         <div class="blog-tab-list position-relative">
-            <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-lg-0" id="pills-tab"
+            <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
                 role="tablist">
                 <li class="nav-item" role="presentation">
                     <button

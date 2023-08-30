@@ -86,6 +86,9 @@
 .searchBar .search-wrap .cross-btn{top:50%;transform:translateY(-50%);right:10px}
 .searchBar .search-wrap .cross-btn:focus{border:0!important}
 .searchBar .search-wrap .form-control{height:71px;border-radius:0}
+@media (max-width:1200px) {
+    .searchBar .search-wrap .form-control{height: 55px;}
+}
 .blog-main .blogCart-section-title{padding-top:60px;padding-bottom:20px;border-bottom:1px solid #e3e8f8}
 .blog-main .blog-slide-active{margin-top:30px}
 .blog-main .blog-slide-active .splide__arrow{background-color:#97a3c1;height:50px;width:50px;transition:.2s all linear}

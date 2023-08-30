@@ -116,6 +116,7 @@ $related_query = new WP_Query($related_query_args);
         </div>
     </div>
 </div>
+<?php if($related_query->have_posts()) : ?>
   <!--  Latest Blogs  start -->
   <div class="latest-blog section-padding bg-clr-lightGray">
     <div class="testimonial-container">
@@ -147,7 +148,7 @@ $related_query = new WP_Query($related_query_args);
         </div>
         <?php endif; ?>
       </div>
-      <?php if($related_query->have_posts()) : ?>
+
         <div id="splide" class="splide testimonial">
           <div class="splide__track">
             <ul class="splide__list">
@@ -200,9 +201,9 @@ $related_query = new WP_Query($related_query_args);
             </ul>
           </div>
         </div>
-      <?php endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
   <!-- Latest Blogs end -->
 
 

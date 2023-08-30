@@ -213,3 +213,4 @@ div#mobileHeader{position:relative;z-index:9999}
 .ui-brand-wrap .brand-item:hover::after{border:1px solid #11275f;background:#11275f;z-index:-2}
 .ui-brand{background-color:#001345}
 .fs-50{font-style:50px}
+#header .navbar-nav .nav-item.current-menu-item .nav-link{color:#ff368b}

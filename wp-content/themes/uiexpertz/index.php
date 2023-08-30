@@ -155,7 +155,7 @@ if (get_query_var('cat')) {
                 <form action="#" method="POST">
                     <div class="search-wrap position-relative">
                         <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" name="search" placeholder="Search..">
-                        <button type="submit" class="cross-btn border-0 bg-transparent position-absolute">
+                        <button class="cross-btn border-0 bg-transparent position-absolute">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cross.svg" alt="about image"
                                 class="img-fluid cross-search me-3">
                         </button>

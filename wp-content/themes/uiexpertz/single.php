@@ -64,7 +64,7 @@ $related_query = new WP_Query($related_query_args);
                     ?>
                     <div class="categories mb-5">
                         <h3 class="text-clr-blue fs-4 fw-bold mb-4">Categories</h3>
-                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-3 flex-wrap">
+                        <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-2 flex-wrap">
                             <?php foreach($categories as $index => $category) :
                                 $category_id = $category->term_id;    
                             ?>

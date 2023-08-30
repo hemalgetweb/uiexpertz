@@ -63,7 +63,7 @@
     $('.blog-header-tab .nav-pills .nav-link').on('click', function() {
         $('.uiexpertz-has-archive-default-loaded').removeClass("show active");
     })
-    $('.cross-btn').on('click', function(e) {
+    $('.cross-btn').on('click', function() {
         e.preventDefault();
     })
     // Loop through the class numbers

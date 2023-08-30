@@ -41,6 +41,29 @@
               },
             }).mount( window.splide.Extensions );
           });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.brand-active.splide', {
+              type   : 'loop',
+              drag   : 'free',
+              focus  : 'center',
+              autoScroll: {
+                speed: 3,
+              },
+              breakpoints: {
+                1200: {
+                  perPage: 7,
+                },
+                700: {
+                  perPage: 5,
+                },
+                400: {
+                  perPage: 3,
+                },
+              }
+            }).mount( window.splide.Extensions );
+          });
+
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 new Splide('.splide-blog.splide', {

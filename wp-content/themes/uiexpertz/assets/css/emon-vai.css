@@ -759,57 +759,57 @@
 
 /* blog details update start - 30-8-23 */
 
-.wb-blog-details h1 {
+.wb-blog-details .blog-details-wrap h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 58px;
     color: #001345;
 }
 
-.wb-blog-details h2 {
+.wb-blog-details .blog-details-wrap h2 {
     color: #001345;
     font-size: 40px;
     font-weight: 700;
     line-height: 50px;
 }
 
-.wb-blog-details h3 {
+.wb-blog-details .blog-details-wrap h3 {
     color: #001345;
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
 }
 
-.wb-blog-details h4 {
+.wb-blog-details .blog-details-wrap h4 {
     color: #001345;
     font-size: 24px;
     font-weight: 700;
     line-height: 34px;
 }
-.wb-blog-details h5 {
+.wb-blog-details .blog-details-wrap h5 {
     color: #001345;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
 }
-.wb-blog-details h6 {
+.wb-blog-details .blog-details-wrap h6 {
     color: #001345;
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
 }
-.wb-blog-details p {
+.wb-blog-details .blog-details-wrap p {
     color: #384973;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
 }
-.wb-blog-details span {
+.wb-blog-details .blog-details-wrap span {
     color: #384973;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
 }
-.wb-blog-details ul {
-margin-bottom: 0px;
+.blog-details-wrap ul {
+margin-bottom: 0px !important;
 }

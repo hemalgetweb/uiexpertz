@@ -372,7 +372,7 @@ if (get_query_var('cat')) {
                             <?php endwhile; wp_reset_query(); ?>
                         </div>
                         <?php endif; ?>
-                        <button class="ajax-load-more-all-blog w-auto mx-auto mt-5 text-decoration-none position-relative bg-btn banner-btn border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center">
+                        <button class="ajax-load-more-all-blog w-auto wb-blog-load-more-btn mx-auto mt-5 text-decoration-none position-relative bg-btn banner-btn border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center">
                             Load more
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                                 <path d="M-2.62268e-07 6L1.0625 4.9375L5.25 9.125L5.25 -2.95052e-07L6.75 -2.29485e-07L6.75 9.125L10.9375 4.9375L12 6L6 12L-2.62268e-07 6Z" fill="white"/>

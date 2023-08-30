@@ -39,7 +39,7 @@
                 arrows:false,
                 perPage: calculatePerPage($(window).width()),
                 autoScroll: {
-                    speed: 3,
+                    speed: 2,
                 },
             }).mount( window.splide.Extensions );
         }

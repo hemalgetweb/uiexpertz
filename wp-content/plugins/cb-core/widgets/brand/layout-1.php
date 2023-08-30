@@ -17,16 +17,18 @@
             </div>
         </div>
         <?php if(!empty($settings['slides'])) : ?>
-        <div class="marquee">
-            <div class="uiexpertz-swiper-brand-114 brand-wrap swiper-container">
-                <div class="swiper-wrapper">
-                    <?php foreach($settings['slides'] as $slide) : ?>
-                        <div class="swiper-slide">
-                            <div class="brand-item">
-                                <?php echo wp_get_attachment_image( $slide['brand_image']['id'], 'full' ); ?>
+        <div class="ui-brand ui-brand-wrap py-5">
+            <div id="splide" class="uiexpertz-swiper-brand-114 brand-wrap splide brand-active">
+                <div class="splide__track py-5">
+                    <ul class="splide__list">
+                        <?php foreach($settings['slides'] as $slide) : ?>
+                            <div class="splide__slide">
+                                <div class="brand-item">
+                                    <?php echo wp_get_attachment_image( $slide['brand_image']['id'], 'full' ); ?>
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             </div>
         </div>

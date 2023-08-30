@@ -324,7 +324,7 @@ svg .btn-swiper:hover{fill:#5648ff!important}
 }
 .search-experience .form-control{height:52px;background-color:transparent;border-radius:0}
 .search-experience .form-control:focus{box-shadow:none;border:1px solid #aab4cf}
-.service-item-wrap{min-height:542px;display:flex;flex-direction:column;justify-content:space-between}
+.service-item-wrap{display:flex;flex-direction:column;justify-content:space-between}
 #contact textarea{height:102px}
 .project-info-details .project-info{max-width:100px;width:100%}
 .user-flow-map{background-color:var(--lightGray);padding:120px 0 355px 0}

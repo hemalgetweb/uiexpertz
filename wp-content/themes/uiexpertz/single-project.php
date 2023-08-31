@@ -1,6 +1,6 @@
 <?php
 get_header();
-$project_objective = function_exists("get_field") ? get_field("project_objective"): array();
+$project_objective = function_exists("get_field") ? get_field("project_objective"): '';
 $process_general = function_exists("get_field") ? get_field("process_general"): array();
 $process_general_title = $process_general['process_general_title'];
 $process_general_description = $process_general ? $process_general['process_general_description']: '';
@@ -94,22 +94,10 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
                 </div>
             </div>
             <div class="col-lg-6">
-                <div>
+                <div class="uiexpertz-project-single-objective-114">
                     <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Objective</h3>
-                    <?php if(!empty($project_objective)) : 
-                      $project_objective = $lines = explode("\n", $project_objective);
-                    ?>
-                    <ul class="m-0 p-0 list-unstyled">
-                      <?php foreach($project_objective as $index=>$objective) : 
-                        ?>
-                          <?php if(!empty($objective)) : ?>
-                          <li class="d-flex has-p-mb-0 align-items-center gap-3 mb-3 fs-6 text-clr-gray mb-0">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/case-check.svg"
-                                  alt="about image" class="img-fluid" /><?php echo $objective; ?>
-                          </li>
-                          <?php endif; ?>
-                        <?php endforeach; ?>
-                    </ul>
+                    <?php if(!empty($project_objective)) : ?>
+                      <?php echo wp_kses_post($project_objective); ?>
                     <?php endif; ?>
                 </div>
             </div>

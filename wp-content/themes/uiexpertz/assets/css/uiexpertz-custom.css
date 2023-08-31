@@ -54,14 +54,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .pt-115{padding-top:115px}
 .pb-130{padding-bottom:130px}
 
-@media (max-width:991px) {
-    .pt-115{padding-top:80px}
-    .pb-130{padding-bottom:80px}
-}
-@media (max-width:667px) {
-    .pt-115{padding-top:60px}
-    .pb-130{padding-bottom:60px}
-}
+
 .mb-40{margin-bottom:40px}
 .mt-40{margin-top:40px}
 .js-text-cursor-block{position:relative;overflow:hidden!important;z-index:999}
@@ -232,3 +225,12 @@ ul#pagechecklist-most-recent{padding-left:0}
 .uiexpertz-project-single-objective-114 p{margin-bottom:25px}
 .single-uiexpertz-blog-meta svg{margin-right:7px}
 .single-uiexpertz-blog-meta{display:flex;align-items:center}
+
+@media (max-width:991px) {
+    .pt-115{padding-top:80px}
+    .pb-130{padding-bottom:80px}
+}
+@media (max-width:667px) {
+    .pt-115{padding-top:60px}
+    .pb-130{padding-bottom:60px}
+}

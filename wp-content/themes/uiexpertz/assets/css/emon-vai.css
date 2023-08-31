@@ -872,11 +872,12 @@ margin-bottom: 0px !important;
     .blog-header-tab .nav-pills{
         max-width: 700px;
         overflow-x: scroll;
+        justify-content: start !important;
     }
 }
 
 .blog-header-tab .nav-pills::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
 }
  
 .blog-header-tab .nav-pills::-webkit-scrollbar-track {
@@ -888,5 +889,10 @@ margin-bottom: 0px !important;
 .blog-header-tab .nav-pills::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #6d6d6d; 
+    background: #5648ff; 
+}
+
+.blog-details-wraps h4 strong {
+    color: #36B7FF;
+    font-weight: 400;
 }

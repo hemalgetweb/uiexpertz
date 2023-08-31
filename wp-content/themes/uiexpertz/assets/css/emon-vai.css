@@ -829,6 +829,7 @@
 margin-bottom: 0px !important;
 }
 .container.uiexpertz-blog-header-tab-container-114 {
-    transform: translateY(-61px);
+    transform: translateY(-61px) translateX(-34px);
     position: relative;
+    max-width: 1042px;
 }

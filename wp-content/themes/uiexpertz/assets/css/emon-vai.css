@@ -712,7 +712,7 @@
     }
 }
 
-.case-study-wrap .uiexpertz-service-item .service-content p {
+.service-content p {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -720,7 +720,7 @@
     -webkit-box-orient: vertical
 }
 
-.case-study-wrap .uiexpertz-service-item .service-content h4 {
+.service-content h4 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;

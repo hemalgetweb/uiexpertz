@@ -184,11 +184,13 @@
         $(this).addClass('d-none');
         $('.cross-btn').addClass('d-inline-block');
         $('.cross-btn').removeClass('d-none');
+        $('.searchBar').addClass('has-visible');
     })
     $('.cross-btn').on('click', function () {
         $(this).addClass('d-none');
         $('.search-btn').addClass('d-inline-block');
         $('.search-btn').removeClass('d-none');
+        $('.searchBar').removeClass('has-visible');
     })
     // searchBar -end
 

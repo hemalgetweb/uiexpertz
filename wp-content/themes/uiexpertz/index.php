@@ -104,9 +104,9 @@ if (get_query_var('cat')) {
     <div class="uiexpertz-blog-header-tab-overlay-114 has-hidden"></div>
     <div class="container">
         <div class="blog-tab-list position-relative">
-            <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
+            <ul class="nav nav-pills flex-nowrap align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
                 role="tablist">
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                     <?php if(!isset($_POST['search'])) :
                     $active_class = "";
                     if(!$archive_category_id) {

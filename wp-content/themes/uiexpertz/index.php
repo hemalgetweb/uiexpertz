@@ -342,7 +342,7 @@ if (get_query_var('cat')) {
                                         <div class="p-1">
                                             <?php the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                         </div>
-                                        <ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+                                        <ul class="list-unstyled d-flex align-items-center gap-2 flex-wrap px-4 pt-4">
                                             <?php
                                             $categories = get_the_category();
                                             
@@ -560,7 +560,7 @@ if (get_query_var('cat')) {
                                         <div class="p-1">
                                             <?php the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                         </div>
-                                        <ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+                                        <ul class="list-unstyled d-flex align-items-center gap-2 flex-wrap px-4 pt-4">
                                             <?php
                                             $categories = get_the_category();
                                             
@@ -737,7 +737,7 @@ if (get_query_var('cat')) {
                                             <div class="p-1">
                                                 <?php the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                             </div>
-                                            <ul class="list-unstyled d-flex align-items-center gap-3 flex-wrap px-4 pt-4">
+                                            <ul class="list-unstyled d-flex align-items-center gap-2 flex-wrap px-4 pt-4">
                                                 <?php
                                                 $categories = get_the_category();
                                                 

@@ -840,8 +840,13 @@ margin-bottom: 0px !important;
 .uiexpertz-blog-header-tab-overlay-114 {
     position: absolute;
     left: 0;
-    background: red;
+    background: #fff;
     height: 100%;
     width: 100%;
+    transition: all .3s;
     z-index: 1;
+}
+.uiexpertz-blog-header-tab-overlay-114.has-hidden {
+    opacity: 0;
+    visibility: hidden;
 }

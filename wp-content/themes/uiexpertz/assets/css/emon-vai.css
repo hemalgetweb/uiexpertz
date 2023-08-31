@@ -832,4 +832,16 @@ margin-bottom: 0px !important;
     transform: translateY(-61px) translateX(-34px);
     position: relative;
     max-width: 1042px;
+    z-index: 9;
+}
+.blog-header-tab {
+    position: relative;
+}
+.uiexpertz-blog-header-tab-overlay-114 {
+    position: absolute;
+    left: 0;
+    background: red;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }

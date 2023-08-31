@@ -234,3 +234,6 @@ ul#pagechecklist-most-recent{padding-left:0}
     .pt-115{padding-top:60px}
     .pb-130{padding-bottom:60px}
 }
+.wb-blog-details .d-flex.align-items-center.gap-3 {
+    flex-wrap: wrap;
+}

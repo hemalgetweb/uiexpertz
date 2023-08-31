@@ -164,22 +164,30 @@
 
     
     // searchBar
-    $('.search-btn').click(function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $('.searchBar').slideToggle(200);
-        $(this).addClass("hidden");
-    });
-    $('.cross-btn').click(function (e) {
-        e.stopPropagation();
-        $('.searchBar').slideToggle(200);
-    });
-    $('.searchBar').click(function (e) {
-        e.stopPropagation();
-    });
-    $('body,html').click(function (e) {
-        $('.searchBar').slideUp(500);
-    });
+    // $('.search-btn').click(function (e) {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //     $('.searchBar').slideToggle(200);
+    //     $(this).addClass("d-none");
+    // });
+    // $('.cross-btn').click(function (e) {
+    //     e.stopPropagation();
+    //     $('.searchBar').slideToggle(200);
+    // });
+    // $('.searchBar').click(function (e) {
+    //     e.stopPropagation();
+    // });
+    // $('body,html').click(function (e) {
+    //     $('.searchBar').slideUp(500);
+    // });
+    $('.search-btn').on('click', function () {
+        $(this).addClass('d-none');
+        $('.cross-btn').addClass('d-inline-block');
+    })
+    $('.cross-btn').on('click', function () {
+        $(this).addClass('d-none');
+        $('.search-btn').addClass('d-inline-block');
+    })
     // searchBar -end
 
 

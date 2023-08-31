@@ -53,8 +53,6 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .uiexpertz-swiper-brand-114 .swiper-wrapper{transition-timing-function:linear}
 .pt-115{padding-top:115px}
 .pb-130{padding-bottom:130px}
-
-
 .mb-40{margin-bottom:40px}
 .mt-40{margin-top:40px}
 .js-text-cursor-block{position:relative;overflow:hidden!important;z-index:999}
@@ -225,15 +223,15 @@ ul#pagechecklist-most-recent{padding-left:0}
 .uiexpertz-project-single-objective-114 p{margin-bottom:25px}
 .single-uiexpertz-blog-meta svg{margin-right:7px}
 .single-uiexpertz-blog-meta{display:flex;align-items:center}
-
-@media (max-width:991px) {
-    .pt-115{padding-top:80px}
-    .pb-130{padding-bottom:80px}
+@media (max-width:991px){
+.pt-115{padding-top:80px}
+.pb-130{padding-bottom:80px}
 }
-@media (max-width:667px) {
-    .pt-115{padding-top:60px}
-    .pb-130{padding-bottom:60px}
+@media (max-width:667px){
+.pt-115{padding-top:60px}
+.pb-130{padding-bottom:60px}
 }
-.wb-blog-details .d-flex.align-items-center.gap-3 {
-    flex-wrap: wrap;
+.wb-blog-details .d-flex.align-items-center.gap-3{flex-wrap:wrap}
+@media (max-width:575px){
+#header .navbar-nav .nav-item .nav-link.dropdown-toggle::after,.mobileMenu .navbar-nav .nav-item .nav-link.dropdown-toggle::after{margin-left:5px}
 }

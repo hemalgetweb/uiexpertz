@@ -843,6 +843,14 @@ margin-bottom: 0px !important;
         z-index: 9;
     }
 }
+@media (max-width: 1200px){
+.container.uiexpertz-blog-header-tab-container-114 {
+    transform: translateY(-66px) translateX(-34px);
+    position: relative;
+    max-width: 690px;
+    z-index: 9;
+}
+}
 .blog-header-tab {
     position: relative;
 }

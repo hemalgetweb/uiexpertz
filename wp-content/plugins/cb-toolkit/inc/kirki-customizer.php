@@ -2136,7 +2136,7 @@ function cbtoolkit_case_studies_fields($fields) {
         'settings' => 'cbtoolkit_case_study_cf7_section_form_heading',
         'label'    => __('CF7 Form Heading', 'cb-toolkit'),
         'section'  => 'cf7_form_settings',
-        'default'  => __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit'),
+        'default'  => __('We are so excited to get to know more about you, your idea, and your business!', 'cb-toolkit'),
         'priority' => 10
     ];
     

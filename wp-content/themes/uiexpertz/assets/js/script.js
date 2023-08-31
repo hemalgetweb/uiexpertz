@@ -166,7 +166,9 @@
     // searchBar
     $('.search-btn').click(function (e) {
         e.stopPropagation();
+        e.preventDefault();
         $('.searchBar').slideToggle(200);
+        $(this).classList.add('hidden');
     });
     $('.cross-btn').click(function (e) {
         e.stopPropagation();

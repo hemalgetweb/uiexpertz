@@ -231,12 +231,18 @@
 }
 
 .searchBar {
-    display: none;
-    bottom: 0;
-    width: 100%;
-    right: 66px;
+    width: 10%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s linear;
 }
-
+.searchBar.has-visible {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
 .searchBar .search-wrap .form-control:focus {
     box-shadow: none;
     border-color: #5648ff
@@ -424,10 +430,9 @@
 }
 
 .searchBar .search-wrap .form-control {
-    height: 71px;
-    border-radius: 0
+    height: 52px;
+    border-radius: 0;
 }
-
 .blog-main .blogCart-section-title {
     padding-top: 60px;
     padding-bottom: 20px;
@@ -822,4 +827,26 @@
 }
 .blog-details-wrap ul {
 margin-bottom: 0px !important;
+}
+.container.uiexpertz-blog-header-tab-container-114 {
+    transform: translateY(-61px) translateX(-34px);
+    position: relative;
+    max-width: 1042px;
+    z-index: 9;
+}
+.blog-header-tab {
+    position: relative;
+}
+.uiexpertz-blog-header-tab-overlay-114 {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    height: 102%;
+    width: 100%;
+    transition: all .3s;
+    z-index: 1;
+}
+.uiexpertz-blog-header-tab-overlay-114.has-hidden {
+    opacity: 0;
+    visibility: hidden;
 }

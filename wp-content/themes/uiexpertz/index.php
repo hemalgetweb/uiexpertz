@@ -104,9 +104,9 @@ if (get_query_var('cat')) {
     <div class="uiexpertz-blog-header-tab-overlay-114 has-hidden"></div>
     <div class="container">
         <div class="blog-tab-list position-relative">
-            <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
+            <ul class="nav nav-pills flex-nowrap align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
                 role="tablist">
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                     <?php if(!isset($_POST['search'])) :
                     $active_class = "";
                     if(!$archive_category_id) {
@@ -114,7 +114,7 @@ if (get_query_var('cat')) {
                     }  
                     ?>
                     <button
-                        class="nav-link <?php echo $active_class; ?> py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
+                        class="nav-link <?php echo $active_class; ?> py-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
 
@@ -122,7 +122,7 @@ if (get_query_var('cat')) {
                     </button>
                     <?php else: ?>
                         <button
-                        class="nav-link active py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
+                        class="nav-link active py-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
                             Latest Blogs
@@ -134,7 +134,7 @@ if (get_query_var('cat')) {
                         $cat_name = get_cat_name($category_id);    
                     ?>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link py-3 py-xl-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
+                    <button class="nav-link py-4 d-flex align-items-center gap-2 text-clr-gray fs-6 fw-bold"
                         id="pills-<?php echo $category_id; ?>-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-<?php echo $category_id; ?>" type="button" role="tab">
 

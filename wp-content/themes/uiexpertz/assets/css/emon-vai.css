@@ -233,8 +233,8 @@
 .searchBar {
     display: none;
     bottom: 0;
-    left: 0;
-    width: 100%
+    width: 100%;
+    right: 66px;
 }
 
 .searchBar .search-wrap .form-control:focus {
@@ -416,7 +416,7 @@
 .searchBar .search-wrap .cross-btn {
     top: 50%;
     transform: translateY(-50%);
-    right: 10px
+    right: -60px;
 }
 
 .searchBar .search-wrap .cross-btn:focus {
@@ -442,7 +442,7 @@
     background-color: #97a3c1;
     height: 50px;
     width: 50px;
-    transition: .2s all linear
+    transition: .2s all 
 }
 
 .blog-main .blog-slide-active .splide__arrow svg {

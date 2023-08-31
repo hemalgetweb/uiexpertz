@@ -928,13 +928,14 @@ margin-bottom: 0px !important;
     background: #c5c5c5; 
 }
 
-.blog-details-wraps h4 strong {
+.blog-details-wraps h4 strong,.blog-details-wraps h3 strong,.blog-details-wraps h2 strong ,.blog-details-wraps h1 strong{
     color: #36B7FF;
     font-weight: 400;
 }
 
+
 @media (max-width: 768px) {
     .blog-tab-list .nav-pills.pb-3{
-        padding-bottom: 10px !important;
+        padding-bottom: 0px !important;
     }
 }

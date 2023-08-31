@@ -53,12 +53,14 @@ $related_query = new WP_Query($related_query_args);
         <div class="blog-details-img mt-4">
             <?php echo get_the_post_thumbnail(); ?>
         </div>
-        <div class="blog-details-wrap mt-5">
+        <div class="blog-details-wraps mt-5">
             <div class="row">
-                <div class="col-xl-9">
-                    <?php echo get_the_content(); ?>
+                <div class="col-xl-8">
+                    <div class="blog-details-wrap">
+                      <?php echo get_the_content(); ?>
+                    </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-xl-4">
                     <?php
                     $categories = get_categories();
                     ?>

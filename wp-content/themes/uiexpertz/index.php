@@ -102,7 +102,7 @@ if (get_query_var('cat')) {
 <!-- blog-header-tab -->
 <div class="blog-header-tab">
     <div class="uiexpertz-blog-header-tab-overlay-114"></div>
-    <div class="container uiexpertz-blog-header-tab-container-114">
+    <div class="container">
         <div class="blog-tab-list position-relative">
             <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
                 role="tablist">
@@ -151,20 +151,22 @@ if (get_query_var('cat')) {
                 </li>
 
             </ul>
-            <!-- search-wrap -->
-            <div class="searchBar position-absolute ">
-                <div class="search-wrap position-relative">
-                        <form action="#" method="POST">
-                            <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" name="search" placeholder="Search..">
-                        </form>
-                        <button class="cross-btn border-0 bg-transparent position-absolute d-none">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cross.svg" alt="about image"
-                                class="img-fluid cross-search me-3">
-                        </button>
-                    </div>
-            </div>
-            <!-- search-wrap -End -->
         </div>
+    </div>
+    <div class="container uiexpertz-blog-header-tab-container-114">
+        <!-- search-wrap -->
+        <div class="searchBar position-absolute ">
+            <div class="search-wrap position-relative">
+                    <form action="#" method="POST">
+                        <input type="text" class="form-control px-4 text-clr-gray fs-14 fw-normal" name="search" placeholder="Search..">
+                    </form>
+                    <button class="cross-btn border-0 bg-transparent position-absolute d-none">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cross.svg" alt="about image"
+                            class="img-fluid cross-search me-3">
+                    </button>
+                </div>
+        </div>
+        <!-- search-wrap -End -->
     </div>
 </div>
 <!--/ blog-header-tab -->

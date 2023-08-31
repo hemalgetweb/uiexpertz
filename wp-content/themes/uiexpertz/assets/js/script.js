@@ -183,6 +183,7 @@
     $('.search-btn').on('click', function () {
         $(this).addClass('d-none');
         $('.cross-btn').addClass('d-inline-block');
+        $('.search-btn').removeClass('d-inline-block');
         $('.cross-btn').removeClass('d-none');
         $('.searchBar').addClass('has-visible');
     })
@@ -190,6 +191,7 @@
         $(this).addClass('d-none');
         $('.search-btn').addClass('d-inline-block');
         $('.search-btn').removeClass('d-none');
+        $('.cross-btn').removeClass('d-inline-block');
         $('.searchBar').removeClass('has-visible');
     })
     // searchBar -end

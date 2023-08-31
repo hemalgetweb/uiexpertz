@@ -22,11 +22,11 @@
                 <div class="splide__track py-5">
                     <ul class="splide__list">
                         <?php foreach($settings['slides'] as $slide) : ?>
-                            <div class="splide__slide">
+                            <li class="splide__slide">
                                 <div class="brand-item">
                                     <?php echo wp_get_attachment_image( $slide['brand_image']['id'], 'full' ); ?>
                                 </div>
-                            </div>
+                            </li>
                         <?php endforeach; ?>
                     </ul>
                 </div>

@@ -168,7 +168,7 @@
         e.stopPropagation();
         e.preventDefault();
         $('.searchBar').slideToggle(200);
-        $(this).toggleClass("hidden");
+        $(this).addClass("hidden");
     });
     $('.cross-btn').click(function (e) {
         e.stopPropagation();

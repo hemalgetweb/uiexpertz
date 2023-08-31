@@ -118,7 +118,7 @@ if (get_query_var('cat')) {
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
 
-                        Latest Blogs
+                        Results for "<?php echo $_POST['search']; ?>":
                     </button>
                     <?php else: ?>
                         <button

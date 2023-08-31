@@ -218,3 +218,6 @@ div#mobileHeader{position:relative;z-index:9999}
 .recent-post ul a div img{width:120px;height:70px;object-fit:cover;object-position:top center}
 div#side-sortables .outer-border{padding-left:0}
 ul#pagechecklist-most-recent{padding-left:0}
+.uiexpertz-project-single-objective-114 ul li{list-style:none;position:relative;margin-bottom:15px}
+.uiexpertz-project-single-objective-114 ul li:after{content:"";width:30px;height:30px;background-image:url(http://www.uiexpertz.com/wp-content/uploads/2023/08/blue-circle-check.svg);position:absolute;left:-32px;background-repeat:no-repeat;top:0}
+.uiexpertz-project-single-objective-114 p{margin-bottom:25px}

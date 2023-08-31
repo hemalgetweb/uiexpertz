@@ -71,6 +71,7 @@ function uiexpertz_custom_post_type_for_project() {
         'hierarchical' => true,
         'labels' => $labels,
         'show_ui' => true,
+		'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
         'show_in_menu' => true,

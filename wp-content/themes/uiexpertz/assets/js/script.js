@@ -193,7 +193,7 @@
         $('.search-btn').addClass('d-inline-block');
         $('.search-btn').removeClass('d-none');
         $('.cross-btn').removeClass('d-inline-block');
-        $('.uiexpertz-blog-header-tab-overlay-114').removeClass('has-hidden');
+        $('.uiexpertz-blog-header-tab-overlay-114').addClass('has-hidden');
         $('.searchBar').removeClass('has-visible');
     })
     // searchBar -end

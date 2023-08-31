@@ -236,13 +236,13 @@
     opacity: 0;
     visibility: hidden;
     transition: all .5s linear;
-    top: 50%;
-    transform: translateY(-50%);
 }
 .searchBar.has-visible {
     width: 100%;
     opacity: 1;
     visibility: visible;
+    left: 0;
+    right: 0;
 }
 .searchBar .search-wrap .form-control:focus {
     box-shadow: none;
@@ -828,4 +828,8 @@
 }
 .blog-details-wrap ul {
 margin-bottom: 0px !important;
+}
+.container.uiexpertz-blog-header-tab-container-114 {
+    transform: translateY(-61px);
+    position: relative;
 }

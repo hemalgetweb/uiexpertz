@@ -231,7 +231,7 @@
 }
 
 .searchBar {
-    width: 50px;
+    width: 10%;
     right: 66px;
     opacity: 0;
     visibility: hidden;
@@ -241,7 +241,6 @@
     width: 100%;
     opacity: 1;
     visibility: visible;
-    left: 0;
     right: 0;
 }
 .searchBar .search-wrap .form-control:focus {

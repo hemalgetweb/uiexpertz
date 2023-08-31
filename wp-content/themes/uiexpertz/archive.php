@@ -313,7 +313,15 @@ if (get_query_var('cat')) {
                                 $args = array(
                                     'post_type'      => 'post',
                                     'post_status' => 'publish',
-                                    'ignore_sticky_posts' => true
+                                    'ignore_sticky_posts' => true,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                             } else {
                                 $search_keyword = sanitize_text_field($_POST['search']);
@@ -321,7 +329,15 @@ if (get_query_var('cat')) {
                                     'post_type'      => 'post',
                                     'post_status' => 'publish',
                                     'ignore_sticky_posts' => true,
-                                    's' => $search_keyword
+                                    's' => $search_keyword,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                             }
                             
@@ -531,7 +547,15 @@ if (get_query_var('cat')) {
                                 $args = array(
                                     'post_type'      => 'post',
                                     'post_status' => 'publish',
-                                    'ignore_sticky_posts' => true
+                                    'ignore_sticky_posts' => true,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                             } else {
                                 $search_keyword = sanitize_text_field($_POST['search']);
@@ -539,7 +563,15 @@ if (get_query_var('cat')) {
                                     'post_type'      => 'post',
                                     'post_status' => 'publish',
                                     'ignore_sticky_posts' => true,
-                                    's' => $search_keyword
+                                    's' => $search_keyword,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                             }
                             
@@ -717,7 +749,15 @@ if (get_query_var('cat')) {
                                     'post_status' => 'publish',
                                     'ignore_sticky_posts' => true,
                                     'cat'            => $category_id,
-                                    'posts_per_page' => -1
+                                    'posts_per_page' => -1,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                                 
                                 $fetch_all_posts = new WP_Query($args);

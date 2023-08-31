@@ -64,8 +64,7 @@
         $('.uiexpertz-has-archive-default-loaded').removeClass("show active");
     })
     // Loop through the class numbers
-    console.log(uiexpertz_all_cat_ids);
-    if (typeof uiexpertz_all_cat_ids !== 'undefined') {
+    if (typeof uiexpertz_all_cat_ids != 'undefined') {
         uiexpertz_all_cat_ids.forEach(function (number) {
             document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(function() {

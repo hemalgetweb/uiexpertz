@@ -38,7 +38,7 @@ $process_gallery_images = function_exists("get_field") ? get_field("process_gall
 $cbtoolkit_case_study_cf7_section_subtitle = get_theme_mod( 'cbtoolkit_case_study_cf7_section_subtitle', __('Let’s work together', 'cb-toolkit') );
 $cbtoolkit_case_study_cf7_section_title = get_theme_mod( 'cbtoolkit_case_study_cf7_section_title', __('Tell us about your project, or send us an email at  <span><a class="fw-extraBold text-white" href="mailto:hello@uiexpertz.com">hello@uiexpertz.com </a></span>', 'cb-toolkit') );
 $cbtoolkit_case_study_cf7_section_content = get_theme_mod( 'cbtoolkit_case_study_cf7_section_content', __('We take pride in delivering exceptional customer satisfaction and are always thrilled to hear how we’ve helped our clients achieve their goals.', 'cb-toolkit') );
-$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('Fill out the form to start the <br class="d-none d-xl-inline"> conversation', 'cb-toolkit') );
+$cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_study_cf7_section_form_heading', __('We are so excited to get to know more about you, your idea, and your business! ', 'cb-toolkit') );
 
 ?>
 

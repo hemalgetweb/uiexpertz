@@ -97,6 +97,7 @@ function uiexpertz_custom_post_type_for_project() {
         'hierarchical' => true,
         'labels' => $labels,
         'show_ui' => true,
+		'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
         'show_in_menu' => true,
@@ -119,6 +120,7 @@ function uiexpertz_custom_post_type_for_project() {
         'hierarchical' => false,
         'labels' => $labels,
         'show_ui' => true,
+		'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
         'rewrite' => array('slug' => 'project_tags'), // Set the URL slug here
@@ -173,6 +175,7 @@ function uiexpertz_custom_post_type_for_service() {
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
+		'show_in_rest' => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-tools',

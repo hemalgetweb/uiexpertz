@@ -168,7 +168,7 @@ to{transform:translateY(0)}
 }
 .brand-wrap .brand-item:hover img{animation-direction:alternate;animation-duration:.5s;animation-iteration-count:1;animation-name:animation-pulse-shrink;animation-timing-function:linear;display:inline-block}
 .workProcessItem:hover .process-count .count-shape{animation-duration:1s;animation-iteration-count:1;animation-name:wobble-vertical;animation-timing-function:ease-in-out}
-.case-study .service-item img{transition:all .3s}
+.case-study .service-item img{transition:all .3s;height:260px;object-fit:cover}
 .case-study .service-item:hover img{transform:scale(1.1)}
 .case-study .service-item .m-1{overflow:hidden}
 .case-study .service-item .read-more .span.fs-14.fw-semi-bold.text-clr-gray{transition:all .3s}
@@ -221,5 +221,5 @@ ul#pagechecklist-most-recent{padding-left:0}
 .uiexpertz-project-single-objective-114 ul li{list-style:none;position:relative;margin-bottom:15px}
 .uiexpertz-project-single-objective-114 ul li:after{content:"";width:24px;height:24px;background-image:url(http://www.uiexpertz.com/wp-content/uploads/2023/08/blue-circle-check.svg);position:absolute;left:-32px;background-repeat:no-repeat;top:0}
 .uiexpertz-project-single-objective-114 p{margin-bottom:25px}
-.single-uiexpertz-blog-meta svg{margin-right:7px;}
-.single-uiexpertz-blog-meta {display: flex;align-items: center;}
+.single-uiexpertz-blog-meta svg{margin-right:7px}
+.single-uiexpertz-blog-meta{display:flex;align-items:center}

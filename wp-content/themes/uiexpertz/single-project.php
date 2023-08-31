@@ -26,6 +26,8 @@ $process_4_subtitle = $process_4["process_4_subtitle"];
 $process_4_description = $process_4["process_4_description"];
 $process_4_image_1 = $process_4["process_4_image_1"];
 $process_4_image_2 = $process_4["process_4_image_2"];
+$process_4_image_3 = $process_4["process_4_image_3"];
+$process_4_image_4 = $process_4["process_4_image_4"];
 $process_general_gallery_title = function_exists("get_field") ? get_field("process_general_gallery_title"): "";
 $process_gallery_image_subtitle = function_exists("get_field") ? get_field("process_gallery_image_subtitle"): "";
 $process_gallery_image_content = function_exists("get_field") ? get_field("process_gallery_image_content"): "";
@@ -249,7 +251,7 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
                       <?php if(!empty($process_4_image_1)) : ?>
                         <div class="<?php echo $process_4_image_2 ? 'col-lg-6': 'col-12'; ?>">
                             <div>
-                                <img src="<?php echo esc_url($process_4_image_1); ?>"
+                                <img class="mb-30" src="<?php echo esc_url($process_4_image_1); ?>"
                                     alt="about image" class="img-fluid">
                             </div>
                         </div>
@@ -257,7 +259,23 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
                       <?php if(!empty($process_4_image_2)) : ?>
                         <div class="col-lg-6">
                             <div>
-                                <img src="<?php echo esc_url($process_4_image_2); ?>"
+                                <img class="mb-30" src="<?php echo esc_url($process_4_image_2); ?>"
+                                    alt="about image" class="img-fluid">
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                      <?php if(!empty($process_4_image_3)) : ?>
+                        <div class="col-lg-6">
+                            <div>
+                                <img class="mb-30" src="<?php echo esc_url($process_4_image_3); ?>"
+                                    alt="about image" class="img-fluid">
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                      <?php if(!empty($process_4_image_4)) : ?>
+                        <div class="col-lg-6">
+                            <div>
+                                <img class="mb-30" src="<?php echo esc_url($process_4_image_4); ?>"
                                     alt="about image" class="img-fluid">
                             </div>
                         </div>

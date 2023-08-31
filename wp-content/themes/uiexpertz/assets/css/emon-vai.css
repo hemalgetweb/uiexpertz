@@ -932,3 +932,9 @@ margin-bottom: 0px !important;
     color: #36B7FF;
     font-weight: 400;
 }
+
+@media (max-width: 768px) {
+    .blog-tab-list .nav-pills.pb-3{
+        padding-bottom: 10px !important;
+    }
+}

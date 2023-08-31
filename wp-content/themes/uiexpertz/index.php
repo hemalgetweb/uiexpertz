@@ -101,7 +101,8 @@ if (get_query_var('cat')) {
 
 <!-- blog-header-tab -->
 <div class="blog-header-tab">
-    <div class="container">
+    <div class="uiexpertz-blog-header-tab-overlay-114"></div>
+    <div class="container uiexpertz-blog-header-tab-container-114">
         <div class="blog-tab-list position-relative">
             <ul class="nav nav-pills align-items-center justify-content-center mb-0 pb-3 pb-md-0" id="pills-tab"
                 role="tablist">

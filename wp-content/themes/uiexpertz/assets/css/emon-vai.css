@@ -850,3 +850,7 @@ margin-bottom: 0px !important;
     opacity: 0;
     visibility: hidden;
 }
+
+.blog-details-wrap ol {
+    margin-bottom: 0;
+}

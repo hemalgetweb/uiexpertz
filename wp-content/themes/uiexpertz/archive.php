@@ -207,6 +207,14 @@ if (get_query_var('cat')) {
                                     'meta_value'     => 1,
                                     'meta_compare'   => '=',
                                     'posts_per_page' => -1,
+                                    'tax_query'      => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $archive_category_id,
+                                            'operator' => 'IN',
+                                        ),
+                                    ),
                                 );
                                 
                                 $fetch_all_featured_post = new WP_Query($args);

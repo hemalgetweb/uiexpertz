@@ -118,7 +118,7 @@ if (get_query_var('cat')) {
                         id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button"
                         role="tab">
 
-                        Results for "<?php echo $_POST['search']; ?>":
+                        Latest Blogs
                     </button>
                     <?php else: ?>
                         <button
@@ -295,7 +295,7 @@ if (get_query_var('cat')) {
                             <?php endif; ?>
                             <?php if(isset($_POST['search'])) : ?>
                             <h4 class="fs-2 fw-normal text-clr-blue mb-0">
-                                Latest Blogs <?php echo sanitize_text_field($_POST['search']); ?>
+                            Results for "<?php echo sanitize_text_field($_POST['search']); ?>":
                             </h4>
                             <?php endif; ?>
                         </div>

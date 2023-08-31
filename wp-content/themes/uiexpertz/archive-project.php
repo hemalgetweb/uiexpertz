@@ -8,7 +8,7 @@ $cbtoolkit_case_study_inner_section_subtitle = get_theme_mod( 'cbtoolkit_case_st
 $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study_inner_section_title', __('Explore our key experience', 'cb-toolkit') );
 ?>
 <!--subbanner banner -->
-<div class=" subBanners bg-clr-blue fs-6 pt-75 pb-120">
+<div class=" subBanners bg-clr-blue fs-6 pt-120 pb-120">
     <div class="container">
         <div class="banner-wrapper d-flex flex-column justify-content-between">
             <div class="row align-items-center">

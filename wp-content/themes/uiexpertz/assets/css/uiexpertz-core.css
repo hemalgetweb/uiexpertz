@@ -27,6 +27,7 @@ body{padding:0;margin:0;background-color:#fff;font-family:Manrope,sans-serif!imp
 .bg-btn.active,.bg-btn:hover{background-color:var(--blue)!important;color:#fff}
 .bg-btn.active svg *,.bg-btn:hover svg *{fill:#fff!important}
 .bg-btn.banner-btn{padding:10px 50px 10px 30px!important}
+.blog-main .bg-btn.banner-btn{padding:10px 30px 10px 30px!important}
 .bg-btn.banner-btn .btn-icon{right:25px;transition:all .2s linear}
 .bg-btn.banner-btn.active,.bg-btn.banner-btn:hover{background-color:var(--sky)!important;border:1px solid var(--sky)!important}
 .bg-btn.banner-btn.active .btn-icon,.bg-btn.banner-btn:hover .btn-icon{right:20px}

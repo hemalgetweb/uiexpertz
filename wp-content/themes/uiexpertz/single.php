@@ -53,12 +53,14 @@ $related_query = new WP_Query($related_query_args);
         <div class="blog-details-img mt-4">
             <?php echo get_the_post_thumbnail(); ?>
         </div>
-        <div class="blog-details-wrap mt-5">
+        <div class="blog-details-wraps mt-5">
             <div class="row">
-                <div class="col-xl-9">
-                    <?php echo get_the_content(); ?>
+                <div class="col-xl-8">
+                    <div class="blog-details-wrap">
+                      <?php echo get_the_content(); ?>
+                    </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-xl-4">
                     <?php
                     $categories = get_categories();
                     ?>
@@ -120,7 +122,7 @@ $related_query = new WP_Query($related_query_args);
   <!--  Latest Blogs  start -->
   <div class="latest-blog section-padding bg-clr-lightGray">
     <div class="testimonial-container">
-    <h4 class="uiexpertz-generic-title-114">Recommended posts</h4>
+    <h4 class="uiexpertz-generic-title-114">Recent posts</h4>
       <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
         <div class="section-headings text-start">
           <?php if(!empty($cbblog_details_related_post_subtitle)) : ?>

@@ -1,4 +1,7 @@
 (function($) {
+    $('.uiexpertz-mobile-menu-cross-114').on('click', function() {
+        $('.custom-dropdown-menu').addClass('uiexpertz-hidden');
+    })
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
             function calculatePerPage(windowWidth) {

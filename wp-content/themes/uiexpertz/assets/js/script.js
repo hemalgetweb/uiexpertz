@@ -10,6 +10,7 @@
     });
     $('.openMenu').on('click', function() {
         $('.mobileMenu-wrapper').removeClass('uiexpertz-hidden');
+        $(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
     });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
@@ -404,15 +405,14 @@
             $(this).css("background-color","#"+$(this).attr("data-bgcolor"));
         })
         //navbar add class
-        $(function () {
-            if ($(".mobileMenu").length) {
-                $(".navbar").on("click", ".navbarToggler", function (e) {
-                    e.preventDefault();
-                    console.log("i am clicked");
-                    $(this).closest(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
-                });
-            }
-        });
+        // $(function () {
+        //     if ($(".mobileMenu").length) {
+        //         $(".navbar").on("click", ".navbarToggler", function (e) {
+        //             e.preventDefault();
+        //             $(this).closest(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
+        //         });
+        //     }
+        // });
 
         $(function () {
             $(document).on("click", function (e) {

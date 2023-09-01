@@ -205,6 +205,12 @@
     border-bottom: 1px solid #aab4cf
 }
 
+@media (max-width:991px) {
+    .blog-header-tab .search-btn{
+        padding-left: 16px;
+    }
+}
+
 .blog-header-tab .nav-pills {
     margin-bottom: -1.5px !important
 }

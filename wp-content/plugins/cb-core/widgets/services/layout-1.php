@@ -7,7 +7,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
         <?php if(!empty($settings['slides'])) : ?>
         <div class="service-wrapper row">
             <?php foreach($settings['slides'] as $index => $slide) : ?>
-            <div class="col-lg-4 col-md-6 mb-4 ">
+            <div class="col-lg-4 col-sm-6 mb-4 ">
                 <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo $service_box_height ? esc_attr($service_box_height): 'auto'; ?>;">
                     <div>
                         <div class="p-1">

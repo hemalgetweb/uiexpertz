@@ -1295,6 +1295,12 @@ p.comment-form-comment textarea {
     color: #36B7FF!important;
 }
 
-.footer-widget ul.menu li a:hover {
+.footer-widget ul li a:hover {
     color: #5648FF;
+}
+
+@media (max-width:991px) {
+    .subBanners.pb-120{
+        padding-top: 120px !important;
+    }
 }

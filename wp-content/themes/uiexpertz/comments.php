@@ -1,72 +1,72 @@
 <?php
-/**
- * The template for displaying comments
- *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package uiexpertz
- */
+if (have_comments()) :
+    // Display comment list
+    ?>
+    <h3><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></h3>
+    <ol class="comment-list mb-30">
+        <?php wp_list_comments('callback=custom_comment'); ?>
+    </ol>
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
+    <?php
+    // Pagination for comments
+    if (get_comment_pages_count() > 1 && get_option('page_comments')) :
+        ?>
+        <nav class="comment-navigation" role="navigation">
+            <div class="nav-previous"><?php previous_comments_link('&larr; Older Comments'); ?></div>
+            <div class="nav-next"><?php next_comments_link('Newer Comments &rarr;'); ?></div>
+        </nav>
+        <?php
+    endif;
+    comment_form();
+else : // If there are no comments yet
+    if (comments_open()) :
+        // Comment form
+        comment_form();
+    else :
+        // Comments are closed
+        echo '<p class="alert">Comments are closed.</p>';
+    endif;
+endif;
+
+// Custom comment display function
+function custom_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+    $comment_user_id = get_comment(get_comment_ID())->user_id;
+    $comment_user = get_userdata($comment_user_id);
+
+    if ($comment_user) {
+        $user_roles = $comment_user->roles;
+        $user_designation = ucfirst($user_roles[0]); // Use the first role as the designation
+    }
+    ?>
+    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+
+        <div class="uiexpertz-comment-box-single-blog-114">
+            <div class="uiexpertz-comment-box-single-blog-image-114">
+                <?php echo get_avatar($comment, 73); ?>
+            </div>
+            <div class="uiexpertz-comment-box-single-blog-content-114">
+                <div class="uiexpertz-comment-meta-top-114">
+                    <h5 class="uiexpertz-comment-title-114"><?php comment_author_link(); ?></h5>
+                    <?php if (!empty($user_designation)) : ?>
+                        <span class="uiexpertz-comment-subtitle"><?php echo $user_designation; ?></span>
+                    <?php endif; ?>
+                </div>
+                <div class="uiexpertz-comment-content-main-114">
+                    <?php comment_text(); ?>
+                </div>
+                <div class="reply">
+                <?php
+                    comment_reply_link(array_merge($args, array(
+                        'reply_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"> <path d="M3.375 14.25V11.325C3.375 10.575 3.61875 9.95625 4.10625 9.46875C4.59375 8.98125 5.2125 8.7375 5.9625 8.7375H13.575L10.5187 11.7938L11.325 12.6L15.75 8.175L11.325 3.75L10.5187 4.55625L13.575 7.6125H5.9625C4.9 7.6125 4.01562 7.96563 3.30937 8.67188C2.60312 9.37813 2.25 10.2625 2.25 11.325V14.25H3.375Z" fill="#1F516D"/> </svg> Reply',
+                        'depth' => $depth,
+                        'max_depth' => $args['max_depth']
+                    )));
+                    ?>
+                </div>
+            </div>
+        </div>
+    </li>
+    <?php
 }
-?>
-<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-?>
-	<div id="comments" class="comments-area">
-		<div class="comments-title-wrap mb-35">
-			<h5 class="comments-title">
-				<?php
-				$uiexpertz_comment_count = get_comments_number();
-				if ( '1' === $uiexpertz_comment_count ) {
-					printf(
-						/* translators: 1: title. */
-						esc_html__('1 Comment', 'uiexpertz')
-					);
-				} else {
-					printf( 
-						esc_html($uiexpertz_comment_count.' Comments')
-					);
-				}
-				?>
-			</h5><!-- .comments-title -->
-		</div>
-		<?php the_comments_navigation(); ?>
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'walker'      => new Farzaa_Walker_Comment(),
-					'style'      => 'ol',
-					'avatar_size' => 100,
-					'short_ping' => true,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
-
-		
-
-	</div><!-- #comments -->
-<?php
-// Check for have_comments(). 
-endif; ?>
-<?php
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() ) :
-		?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'uiexpertz' ); ?></p>
-		<?php
-	endif;
-	comment_form();
 ?>

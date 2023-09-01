@@ -1267,3 +1267,12 @@ p.comment-form-comment textarea {
 .comments-area form.comment-form label {
     margin-bottom: 7px;
 }
+
+.comment-form .logged-in-as a {
+    color: #5648FF!important;
+    font-size: 16px!important;
+    text-decoration: underline!important;
+}
+.comment-form .logged-in-as a:hover {
+    color: #36B7FF!important;
+}

@@ -41,18 +41,18 @@ function custom_comment($comment, $args, $depth) {
     ?>
     <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 
-        <div class="uiexpertz-comment-box-single-blog-114">
-            <div class="uiexpertz-comment-box-single-blog-image-114">
+        <div class="apps-comment-box-single-blog-114">
+            <div class="apps-comment-box-single-blog-image-114">
                 <?php echo get_avatar($comment, 73); ?>
             </div>
-            <div class="uiexpertz-comment-box-single-blog-content-114">
-                <div class="uiexpertz-comment-meta-top-114">
-                    <h5 class="uiexpertz-comment-title-114"><?php comment_author_link(); ?></h5>
+            <div class="apps-comment-box-single-blog-content-114">
+                <div class="apps-comment-meta-top-114">
+                    <h5 class="apps-comment-title-114"><?php comment_author_link(); ?></h5>
                     <?php if (!empty($user_designation)) : ?>
-                        <span class="uiexpertz-comment-subtitle"><?php echo $user_designation; ?></span>
+                        <span class="apps-comment-subtitle"><?php echo $user_designation; ?></span>
                     <?php endif; ?>
                 </div>
-                <div class="uiexpertz-comment-content-main-114">
+                <div class="apps-comment-content-main-114">
                     <?php comment_text(); ?>
                 </div>
                 <div class="reply">

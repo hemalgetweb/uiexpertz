@@ -1101,6 +1101,9 @@ p.comment-form-comment textarea {
     line-height: normal;
     margin-top: 20px;
 }
+.comments-area p.form-submit input.submit:hover {
+    background: #36b7ff;
+}
 .apps-comment-114 .comment-respond .comment-reply-title {
     color: #003959!important;
     font-size: 36px;
@@ -1237,7 +1240,12 @@ p.comment-form-comment textarea {
 .apps-comment-114 .comments-area h3 {
     color: #003959;
     font-size: 36px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 46px;
     margin-bottom: 60px;
+}
+.apps-comment-114 .comments-area form.comment-form label {
+    color: #001345;
+    font-size: 14px;
+    font-weight: 700;
 }

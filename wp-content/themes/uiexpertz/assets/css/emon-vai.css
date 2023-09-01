@@ -348,36 +348,36 @@
     height: 1px
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item {
     background: #fff;
     box-shadow: 0 30px 30px 0 rgba(0, 19, 69, .03);
     margin-bottom: 15px;
     transition: .2s all linear
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item:hover {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item:hover {
     box-shadow: 0 30px 30px 0 rgba(0, 19, 69, .1);
     background-color: #fff !important
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item .accordion-button {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item .accordion-button {
     padding: 20px 30px;
     color: #384973;
     font-size: 16px;
     font-weight: 700
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item .accordion-button::after {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item .accordion-button::after {
     width: 24px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 15.2671L7 10.2671H17L12 15.2671Z' fill='%23AAB4CF'/%3E%3C/svg%3E%0A")
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item .accordion-body {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item .accordion-body {
     padding: 0 30px
 }
 
-.faq-area .apps-accordion-wrapper-main-114 .accordion-item .accordion-button:focus {
+.faq-area .uiexpertz-accordion-wrapper-main-114 .accordion-item .accordion-button:focus {
     box-shadow: none !important;
     background-color: #fff !important;
     color: #5648ff
@@ -1065,14 +1065,14 @@
 }
 
 
-.apps-comment-114 .comment-reply-title {
+.uiexpertz-comment-114 .comment-reply-title {
     color: #001345;
     font-size: 40px;
     font-weight: 700;
     line-height: 50px;
 }
 
-.apps-comment-114 .comment-form .logged-in-as {
+.uiexpertz-comment-114 .comment-form .logged-in-as {
     color: #384973;
     font-size: 16px;
     font-weight: 400;
@@ -1085,7 +1085,7 @@
 
 
 
-.apps-comment-114 .comments-area h3 {
+.uiexpertz-comment-114 .comments-area h3 {
     color: #003959;
     font-size: 36px;
     font-weight: 900;
@@ -1093,16 +1093,16 @@
     margin-bottom: 60px
 }
 
-.apps-comment-box-single-blog-114 {
+.uiexpertz-comment-box-single-blog-114 {
     display: flex;
     gap: 25px
 }
 
-.apps-comment-title-114 {
+.uiexpertz-comment-title-114 {
     margin-bottom: 0
 }
 
-.apps-comment-title-114 a {
+.uiexpertz-comment-title-114 a {
     color: #003959;
     font-size: 18px;
     font-weight: 700;
@@ -1110,14 +1110,14 @@
     text-decoration: none
 }
 
-.apps-comment-subtitle {
+.uiexpertz-comment-subtitle {
     color: #316785;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px
 }
 
-.apps-comment-content-main-114 p {
+.uiexpertz-comment-content-main-114 p {
     color: #1f516d;
     font-size: 18px;
     font-weight: 400;
@@ -1139,7 +1139,7 @@
     line-height: 30px
 }
 
-.apps-comment-box-single-blog-image-114 {
+.uiexpertz-comment-box-single-blog-image-114 {
     width: 83px;
     height: 80px;
     position: relative;
@@ -1148,7 +1148,7 @@
     align-items: center
 }
 
-.apps-comment-box-single-blog-image-114::after {
+.uiexpertz-comment-box-single-blog-image-114::after {
     content: "";
     background-image: url(../img/avater-bg-shape.svg);
     background-repeat: no-repeat;
@@ -1161,50 +1161,50 @@
     z-index: -1
 }
 
-.apps-comment-box-single-blog-image-114 img.avatar {
+.uiexpertz-comment-box-single-blog-image-114 img.avatar {
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     width: 80px;
     margin: 5px
 }
 
-.apps-comment-box-single-blog-114 .apps-comment-meta-top-114 {
+.uiexpertz-comment-box-single-blog-114 .uiexpertz-comment-meta-top-114 {
     margin-bottom: 23px
 }
 
-.apps-comment-box-single-blog-114 .apps-comment-meta-top-114 {
+.uiexpertz-comment-box-single-blog-114 .uiexpertz-comment-meta-top-114 {
     margin-bottom: 23px
 }
 
-.apps-comment-114 .comment-list .reply a:hover,
-.apps-comment-title-114 a:hover {
+.uiexpertz-comment-114 .comment-list .reply a:hover,
+.uiexpertz-comment-title-114 a:hover {
     color: #00c7c7
 }
 
-.apps-comment-114 .comment-list .reply a:hover path {
+.uiexpertz-comment-114 .comment-list .reply a:hover path {
     fill: #00c7c7
 }
 
-.apps-comment-114 .comment-list .reply a path {
+.uiexpertz-comment-114 .comment-list .reply a path {
     transition: all .3s
 }
 
-.apps-comment-114 .comments-area>ol.comment-list li .apps-comment-box-single-blog-content-114 {
+.uiexpertz-comment-114 .comments-area>ol.comment-list li .uiexpertz-comment-box-single-blog-content-114 {
     border-bottom: 1px solid var(--dark-dark-6, #baddf0);
     padding-bottom: 30px
 }
 
-.apps-comment-114 .comments-area>ol.comment-list .children {
+.uiexpertz-comment-114 .comments-area>ol.comment-list .children {
     padding-left: 107px;
     border-bottom: 1px solid var(--dark-dark-6, #baddf0);
     padding-bottom: 0
 }
 
-.apps-comment-114 .comments-area>ol.comment-list .children>li:last-child .apps-comment-box-single-blog-content-114 {
+.uiexpertz-comment-114 .comments-area>ol.comment-list .children>li:last-child .uiexpertz-comment-box-single-blog-content-114 {
     border-bottom: 0;
     padding-bottom: 13px
 }
 
-.apps-comment-114 .comments-area>ol.comment-list>li:not(:last-child) {
+.uiexpertz-comment-114 .comments-area>ol.comment-list>li:not(:last-child) {
     margin-bottom: 34px
 }
 
@@ -1212,7 +1212,7 @@
     padding-top: 37px
 }
 
-.apps-comment-114 .comment-respond {
+.uiexpertz-comment-114 .comment-respond {
     border-radius: 6px !important;
     background: var(--white, #fff) !important;
     box-shadow: 0 10px 30px 0 rgba(0, 57, 89, .1) !important;
@@ -1220,7 +1220,7 @@
     padding: 40px
 }
 
-.apps-comment-114 .comment-respond .comment-reply-title {
+.uiexpertz-comment-114 .comment-respond .comment-reply-title {
     color: #003959 !important;
     font-family: Cairo;
     font-size: 36px;
@@ -1230,7 +1230,7 @@
     margin-bottom: 0
 }
 
-.apps-comment-114 .comments-area .comment-form>p:not(.comment-notes) {
+.uiexpertz-comment-114 .comments-area .comment-form>p:not(.comment-notes) {
     color: #6b6b82;
     font-size: 16px;
     font-style: normal;
@@ -1239,18 +1239,18 @@
     margin-bottom: 0
 }
 
-.apps-comment-114 .comments-area .comment-form>p:not(.comment-notes) a {
+.uiexpertz-comment-114 .comments-area .comment-form>p:not(.comment-notes) a {
     text-decoration: none
 }
 
-.apps-comment-114 textarea {
+.uiexpertz-comment-114 textarea {
     border-radius: 4px !important;
     border: 1px solid #aecbd3 !important;
     max-height: 114px;
     transition: all 150ms linear
 }
 
-.apps-comment-114 textarea::placeholder {
+.uiexpertz-comment-114 textarea::placeholder {
     color: #6a96a4 !important;
     font-size: 16px;
     font-style: normal;
@@ -1258,32 +1258,32 @@
     line-height: 1.62em
 }
 
-.apps-comment-114 .comments-area .comment-form>p.form-submit {
+.uiexpertz-comment-114 .comments-area .comment-form>p.form-submit {
     margin-top: 3px
 }
 
 @media (max-width:767px) {
-    .apps-comment-114 .comments-area>ol.comment-list .children {
+    .uiexpertz-comment-114 .comments-area>ol.comment-list .children {
         padding-left: 0
     }
 }
 
-.apps-comment-114 .comments-area .comment-form>p.comment-form-author,
-.apps-comment-114 .comments-area .comment-form>p.comment-form-email {
+.uiexpertz-comment-114 .comments-area .comment-form>p.comment-form-author,
+.uiexpertz-comment-114 .comments-area .comment-form>p.comment-form-email {
     width: calc(50% - 15px);
     display: inline-block;
     margin: 0 0
 }
 
-.apps-comment-114 .comments-area .comment-form>p.comment-form-author {
+.uiexpertz-comment-114 .comments-area .comment-form>p.comment-form-author {
     margin-right: 15px
 }
 
-.apps-comment-114 .comments-area .comment-form>p.comment-form-email {
+.uiexpertz-comment-114 .comments-area .comment-form>p.comment-form-email {
     margin-left: 11px
 }
 
-.apps-comment-114 .comments-area form.comment-form label {
+.uiexpertz-comment-114 .comments-area form.comment-form label {
     color: var(--dark-dark-1, #003959);
     font-family: Cairo;
     font-size: 14px;
@@ -1292,12 +1292,12 @@
     line-height: normal
 }
 
-.apps-comment-114 input:focus,
-.apps-comment-114 textarea:focus {
+.uiexpertz-comment-114 input:focus,
+.uiexpertz-comment-114 textarea:focus {
     border: 1px solid var(--dark-dark-1, #003959) !important
 }
 
-.apps-comment-114 .comments-area .comment-form>p:not(.comment-notes) {
+.uiexpertz-comment-114 .comments-area .comment-form>p:not(.comment-notes) {
     margin-bottom: 20px
 }
 
@@ -1310,12 +1310,12 @@
 }
 
 @media (max-width:575px) {
-    .apps-comment-box-single-blog-114 {
+    .uiexpertz-comment-box-single-blog-114 {
         flex-direction: column;
         text-align: center
     }
 
-    .apps-comment-box-single-blog-image-114 {
+    .uiexpertz-comment-box-single-blog-image-114 {
         margin: 0 auto
     }
 }

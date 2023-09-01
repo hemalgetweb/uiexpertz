@@ -284,7 +284,7 @@ svg .btn-swiper:hover{fill:#5648ff!important}
 .contact-form .form-select option{color:#001345}
 .contact-form .form-select:focus{box-shadow:none!important;border-color:#5648ff}
 .contact-form .form-check-input:focus{box-shadow:none!important;border-color:#5648ff}
-.contact-form .form-btn{height:52px;font-weight:400;font-size:14px;color:#fff;transition:.2s all linear}
+.contact-form .form-btn{height:52px;font-weight:800;font-size:14px;color:#fff;transition:.2s all linear}
 .contact-form .form-btn:hover{background-color:#6f62fc!important}
 .footer{padding-top:100px}
 #backToTop{width:42px;height:42px;outline:0;box-shadow:none;border:none;border-radius:100%;background-color:#36b7ff;position:fixed;bottom:30px;right:30px;font-size:16px;color:#000;z-index:1000;display:none;cursor:pointer;transition:all .5s}

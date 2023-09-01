@@ -1072,7 +1072,7 @@
     width: 100%;
     height: 44px;
     border-radius: 4px !important;
-    border: 1px solid #aecbd3 !important;
+    border: 1px solid #AAB4CF !important;
     line-height: 50px;
     padding: 0 20px;
     font-size: 16px;
@@ -1217,7 +1217,7 @@ p.comment-form-comment textarea {
 
 .apps-comment-114 .comments-area>ol.comment-list .children {
     padding-left: 107px;
-    border-bottom: 1px solid var(--dark-dark-6,#baddf0);
+    /* border-bottom: 1px solid var(--dark-dark-6,#baddf0); */
     padding-bottom: 0;
 }
 
@@ -1229,4 +1229,15 @@ p.comment-form-comment textarea {
 }
 .mb-30 {
     margin-bottom: 30px;
+}
+.comments-area {
+    margin-top: 45px;
+}
+
+.apps-comment-114 .comments-area h3 {
+    color: #003959;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 46px;
+    margin-bottom: 60px;
 }

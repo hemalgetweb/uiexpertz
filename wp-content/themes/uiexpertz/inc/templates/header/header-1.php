@@ -27,6 +27,20 @@
                     </div>
                 </div>
                 <div class="mobileMenu-wrapper d-flex align-items-center justify-content-between flex-column">
+                    <div class="uiexpertz-mobile-menu-header-top-114">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mobile.svg" alt="mobile logo">
+                            </div>
+                            <div class="col-6">
+                                <div class="text-end">
+                                    <button class="uiexpertz-mobile-cross-menu">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"> <path d="M0.293029 1.70697L1.70703 0.292969L7.00003 5.58597L12.293 0.292969L13.707 1.70697L8.41403 6.99997L13.707 12.293L12.293 13.707L7.00003 8.41397L1.70703 13.707L0.293029 12.293L5.58603 6.99997L0.293029 1.70697Z" fill="white"/> </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php uiexpertz_header_menu(); ?>
                     <div
                         class="navbar-right btn-wrap d-flex flex-wrap justify-content-between align-content-center w-100 gap-3 gap-lg-4">

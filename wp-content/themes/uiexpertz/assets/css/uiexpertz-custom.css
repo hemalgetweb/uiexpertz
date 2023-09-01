@@ -31,7 +31,7 @@ img{max-width:100%}
 .footer-widget ul.menu li:last-child{margin-bottom:0}
 .footer-widget ul.menu li a:hover{color:var(--bs-link-hover-color)}
 .uiexpertz-copyright-menu li a{font-size:14px;line-height:24px;text-decoration:none;color:var(--gray);font-weight:700}
-.uiexpertz-copyright-menu li a:hover{color: #6f62fc;}
+.uiexpertz-copyright-menu li a:hover{color:#6f62fc}
 .uiexpertz-footer-114{background-size:cover;background-repeat:no-repeat}
 .service-content .text-clr-blue a{color:inherit;text-decoration:none;transition:all .3s}
 .service-content .text-clr-blue a:hover{color:var(--primary-color-system-indigo-dye,#5648ff)}
@@ -251,7 +251,7 @@ ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item
 button.uiexpertz-mobile-menu-cross-114{line-height:1;background:0 0;border:0}
 button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 .uiexpertz-mobile-menu-topbar-title-114{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:700;margin-bottom:0}
-.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display:flex!important;background:#fff}
+.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display:block!important;background:#fff}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{background:0 0}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a,.has-mega-menu .custom-dropdown-menu>li.menu-item a:hover{box-shadow:none}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114){height:fit-content;transition:all .3s;border:1px solid #aab4cf;padding-top:11px;padding:10px}
@@ -275,25 +275,7 @@ button.uiexpertz-mobile-cross-menu{background:0 0;border:0;line-height:1}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{border-top:0}
 }
 a.navbar-brand img.img-fluid.d-xl-none{max-height:28px;width:auto}
-.mobilemenu-wrapper-fixed-top-114 {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    overflow-y: auto;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    background: #001345;
-    transition: all .3s;
-}
-.mobilemenu-wrapper-fixed-top-114.visible {
-    opacity: 1;
-    visibility: visible;
-}
-div#mobileHeader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
+.mobilemenu-wrapper-fixed-top-114{position:fixed;left:0;top:0;width:100%;overflow-y:auto;height:100%;opacity:0;visibility:hidden;background:#001345;transition:all .3s}
+.mobilemenu-wrapper-fixed-top-114.visible{opacity:1;visibility:visible}
+div#mobileHeader{position:fixed;left:0;top:0;width:100%}
+li.uiexpertz-mobile-menu-bottom-pos-114{position:fixed;left:0;bottom:0}

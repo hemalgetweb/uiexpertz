@@ -199,7 +199,7 @@ function uiexpertz_scripts()
 	wp_enqueue_style('splide-min', UIEXPERTZ_THEME_CSS_DIR . 'splide.min.css', null, time());
 
 	// all js
-	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);
+	wp_enqueue_script('bootstrap', UI_EXPERTZ_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], time(), true);
 	wp_enqueue_script('swiper', UI_EXPERTZ_THEME_JS_DIR . 'swiper-bundle.min.js', ['jquery'], '', true);
 	wp_enqueue_script('gsap', UI_EXPERTZ_THEME_JS_DIR . 'gsap.min.js', ['jquery'], '', true);
 	wp_enqueue_script('splide-js', UI_EXPERTZ_THEME_JS_DIR . 'splide.min.js', ['jquery'], time(), true);

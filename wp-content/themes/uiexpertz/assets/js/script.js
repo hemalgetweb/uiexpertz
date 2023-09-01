@@ -1,6 +1,8 @@
 (function($) {
     $('.uiexpertz-mobile-menu-cross-114').on('click', function() {
         $('.custom-dropdown-menu').addClass('uiexpertz-hidden');
+        $(".menuAction").children(".openMenu").toggle(0);
+        $(".menuAction").children(".closeMenu").toggle(0);
     })
     $('.mobileMenu .mobileMenu-wrapper > .navbar-nav > .nav-item > .nav-link').on('click', function() {
         $('.custom-dropdown-menu').removeClass('uiexpertz-hidden');

@@ -285,3 +285,6 @@ li.uiexpertz-mobile-menu-bottom-pos-114{position:fixed;left:0;bottom:0}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li.uiexpertz-mobile-menu-bottom-pos-114{background:#ebf0ff!important;box-shadow:none}
 }
 .wb-blog-details .accordion-header{margin:0!important}
+.service .service-wrapper.row .service-item:hover .text-clr-blue{color:#5648ff}
+.uiexpertz-service-item .text-clr-blue{transition:all .3s}
+.service-item:hover .service-content .text-clr-blue a,.service-item:hover .service-content span.fs-14.fw-semi-bold.text-clr-gray,.uiexpertz-service-item:hover .text-clr-blue,.uiexpertz-service-item:hover span.fs-14.fw-semi-bold.text-clr-gray{color:#5648ff}

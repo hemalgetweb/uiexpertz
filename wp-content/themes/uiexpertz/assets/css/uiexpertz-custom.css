@@ -55,7 +55,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .pb-130{padding-bottom:130px}
 .mb-40{margin-bottom:40px}
 .mt-40{margin-top:40px}
-.js-text-cursor{position:absolute;max-width:163px;width:100%;margin:auto;text-align:center;z-index:999;cursor:auto}
+.js-text-cursor{position:absolute;max-width:163px;width:100%;margin:auto;text-align:center;z-index:999;cursor:none}
 @media (max-width:1199px){
 #whychooseus .why-choose-us-wrapper .why-choose-us-item{padding:30px 15px}
 }

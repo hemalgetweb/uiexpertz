@@ -715,16 +715,3 @@ function uiexpertz_service_category_based_filter_posts() {
 add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_filter( 'wp_lazy_loading_enabled', '__return_false' );
-/**
- * Add content to submenu
- */
-function add_content_at_submenu_end($items, $args) {
-    // Check if this is a submenu
-    if (in_array('menu-item-has-children', $args->menu_class)) {
-        // Add your content at the end of the submenu list
-        $additional_content = '<li class="menu-item">Your md hemal akhand End Content</li>';
-        $items .= $additional_content;
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'add_content_at_submenu_end', 10, 2);

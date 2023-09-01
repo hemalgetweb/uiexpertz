@@ -179,7 +179,7 @@ p.uiexpertz-brand-content-114{color:var(--gray-color-system-gray-7,#9db9ff);font
 .searchBar .search-wrap .form-control{height:55px!important}
 }
 .custom-dropdown-menu{transition:all .3s}
-.custom-dropdown-menu.uiexpertz-hidden{opacity:0!important;visibility:hidden!important}
+.uiexpertz-hidden{opacity:0!important;visibility:hidden!important}
 div#mobileHeader{position:relative;z-index:9999}
 @media (max-width:575px){
 .uiexpertz-brand-content-114 br{display:none}

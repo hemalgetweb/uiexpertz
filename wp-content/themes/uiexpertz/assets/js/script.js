@@ -5,6 +5,12 @@
     $('.mobileMenu .mobileMenu-wrapper > .navbar-nav > .nav-item > .nav-link').on('click', function() {
         $('.custom-dropdown-menu').removeClass('uiexpertz-hidden');
     })
+    $('.uiexpertz-mobile-cross-menu').on('click', function() {
+        $('.mobileMenu-wrapper').addClass('uiexpertz-hidden');
+    });
+    $('.openMenu').on('click', function() {
+        $('.mobileMenu-wrapper').removeClass('uiexpertz-hidden');
+    });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
             function calculatePerPage(windowWidth) {

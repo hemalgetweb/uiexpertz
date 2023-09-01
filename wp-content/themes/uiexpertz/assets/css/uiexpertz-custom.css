@@ -6,7 +6,7 @@ img{max-width:100%}
 .has-mega-menu .custom-dropdown-menu>li{display:block;margin-bottom:10px}
 .has-mega-menu .custom-dropdown-menu{position:absolute}
 .has-mega-menu .custom-dropdown-menu::after{content:"";position:absolute;left:111px;top:-15px;width:21px;height:12px;background-color:var(--primary-color-system-indigo-dye,#5648ff);display:inline-block;clip-path:polygon(0 100%,50% 0,100% 100%)}
-.has-mega-menu .custom-dropdown-menu>li .menu-image-title{color:#001345;font-family:Manrope;font-size:16px;font-style:normal;font-weight:700;padding-left:20px;overflow:hidden;display:block;padding-top:17px}
+.has-mega-menu .custom-dropdown-menu>li .menu-image-title{color:#001345;font-family:Manrope;font-size:16px;font-style:normal;font-weight:700;padding-left:13px;overflow:hidden;display:block;padding-top:17px}
 .has-mega-menu .custom-dropdown-menu>li a{transition:all .3s;display:block}
 .has-mega-menu .custom-dropdown-menu>li img{box-sizing:content-box}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{background:#fff;overflow:hidden;display:block;padding:2px;box-shadow:0 30px 30px 0 rgba(0,19,69,.05);padding-right:10px}
@@ -84,7 +84,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 }
 .has-mega-menu .custom-dropdown-menu>li img{float:left}
 .has-mega-menu .custom-dropdown-menu>li a{overflow:hidden}
-.has-mega-menu .custom-dropdown-menu>li .extra-info{overflow:hidden;color:#384973;text-overflow:ellipsis;font-family:Manrope;font-size:12px;font-style:normal;font-weight:400;line-height:18px;padding-left:21px;display:block;margin-top:4px}
+.has-mega-menu .custom-dropdown-menu>li .extra-info{overflow:hidden;color:#384973;text-overflow:ellipsis;font-family:Manrope;font-size:12px;font-style:normal;font-weight:400;line-height:18px;padding-left:13px;display:block;margin-top:4px}
 .has-mega-menu .custom-dropdown-menu{position:absolute;left:-80px;top:130%;transition:all .3s}
 .uiexpertz-header-menu-for-pc-114 .navbar-nav>li>a{padding:18px 10px}
 .has-mega-menu .custom-dropdown-menu>li.apps-submenu-main-title-114{list-style:none;border:0;display:block;padding-bottom:15px}
@@ -112,7 +112,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{padding:14px;max-height:340px;overflow-y:auto}
 }
 @media (min-width:421px) and (max-width:575px){
-.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a{padding:0 14px;padding-bottom:22px}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a{padding:0 12px;padding-bottom:13px}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{padding:20px 15px}
 .has-mega-menu .custom-dropdown-menu>li img{max-width:106px}
 }
@@ -237,10 +237,16 @@ ul#pagechecklist-most-recent{padding-left:0}
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-title-114{display:none}
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-desc-114{display:none}
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114{position:fixed;left:0;top:0;width:100%;height:100%;max-height:100%!important}
-ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item-content img{width:40px}
+ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item-content img{width:80px;height:53px;transform:inherit}
 .uiexpertz-mobile-menu-topbar{background:var(--primary-color-system-white,#fff);box-shadow:0 15px 40px 0 rgba(30,33,45,.05)}
 .uiexpertz-mobile-menu-topbar{padding:20px 18px}
 button.uiexpertz-mobile-menu-cross-114{line-height:1;background:0 0;border:0}
 button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 .uiexpertz-mobile-menu-topbar-title-114{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:700;margin-bottom:0}
+li.uiexpertz-mobile-menu-topbar-list-114{margin-bottom:20px!important}
+.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{background:#fff}
+.has-mega-menu .custom-dropdown-menu>li.menu-item a{background:0 0}
+.has-mega-menu .custom-dropdown-menu>li.menu-item a{box-shadow:none}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li{border:1px solid #aab4cf;padding-top:11px}
+.has-mega-menu .custom-dropdown-menu>li .extra-info{display:-webkit-box;-webkit-line-clamp:1;line-clamp:1;-webkit-box-orient:vertical}
 }

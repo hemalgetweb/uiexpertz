@@ -1230,3 +1230,14 @@ p.comment-form-comment textarea {
 .mb-30 {
     margin-bottom: 30px;
 }
+.comments-area {
+    margin-top: 45px;
+}
+
+.apps-comment-114 .comments-area h3 {
+    color: #003959;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 46px;
+    margin-bottom: 60px;
+}

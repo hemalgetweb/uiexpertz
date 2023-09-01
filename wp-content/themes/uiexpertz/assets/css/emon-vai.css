@@ -1093,13 +1093,14 @@ p.comment-form-comment textarea {
     background: #5648FF;
     border: 0;
     height: 54px;
-    padding: 0 55px 0 30px;
+    padding: 0 30px;
     color: #fff;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-top: 20px;
+    transition: .3s all linear;
 }
 .comments-area p.form-submit input.submit:hover {
     background: #36b7ff;
@@ -1132,10 +1133,10 @@ p.comment-form-comment textarea {
     border-radius: 3px;
 }
 .apps-comment-114 .comments-area form.comment-form label {
-    color: var(--dark-dark-1,#003959);
+    color: #001345;
     font-size: 14px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: normal;
 }
 .comment-list li.comment {
@@ -1248,4 +1249,30 @@ p.comment-form-comment textarea {
     color: #001345;
     font-size: 14px;
     font-weight: 700;
+}
+
+.comments-area .comment-respond .comment-reply-title small {
+    font-size: 18px;
+}
+.comments-area .comment-respond .comment-reply-title small a {
+    color: #0063d1;
+    text-decoration: none;
+}
+.comments-area .comment-reply-title a#cancel-comment-reply-link {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comments-area form.comment-form label {
+    margin-bottom: 7px;
+}
+
+.comment-form .logged-in-as a {
+    color: #5648FF!important;
+    font-size: 16px!important;
+    text-decoration: underline!important;
+}
+.comment-form .logged-in-as a:hover {
+    color: #36B7FF!important;
 }

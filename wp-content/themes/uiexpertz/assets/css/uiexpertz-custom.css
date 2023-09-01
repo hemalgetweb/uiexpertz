@@ -278,7 +278,8 @@ a.navbar-brand img.img-fluid.d-xl-none{max-height:28px;width:auto}
 .mobilemenu-wrapper-fixed-top-114.visible{opacity:1;visibility:visible}
 div#mobileHeader{position:fixed;left:0;top:0;width:100%}
 li.uiexpertz-mobile-menu-bottom-pos-114{position:fixed;left:0;bottom:0}
-.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li.uiexpertz-mobile-menu-bottom-pos-114 {
-    background: transparent !important;
-}
+    .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li.uiexpertz-mobile-menu-bottom-pos-114 {
+        background: transparent !important;
+        box-shadow: none;
+    }
 }

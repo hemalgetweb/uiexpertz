@@ -261,3 +261,10 @@ li.uiexpertz-mobile-menu-bottom-pos-114 .first svg{margin-right:5px}
 li.uiexpertz-mobile-menu-bottom-pos-114 .last{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:800;text-decoration:none;padding:0 20px;height:34px;display:inline-block;background:var(--secondary-color-system-flourescent-blue,#36b7ff);line-height:34px}
 li.uiexpertz-mobile-menu-bottom-pos-114 .last svg{margin-left:10px}
 }
+.custom-dropdown-menu {
+    transition: all .3s;
+}
+.custom-dropdown-menu.uiexpertz-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}

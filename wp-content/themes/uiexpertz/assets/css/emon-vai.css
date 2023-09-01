@@ -768,6 +768,13 @@
 
 /* blog details update start - 30-8-23 */
 
+@media (min-width:1200px) {
+    
+    .wb-blog-details.pt-105{
+        padding-top: 150px !important;
+    }
+}
+
 .wb-blog-details{
     padding-bottom: 120px;
 }
@@ -776,7 +783,7 @@
     font-weight: 700;
     line-height: 58px;
     color: #001345;
-    margin-top:60px;
+    margin-top:40px;
 }
 
 .wb-blog-details .blog-details-wrap h2 {

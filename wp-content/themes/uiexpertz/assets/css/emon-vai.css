@@ -1049,7 +1049,7 @@
 }
 
 .blog-header-tab .nav-pills::-webkit-scrollbar-track {
-    background-color: #dbdada;
+    background-color: #75a4d769;
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -1057,7 +1057,7 @@
 .blog-header-tab .nav-pills::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #c5c5c5;
+    background: #5ba9ff;
 }
 
 .blog-details-wraps h4 strong,

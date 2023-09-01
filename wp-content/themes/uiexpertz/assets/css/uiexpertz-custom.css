@@ -275,3 +275,11 @@ button.uiexpertz-mobile-cross-menu{background:0 0;border:0;line-height:1}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{border-top:0}
 }
 a.navbar-brand img.img-fluid.d-xl-none{max-height:28px;width:auto}
+.mobilemenu-wrapper-fixed-top-114 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow-y: auto;
+    background: #001345;
+}

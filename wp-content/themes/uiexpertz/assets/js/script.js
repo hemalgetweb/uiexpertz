@@ -410,8 +410,6 @@
                     e.preventDefault();
                     console.log("i am clicked");
                     $(this).closest(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
-                    $(".menuAction").children(".openMenu").toggle(0);
-                    $(".menuAction").children(".closeMenu").toggle(0);
                 });
             }
         });

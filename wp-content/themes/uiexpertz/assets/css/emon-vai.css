@@ -1249,3 +1249,25 @@ p.comment-form-comment textarea {
     font-size: 14px;
     font-weight: 700;
 }
+
+.apps-comment-114 .comment-respond .comment-reply-title {
+    color: #003959!important;
+    font-family: Cairo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46px;
+    margin-bottom: 0;
+}
+.comments-area .comment-respond .comment-reply-title small {
+    font-size: 18px;
+}
+.comments-area .comment-respond .comment-reply-title small a {
+    color: #0063d1;
+    text-decoration: none;
+}
+.comments-area .comment-reply-title a#cancel-comment-reply-link {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}

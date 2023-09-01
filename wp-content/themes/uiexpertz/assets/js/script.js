@@ -10,7 +10,7 @@
     });
     $('.openMenu').on('click', function() {
         $('.mobileMenu-wrapper').removeClass('uiexpertz-hidden');
-        $(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
+        $(".navbar").find(".mobileMenu-wrapper").addClass("mobileMenu-action");
     });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
@@ -409,7 +409,7 @@
         //     if ($(".mobileMenu").length) {
         //         $(".navbar").on("click", ".navbarToggler", function (e) {
         //             e.preventDefault();
-        //             $(this).closest(".navbar").find(".mobileMenu-wrapper").toggleClass("mobileMenu-action");
+        //             $(this).closest(".navbar").find(".mobileMenu-wrapper").addClass("mobileMenu-action");
         //         });
         //     }
         // });

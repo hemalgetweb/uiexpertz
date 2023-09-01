@@ -1,7 +1,7 @@
 img{max-width:100%}
 #header .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu,.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu.has-mega-menu .custom-dropdown-menu{min-width:566px;border-radius:0;border-top:4px solid var(--primary-color-system-indigo-dye,#5648ff);background:var(--gray-color-system-gray-6,#ebf0ff);box-shadow:0 30px 30px 0 rgba(0,19,69,.1)}
 .has-mega-menu .custom-dropdown-menu{flex-wrap:wrap}
-.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li{flex:0 0 100%;margin-left:0!important}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114){flex:0 0 100%;margin-left:0!important}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114{display:flex!important}
 .has-mega-menu .custom-dropdown-menu>li{display:block;margin-bottom:10px}
 .has-mega-menu .custom-dropdown-menu{position:absolute}

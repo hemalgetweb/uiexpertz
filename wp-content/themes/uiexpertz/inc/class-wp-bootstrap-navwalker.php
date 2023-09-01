@@ -121,7 +121,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                             </svg> Main Menu</h5>
                         </div>
                         <div class="col-6">
-                            <div class="text-end itsme">
+                            <div class="text-end">
                                 <button class="uiexpertz-mobile-menu-cross-114">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                                     <path d="M0.293029 1.70697L1.70703 0.292969L7.00003 5.58597L12.293 0.292969L13.707 1.70697L8.41403 6.99997L13.707 12.293L12.293 13.707L7.00003 8.41397L1.70703 13.707L0.293029 12.293L5.58603 6.99997L0.293029 1.70697Z" fill="#97A3C1"/>

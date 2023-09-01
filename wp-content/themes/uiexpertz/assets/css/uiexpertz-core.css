@@ -108,9 +108,6 @@ body{padding:0;margin:0;background-color:#fff;font-family:Manrope,sans-serif!imp
 .mobileMenu .navbar .mobileMenu-header{padding:0 20px}
 }
 .mobileMenu .navbar .navbar-toggler-icons img{width:24px}
-@media (max-width:776px){
-.mobileMenu .navbar .navbar-toggler-icons img{width:35px}
-}
 .mobileMenu .navbar .navbar-toggler-icons.closeMenu img{width:30px}
 @media (max-width:776px){
 .mobileMenu .navbar .navbar-toggler-icons.closeMenu img{width:26px}

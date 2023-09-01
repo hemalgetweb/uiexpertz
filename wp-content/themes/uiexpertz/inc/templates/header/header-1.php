@@ -20,9 +20,6 @@
                             <button class="navbar-toggler-icons openMenu  bg-transparent border-0">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/menu.svg" alt="bar icon" class="img-fluid">
                             </button>
-                            <button class="navbar-toggler-icons closeMenu bg-transparent border-0">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/close.svg" alt="bar icon" class="img-fluid">
-                            </button>
                         </div>
                     </div>
                 </div>

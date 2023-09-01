@@ -2,7 +2,7 @@
     $('.uiexpertz-mobile-menu-cross-114').on('click', function() {
         $('.custom-dropdown-menu').addClass('uiexpertz-hidden');
     })
-    $('.mobileMenu .mobileMenu-wrapper > .navbar-nav > .nav-item > .nav-link').on('click', function() {
+    $('.mobileMenu .mobileMenu-wrapper > .navbar-nav > .nav-item > .nav-link, .openMenu').on('click', function() {
         $('.custom-dropdown-menu').removeClass('uiexpertz-hidden');
     })
     $('.uiexpertz-mobile-cross-menu').on('click', function() {

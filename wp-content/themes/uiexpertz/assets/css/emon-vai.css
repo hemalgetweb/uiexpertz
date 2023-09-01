@@ -207,7 +207,7 @@
 
 @media (max-width:991px) {
     .blog-header-tab .search-btn{
-        padding-left: 16px;
+        padding-left: 16px !important;
     }
 }
 

@@ -273,9 +273,12 @@ li.uiexpertz-mobile-menu-bottom-pos-114 .last svg{margin-left:10px}
 .uiexpertz-mobile-menu-header-top-114{padding:20px 14px;box-shadow:0 1px 1px 0 rgba(170,180,207,.4)}
 button.uiexpertz-mobile-cross-menu{background:0 0;border:0;line-height:1}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{border-top:0}
-}
 a.navbar-brand img.img-fluid.d-xl-none{max-height:28px;width:auto}
 .mobilemenu-wrapper-fixed-top-114{position:fixed;left:0;top:0;width:100%;overflow-y:auto;height:100%;opacity:0;visibility:hidden;background:#001345;transition:all .3s}
 .mobilemenu-wrapper-fixed-top-114.visible{opacity:1;visibility:visible}
 div#mobileHeader{position:fixed;left:0;top:0;width:100%}
 li.uiexpertz-mobile-menu-bottom-pos-114{position:fixed;left:0;bottom:0}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li.uiexpertz-mobile-menu-bottom-pos-114 {
+    background: transparent !important;
+}
+}

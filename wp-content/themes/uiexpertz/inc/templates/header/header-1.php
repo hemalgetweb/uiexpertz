@@ -1,7 +1,7 @@
 <?php
     $cbtoolkit_header_main_right_switch_1 = get_theme_mod('cbtoolkit_header_main_right_switch_1', false);
-    $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+88 012 458 368', 'uiexpertz'));
-    $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+88012458368', 'uiexpertz'));
+    $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+132 384 30780', 'uiexpertz'));
+    $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+13238430780', 'uiexpertz'));
     $cbtoolkit_header_btn_text = get_theme_mod('cbtoolkit_header_btn_text', __('Lets’s talk', 'uiexpertz'));
     $cbtoolkit_header_btn_link = get_theme_mod('cbtoolkit_header_btn_link', __('/contact', 'uiexpertz'));
 ?>

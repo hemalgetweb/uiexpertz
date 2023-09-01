@@ -109,7 +109,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .has-mega-menu .custom-dropdown-menu>li.apps-submenu-main-desc-114{margin-bottom:20px}
 }
 @media (max-width:420px){
-.has-mega-menu .custom-dropdown-menu>li.menu-item a{padding:20px 0;background-image:none!important}
+.has-mega-menu .custom-dropdown-menu>li.menu-item a{background-image:none!important}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{padding:14px;max-height:340px;overflow-y:auto}
 }
 @media (min-width:421px) and (max-width:575px){
@@ -234,6 +234,7 @@ ul#pagechecklist-most-recent{padding-left:0}
 @media (max-width:575px){
 #header .navbar-nav .nav-item .nav-link.dropdown-toggle::after,.mobileMenu .navbar-nav .nav-item .nav-link.dropdown-toggle::after{margin-left:5px}
 }
+div#respond input,div#respond textarea{max-width:100%}
 @media (max-width:991px){
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-title-114{display:none}
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-desc-114{display:none}
@@ -244,14 +245,19 @@ ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item
 button.uiexpertz-mobile-menu-cross-114{line-height:1;background:0 0;border:0}
 button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 .uiexpertz-mobile-menu-topbar-title-114{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:700;margin-bottom:0}
-.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display: block !important;background:#fff}
+.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display:block!important;background:#fff}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{background:0 0}
-.has-mega-menu .custom-dropdown-menu>li.menu-item a, .has-mega-menu .custom-dropdown-menu>li.menu-item a:hover{box-shadow:none}
-.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114){height:fit-content;transition:all .3s;border:1px solid #aab4cf;padding-top:11px}
+.has-mega-menu .custom-dropdown-menu>li.menu-item a,.has-mega-menu .custom-dropdown-menu>li.menu-item a:hover{box-shadow:none}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114){height:fit-content;transition:all .3s;border:1px solid #aab4cf;padding-top:11px;padding:10px}
 .has-mega-menu .custom-dropdown-menu>li .extra-info{display:-webkit-box;-webkit-line-clamp:1;line-clamp:1;-webkit-box-orient:vertical}
 li.uiexpertz-mobile-menu-topbar-list-114{margin-bottom:20px!important;border:0}
 .has-mega-menu .custom-dropdown-menu>li .menu-image-title{padding-top:0}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a,.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a:hover{background:0 0}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114):hover{border-color:transparent;background:var(--primary-color-system-indigo-dye-light,#f3f2ff)}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a:hover .menu-image-title{color:var(--gray-color-system-gray-1,#001345)}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li.uiexpertz-mobile-menu-bottom-pos-114{margin-bottom:30px;position:absolute;left:0;bottom:0;width:100%;padding:0 20px;border:0!important;display:flex;justify-content:space-between;align-items:center}
+li.uiexpertz-mobile-menu-bottom-pos-114 .first{color:var(--gray-color-system-gray-1,#001345);font-size:16px;font-weight:400;text-decoration:none}
+li.uiexpertz-mobile-menu-bottom-pos-114 .first svg{margin-right:5px}
+li.uiexpertz-mobile-menu-bottom-pos-114 .last{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:800;text-decoration:none;padding:0 20px;height:34px;display:inline-block;background:var(--secondary-color-system-flourescent-blue,#36b7ff);line-height:34px}
+li.uiexpertz-mobile-menu-bottom-pos-114 .last svg{margin-left:10px}
 }

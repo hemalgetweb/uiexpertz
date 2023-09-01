@@ -9,7 +9,15 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
             <?php foreach($settings['slides'] as $index => $slide) : ?>
             <div class="col-lg-4 col-sm-6 mb-4 ">
                 <a href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>" class="js-text-cursor-block service-item  bg-white d-flex flex-column justify-content-between" style="min-height: <?php echo $service_box_height ? esc_attr($service_box_height): 'auto'; ?>;">
-                <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white" href="<?php echo $slide['service_link']['url'] ? esc_url($slide['service_link']['url']): ''; ?>">Explore Service <span class="pb-1"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z" fill="white"></path></svg></span></a>
+                <span class="uiexpertz-theme-accourdion-btn-114 js-text-cursor js-text-cursor d-none bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none">
+                        <?php echo esc_html__('Explore service', 'cb-core'); ?>
+                        <span class="pb-1">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z" fill="white"/>
+</svg>
+
+                        </span>
+            </span>
                     <div>
                         <div class="p-1">
                             <?php echo wp_get_attachment_image( $slide['service_image']['id'], 'full' ); ?>

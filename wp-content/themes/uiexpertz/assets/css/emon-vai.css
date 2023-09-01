@@ -1329,7 +1329,7 @@ a.back-to-blog:hover svg * {
     border: 1px solid #E0E3EC;
     border-radius: 100px;
     transition: .2s all linear;
-
+    margin-top: 20px;
 }
 
 .ui-social-links .ui-social-link:hover {

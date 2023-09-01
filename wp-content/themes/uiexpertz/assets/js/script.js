@@ -2,6 +2,9 @@
     $('.uiexpertz-mobile-menu-cross-114').on('click', function() {
         $('.custom-dropdown-menu').addClass('uiexpertz-hidden');
     })
+    $('.mobileMenu .mobileMenu-wrapper > .navbar-nav > .nav-item > .nav-link').on('click', function() {
+        $('.custom-dropdown-menu').removeClass('uiexpertz-hidden');
+    })
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
             function calculatePerPage(windowWidth) {

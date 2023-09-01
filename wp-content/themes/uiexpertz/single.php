@@ -80,10 +80,10 @@ $related_query = new WP_Query($related_query_args);
                           <?php 
                             comments_template();
                           ?>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 <div class="col-xl-4">
                     <?php
                     $categories = get_categories();

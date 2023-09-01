@@ -99,18 +99,15 @@ body{padding:0;margin:0;background-color:#fff;font-family:Manrope,sans-serif!imp
 .border-gray{border:1px solid #aab4cf}
 .mobileMenu{position:relative}
 .mobileMenu .mobileMenu-container{max-width:1840px;width:100%;margin:auto}
-.mobileMenu .mobileMenu-wrapper{position:fixed;height:0vh;opacity:0;visibility:hidden;padding:0 15px 15px 15px;transition:.1s all linear;background-color:var(--blue);width:100%}
+.mobileMenu .mobileMenu-wrapper{height: 530px;padding:0 15px 15px 15px;transition:.1s all linear;background-color:var(--blue);width:100%}
 .mobileMenu .mobileMenu-wrapper .navbar-nav{width:100%}
 .mobileMenu .mobileMenu-wrapper .navbar-nav .nav-item .nav-link{border-bottom:1px solid #263062;display:block}
-.mobileMenu .mobileMenu-action{height:93vh;opacity:1;visibility:visible;transition:.1s all linear}
-.mobileMenu .navbar .mobileMenu-header{height:70px;width:100%;background-color:#283b6c;padding:0 40px}
+.mobileMenu .mobileMenu-action{height:100vh;opacity:1;visibility:visible;transition:.1s all linear;padding-top:20px;padding-bottom:0}
+.mobileMenu .navbar .mobileMenu-header{height:70px;width:100%;background-color:#001345;padding:0 40px;box-shadow:0 1px 1px 0 rgba(170,180,207,.4)}
 @media (max-width:576px){
 .mobileMenu .navbar .mobileMenu-header{padding:0 20px}
 }
-.mobileMenu .navbar .navbar-toggler-icons img{width:40px}
-@media (max-width:776px){
-.mobileMenu .navbar .navbar-toggler-icons img{width:35px}
-}
+.mobileMenu .navbar .navbar-toggler-icons img{width:24px}
 .mobileMenu .navbar .navbar-toggler-icons.closeMenu img{width:30px}
 @media (max-width:776px){
 .mobileMenu .navbar .navbar-toggler-icons.closeMenu img{width:26px}
@@ -274,15 +271,13 @@ svg .btn-swiper:hover{fill:#5648ff!important}
 .contact .contact-wrap{padding:0 30px 0 30px}
 }
 .contact .footer-bg{background-repeat:no-repeat;background-size:cover;background-position:center}
-.contact-form .form-control{border:1px solid #AAB4CF;height:52px;font-weight:400;font-size:16px;line-height:22px;color:#384973;border-radius:0!important}
-@media (max-width:667px) {
-    .contact-form .form-control{
-        height: 44px;
-    }
+.contact-form .form-control{border:1px solid #aab4cf;height:52px;font-weight:400;font-size:16px;line-height:22px;color:#384973;border-radius:0!important}
+@media (max-width:667px){
+.contact-form .form-control{height:44px}
 }
 .contact-form .form-control:focus{box-shadow:none!important;border-color:#5648ff}
 .contact-form .form-control::placeholder{color:#97a3c1;font-family:Manrope;font-size:16px;font-style:normal;font-weight:400;line-height:normal}
-.contact-form .form-select{border:1px solid #AAB4CF;height:52px;font-weight:400;font-size:16px;line-height:22px;color:#97a3c1}
+.contact-form .form-select{border:1px solid #aab4cf;height:52px;font-weight:400;font-size:16px;line-height:22px;color:#97a3c1}
 @media (max-width:667px){
 .contact-form .form-select{height:44px}
 }

@@ -230,8 +230,7 @@ function save(props) {
   }, cta_btn_1_text && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     class: "text-decoration-none position-relative bg-btn banner-btn border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center",
     href: cta_btn_1_link && cta_btn_1_link,
-    target: "_blank",
-    rel: "nofollow"
+    target: "_blank"
   }, cta_btn_1_text, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     class: "btn-icon position-absolute",
     width: "12",
@@ -245,8 +244,7 @@ function save(props) {
   }))), cta_btn_2_text && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     class: "text-decoration-none position-relative bg-btn banner-btn border-0 bg-transparent text-clr-darkBlue fs-14 fw-extraBold d-flex gap-2 align-items-center",
     href: cta_btn_2_link && cta_btn_2_link,
-    target: "_blank",
-    rel: "nofollow"
+    target: "_blank"
   }, cta_btn_2_text, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     class: "btn-icon position-absolute",
     width: "20",

@@ -1,0 +1,1 @@
+{"version":3,"file":"quote/index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://getweb-gutenberg-block/./src/quote/editor.scss"],"sourcesContent":[".wb-blog-details-quote input, .wb-blog-details-quote textarea {\r\n    background: transparent;\r\n}"],"names":[],"sourceRoot":""}

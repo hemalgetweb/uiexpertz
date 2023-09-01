@@ -114,3 +114,12 @@ if(class_exists('WooCommerce')) {
     add_action( 'edited_product_cat', 'farzaa_save_taxonomy_custom_meta', 10, 2 );  
     add_action( 'create_product_cat', 'farzaa_save_taxonomy_custom_meta', 10, 2 );
 }
+
+function generate_blog_category_control() {
+    $categories = get_categories();
+    $choices = [];
+    foreach ($categories as $category) {
+        $choices[$category->term_id] = $category->name;
+    }
+    return $choices;
+}

@@ -1294,3 +1294,7 @@ p.comment-form-comment textarea {
 .comment-form .logged-in-as a:hover {
     color: #36B7FF!important;
 }
+
+.footer-widget ul.menu li a:hover {
+    color: #5648FF;
+}

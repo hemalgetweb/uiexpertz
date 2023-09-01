@@ -243,10 +243,10 @@ ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item
 button.uiexpertz-mobile-menu-cross-114{line-height:1;background:0 0;border:0}
 button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 .uiexpertz-mobile-menu-topbar-title-114{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:700;margin-bottom:0}
-li.uiexpertz-mobile-menu-topbar-list-114{margin-bottom:20px!important}
 .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{background:#fff}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{background:0 0}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{box-shadow:none}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li{border:1px solid #aab4cf;padding-top:11px}
 .has-mega-menu .custom-dropdown-menu>li .extra-info{display:-webkit-box;-webkit-line-clamp:1;line-clamp:1;-webkit-box-orient:vertical}
+li.uiexpertz-mobile-menu-topbar-list-114{margin-bottom:20px!important; border: 0;}
 }

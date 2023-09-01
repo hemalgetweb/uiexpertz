@@ -2,7 +2,7 @@
     <!--  Latest Blogs  start -->
     <div class="latest-blog section-padding bg-clr-lightGray">
         <div class="container">
-            <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
+            <div class="blog-heading d-flex flex-wrap align-items-end justify-content-between mb-5">
                 <div class="section-headings text-start">
                     <?php if(!empty($settings['subtitle'])) : ?>
                     <div class="section-hints d-flex justify-content-start align-items-center gap-2">

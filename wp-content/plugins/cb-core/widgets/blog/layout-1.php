@@ -46,7 +46,7 @@
                     }
                 ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item js-text-cursor-block bg-white mb-4 pb-2">
+                    <div class="service-item js-text-cursor-block bg-white mb-4 pb-3">
                     <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor d-none js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none" href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>">
                         <?php echo esc_html__('Get inspired', 'cb-core'); ?>
                         <span class="pb-1">

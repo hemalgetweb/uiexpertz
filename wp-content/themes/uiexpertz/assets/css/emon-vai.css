@@ -1101,6 +1101,9 @@ p.comment-form-comment textarea {
     line-height: normal;
     margin-top: 20px;
 }
+.comments-area p.form-submit input.submit:hover {
+    background: #36b7ff;
+}
 .apps-comment-114 .comment-respond .comment-reply-title {
     color: #003959!important;
     font-size: 36px;

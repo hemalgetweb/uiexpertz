@@ -1304,3 +1304,8 @@ p.comment-form-comment textarea {
         padding-top: 120px !important;
     }
 }
+@media (max-width:768px) {
+    .uiexpertz-footer-114 .footer .row {
+        flex-direction: column-reverse;
+    }
+}

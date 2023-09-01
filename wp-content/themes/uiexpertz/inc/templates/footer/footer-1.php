@@ -44,7 +44,7 @@ $footer_class_2[4] = 'col-xl-3 col-md-6 col-6';
                     <div class="row">
                         <div class="col-md-6">
                             <?php if (!empty($cbtoolkit_copyright_1)): ?>
-                            <p class="copyright fs-14 text-center text-lg-start text-clr-gray mb-md-0 mb-3 mb-xl-0 ">
+                            <p class="copyright fs-14 text-center text-lg-start text-clr-gray mb-xl-0 ">
                                 <?php echo esc_html($cbtoolkit_copyright_1); ?>
                             </p>
                             <?php endif; ?>

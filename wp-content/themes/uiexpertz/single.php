@@ -75,6 +75,11 @@ $related_query = new WP_Query($related_query_args);
                 <div class="col-xl-8">
                     <div class="blog-details-wrap">
                       <?php echo get_the_content(); ?>
+                      <?php
+                       if ( comments_open() || get_comments_number(get_the_ID()) ):
+                          comments_template();
+                      endif;
+                      ?>
                     </div>
                 </div>
                 <div class="col-xl-4">

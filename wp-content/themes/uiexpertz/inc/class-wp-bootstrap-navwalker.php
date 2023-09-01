@@ -110,6 +110,22 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
+            $output .= <<<EOD
+            <div class="uiexpertz-mobile-menu-topbar">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="uiexpertz-mobile-menu-topbar-title-114"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6.96931 11.3636L9.18315 13.5775L9.06548 13.6951L6.01839 10.6481C6.01836 10.648 6.01833 10.648 6.01831 10.648C5.88422 10.5138 5.796 10.3424 5.76373 10.1581L6.96931 11.3636ZM7.49964 10.0833H5.75379C5.75128 10.0557 5.75 10.0279 5.75 9.99997C5.75 9.97204 5.75128 9.94423 5.75379 9.91664H7.49964H15.083V10.0833H7.49964ZM6.96931 8.63631L5.76373 9.84189C5.796 9.65756 5.88422 9.48613 6.01831 9.35197C6.01833 9.35194 6.01836 9.35192 6.01839 9.35189L9.06548 6.3048L9.18315 6.42247L6.96931 8.63631Z" fill="#001345" stroke="#001345" stroke-width="1.5"/>
+                        </svg> Main Menu</h5>
+                    </div>
+                    <div class="col-6">
+                        <div class="uiexpertz-mobile-menu-cross-114">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            EOD;
             $output .= "{$n}{$indent}<ul$class_names $labelledby>";?>
             <?php if(!empty($submenu_title)) {
                 $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$submenu_title</h1></li>";

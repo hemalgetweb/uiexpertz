@@ -251,7 +251,7 @@ ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 .menu-item
 button.uiexpertz-mobile-menu-cross-114{line-height:1;background:0 0;border:0}
 button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 .uiexpertz-mobile-menu-topbar-title-114{color:var(--gray-color-system-gray-1,#001345);font-size:14px;font-weight:700;margin-bottom:0}
-.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display:block!important;background:#fff}
+.mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu{display:flex!important;background:#fff}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a{background:0 0}
 .has-mega-menu .custom-dropdown-menu>li.menu-item a,.has-mega-menu .custom-dropdown-menu>li.menu-item a:hover{box-shadow:none}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114){height:fit-content;transition:all .3s;border:1px solid #aab4cf;padding-top:11px;padding:10px}
@@ -290,4 +290,10 @@ a.navbar-brand img.img-fluid.d-xl-none{max-height:28px;width:auto}
 .mobilemenu-wrapper-fixed-top-114.visible {
     opacity: 1;
     visibility: visible;
+}
+div#mobileHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

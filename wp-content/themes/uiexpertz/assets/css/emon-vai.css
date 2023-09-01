@@ -1133,10 +1133,10 @@ p.comment-form-comment textarea {
     border-radius: 3px;
 }
 .apps-comment-114 .comments-area form.comment-form label {
-    color: var(--dark-dark-1,#003959);
+    color: #001345;
     font-size: 14px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: normal;
 }
 .comment-list li.comment {
@@ -1262,4 +1262,8 @@ p.comment-form-comment textarea {
     margin-left: 15px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.comments-area form.comment-form label {
+    margin-bottom: 7px;
 }

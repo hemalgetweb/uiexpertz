@@ -251,6 +251,6 @@ button.uiexpertz-mobile-menu-cross-114:hover svg path{fill:#5648ff}
 li.uiexpertz-mobile-menu-topbar-list-114{margin-bottom:20px!important;border:0}
 .has-mega-menu .custom-dropdown-menu>li .menu-image-title{padding-top:0}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a,.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a:hover{background:0 0}
-.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:hover{border-color:transparent;background:var(--primary-color-system-indigo-dye-light,#f3f2ff)}
+.has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li:not(.uiexpertz-mobile-menu-topbar-list-114):hover{border-color:transparent;background:var(--primary-color-system-indigo-dye-light,#f3f2ff)}
 .has-mega-menu .custom-dropdown-menu.has-apps-dropdown-mega-menu-114>li .menu-item-content a:hover .menu-image-title{color:var(--gray-color-system-gray-1,#001345)}
 }

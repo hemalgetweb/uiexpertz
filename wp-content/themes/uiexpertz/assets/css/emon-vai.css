@@ -1310,20 +1310,42 @@ p.comment-form-comment textarea {
     }
 }
 
-/* social icon */
+a.back-to-blog:hover span {
+    color: #36b7ff !important;
+}
 
-.ui-social-links .ui-social-link img {
+
+a.back-to-blog:hover svg * {
+    fill: #36b7ff !important;
+}
+
+/* social icon */
+.ui-social-links .ui-social-link {
     height: 30px;
     width: 30px;
-    transition: .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E3EC;
+    border-radius: 100px;
+    transition: .2s all linear;
+    margin-top: 20px;
 }
-.ui-social-link img:hover {
-    transform: scale(1.08);
+
+.ui-social-links .ui-social-link:hover {
+    background-color: #5648FF;
+}
+
+.ui-social-links .ui-social-link svg *{
+    transition: .3s all linear;
+}
+
+.ui-social-links .ui-social-link:hover svg * {
+    fill: #fff !important;
 }
 
 .ui-social-links {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: 10px;
 }

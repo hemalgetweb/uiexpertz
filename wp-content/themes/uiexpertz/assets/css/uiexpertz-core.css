@@ -289,8 +289,8 @@ svg .btn-swiper:hover{fill:#5648ff!important}
 .footer{padding-top:100px}
 #backToTop{width:42px;height:42px;outline:0;box-shadow:none;border:none;border-radius:100%;background-color:#36b7ff;position:fixed;bottom:30px;right:30px;font-size:16px;color:#000;z-index:1000;display:none;cursor:pointer;transition:all .5s}
 #backToTop svg *{margin-bottom:5px;transition:.2s all linear}
-#backToTop:hover{background-color:#ff368b}
-#backToTop:hover svg *{fill:#9db9ff!important}
+#backToTop:hover{background-color:#5648FF}
+#backToTop:hover svg *{fill:#fff!important}
 #introduction{width:100vw;height:100vh;position:fixed;z-index:105;background-color:#141414;cursor:pointer;overflow:hidden;top:0;left:0;z-index:99999}
 #introduction .image-container{width:100vw;height:100vh;top:0;left:0;position:relative}
 #introduction .banner-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:80%;max-width:1600px}

@@ -1309,3 +1309,21 @@ p.comment-form-comment textarea {
         flex-direction: column-reverse;
     }
 }
+
+/* social icon */
+
+.ui-social-links .ui-social-link img {
+    height: 30px;
+    width: 30px;
+    transition: .2s ease-in-out;
+}
+.ui-social-link img:hover {
+    transform: scale(1.08);
+}
+
+.ui-social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}

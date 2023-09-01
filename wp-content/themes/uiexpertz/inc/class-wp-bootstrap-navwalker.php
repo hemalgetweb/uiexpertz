@@ -110,7 +110,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 // Build a string to use as aria-labelledby.
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
-            $output .= "{$n}{$indent}<ul$class_names $labelledby>";
+            $output .= "{$n}{$indent}<div class='uiexpertz-menu-parent-114'><ul$class_names $labelledby>";
             $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+88 012 458 368', 'uiexpertz'));
             $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+88012458368', 'uiexpertz'));
             $cbtoolkit_header_btn_text = get_theme_mod('cbtoolkit_header_btn_text', __('Lets’s talk', 'uiexpertz'));
@@ -157,7 +157,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             <?php if(!empty($submenu_content)) {
                 $output .= "<li class='apps-submenu-main-desc-114'><p>$submenu_content</p></li>";
             } ?>
-            <?php $output .= "{$n}";
+            <?php $output .= "{$n}</div>";
         }
         /**
          * Starts the element output.

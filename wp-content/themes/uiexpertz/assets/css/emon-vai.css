@@ -694,6 +694,17 @@
     padding-bottom: 120px !important
 }
 
+@media (max-width:991px) {
+.pb-120-i {
+    padding-bottom: 80px !important
+}
+}
+@media (max-width:667px) {
+.pb-120-i {
+    padding-bottom: 60px !important
+}
+}
+
 .wb-blog-details .blog-details-img img {
     width: 100%
 }

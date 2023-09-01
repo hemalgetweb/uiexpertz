@@ -232,15 +232,14 @@ ul#pagechecklist-most-recent{padding-left:0}
 .pt-115{padding-top:60px}
 .pb-130{padding-bottom:60px}
 }
+li.uiexpertz-mobile-menu-bottom-pos-114:hover{background:#fff!important}
 .wb-blog-details .d-flex.align-items-center.gap-3{flex-wrap:wrap}
 @media (max-width:575px){
 #header .navbar-nav .nav-item .nav-link.dropdown-toggle::after,.mobileMenu .navbar-nav .nav-item .nav-link.dropdown-toggle::after{margin-left:5px}
 }
 div#respond input,div#respond textarea{max-width:100%}
-@media (min-width: 1200px) {
-    li.uiexpertz-mobile-menu-topbar-list-114, li.uiexpertz-mobile-menu-bottom-pos-114 {
-        display: none !important;
-    }
+@media (min-width:1200px){
+li.uiexpertz-mobile-menu-bottom-pos-114,li.uiexpertz-mobile-menu-topbar-list-114{display:none!important}
 }
 @media (max-width:1199px){
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-title-114{display:none}

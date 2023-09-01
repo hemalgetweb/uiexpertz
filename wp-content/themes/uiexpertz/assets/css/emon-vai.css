@@ -1093,13 +1093,14 @@ p.comment-form-comment textarea {
     background: #5648FF;
     border: 0;
     height: 54px;
-    padding: 0 55px 0 30px;
+    padding: 0 30px;
     color: #fff;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-top: 20px;
+    transition: .3s all linear;
 }
 .comments-area p.form-submit input.submit:hover {
     background: #36b7ff;

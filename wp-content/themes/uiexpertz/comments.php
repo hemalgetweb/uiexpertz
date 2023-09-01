@@ -24,7 +24,7 @@ else : // If there are no comments yet
         comment_form();
     else :
         // Comments are closed
-        echo '<p class="alert">Comments are closed.</p>';
+        comment_form();
     endif;
 endif;
 

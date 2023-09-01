@@ -774,6 +774,12 @@
         padding-top: 150px !important;
     }
 }
+@media (max-width:1199px) {
+    
+    .wb-blog-details.pt-105{
+        padding-top: 60px !important;
+    }
+}
 
 .wb-blog-details{
     padding-bottom: 120px;

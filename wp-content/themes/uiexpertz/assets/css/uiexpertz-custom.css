@@ -207,7 +207,7 @@ div#mobileHeader{position:relative;z-index:9999}
 .ui-brand-wrap .brand-item{width:150px;height:150px}
 }
 @media (max-width:570px){
-.ui-brand-wrap .brand-item img{width:100px}
+.ui-brand-wrap .brand-item img{width:auto}
 }
 .ui-brand-wrap .brand-item::after{content:"";position:absolute;left:-10px;right:0;top:-10px;width:calc(100% + 20px);height:calc(100% + 20px);border:1px solid #11275f;border-radius:100%}
 .ui-brand-wrap .brand-item:hover{background:#11275f}

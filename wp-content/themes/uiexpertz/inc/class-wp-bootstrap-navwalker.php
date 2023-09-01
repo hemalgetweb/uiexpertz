@@ -141,7 +141,13 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             } ?>
             <?php $output .= "{$n}";
         }
-
+        function end_lvl(&$output, $depth = 0, $args = null) {
+            // Check if we are at the submenu level
+            if ($depth === 1) {
+                // Add your content at the end of the submenu list
+                $output .= '<li class="sub-menu-item">Your Submenu End Content</li>';
+            }
+        }
         /**
          * Starts the element output.
          *

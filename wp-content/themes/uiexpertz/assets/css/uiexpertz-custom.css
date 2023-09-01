@@ -265,6 +265,6 @@ li.uiexpertz-mobile-menu-bottom-pos-114 .last svg{margin-left:10px}
     transition: all .3s;
 }
 .custom-dropdown-menu.uiexpertz-hidden {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }

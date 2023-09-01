@@ -13,7 +13,8 @@
             <div class="mobileMenu-container">
                 <div class="mobileMenu-header d-flex align-items-center gap-4 justify-content-between">
                     <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                        <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid">
+                        <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="logo" class="img-fluid d-none d-xl-block">
+                        <img width="158" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mobile.svg" alt="logo" class="img-fluid d-xl-none">
                     </a>
                     <div class="navbarToggler  border-0 text-decoration-none">
                         <div class="menuAction">

@@ -715,3 +715,16 @@ function uiexpertz_service_category_based_filter_posts() {
 add_action('wp_ajax_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_action('wp_ajax_nopriv_uiexpertz_service_category_based_filter_posts', 'uiexpertz_service_category_based_filter_posts');
 add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+/**
+ * Add content to submenu
+ */
+function add_content_after_submenu_list($items, $args) {
+    // Check if the menu is the one you want to modify (replace 'your-menu-slug' with your actual menu slug).
+    if ($args->theme_location == 'main-menu') {
+        // Add your content after the submenu list.
+        $additional_content = '<li class="uiexpertz-submenu-content-114">Your Additional Content</li>';
+        $items .= $additional_content;
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_content_after_submenu_list', 10, 2);

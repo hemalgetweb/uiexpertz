@@ -241,6 +241,10 @@ div#respond input,div#respond textarea{max-width:100%}
 @media (min-width:1200px){
 li.uiexpertz-mobile-menu-bottom-pos-114,li.uiexpertz-mobile-menu-topbar-list-114{display:none!important}
 }
+body.blog .subBanner{padding-top:135px}
+@media (max-width:767px){
+body.blog .subBanner{padding-top:95px}
+}
 @media (max-width:1199px){
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-title-114{display:none}
 ul.custom-dropdown-menu.dropdown-menu.has-apps-dropdown-mega-menu-114 li.apps-submenu-main-desc-114{display:none}

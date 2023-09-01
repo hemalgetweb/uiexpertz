@@ -141,13 +141,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             } ?>
             <?php $output .= "{$n}";
         }
-        function end_lvl(&$output, $depth = 0, $args = null) {
-            // Check if we are at the submenu level
-            if ($depth === 1) {
-                // Add your content at the end of the submenu list
-                $output .= '<li class="sub-menu-item">Your Submenu End Content</li>';
-            }
-        }
         /**
          * Starts the element output.
          *
@@ -362,7 +355,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             }
 
             $item_output .= isset( $args->after ) ? $args->after : '';
-
+            
             // END appending the internal item contents to the output.
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }

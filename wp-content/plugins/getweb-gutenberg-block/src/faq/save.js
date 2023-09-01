@@ -25,7 +25,7 @@ export default function save(props) {
 					<div className="accordion accordion-flush" id="questionAccordion-213432">
 					{faqs.map((item, index) => (
 						<div key={index} className="accordion-item">
-						<h2 className="accordion-header" id={`213432_heading_${index}`}>
+						<h3 className="accordion-header" id={`213432_heading_${index}`}>
 							<button
 							className="accordion-button d-flex align-items-start collapsed"
 							type="button"
@@ -35,7 +35,7 @@ export default function save(props) {
 							>
 							{faqs[index].question}
 							</button>
-						</h2>
+						</h3>
 						<div
 							id={`collapse_213432-${index}`}
 							className="accordion-collapse collapse"

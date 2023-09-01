@@ -141,7 +141,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             } ?>
             <?php $output .= "{$n}";
         }
-
         /**
          * Starts the element output.
          *
@@ -356,7 +355,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             }
 
             $item_output .= isset( $args->after ) ? $args->after : '';
-
+            
             // END appending the internal item contents to the output.
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }

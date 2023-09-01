@@ -2,7 +2,7 @@
     <div class="brand pb-130 pt-115 bg-clr-blue overflow-hidden">
         
         <div class="container">
-            <div class=" me-auto mb-5">
+            <div class=" me-auto mb-lg-5 mb-2">
                 <?php if(!empty($settings['subtitle'])) : ?>
                 <div class="section-hints d-flex justify-content-start align-items-center gap-2">
                     <p class="fs-14 mb-0 fw-bold text-clr-sky"><?php echo wp_kses_post($settings['subtitle']); ?></p>

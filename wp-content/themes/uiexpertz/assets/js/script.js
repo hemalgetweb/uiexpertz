@@ -11,6 +11,7 @@
     $('.openMenu').on('click', function() {
         $('.mobileMenu-wrapper').removeClass('uiexpertz-hidden');
         $(".navbar").find(".mobileMenu-wrapper").addClass("mobileMenu-action");
+        $('.mobilemenu-wrapper-fixed-top-114').addClass('visible');
     });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {

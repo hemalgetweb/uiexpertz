@@ -75,11 +75,12 @@ $related_query = new WP_Query($related_query_args);
                 <div class="col-xl-8">
                     <div class="blog-details-wrap">
                       <?php echo get_the_content(); ?>
-                      <div class="apps-comment-114">
+                      <div class="uiexpertz-comment-114">
                         <div class="comments-area">
                           <?php 
                             comments_template();
                           ?>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -111,6 +111,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 $labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
             }
             $output .= "{$n}{$indent}<ul$class_names $labelledby>";
+            $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+88 012 458 368', 'uiexpertz'));
+            $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+88012458368', 'uiexpertz'));
+            $cbtoolkit_header_btn_text = get_theme_mod('cbtoolkit_header_btn_text', __('Lets’s talk', 'uiexpertz'));
+            $cbtoolkit_header_btn_link = get_theme_mod('cbtoolkit_header_btn_link', __('/contact', 'uiexpertz'));
             $output .= <<<EOD
             <li class="uiexpertz-mobile-menu-topbar-list-114">
                 <div class="uiexpertz-mobile-menu-topbar">
@@ -133,6 +137,20 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
                 </div>
             </li>
             EOD;
+            $output .= '<li class="uiexpertz-mobile-menu-bottom-pos-114">';
+            if(!empty($cbtoolkit_side_support_number_text_1)) {
+                $number_link = esc_attr($cbtoolkit_side_support_number_link_1) ? esc_attr($cbtoolkit_side_support_number_link_1) : '';
+                $output .= '<a href="tel: '.$number_link.'" class="first"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M21 16.92V20.456C21.0001 20.7092 20.9042 20.953 20.7316 21.1382C20.559 21.3234 20.3226 21.4363 20.07 21.454C19.633 21.484 19.276 21.5 19 21.5C10.163 21.5 3 14.337 3 5.5C3 5.224 3.015 4.867 3.046 4.43C3.06372 4.17744 3.17658 3.94101 3.3618 3.76841C3.54703 3.59581 3.79082 3.49989 4.044 3.5H7.58C7.70404 3.49987 7.8237 3.54586 7.91573 3.62902C8.00776 3.71218 8.0656 3.82658 8.078 3.95C8.101 4.18 8.122 4.363 8.142 4.502C8.34073 5.88892 8.748 7.23783 9.35 8.503C9.445 8.703 9.383 8.942 9.203 9.07L7.045 10.612C8.36445 13.6865 10.8145 16.1365 13.889 17.456L15.429 15.302C15.4919 15.214 15.5838 15.1509 15.6885 15.1237C15.7932 15.0964 15.9042 15.1068 16.002 15.153C17.267 15.7539 18.6156 16.1601 20.002 16.358C20.141 16.378 20.324 16.4 20.552 16.422C20.6752 16.4346 20.7894 16.4926 20.8724 16.5846C20.9553 16.6766 21.0012 16.7961 21.001 16.92H21Z" fill="#36B7FF"/>
+                </svg> <span>'.esc_html($cbtoolkit_side_support_number_text_1).'</span></a>';
+            }
+            if(!empty($cbtoolkit_header_btn_text)) {
+                $btn_link = $cbtoolkit_header_btn_link ? esc_url($cbtoolkit_header_btn_link): '';
+                $output .= '<a href="tel: '.$cbtoolkit_header_btn_link.'" class="last">'.esc_html($cbtoolkit_header_btn_text).' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 16L8.9375 14.9375L13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16Z" fill="#001345"/>
+              </svg></a>';
+            }
+            $output .= '</li>';
             if(!empty($submenu_title)) {
                 $output .= "<li class='apps-submenu-main-title-114'><h1 class='title'>$submenu_title</h1></li>";
             } ?>
@@ -355,7 +373,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
             }
 
             $item_output .= isset( $args->after ) ? $args->after : '';
-            
+
             // END appending the internal item contents to the output.
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }

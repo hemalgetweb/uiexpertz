@@ -1,4 +1,5 @@
 (function($) {
+    $('#has-download-btn-114').attr('download');
     $('.uiexpertz-mobile-menu-cross-114, .uiexpertz-mobile-menu-topbar-title-114').on('click', function() {
         $('.custom-dropdown-menu').addClass('uiexpertz-hidden');
     })
@@ -230,6 +231,7 @@
         $(this).find('.js-text-cursor').removeClass('d-none');
         $(".js-text-cursor").stop(!0, !0).fadeIn("fast");
     }),
+
     $(".js-text-cursor-block").mouseleave(function () {
         $(this).find('.js-text-cursor').addClass('d-none');
         $(".js-text-cursor").stop(!0, !0).fadeOut("fast");

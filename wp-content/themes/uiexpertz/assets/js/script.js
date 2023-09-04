@@ -16,6 +16,7 @@
     });
     $(document).ready(function() {
         $("#has-download-btn-114").prop("download", true);
+        $(".uiexpertz-copyright-menu li a").attr("target", "_blank");
     });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {

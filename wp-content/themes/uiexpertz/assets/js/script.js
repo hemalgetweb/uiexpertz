@@ -15,7 +15,7 @@
         $('.mobilemenu-wrapper-fixed-top-114').addClass('visible');
     });
     $(document).ready(function() {
-        $("#has-download-btn-114").attr("download");
+        $("#has-download-btn-114").prop("download", true);
     });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {

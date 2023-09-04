@@ -1324,6 +1324,9 @@ a.back-to-blog:hover svg * {
 
 .ui-social-links {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .ui-social-links .ui-social-link {
     height: 30px;
@@ -1334,7 +1337,6 @@ a.back-to-blog:hover svg * {
     border: 1px solid #E0E3EC;
     border-radius: 100px;
     transition: .2s all linear;
-    flex-wrap: wrap;
 }
 
 .ui-social-links .ui-social-link:hover {

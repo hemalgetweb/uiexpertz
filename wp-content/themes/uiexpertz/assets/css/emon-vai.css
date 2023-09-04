@@ -1357,3 +1357,7 @@ a.back-to-blog:hover svg * {
 .footer-widget ul.menu li a:hover{
     color: #5648ff !important;
 }
+
+.blog-slide-active .splide__pagination{
+    display: none !important;
+}

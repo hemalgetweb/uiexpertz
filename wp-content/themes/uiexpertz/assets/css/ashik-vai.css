@@ -110,3 +110,6 @@ details.e-n-accordion-item.e-normal[open] {
 }
 
 
+.splide__arrow {
+    opacity: 1 !important;
+}

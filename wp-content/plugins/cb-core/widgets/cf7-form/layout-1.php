@@ -34,8 +34,6 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-info mb-4">
-                                <!-- <h3 class="fs-4 fw-bold">Fill out the form to start the <br class="d-none d-xl-inline">
-                                    conversation</h3> -->
                                 
                                 <?php if(!empty($settings['section_title_form'])) : ?>
                                     <h3 class="fs-4 fw-bold">

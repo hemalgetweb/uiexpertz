@@ -17,7 +17,7 @@ $cbtoolkit_blog_banner_image = get_theme_mod('cbtoolkit_blog_banner_image', get_
 $cbtoolkit_blog_sub_title = get_theme_mod('cbtoolkit_blog_sub_title', __('Latest Blogs and News', 'uiexpertz'));
 $cbtoolkit_blog_title = get_theme_mod('cbtoolkit_blog_title', __('Sharing our knowledge, experience and insight.', 'uiexpertz'));
 $cbtoolkit_blog_content = get_theme_mod('cbtoolkit_blog_content', __('Keep yourself updated with our blogs that offer the latest news, updates, & tips related to full-service creative agency.', 'uiexpertz'));
-$cbtoolkit_blog_category_select = get_theme_mod('cbtoolkit_blog_category_select', array());
+$cbtoolkit_blog_category_select = get_theme_mod('cbtoolkit_blog_category_select', array(1, 41));
 $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 8;
 $sidebar_class = is_active_sidebar( 'blog-sidebar' ) ? 'theme-has-blog-sidebar' : 'theme-has-blog-no-sidebar';
 $cbblog_layout = get_theme_mod('cbblog_layout') ? get_theme_mod('cbblog_layout') : 'right-sidebar';
@@ -353,7 +353,7 @@ if (get_query_var('cat')) {
                                         </ul>
                                         <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
                                             <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
-                                            <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
+                                            <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
                                         </div>
                                     </div>
                                     <div
@@ -571,7 +571,7 @@ if (get_query_var('cat')) {
                                         </ul>
                                         <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
                                             <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
-                                            <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
+                                            <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
                                         </div>
                                     </div>
                                     <div
@@ -748,7 +748,7 @@ if (get_query_var('cat')) {
                                             </ul>
                                             <div class="service-content px-4 mt-1 pb-1 text-decoration-none d-block ">
                                                 <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php the_title(); ?></h4>
-                                                <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 16); ?></p>
+                                                <p class="fs-6 text-clr-gray mb-3"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
                                             </div>
                                         </div>
                                         <div

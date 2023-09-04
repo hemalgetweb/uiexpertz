@@ -13,7 +13,7 @@ $contact_space_top = $contact_page_id == $current_page_id ? 'pt-100' : 'pt-300';
 /*
 cmt_section_footer_2: start section Footer 1
 */
-$footer_class_2[1] = 'col-xl-3 col-md-6 col-8';
+$footer_class_2[1] = 'col-xl-3 col-md-6 col-6';
 $footer_class_2[2] = 'col-xl-3 col-md-6 col-6';
 $footer_class_2[3] = 'col-xl-3 col-md-6 col-6';
 $footer_class_2[4] = 'col-xl-3 col-md-6 col-6';

@@ -1,6 +1,4 @@
-
 <?php
-
 /**
  * cbtoolkit customizer
  *
@@ -399,7 +397,7 @@ function _header_fields($fields)
         'settings' => 'cbtoolkit_side_support_number_text_1',
         'label'    => __('Support Number Text', 'cb-toolkit'),
         'section'  => 'section_header_settings',
-        'default'  => __('+88 012 458 368', 'cb-toolkit'),
+        'default'  => __('+132 384 30780', 'cb-toolkit'),
         'priority' => 10,
         'active_callback' => [
             [
@@ -430,7 +428,7 @@ function _header_fields($fields)
         'settings' => 'cbtoolkit_side_support_number_link_1',
         'label'    => __('Support Number Link', 'cb-toolkit'),
         'section'  => 'section_header_settings',
-        'default'  => __('+88012458368', 'cb-toolkit'),
+        'default'  => __('+13238430780', 'cb-toolkit'),
         'priority' => 10,
         'active_callback' => [
             [

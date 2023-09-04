@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g data-name="4"><path d="M2 6h28v2H2zM2 15h28v2H2zM2 24h28v2H2z" fill="#fbfbfb" data-original="#000000"/></g></g></svg>
+<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="fi_10654778">
+<g id="Group">
+<g id="Group_2">
+<g id="Clip path group">
+<mask id="mask0_1681_6777" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="22" height="16">
+<g id="SVGID_2_">
+<path id="SVGID_1_" d="M0 2H22V18H0V2Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_1681_6777)">
+<g id="Group_3">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.6 18H22V16H6.6V18ZM0 4H22V2H0V4ZM0 11H22V9H0V11Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

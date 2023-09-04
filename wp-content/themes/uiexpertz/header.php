@@ -15,9 +15,9 @@ $body_background_color = function_exists( 'get_field' ) ? get_field( 'body_backg
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="google-site-verification" content="n6pNPuNT56SNrH6FZ2N0aXjGpPoBeFZspVVJ-6Hbc8w" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 

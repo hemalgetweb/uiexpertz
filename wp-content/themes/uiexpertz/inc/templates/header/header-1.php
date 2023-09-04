@@ -1,7 +1,7 @@
 <?php
     $cbtoolkit_header_main_right_switch_1 = get_theme_mod('cbtoolkit_header_main_right_switch_1', false);
-    $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+88 012 458 368', 'uiexpertz'));
-    $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+88012458368', 'uiexpertz'));
+    $cbtoolkit_side_support_number_text_1 = get_theme_mod('cbtoolkit_side_support_number_text_1', __('+132 384 30780', 'uiexpertz'));
+    $cbtoolkit_side_support_number_link_1 = get_theme_mod('cbtoolkit_side_support_number_link_1', __('+13238430780', 'uiexpertz'));
     $cbtoolkit_header_btn_text = get_theme_mod('cbtoolkit_header_btn_text', __('Lets’s talk', 'uiexpertz'));
     $cbtoolkit_header_btn_link = get_theme_mod('cbtoolkit_header_btn_link', __('/contact', 'uiexpertz'));
 ?>
@@ -51,7 +51,7 @@
                             </a>
                             <?php endif; ?>
                             <?php if(!empty($cbtoolkit_header_btn_text)) : ?>
-                            <a class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
+                            <a target="_blank" class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
                                 href="<?php echo $cbtoolkit_header_btn_link ? esc_url($cbtoolkit_header_btn_link): ''; ?>"><?php echo esc_html($cbtoolkit_header_btn_text); ?> </a>
                             <?php endif; ?>
                         </div>
@@ -80,7 +80,7 @@
                         </a>
                         <?php endif; ?>
                         <?php if(!empty($cbtoolkit_header_btn_text)) : ?>
-                        <a class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
+                        <a target="_blank" class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
                             href="<?php echo $cbtoolkit_header_btn_link ? esc_url($cbtoolkit_header_btn_link): ''; ?>"><?php echo esc_html($cbtoolkit_header_btn_text); ?> </a>
                         <?php endif; ?>
                     </div>

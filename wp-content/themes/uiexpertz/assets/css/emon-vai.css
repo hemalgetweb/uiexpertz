@@ -52,9 +52,10 @@
 }
 
 .case-study-details-banner .case-study-details-wrap {
-    padding-top: 65px;
+    padding-top: 85px;
     position: relative;
-    z-index: 22
+    z-index: 22;
+
 }
 
 .case-study-details-banner .case-study-details-wrap .case-details-content {
@@ -1305,7 +1306,59 @@ p.comment-form-comment textarea {
     }
 }
 @media (max-width:768px) {
-    .uiexpertz-footer-114 .footer .row {
+    .uiexpertz-footer-114 .footer .footer-bottom .row {
         flex-direction: column-reverse;
     }
+}
+
+a.back-to-blog:hover span {
+    color: #36b7ff !important;
+}
+
+
+a.back-to-blog:hover svg * {
+    fill: #36b7ff !important;
+}
+
+/* social icon */
+.ui-social-links .ui-social-link {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E3EC;
+    border-radius: 100px;
+    transition: .2s all linear;
+    margin-top: 20px;
+}
+
+.ui-social-links .ui-social-link:hover {
+    background-color: #5648FF;
+}
+
+.ui-social-links .ui-social-link svg *{
+    transition: .3s all linear;
+}
+
+.ui-social-links .ui-social-link:hover svg * {
+    fill: #fff !important;
+}
+
+.ui-social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.blog-main .blog-slide-active .single-blog .blog-info a:hover{
+    color: #5648ff !important;
+}
+.footer-widget ul.menu li a:hover{
+    color: #5648ff !important;
+}
+
+.blog-slide-active .splide__pagination{
+    display: none !important;
 }

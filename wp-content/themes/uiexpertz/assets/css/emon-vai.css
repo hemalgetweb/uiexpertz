@@ -1354,3 +1354,6 @@ a.back-to-blog:hover svg * {
 .blog-main .blog-slide-active .single-blog .blog-info a:hover{
     color: #5648ff !important;
 }
+.footer-widget ul.menu li a:hover{
+    color: #5648ff !important;
+}

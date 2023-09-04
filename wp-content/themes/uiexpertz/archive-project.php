@@ -136,7 +136,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                                             class="d-flex read-more px-4 text-decoration-none align-items-start justify-content-between mt-2">
                                             <span>
                                                 <h4 class="fs-14 fw-semi-bold text-clr-gray">
-                                                    <?php echo esc_html__('Read more', 'uiexpertz'); ?></h4>
+                                                    <?php echo esc_html__('View details', 'uiexpertz'); ?></h4>
                                             </span>
                                             <span>
                                                 <svg class="arrow-svg" width="11" height="11" viewBox="0 0 11 11"

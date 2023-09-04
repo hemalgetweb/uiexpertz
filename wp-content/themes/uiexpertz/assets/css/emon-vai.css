@@ -54,7 +54,8 @@
 .case-study-details-banner .case-study-details-wrap {
     padding-top: 85px;
     position: relative;
-    z-index: 22
+    z-index: 22;
+
 }
 
 .case-study-details-banner .case-study-details-wrap .case-details-content {

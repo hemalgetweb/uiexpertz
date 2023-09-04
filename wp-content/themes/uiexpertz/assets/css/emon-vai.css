@@ -1349,3 +1349,8 @@ a.back-to-blog:hover svg * {
     align-items: center;
     gap: 15px;
 }
+
+
+.blog-main .blog-slide-active .single-blog .blog-info a:hover{
+    color: #5648ff !important;
+}

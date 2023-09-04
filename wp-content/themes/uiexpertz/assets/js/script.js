@@ -14,9 +14,9 @@
         $(".navbar").find(".mobileMenu-wrapper").addClass("mobileMenu-action");
         $('.mobilemenu-wrapper-fixed-top-114').addClass('visible');
     });
-    $(document).on('load', function() {
-        $('#has-download-btn-114').attr('download');
-    })
+    $(document).ready(function() {
+        $("#has-download-btn-114").attr("download");
+    });
     document.addEventListener( 'DOMContentLoaded', function () {
         if ($('.brand-active.splide').length > 0) {
             function calculatePerPage(windowWidth) {

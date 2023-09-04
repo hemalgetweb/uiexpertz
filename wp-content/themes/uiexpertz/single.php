@@ -6,26 +6,14 @@ get_header();
 $current_post_id = get_the_ID();
 $categories = wp_get_post_categories($current_post_id, array('fields' => 'ids'));
 
-$related_query_args = array(
-    'post_type' => 'post',
-    'posts_per_page' => -1, // You can adjust the number of related posts to display
-    'post__not_in' => array($current_post_id), // Exclude the current post
-    'tax_query' => array(
-        'relation' => 'OR',
-        array(
-            'taxonomy' => 'post_tag',
-            'field' => 'id',
-            'terms' => $tags,
-        ),
-        array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => $categories,
-        ),
-    ),
+$recent_query_args = array(
+  'post_type' => 'post',
+  'posts_per_page' => -1,
+  'order' => 'DESC',
+  'orderby' => 'date',
 );
 
-$related_query = new WP_Query($related_query_args);
+$recent_query = new WP_Query($recent_query_args);
 ?>
 <div class="wb-blog-details pt-105">
     <div class="container">
@@ -142,7 +130,7 @@ $related_query = new WP_Query($related_query_args);
         </div>
     </div>
 </div>
-<?php if($related_query->have_posts()) : ?>
+<?php if($recent_query->have_posts()) : ?>
   <!--  Latest Blogs  start -->
   <div class="latest-blog section-padding bg-clr-lightGray">
     <div class="testimonial-container">
@@ -178,7 +166,7 @@ $related_query = new WP_Query($related_query_args);
         <div id="splide" class="splide testimonial">
           <div class="splide__track">
             <ul class="splide__list">
-            <?php while($related_query->have_posts()): $related_query->the_post() ?>
+            <?php while($recent_query->have_posts()): $recent_query->the_post() ?>
               <li class="splide__slide">
               <div class="service-item  bg-white mb-4 pb-2">
                     <div class="p-1">

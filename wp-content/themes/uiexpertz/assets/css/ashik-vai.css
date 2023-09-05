@@ -117,3 +117,25 @@ details.e-n-accordion-item.e-normal[open] {
         font-size: 14px;
     }
 }
+
+.uiexpertz-privacy-policy h4,
+.uiexpertz-privacy-policy h4 strong {
+    color: #001345 !important;
+}
+.uiexpertz-privacy-policy p {
+    color: #384973 !important;
+}
+.uiexpertz-privacy-policy p strong {
+    color: #001345 !important;
+}
+
+.uiexpertz-privacy-policy a:hover {
+    text-decoration: underline !important;
+    color: #5648FF !important;
+    font-weight: 600 !important;
+    transition: all .2s linear !important;
+}
+.uiexpertz-privacy-policy a:hover {
+    text-decoration: underline !important;
+    color: #5648FF !important;
+}

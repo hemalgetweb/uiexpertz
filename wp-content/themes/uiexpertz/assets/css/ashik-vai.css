@@ -104,12 +104,16 @@
     }
 }
 
-
 details.e-n-accordion-item.e-normal[open] {
     box-shadow: 0px 30px 30px 0px rgba(0, 19, 69, 0.10);  
 }
 
-
 .splide__arrow {
     opacity: 1 !important;
+}
+
+@media (max-width:991px) {
+    .footer-widget ul.menu li a {
+        font-size: 14px;
+    }
 }

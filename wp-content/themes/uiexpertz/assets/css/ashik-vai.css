@@ -130,7 +130,6 @@ details.e-n-accordion-item.e-normal[open] {
 }
 
 .uiexpertz-privacy-policy a {
-    text-decoration: underline !important;
     color: #5648FF !important;
     font-weight: 600 !important;
     transition: all .2s linear !important;

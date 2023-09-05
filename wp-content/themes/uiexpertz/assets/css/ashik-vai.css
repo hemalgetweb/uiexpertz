@@ -129,7 +129,7 @@ details.e-n-accordion-item.e-normal[open] {
     color: #001345 !important;
 }
 
-.uiexpertz-privacy-policy a:hover {
+.uiexpertz-privacy-policy a {
     text-decoration: underline !important;
     color: #5648FF !important;
     font-weight: 600 !important;

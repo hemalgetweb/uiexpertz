@@ -80,7 +80,7 @@
                         </a>
                         <?php endif; ?>
                         <?php if(!empty($cbtoolkit_header_btn_text)) : ?>
-                        <a target="_blank" class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13 fw-bold"
+                        <a target="_blank" class="text-decoration-none fw-extraBold nav-bg-btn d-flex align-items-center justify-content-center bg-clr-sky  py-2 px-4 border-0 text-clr-blue fs-13"
                             href="<?php echo $cbtoolkit_header_btn_link ? esc_url($cbtoolkit_header_btn_link): ''; ?>"><?php echo esc_html($cbtoolkit_header_btn_text); ?> </a>
                         <?php endif; ?>
                     </div>

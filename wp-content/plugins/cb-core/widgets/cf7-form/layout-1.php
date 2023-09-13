@@ -28,7 +28,6 @@
                     <div class="row my-0 my-md-3 align-items-center">
                         <div class="col-lg-5 offset-lg-1">
                             <div class="contactImg text-center mb-5 mb-lg-0 px-4 px-md-0">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact.svg" class="img-fluid" alt="">
                                 <?php echo wp_get_attachment_image( $settings['cf7_image']['id'], 'full' ); ?>
                             </div>
                         </div>

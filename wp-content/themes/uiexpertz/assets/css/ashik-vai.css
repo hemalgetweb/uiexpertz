@@ -142,4 +142,10 @@ details.e-n-accordion-item.e-normal[open] {
     .common-fill-btn .elementor-button::after {
         right: 22px;
     }
+    .section-heading p.text-clr-gray {
+        font-size: 16px;
+    }
+    .section-heading.text-center h1.py-2 {
+        margin-bottom: 2px;
+    }
 }

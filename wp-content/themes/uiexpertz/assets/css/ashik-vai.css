@@ -150,6 +150,9 @@ details.e-n-accordion-item.e-normal[open] {
         height: 44px;
         padding-right: 52px;
     }
+    .latest-blog.section-padding.bg-clr-lightGray .blog-heading.d-flex.flex-wrap.align-items-lg-end.align-items-center.justify-content-between.mb-5 {
+        margin-bottom: 30px !important;
+    }
     .testimonial.bg-clr-blue.section-padding .section-heading.text-center.mb-5.px-3 {
         margin-bottom: -4px !important;
     }

@@ -148,4 +148,17 @@ details.e-n-accordion-item.e-normal[open] {
     .section-heading.text-center h1.py-2 {
         margin-bottom: 2px;
     }
+    .service-content.text-decoration-none h4 {
+        font-size: 20px !important;
+    }
+    .service-content.text-decoration-none p {
+        font-size: 16px !important;
+        margin-bottom: 28px !important;
+    }
+    .service-content.px-4.pt-4 {
+        padding-top: 17px !important;
+    }
+    .service .service-wrapper.row .service-item .d-flex.read-more .fw-semi-bold {
+        font-size: 14px;
+    }
 }

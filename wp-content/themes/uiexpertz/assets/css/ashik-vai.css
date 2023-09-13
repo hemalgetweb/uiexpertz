@@ -139,6 +139,16 @@ details.e-n-accordion-item.e-normal[open] {
     color: #5648FF !important;
 }
 @media (max-width: 767px) {
+    .uiexpertz-service-item.js-text-cursor-block .d-flex.read-more {
+        margin-top: 10px !important;
+        padding-bottom: 30px !important;
+    }
+    .uiexpertz-service-item.js-text-cursor-block p.fs-6.text-clr-gray.mb-0 {
+        margin-bottom: 0 !important;
+    }
+    .d-flex.read-more span.fs-14.fw-semi-bold.text-clr-gray {
+        font-size: 14px;
+    }
     .uiexperts-btn-item .banner-btn.bg-btn {
         height: 44px;
         padding: 0 30px !important;
@@ -180,6 +190,7 @@ details.e-n-accordion-item.e-normal[open] {
     }
     .service-content.text-decoration-none h4 {
         font-size: 20px !important;
+        margin-bottom: 10px !important;
     }
     .service-content.text-decoration-none p {
         font-size: 16px !important;

@@ -145,6 +145,17 @@ details.e-n-accordion-item.e-normal[open] {
     .testimonial.bg-clr-blue.section-padding {
         padding-bottom: 65px;
     }
+    .latest-blog.section-padding.bg-clr-lightGray {
+        padding-bottom: 35px;
+    }
+    .contact.bg-clr-blue.section-padding .section-heading {
+        margin-bottom: 30px !important;
+    }
+    .service-item.js-text-cursor-block.bg-white.mb-4.pb-3 .service-content.px-4.mt-1.pb-1.text-decoration-none.d-block p.fs-6.text-clr-gray.mb-3 {
+        font-size: 14px !important;
+        line-height: 171.429% !important;
+        margin-bottom: 0px !important;
+    }
     .bg-btn.banner-btn {
         padding: 0 28px;
         height: 44px;

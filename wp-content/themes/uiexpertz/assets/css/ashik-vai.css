@@ -98,9 +98,9 @@
     background-size: 24px 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .contact .contact-wrap {
-        padding-inline: 20px !important;
+        padding-inline: 30px !important;
     }
 }
 
@@ -144,6 +144,9 @@ details.e-n-accordion-item.e-normal[open] {
 @media (max-width: 767px) {
     .testimonial.bg-clr-blue.section-padding {
         padding-bottom: 65px;
+    }
+    .contact-wrap.bg-white.pt-3.pt-md-5.pb-4.pb-lg-5 .contactImg.text-center.mb-5.mb-lg-0.px-4.px-md-0 {
+        margin-bottom: 30px !important;
     }
     .latest-blog.section-padding.bg-clr-lightGray {
         padding-bottom: 35px;

@@ -138,7 +138,7 @@ li.recent-post-list .post-time img{width:16px;height:auto}
 .faq-area .accordion-button:not(.collapsed){background:0 0}
 @media (max-width:767px){
 .workProcess-wrap.py-3 .process-count{transform:translateY(10px)}
-.process-count .count-shape{top:-23px;left:8px}
+.process-count .count-shape{top:-23px;left:13px}
 }
 .service .service-wrapper.row .service-item .d-flex.read-more .fw-semi-bold{transition:all .3s}
 .service .service-wrapper.row .service-item .d-flex.read-more:hover .fw-semi-bold{color:#5648ff}
@@ -166,7 +166,7 @@ to{transform:translateY(0)}
 100%{transform:scale(1)}
 }
 .brand-wrap .brand-item:hover img{animation-direction:alternate;animation-duration:.5s;animation-iteration-count:1;animation-name:animation-pulse-shrink;animation-timing-function:linear;display:inline-block}
-.workProcessItem:hover .process-count .count-shape{animation-duration:1s;animation-iteration-count:1;animation-name:wobble-vertical;animation-timing-function:ease-in-out}
+.workProcessItem:hover .process-count .count-shape{animation-duration:0;animation-iteration-count:1;animation-name:wobble-vertical;animation-timing-function:ease-in-out}
 .case-study .service-item img{transition:all .3s;height:260px;object-fit:cover}
 .case-study .service-item:hover img{transform:scale(1.1)}
 .case-study .service-item .m-1{overflow:hidden}

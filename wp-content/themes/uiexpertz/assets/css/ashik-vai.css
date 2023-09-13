@@ -146,6 +146,17 @@ details.e-n-accordion-item.e-normal[open] {
         font-size: 24px !important;
         line-height: 141.667% !important;
     }
+    .footer-wrap .ui-social-links {
+        margin-top: 10px;
+    }
+    .footer-wrap p.fs-14.text-clr-gray.mb-3 {
+        font-size: 14px;
+        line-height: 200%;
+        margin-bottom: 0 !important;
+    }
+    .footer-logo img {
+        max-width: 128px;
+    }
     .footer {
         padding-top: 60px;
     }

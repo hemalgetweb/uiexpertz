@@ -414,7 +414,7 @@ body {
 
 @media (max-width:576px) {
     .mobileMenu .navbar .mobileMenu-header {
-        padding: 0 20px
+        padding: 0 14px
     }
 }
 

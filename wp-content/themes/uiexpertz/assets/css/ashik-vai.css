@@ -139,6 +139,19 @@ details.e-n-accordion-item.e-normal[open] {
     color: #5648FF !important;
 }
 @media (max-width: 767px) {
+    .workProcess-wrap.py-3 .process-count span.work-process-count-114 {
+        font-size: 40px;
+        transform: translateY(-11px);
+        display: inline-block;
+    }
+    .workProcessItem.d-flex.gap-4 {
+        grid-gap: 0 22px !important;
+    }
+    .workProcess-wrap.py-3 .process-count span.work-process-count-114 {
+        font-size: 40px;
+        transform: translateY(-11px);
+        display: inline-block;
+    }
     .common-fill-btn .elementor-button::after {
         right: 22px;
     }

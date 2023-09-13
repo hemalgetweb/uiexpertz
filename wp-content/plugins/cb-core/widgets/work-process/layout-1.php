@@ -9,7 +9,7 @@
                         <div
                             class="workProcessItem d-flex mb-40 align-items-start gap-4 elementor-repeater-item-<?php echo esc_attr( $slide['_id'] ); ?>">
                             <?php if(!empty($slide['count'])) : ?>
-                            <h2 class="fs-40 text-clr-blue process-count"><?php echo esc_html($slide['count']); ?>
+                            <h2 class="fs-40 text-clr-blue process-count"><span class="work-process-count-114"><?php echo esc_html($slide['count']); ?></span>
                                 <span class="count-shape"></span>
                             </h2>
                             <?php endif; ?>

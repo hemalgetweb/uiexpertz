@@ -14,7 +14,7 @@
                             </h2>
                             <?php endif; ?>
                             <div class="workBorder"></div>
-                            <div>
+                            <div class="work-process-item-space-top-114">
                                 <?php if(!empty($slide['title'])) : ?>
                                 <h3 class="text-clr-blue fs-5 fw-bold"><?php echo esc_htmL($slide['title']); ?></h3>
                                 <?php endif; ?>

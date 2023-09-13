@@ -139,6 +139,12 @@ details.e-n-accordion-item.e-normal[open] {
     color: #5648FF !important;
 }
 @media (max-width: 767px) {
+    .ui-brand.ui-brand-wrap .splide__track.py-5 {
+        padding-top: 20px !important;
+    }
+    .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
+        padding-bottom: 20px;
+    }
     .uiexpertz-service-item.js-text-cursor-block .d-flex.read-more {
         margin-top: 10px !important;
         padding-bottom: 30px !important;

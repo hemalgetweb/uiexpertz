@@ -3,7 +3,7 @@
         <div class="container">
             <?php if(!empty($settings['slides'])) : ?>
             <div class="workProcess-wrap py-3">
-                <div class="row px-4">
+                <div class="row px-3">
                     <?php foreach($settings['slides'] as $slide) : ?>
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-sm-4 mb-0">
                         <div

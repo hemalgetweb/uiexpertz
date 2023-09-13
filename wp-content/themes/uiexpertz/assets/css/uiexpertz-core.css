@@ -760,12 +760,12 @@ body {
 .process-count .count-shape {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-57%);
     width: 48px;
     height: 48px;
     border-radius: 100%;
     z-index: -22;
-    top: -13px
+    top: -13px;
 }
 
 .workProcessItem h2 {

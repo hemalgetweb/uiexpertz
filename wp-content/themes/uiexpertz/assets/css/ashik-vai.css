@@ -155,6 +155,9 @@ details.e-n-accordion-item.e-normal[open] {
     .footer-wrap .ui-social-links {
         margin-top: 10px;
     }
+    footer.uiexpertz-footer-114 {
+        background-image: url('http://uiexpertz.com/wp-content/uploads/2023/09/footer_bg_mobile.svg') !important;
+    }
     .footer-wrap h3.widget-title {
         font-size: 13px;
         margin-bottom: 15px !important;

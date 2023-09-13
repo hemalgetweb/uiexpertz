@@ -138,3 +138,8 @@ details.e-n-accordion-item.e-normal[open] {
     text-decoration: underline !important;
     color: #5648FF !important;
 }
+@media (max-width: 767px) {
+    .common-fill-btn .elementor-button::after {
+        right: 28px;
+    }
+}

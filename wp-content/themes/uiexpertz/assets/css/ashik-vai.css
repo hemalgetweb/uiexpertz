@@ -141,13 +141,26 @@ details.e-n-accordion-item.e-normal[open] {
 .workProcessItem.d-flex h2.text-clr-blue.process-count {
     min-width: 20px;
 }
+.ui-social-links .ui-social-link:hover {
+    border-color: transparent;
+}
 @media (max-width: 767px) {
     .contact-wrap.bg-white.pt-3.pt-md-5.pb-4.pb-lg-5 h3.fs-4.fw-bold {
         font-size: 24px !important;
         line-height: 141.667% !important;
     }
+    .ui-social-links .ui-social-link {
+        background: white;
+    }
     .footer-wrap .ui-social-links {
         margin-top: 10px;
+    }
+    .footer-wrap h3.widget-title {
+        font-size: 13px;
+        margin-bottom: 15px !important;
+    }
+    .footer-widget ul.menu li {
+        margin-bottom: 8px;
     }
     .footer-wrap p.fs-14.text-clr-gray.mb-3 {
         font-size: 14px;

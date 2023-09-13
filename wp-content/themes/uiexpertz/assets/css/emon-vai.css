@@ -1305,12 +1305,6 @@ p.comment-form-comment textarea {
         padding-top: 120px !important;
     }
 }
-@media (max-width:768px) {
-    .uiexpertz-footer-114 .footer .footer-bottom .row {
-        flex-direction: column-reverse;
-    }
-}
-
 a.back-to-blog:hover span {
     color: #36b7ff !important;
 }

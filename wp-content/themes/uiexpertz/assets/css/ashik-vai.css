@@ -140,6 +140,6 @@ details.e-n-accordion-item.e-normal[open] {
 }
 @media (max-width: 767px) {
     .common-fill-btn .elementor-button::after {
-        right: 28px;
+        right: 22px;
     }
 }

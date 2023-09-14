@@ -363,6 +363,10 @@ details.e-n-accordion-item.e-normal[open] {
     .subpage-banner-wrap .e-con-inner {
         flex-direction: column-reverse !important;
     }
+    .banner-wrapper .row {
+        flex-direction: column-reverse;
+    }
+
 }
 @media (min-width: 450px) and (max-width: 767px) {
     .service .service-wrapper.row > * {

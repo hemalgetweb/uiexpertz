@@ -151,6 +151,9 @@ details.e-n-accordion-item.e-normal[open] {
     .testimonial-container .splide__slide .mb-4 {
         font-size: 18px;
     }
+    .footer-widget ul.menu li {
+        margin-bottom: 9px;
+    }
     .fs-40 {
         font-size: 34px;
         line-height: 1.3;

@@ -291,6 +291,9 @@ details.e-n-accordion-item.e-normal[open] {
         width: 250px;
         height: 250px;
     }
+    .testimonial-container .splide__slide h3.mb-4 {
+        font-size: 18px;
+    }
 }
 @media (max-width: 767px) {
     footer.uiexpertz-footer-114 {

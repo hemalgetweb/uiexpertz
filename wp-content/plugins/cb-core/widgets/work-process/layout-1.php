@@ -5,7 +5,7 @@
             <div class="workProcess-wrap py-3">
                 <div class="row px-3">
                     <?php foreach($settings['slides'] as $slide) : ?>
-                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-sm-4 mb-0">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-0">
                         <div
                             class="workProcessItem d-flex mb-40 align-items-start gap-4 elementor-repeater-item-<?php echo esc_attr( $slide['_id'] ); ?>">
                             <?php if(!empty($slide['count'])) : ?>

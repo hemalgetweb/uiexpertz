@@ -1362,3 +1362,8 @@ a.back-to-blog:hover svg * {
 .blog-slide-active .splide__pagination{
     display: none !important;
 }
+
+.blog-details-wraps h4 strong, .blog-details-wraps h3 strong, .blog-details-wraps h2 strong, .blog-details-wraps h1 strong {
+    color: #5648FF;
+    font-weight: 400;
+}

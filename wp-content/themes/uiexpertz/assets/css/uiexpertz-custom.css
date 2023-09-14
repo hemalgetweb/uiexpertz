@@ -298,6 +298,6 @@ table.message-fields td.field-value ul{padding-left:0}
 
 @media (max-width:1240px) and (min-width: 1199px) {
     #header .navbar-nav .nav-item .nav-link{
-        padding: 13px 5px;
+        padding: 13px 5px !important;
     }
 }

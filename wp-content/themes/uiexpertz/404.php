@@ -22,7 +22,7 @@ $cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take
    <div class="container">
       <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
          <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-md-6">
                <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
                   
                   <?php if(!empty($cbtoolkit_error_sub_title)) : ?>
@@ -52,7 +52,7 @@ $cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take
                   </div>
                </div>
             </div>
-            <div class="col-lg-6">               
+            <div class="col-md-6">               
                <?php if(!empty($cbtoolkit_error_404_image)) : ?>
                <div class="banner-img text-center text-lg-end">
                   <img src="<?php echo esc_url($cbtoolkit_error_404_image); ?>" alt="<?php echo esc_attr__('Error image', 'uiexpertz'); ?>" class="img-fluid">

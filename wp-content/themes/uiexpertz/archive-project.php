@@ -12,7 +12,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
     <div class="container">
         <div class="banner-wrapper d-flex flex-column justify-content-between">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
                         <?php if(!empty($cbtoolkit_case_study_section_subtitle)) : ?>
                         <p class="text-clr-sky fs-18"><?php echo $cbtoolkit_case_study_section_subtitle; ?></p>
@@ -32,7 +32,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                     </div>
                 </div>
                 <?php if(!empty($cbtoolkit_case_study_section_image)) : ?>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="banner-img text-center text-lg-end ">
                         <img src="<?php echo esc_url($cbtoolkit_case_study_section_image); ?>" alt="banner img"
                             class="img-fluid">

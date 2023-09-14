@@ -23,7 +23,7 @@ $cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take
       <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
          <div class="row align-items-center">
             <div class="col-md-6">
-               <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
+               <div class="banner-info text-center text-md-start mb-5 mb-lg-0">
                   
                   <?php if(!empty($cbtoolkit_error_sub_title)) : ?>
                      <p class="text-clr-sky fs-18">

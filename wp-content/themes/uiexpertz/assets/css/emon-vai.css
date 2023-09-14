@@ -753,13 +753,13 @@
     -webkit-box-orient: vertical
 }
 
-.service-content h4 {
+/* .service-content h4 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical
-}
+} */
 
 .form-wrapper .select-menu.form-control {
     background-size: 20px !important;

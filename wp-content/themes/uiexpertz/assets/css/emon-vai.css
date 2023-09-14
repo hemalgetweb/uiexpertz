@@ -861,6 +861,12 @@
     margin-bottom: 40px !important;
 }
 
+@media (max-width: 768px) {
+    .wb-blog-details .blog-details-wrap p {
+        margin-bottom: 30px !important;
+    }
+}
+
 .wb-blog-details .blog-details-wrap span {
     color: #384973;
     font-size: 16px;

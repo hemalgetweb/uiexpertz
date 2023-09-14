@@ -148,13 +148,20 @@ details.e-n-accordion-item.e-normal[open] {
     margin-left: 10px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .testimonial-container .splide__slide .mb-4 {
+        font-size: 18px;
+    }
     .fs-40 {
         font-size: 34px;
         line-height: 1.3;
     }
+    
     .brand.pb-130.pt-115.overflow-hidden {
         padding-top: 72px;
         padding-bottom: 40px;
+    }
+    .brand.overflow-hidden div#splide-track {
+        padding-top: 10px !important;
     }
     .section-heading .section-hints p {
         font-size: 14px;

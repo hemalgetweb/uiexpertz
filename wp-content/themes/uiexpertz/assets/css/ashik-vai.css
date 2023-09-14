@@ -173,7 +173,7 @@ details.e-n-accordion-item.e-normal[open] {
     }
     .footer {
         padding-top: 60px;
-        padding-bottom: 30px;
+        padding-bottom: 0;
     }
     .contact-wrap .contact-form label.form-label {
         font-size: 14px;

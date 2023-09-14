@@ -837,6 +837,12 @@
     margin-top: 60px;
 }
 
+@media (max-width: 768px) {
+    .wb-blog-details .blog-details-wrap h4 {
+        margin-top: 45px;
+    }
+}
+
 .wb-blog-details .blog-details-wrap h5 {
     color: #001345;
     font-size: 20px;

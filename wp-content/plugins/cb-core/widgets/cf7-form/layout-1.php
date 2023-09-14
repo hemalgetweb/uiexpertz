@@ -25,7 +25,7 @@
 
             <div class="container">
                 <div class="contact-wrap bg-white pt-3 pt-md-5 pb-4 pb-lg-5">
-                    <div class="row my-0 my-md-3 align-items-center">
+                    <div class="row my-0 my-lg-3 align-items-center">
                         <div class="col-lg-5 offset-lg-1">
                             <div class="contactImg text-center mb-5 mb-lg-0 px-4 px-md-0">
                                 <?php echo wp_get_attachment_image( $settings['cf7_image']['id'], 'full' ); ?>

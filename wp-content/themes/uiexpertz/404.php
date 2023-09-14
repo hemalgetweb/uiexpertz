@@ -43,7 +43,7 @@ $cbtoolkit_error_link_text = get_theme_mod('cbtoolkit_error_link_text', __('Take
                      </p>
                   <?php endif; ?>
 
-                  <div class="navbar-right btn-wrap d-flex justify-content-lg-start justify-content-center flex-wrap gap-3 gap-lg-4">
+                  <div class="navbar-right btn-wrap d-flex justify-content-start flex-wrap gap-3 gap-lg-4">
                      <?php if(!empty($cbtoolkit_error_link_text)) : ?>
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="text-decoration-none position-relative text-uppercase border-0 bg-clr-darkBlue text-white fs-14 fw-extraBold d-flex gap-2 align-items-center back-to-home-btn">
                            <?php echo wp_kses_post($cbtoolkit_error_link_text); ?>

@@ -1141,6 +1141,13 @@ p.comment-form-comment textarea {
     line-height: 46px;
     margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .apps-comment-114 .comment-respond .comment-reply-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
 .apps-comment-114 .comments-area .comment-form>p.comment-form-author, .apps-comment-114 .comments-area .comment-form>p.comment-form-email {
     width: calc(50% - 15px);
     display: inline-block;

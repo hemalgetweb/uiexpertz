@@ -360,6 +360,9 @@ details.e-n-accordion-item.e-normal[open] {
     footer.uiexpertz-footer-114 {
         background-image: url('http://uiexpertz.com/wp-content/uploads/2023/09/footer_bg_mobile.svg') !important;
     }
+    .subpage-banner-wrap .e-con-inner {
+        flex-direction: column-reverse !important;
+    }
 }
 @media (min-width: 450px) and (max-width: 767px) {
     .service .service-wrapper.row > * {

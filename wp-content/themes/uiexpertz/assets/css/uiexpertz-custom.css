@@ -228,7 +228,7 @@ ul#pagechecklist-most-recent{padding-left:0}
 .pt-115{padding-top:80px}
 .pb-130{padding-bottom:80px}
 }
-@media (max-width:667px){
+@media (max-width: 991px){
 .pt-115{padding-top:60px}
 .pb-130{padding-bottom:60px}
 }

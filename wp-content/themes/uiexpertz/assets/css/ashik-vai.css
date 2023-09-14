@@ -295,6 +295,9 @@ details.e-n-accordion-item.e-normal[open] {
         font-size: 14px;
         max-width: 117px;
     }
+    .latest-blog .service-item ul {
+        margin-bottom: 16px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .ui-brand-wrap .brand-item {

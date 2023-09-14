@@ -612,7 +612,7 @@
     margin: auto;
     padding: 0 80px;
     @media (max-width:991px) {
-        max-width: 820px;
+        max-width: 860px;
     }
 
 }

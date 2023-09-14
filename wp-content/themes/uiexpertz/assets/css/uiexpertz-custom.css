@@ -294,3 +294,10 @@ section#contact .contact-form .btn-wrap.mt-4 .wpcf7-spinner{display:none}
 section#contact .contact-form .btn-wrap.mt-4 p:hover::after{transform:translateX(calc(-50% + 71px)) translateY(-50%)}
 .btn-wrap.mt-4 span.wpcf7-spinner{display:none}
 table.message-fields td.field-value ul{padding-left:0}
+
+
+@media (max-width:1240px) and (min-width: 1199px) {
+    #header .navbar-nav .nav-item .nav-link{
+        padding: 13px 5px;
+    }
+}

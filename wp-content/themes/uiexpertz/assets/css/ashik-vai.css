@@ -291,6 +291,8 @@ details.e-n-accordion-item.e-normal[open] {
         width: 250px;
         height: 250px;
     }
+}
+@media (min-width: 701px) and (max-width: 991px) {
     .testimonial-container .splide__slide h3.mb-4 {
         font-size: 18px;
     }

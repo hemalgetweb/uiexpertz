@@ -144,11 +144,7 @@ details.e-n-accordion-item.e-normal[open] {
 .ui-social-links .ui-social-link:hover {
     border-color: transparent;
 }
-@media (max-width: 767px) {
-    footer.uiexpertz-footer-114 {
-        background-image: url('http://uiexpertz.com/wp-content/uploads/2023/09/footer_bg_mobile.svg') !important;
-    }
-}
+
 @media (max-width: 991px) {
     .contact-wrap.bg-white.pt-3.pt-md-5.pb-4.pb-lg-5 h3.fs-4.fw-bold {
         font-size: 24px !important;
@@ -291,5 +287,16 @@ details.e-n-accordion-item.e-normal[open] {
     }
     .js-text-cursor-block.service-item .p-1 {
         padding: 2px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .ui-brand-wrap .brand-item {
+        width: 240px;
+        height: 240px;
+    }
+}
+@media (max-width: 767px) {
+    footer.uiexpertz-footer-114 {
+        background-image: url('http://uiexpertz.com/wp-content/uploads/2023/09/footer_bg_mobile.svg') !important;
     }
 }

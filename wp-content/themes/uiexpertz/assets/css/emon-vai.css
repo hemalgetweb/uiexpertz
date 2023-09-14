@@ -1130,6 +1130,12 @@ p.comment-form-comment textarea {
     margin-top: 20px;
     transition: .3s all linear;
 }
+
+@media (max-width: 768px) {
+    .comments-area p.form-submit input.submit {
+        margin-top: 0px;
+    }
+}
 .comments-area p.form-submit input.submit:hover {
     background: #36b7ff;
 }
@@ -1253,6 +1259,12 @@ p.comment-form-comment textarea {
     margin: 0;
     padding: 40px;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .apps-comment-114 .comment-respond {
+        padding: 28px;
+    }
 }
 
 .apps-comment-114 .comments-area>ol.comment-list .children {

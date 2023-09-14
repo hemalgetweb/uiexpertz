@@ -1277,7 +1277,7 @@ table.message-fields td.field-value ul {
     }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1700px) {
     .home-hero-social-links {
         padding-left: 82px !important;
     }

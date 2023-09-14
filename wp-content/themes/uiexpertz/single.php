@@ -135,7 +135,7 @@ $recent_query = new WP_Query($recent_query_args);
   <div class="latest-blog section-padding bg-clr-lightGray">
     <div class="testimonial-container">
     <h4 class="uiexpertz-generic-title-114">Recent posts</h4>
-      <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-5">
+      <div class="blog-heading d-flex flex-wrap align-items-start  justify-content-between  mb-lg-5 mb-4">
         <div class="section-headings text-start">
           <?php if(!empty($cbblog_details_related_post_subtitle)) : ?>
           <div class="section-hints d-flex justify-content-start align-items-center gap-2">

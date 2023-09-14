@@ -165,6 +165,9 @@
         font-size: 80px;
         line-height: 80px;
     }
+    p.copyright.fs-14.text-center.text-lg-start.text-clr-gray.mb-xl-0 {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width:576px) {

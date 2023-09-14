@@ -288,6 +288,9 @@ details.e-n-accordion-item.e-normal[open] {
     .footer-widget .widget-list .footer-link {
         font-size: 14px !important;
     }
+    .service-item.js-text-cursor-block.service-item-wrap .list-unstyled.d-flex.flex-wrap.align-items-center.gap-1.gap-md-3.p-4.mb-1 {
+        padding-bottom: 13px !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .ui-brand-wrap .brand-item {

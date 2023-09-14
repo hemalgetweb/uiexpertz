@@ -415,7 +415,7 @@ body {
     box-shadow: 0 1px 1px 0 rgba(170, 180, 207, .4)
 }
 
-@media (max-width:576px) {
+@media (max-width:991px) {
     .mobileMenu .navbar .mobileMenu-header {
         padding: 0 14px
     }

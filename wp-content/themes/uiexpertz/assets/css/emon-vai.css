@@ -790,16 +790,14 @@
 /* blog details update start - 30-8-23 */
 
 @media (min-width:1200px) {
-
     .wb-blog-details.pt-105 {
         padding-top: 122px !important;
     }
 }
 
 @media (max-width:1199px) {
-
     .wb-blog-details.pt-105 {
-        padding-top: 60px !important;
+        padding-top: 80px !important;
     }
 }
 
@@ -1361,4 +1359,9 @@ a.back-to-blog:hover svg * {
 
 .blog-slide-active .splide__pagination{
     display: none !important;
+}
+
+.blog-details-wraps h4 strong, .blog-details-wraps h3 strong, .blog-details-wraps h2 strong, .blog-details-wraps h1 strong {
+    color: #5648FF;
+    font-weight: 400;
 }

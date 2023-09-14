@@ -285,6 +285,9 @@ details.e-n-accordion-item.e-normal[open] {
     .js-text-cursor-block.service-item .p-1 {
         padding: 2px !important;
     }
+    .footer-widget .widget-list .footer-link {
+        font-size: 14px !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .ui-brand-wrap .brand-item {

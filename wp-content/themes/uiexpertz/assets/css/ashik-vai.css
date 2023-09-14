@@ -144,11 +144,17 @@ details.e-n-accordion-item.e-normal[open] {
 .ui-social-links .ui-social-link:hover {
     border-color: transparent;
 }
-
+#header .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
+    margin-left: 10px;
+}
 @media (min-width: 992px) and (max-width: 1199px) {
     .fs-40 {
         font-size: 34px;
         line-height: 1.3;
+    }
+    .brand.pb-130.pt-115.overflow-hidden {
+        padding-top: 72px;
+        padding-bottom: 40px;
     }
     .section-heading .section-hints p {
         font-size: 14px;
@@ -159,6 +165,10 @@ details.e-n-accordion-item.e-normal[open] {
     }
     .list-unstyled.d-flex.flex-wrap.align-items-center.gap-1.gap-md-3.p-4.mb-1 {
         padding-bottom: 11px !important;
+    }
+    .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
+        padding-top: 72px;
+        padding-bottom: 40px;
     }
 }
 

@@ -790,16 +790,14 @@
 /* blog details update start - 30-8-23 */
 
 @media (min-width:1200px) {
-
     .wb-blog-details.pt-105 {
         padding-top: 122px !important;
     }
 }
 
 @media (max-width:1199px) {
-
     .wb-blog-details.pt-105 {
-        padding-top: 60px !important;
+        padding-top: 80px !important;
     }
 }
 

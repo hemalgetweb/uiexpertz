@@ -1415,3 +1415,8 @@ a.back-to-blog:hover svg * {
 .footer-wrap .ui-social-links {
     margin-top: 10px !important;
 }}
+
+
+.service-ui-brand .brand-item img{
+    max-width: 27% !important;
+}

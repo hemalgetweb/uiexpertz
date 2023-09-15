@@ -378,3 +378,12 @@ details.e-n-accordion-item.e-normal[open] {
         line-height: 1.4 !important;
     }
 }
+
+@media (max-width:1200px) {
+    .latest-blog .read-more span h4{
+        font-size: 14px !important;
+        font-weight: 600;
+}
+}
+
+

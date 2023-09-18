@@ -1453,6 +1453,15 @@ a.back-to-blog:hover svg * {
         padding-bottom: 80px;
     }
 }
+.footer-widget .widget-list .footer-link {
+    word-break: break-all;
+}
+.service .d-flex.flex-wrap.align-items-center.gap-3.pt-4.justify-content-center {
+    padding-top: 5px !important;
+}
+#whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-last-child(-n+3) p.fs-14 {
+    margin-bottom: 0 !important;
+}
 @media (max-width: 767px) {
     .workProcess-wrap.py-3 > .row.px-3 > *:last-child .workProcessItem {
         margin-bottom: 0;

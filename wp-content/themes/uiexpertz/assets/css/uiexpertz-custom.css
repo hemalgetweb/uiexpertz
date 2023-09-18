@@ -1299,3 +1299,10 @@ table.message-fields td.field-value ul {
         padding-left: 82px !important;
     }
 }
+#whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-last-child(-n+3) {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0;
+}
+#whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-last-child(-n+3) p.fs-14 {
+    margin-bottom: 0 !important;
+}

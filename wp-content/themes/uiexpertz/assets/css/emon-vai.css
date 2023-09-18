@@ -1414,10 +1414,15 @@ a.back-to-blog:hover svg * {
 .footer-wrap .ui-social-links {
     margin-top: 10px !important;
 }}
-
-
+.uiexpertz-service-content-space-2341 {
+    padding: 6px 20px;
+    padding-bottom: 25px;
+}
 .service-ui-brand .brand-item img{
     max-width: 27% !important;
+}
+.d-flex.flex-wrap.align-items-center.gap-3.pt-4.justify-content-center {
+    padding-top: 35px !important;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
@@ -1425,6 +1430,9 @@ a.back-to-blog:hover svg * {
     }
     .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
         text-align: center;
+    }
+    .workProcess-wrap.py-3 .process-count span.work-process-count-114 {
+        transform: translateY(2px) translateX(-6px);
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {

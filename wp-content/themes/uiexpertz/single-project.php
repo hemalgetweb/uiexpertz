@@ -90,14 +90,16 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div>
                     <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Overview</h3>
-                    <p class="text-clr-gray fs-4 "><?php echo get_the_content(); ?></p>
+                    <p class="text-clr-gray fs-4"><?php echo get_the_content(); ?></p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="uiexpertz-project-single-objective-114">
                     <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Objective</h3>
                     <?php if(!empty($project_objective)) : ?>
-                      <?php echo wp_kses_post($project_objective); ?>
+                      <p class="uiexpertz-project-objective-1234">
+                        <?php echo wp_kses_post($project_objective); ?>
+                      </p>
                     <?php endif; ?>
                 </div>
             </div>

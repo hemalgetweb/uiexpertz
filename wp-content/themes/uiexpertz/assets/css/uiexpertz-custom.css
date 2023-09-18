@@ -1037,7 +1037,8 @@ body.blog .subBanner {
 
 @media (max-width:767px) {
     body.blog .subBanner {
-        padding-top: 95px
+        padding-top: 95px;
+        padding-bottom: 0 !important;
     }
 }
 

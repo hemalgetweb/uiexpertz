@@ -1419,3 +1419,8 @@ a.back-to-blog:hover svg * {
 .service-ui-brand .brand-item img{
     max-width: 27% !important;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
+        padding-bottom: 75px;
+    }
+}

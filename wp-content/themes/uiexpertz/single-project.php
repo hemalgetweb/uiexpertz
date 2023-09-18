@@ -87,19 +87,15 @@ $cbtoolkit_case_study_cf7_section_form_heading = get_theme_mod( 'cbtoolkit_case_
           <?php the_post_thumbnail(get_the_ID(), 'full'); ?>
         </div>
         <div class="py-120 row gx-lg-5 gx-0">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div>
-                    <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Overview</h3>
-                    <p class="text-clr-gray fs-4"><?php echo get_the_content(); ?></p>
-                </div>
+            <div class="col-lg-6 mb-4 mb-lg-0 uiexpertz-project-overview-1234">
+                <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Overview</h3>
+                <?php echo get_the_content(); ?>
             </div>
             <div class="col-lg-6">
                 <div class="uiexpertz-project-single-objective-114">
                     <h3 class="fs-40 text-clr-blue fw-normal mb-4 mt-0">Objective</h3>
                     <?php if(!empty($project_objective)) : ?>
-                      <p class="uiexpertz-project-objective-1234">
-                        <?php echo wp_kses_post($project_objective); ?>
-                      </p>
+                      <?php echo wp_kses_post($project_objective); ?>
                     <?php endif; ?>
                 </div>
             </div>

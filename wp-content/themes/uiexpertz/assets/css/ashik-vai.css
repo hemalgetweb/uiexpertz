@@ -60,7 +60,11 @@
 .back-to-home-btn:hover::before {
     left: 20px;
 }
-
+@media (max-width: 991px) {
+    .contactImg.mb-5.mb-lg-0.px-4.px-md-0 {
+        text-align: center;
+    }
+}
 
 
 

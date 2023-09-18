@@ -1430,5 +1430,8 @@ a.back-to-blog:hover svg * {
 @media (min-width: 992px) and (max-width: 1199px) {
     h2.fs-40.process-count span.work-process-count-114 {
         transform: translateX(-5px) translateY(9px);
-    }   
+    }
+    .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
+        padding-bottom: 120px;
+    }
 }

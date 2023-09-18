@@ -17,7 +17,7 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                         <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php echo esc_html($slide['service_title']); ?></h4>
                         <?php endif; ?>
                         <?php if(!empty($slide['service_excerpt'])) : ?>
-                            <p class="fs-14 text-clr-gray mb-2"><?php echo wp_kses_post($slide['service_excerpt']); ?></p>
+                            <p class="fs-14 text-clr-gray"><?php echo wp_kses_post($slide['service_excerpt']); ?></p>
                         <?php endif; ?>
                     </div>
                 </div>

@@ -1432,6 +1432,6 @@ a.back-to-blog:hover svg * {
         transform: translateX(-5px) translateY(9px);
     }
     .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
-        padding-bottom: 120px;
+        padding-bottom: 80px;
     }
 }

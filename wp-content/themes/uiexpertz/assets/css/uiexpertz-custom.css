@@ -294,3 +294,7 @@ section#contact .contact-form .btn-wrap.mt-4 .wpcf7-spinner{display:none}
 section#contact .contact-form .btn-wrap.mt-4 p:hover::after{transform:translateX(calc(-50% + 71px)) translateY(-50%)}
 .btn-wrap.mt-4 span.wpcf7-spinner{display:none}
 table.message-fields td.field-value ul{padding-left:0}
+h2.fs-40.process-count span.work-process-count-114 {
+    display: inline-block;
+    transform: translateX(-5px);
+}

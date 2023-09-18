@@ -65,6 +65,16 @@
         text-align: center;
     }
 }
+@media (max-width: 1199px) {
+    .blog-slide-active.radius-12 .splide__arrows > * {
+        position: static !important;
+    }
+    .splide__arrows.splide__arrows--ltr {
+        display: flex;
+        grid-gap: 0 20px;
+        margin-top: 51px;
+    }
+}
 
 
 

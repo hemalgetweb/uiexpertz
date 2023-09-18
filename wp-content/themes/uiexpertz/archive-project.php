@@ -94,7 +94,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                             <div class="row" id="uiexpertz_service_archive_wrapper">
                                 <?php while(have_posts()) : the_post();
                                     ?>
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="service-item service-item-wrap bg-white mb-4 pb-3 js-text-cursor-block">
                                         <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
                                             href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>"
@@ -182,7 +182,7 @@ $cbtoolkit_case_study_inner_section_title = get_theme_mod( 'cbtoolkit_case_study
                             <div class="row" id="uiexpertz_service_archive_wrapper">
                                 <?php while($projects->have_posts()) : $projects->the_post();
                                         ?>
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="service-item service-item-wrap bg-white mb-4 pb-3 js-text-cursor-block">
                                         <a class="uiexpertz-theme-accourdion-btn-114 js-text-cursor bg-clr-darkBlue px-2 py-2 text-nowrap text-white d-none"
                                             href="<?php echo esc_url(get_the_permalink( get_the_ID() )); ?>"

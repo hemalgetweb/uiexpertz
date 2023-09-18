@@ -330,6 +330,9 @@ li.recent-post-list .post-time img {
     .workProcessItem .workBorder {
         width: 1px
     }
+    #whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-child(3) {
+        border-right: 1px solid #aab4cf !important;
+    }
 
     .latest-blog .blog-heading.d-flex {
         flex-direction: column

@@ -487,6 +487,10 @@ li.recent-post-list .post-time img {
 }
 
 @media (max-width:767px) {
+    .uiexpertz-project-overview-1234 p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
     .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
         min-width: 100%
     }
@@ -939,7 +943,17 @@ ul#pagechecklist-most-recent {
     font-weight: 400;
     line-height: 26px;
 }
-
+.work-process-details-wrap .col-lg-6 p span {
+    color: var(--gray-color-system-gray-2, #384973);
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+.bg-clr-blue .work-process-details-wrap .col-lg-6 p span {
+    color: var(--gray-color-system-gray-7, #9DB9FF);
+}
 .uiexpertz-project-single-objective-114 ul li:after {
     content: "";
     width: 24px;

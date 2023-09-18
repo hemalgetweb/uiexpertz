@@ -182,7 +182,9 @@ h2.fs-40.process-count span.work-process-count-114 {
     text-decoration: none;
     transition: all .3s
 }
-
+.section-heading h1.fs-40.text-clr-blue.py-2 {
+    font-weight: 400;
+}
 .service-content .text-clr-blue a:hover {
     color: var(--primary-color-system-indigo-dye, #5648ff)
 }
@@ -201,7 +203,9 @@ h2.fs-40.process-count span.work-process-count-114 {
     visibility: visible;
     top: 100%
 }
-
+span.work-process-count-114 {
+    font-weight: 400;
+}
 .blog-pagination>* {
     border: 1px solid #dee2e6;
     color: #0d6efd;

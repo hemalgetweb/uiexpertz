@@ -1428,6 +1428,7 @@ a.back-to-blog:hover svg * {
     margin-bottom: 3px !important;
     line-height: 1.4;
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
         padding-bottom: 55px;
@@ -1449,5 +1450,13 @@ a.back-to-blog:hover svg * {
     }
     .brand.pb-130.pt-115.bg-clr-blue.overflow-hidden {
         padding-bottom: 80px;
+    }
+}
+@media (max-width: 767px) {
+    .workProcess-wrap.py-3 > .row.px-3 > *:last-child .workProcessItem {
+        margin-bottom: 0;
+    }
+    .workProcess-wrap.py-3 .mt-40 {
+        margin-top: 30px;
     }
 }

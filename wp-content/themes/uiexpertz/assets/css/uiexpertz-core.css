@@ -1277,12 +1277,12 @@ svg .btn-swiper:hover {
     }
 
     #whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-child(3) {
-        border-right: 1px solid #aab4cf
+        border-right: 1px solid #aab4cf !important;
     }
 
     #whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-child(4) {
         border-right: 1px solid transparent;
-        border-bottom: 1px solid #aab4cf
+        border-bottom: 1px solid #aab4cf !important;
     }
 }
 
@@ -1297,7 +1297,7 @@ svg .btn-swiper:hover {
 
     #whychooseus .why-choose-us-wrapper .why-choose-us-item:nth-child(5) {
         border-right: 1px solid transparent;
-        border-bottom: 1px solid #aab4cf
+        border-bottom: 1px solid #aab4cf !important;
     }
 }
 

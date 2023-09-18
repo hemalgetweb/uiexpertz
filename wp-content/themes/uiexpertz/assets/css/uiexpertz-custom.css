@@ -491,6 +491,10 @@ li.recent-post-list .post-time img {
         font-size: 18px;
         line-height: 1.4;
     }
+    .uiexpertz-project-overview-1234 p {
+        font-size: 17px;
+        line-height: 28px;
+    }
     .mobileMenu .navbar-nav .nav-item.custom-dropdown .custom-dropdown-menu {
         min-width: 100%
     }

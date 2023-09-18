@@ -12,12 +12,12 @@ $service_box_height = $settings['service_box_height'] ? $settings['service_box_h
                     <div class="p-1">
                         <img src="<?php echo esc_url($slide['service_image']['url']) ?>" class="img-fluid w-100" alt="<?php echo \Elementor\Control_Media::get_image_alt( $slide['service_image'] ); ?>">
                     </div>
-                    <div class="service-content p-4 text-decoration-none d-block mt-1">
+                    <div class="service-content uiexpertz-service-content-space-2341  text-decoration-none d-block mt-1">
                         <?php if(!empty($slide['service_title'])) : ?>
                         <h4 class="text-clr-blue fs-5 fw-bold mb-3"><?php echo esc_html($slide['service_title']); ?></h4>
                         <?php endif; ?>
                         <?php if(!empty($slide['service_excerpt'])) : ?>
-                            <p class="fs-14 text-clr-gray mb-2"><?php echo wp_kses_post($slide['service_excerpt']); ?></p>
+                            <p class="fs-14 text-clr-gray"><?php echo wp_kses_post($slide['service_excerpt']); ?></p>
                         <?php endif; ?>
                     </div>
                 </div>

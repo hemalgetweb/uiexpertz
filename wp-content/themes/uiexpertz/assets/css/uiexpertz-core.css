@@ -684,8 +684,13 @@ body {
 
 .subBanner {
     min-height: 700px;
-    padding-block: 230px 100px
+    padding-block: 230px 100px;
+    @media (max-width: 768px) {
+        min-height: 0px;
+        padding-block: 130px 60px;
+    }
 }
+
 
 .subBanner.blog-details-banner {
     min-height: 544px !important
@@ -1118,7 +1123,7 @@ svg .btn-swiper:hover {
 }
 
 .contact-form .form-btn:hover {
-    background-color: #6f62fc !important
+    background-color: #36b7ff !important
 }
 
 .footer {

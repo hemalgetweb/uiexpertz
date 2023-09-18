@@ -63,8 +63,8 @@ if (get_query_var('cat')) {
     <div class="container">
         <div class="banner-wrapper d-flex flex-column justify-content-between pb-4">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="banner-info text-center text-lg-start mb-5 mb-lg-0">
+                <div class="col-md-6">
+                    <div class="banner-info text-start">
                         <?php if(!empty($cbtoolkit_blog_sub_title)) : ?>
                         <p class="text-clr-sky fs-18"><?php echo wp_kses_post($cbtoolkit_blog_sub_title); ?></p>
                         <?php endif; ?>
@@ -82,7 +82,7 @@ if (get_query_var('cat')) {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <?php if(!empty($cbtoolkit_blog_banner_image)) : ?>
                     <div class="banner-img text-center text-lg-end ">
                         <img src="<?php echo esc_url($cbtoolkit_blog_banner_image); ?>"

@@ -336,7 +336,7 @@ details.e-n-accordion-item.e-normal[open] {
     }
     .js-text-cursor {
         font-size: 14px;
-        max-width: 117px;
+        max-width:137px;
     }
     .latest-blog .service-item ul {
         margin-bottom: 16px;
@@ -346,6 +346,9 @@ details.e-n-accordion-item.e-normal[open] {
     .ui-brand-wrap .brand-item {
         width: 250px;
         height: 250px;
+    }
+    .service .js-text-cursor {
+        max-width: 140px;
     }
 }
 @media (min-width: 701px) and (max-width: 991px) {
@@ -357,6 +360,13 @@ details.e-n-accordion-item.e-normal[open] {
     footer.uiexpertz-footer-114 {
         background-image: url('http://uiexpertz.com/wp-content/uploads/2023/09/footer_bg_mobile.svg') !important;
     }
+    .subpage-banner-wrap .e-con-inner {
+        flex-direction: column-reverse !important;
+    }
+    .banner-wrapper .row {
+        flex-direction: column-reverse;
+    }
+
 }
 @media (min-width: 450px) and (max-width: 767px) {
     .service .service-wrapper.row > * {
@@ -368,3 +378,12 @@ details.e-n-accordion-item.e-normal[open] {
         line-height: 1.4 !important;
     }
 }
+
+@media (max-width:1200px) {
+    .latest-blog .read-more span h4{
+        font-size: 14px !important;
+        font-weight: 600;
+}
+}
+
+

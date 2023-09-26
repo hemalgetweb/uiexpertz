@@ -827,8 +827,8 @@
     color: #001345;
     font-size: 40px;
     font-weight: 700;
-    line-height: 50px;
-    margin-top: 60px;
+    line-height: 1.25em;
+    margin-top: 100px;
     position: relative;
     padding-top: 15px;
 }
